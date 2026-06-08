@@ -11,6 +11,11 @@ Extension \ Select MCP Servers-installed \ Start Server.
 
 NB: server configuration is in .vscode\mcp.json
 
+## Claude code configuration 
+```
+claude mcp add --transport http --scope project my-serveur http://127.0.0.1:8000/mcp/
+```
+
 
 ## Some prompts
 ### For all features secrets, sca and sast
