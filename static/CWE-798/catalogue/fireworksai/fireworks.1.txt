@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Fireworks.ai API Key
+# Provider: fireworksai    Rule id (normalized): fireworks.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.fireworks.1
+#   - titus       kingfisher.fireworks.1
+#
+# Pattern: (?x) \b ( fw_[A-Za-z0-9]{24} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+fw_3ZL5ji26Tp7baYrW5S2pA5xi
+fw_3ZaW5fSpx5GTnHpRGb8CPu2V
+fw_3ZSU8ymvmZ38YPv8uwbZHAyW

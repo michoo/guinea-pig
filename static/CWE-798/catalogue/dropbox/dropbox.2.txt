@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Dropbox Long-Lived API Token
+# Provider: dropbox    Rule id (normalized): dropbox.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dropbox.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    dropbox-api-token
+#   - gitleaks    dropbox-long-lived-api-token
+#   - gitleaks    dropbox-short-lived-api-token
+#   - betterleaks dropbox-api-token
+#   - betterleaks dropbox-long-lived-api-token
+#   - betterleaks dropbox-short-lived-api-token
+#
+# Pattern: (?x) \b ( [a-z0-9]{11} AAAAAAAAAA [a-z0-9\-_=]{43} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ab3cd5ef7g9AAAAAAAAAAbcdefghij-klmnopqrstuvwxyz01234567890abcdef

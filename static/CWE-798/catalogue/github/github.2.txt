@@ -1,0 +1,30 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GitHub Personal Access Token
+# Provider: github    Rule id (normalized): github.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.github.2
+#   - noseyparker np.github.2
+#   - titus       np.github.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    github-app-token
+#   - gitleaks    github-fine-grained-pat
+#   - gitleaks    github-oauth
+#   - gitleaks    github-pat
+#   - gitleaks    github-refresh-token
+#   - betterleaks github-app-token
+#   - betterleaks github-fine-grained-pat
+#   - betterleaks github-oauth
+#   - betterleaks github-pat
+#   - betterleaks github-refresh-token
+#
+# Pattern: (?x) ( ghp_(?P<body>[A-Za-z0-9]{30})(?P<checksum>[A-Za-z0-9]{6}) )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+GITHUB_KEY=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
+let g:gh_token='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'
+## git developer settings
+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
+"url": "git+https://FelipeMestre:gho_psT9pqNFsehnc4se0ZzzR0HBxapxZD35hNHi@github.com/gontarz/PW_2021_Website-FelipeMestre.git"
+oauth_token: gho_fq75OMU7UVbS9pTZmoCCzJT6TM5d1w099FgG

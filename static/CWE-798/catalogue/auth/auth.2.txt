@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: HTTP Bearer Authorization Header (non-JWT)
+# Provider: auth    Rule id (normalized): auth.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.auth.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    curl-auth-header
+#   - gitleaks    curl-auth-user
+#   - betterleaks curl-auth-header
+#   - betterleaks curl-auth-user
+#
+# Pattern: (?x) \b Bearer\s+ ( [A-Za-z0-9._\-]{32,} ) (?:[^A-Za-z0-9._\-]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Authorization: Bearer d1fc83f09661bcaf3cb3591ec4b93fe93b07087ef020886a4ead09e8efd8c0df
+- Bearer 7727d2fa5e8f7d37de25ef385ff8766d265ee2e7384efb311c04069d9c892c6b
+headers={'Authorization': 'Bearer 4f8a2b6c1d9e7f30a5b2c8d4e6f1a3b7c9d2e8f4a6b0c5d1e9f3a7b2c4d6e8f0'}

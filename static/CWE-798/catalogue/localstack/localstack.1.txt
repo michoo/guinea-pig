@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LocalStack Simulated AWS Access Key
+# Provider: localstack    Rule id (normalized): localstack.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.localstack.1
+#
+# Pattern: (?x) \b ( (?:LSIA|LKIA)[A-Z0-9]{16,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AWS_ACCESS_KEY_ID=LSIAQAAAAAAVNCBMPN59
+aws_access_key=LKIAQAAAAAAVNCBMPN59

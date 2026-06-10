@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Deno Account Token
+# Provider: deno    Rule id (normalized): deno.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.deno.1
+#
+# Pattern: (?x) \b ( ddp_[A-Za-z0-9]{36} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DENO_DEPLOY_TOKEN=ddp_A7h3Lm9Qw2Rt6Yu8Ks4Vz1Np5Cx0Bd7EfGhJ
+deno_token = "ddp_M4nT7pQs8Vx1Zc3Df5Gh7Jk9Lm2Np4Qr6StU"

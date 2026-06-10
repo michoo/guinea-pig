@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: ThingsBoard Provision Device Secret
+# Provider: thingsboard    Rule id (normalized): thingsboard.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.thingsboard.3
+#   - noseyparker np.thingsboard.3
+#   - titus       np.thingsboard.3
+#
+# Pattern: (?x) "provisionDeviceSecret"\s*:\s*" ( [a-z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+"{"deviceName": "DEVICE_NAME", "provisionDeviceKey": "s2s1gfcuatgbi61n8h5s", "provisionDeviceSecret": "xbzsovaw9ix4qfhi14an"}"

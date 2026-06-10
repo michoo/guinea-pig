@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SonarQube API Key
+# Provider: sonarqube    Rule id (normalized): sonarqube.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sonarqube.1
+#   - noseyparker np.sonarqube.1
+#   - titus       np.sonarqube.1
+#
+# Pattern: (?xi) \b ( (?:sq[pua]) _[a-z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sonar.login=sqp_4b78f8494075e310d62dfdcaeb14be2c78fca2fc
+sonar.login=squ_4b78f8494075e310d62dfdcaeb14be2c78fca2fc
+sonar.host.url=https://sonarcloud.io -Dsonar.login=5524bf449ca45fcace54698371466398321f3a82
+sonar.login', '826de5590c75919a8317fdface58206eebe7ebbc
+$sonarLogin = "4924be8f51f3e738c97db2c4ace51db7e938f28b"

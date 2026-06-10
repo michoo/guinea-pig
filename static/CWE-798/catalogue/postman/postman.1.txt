@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Postman API Key
+# Provider: postman    Rule id (normalized): postman.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.postman.1
+#   - noseyparker np.postman.1
+#   - titus       np.postman.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    postman-api-token
+#   - betterleaks postman-api-token
+#
+# Pattern: (?xi) \b ( PMAK-[A-Z0-9]{24}-[A-Z0-9]{34} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PMAK-642a58a823faa300316566d1-6715a3a826ce5d5d62be8539d6ac357146
+PMAK-642a9b9084d6110029e75d7d-09efdcb872587f6f67696f02929647d9c6
+// ('x-api-key', 'PMAK-629c73facbc064567cbf6970-f56e8b4cd0bb14d00962f17afc158dc2a2')

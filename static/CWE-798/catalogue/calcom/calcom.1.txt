@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cal.com API Key
+# Provider: calcom    Rule id (normalized): calcom.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.calcom.1
+#
+# Pattern: (?x) \b ( cal(?:_live)?_[A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CAL_API_KEY=cal_live_f1ec52a0b268e00fe30b63e96115c8df
+Authorization: Bearer cal_live_xK8m2LpQr5nW0vYz3cJ7aB4dE6fG8hJk

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry (regex-scanner-only): sonar-api-token
+#
+# Detected by this rule:
+#   - betterleaks sonar-api-token
+#   - gitleaks    sonar-api-token
+#
+# Uncovered a Sonar API token, potentially compromising software vulnerability scanning and code security.
+# Regex: (?i)[\w.-]{0,50}?(?:sonar[_.-]?(login|token))(?:[ \t\w.-]{0,20})[\s'"]{0,3}(?:=|>|:{1,3}=|\|\||:|=>|\?=|,)[\x60'"\s=]{0,5}((?:squ_|sqp_|sqa_)?[a-z0-9=_\-]{40})(?:[\x60'"\s;]|\\[nr]|$)
+#
+# Synthesized fake credential matching the regex — safe to commit.
+
+sonar.login = "squ_0123456789abcdef0123456789abcdef01234567"

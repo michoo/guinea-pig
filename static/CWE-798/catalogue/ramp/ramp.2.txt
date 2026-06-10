@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Ramp Client Secret
+# Provider: ramp    Rule id (normalized): ramp.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ramp.2
+#
+# Pattern: (?x) \b ( ramp_sec_[a-zA-Z0-9]{48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RAMP_CLIENT_SECRET=ramp_sec_a1B2c3D4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0u1V2w3X4

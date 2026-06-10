@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Bitfinex API Secret
+# Provider: bitfinex    Rule id (normalized): bitfinex.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.bitfinex.2
+#
+# Pattern: (?xi) \b bitfinex (?:.|[\n\r]){0,64}? \b(?:api[_-]?secret|secret)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [a-zA-Z0-9]{43} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+bitfinex
+secret = 8d7c3965318b8d20f7648dbda96fbfa23f4d1c449aa
+bitfinex
+api-secret = 1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1d2

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: CARTO API Access Token (JWT)
+# Provider: carto    Rule id (normalized): carto.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.carto.1
+#
+# Pattern: (?x) \b ( eyJhbGciOiJIUzI1NiJ9 \. [A-Za-z0-9_-]{20,80} \. [A-Za-z0-9_-]{20,60} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CARTO_KEY="eyJhbGciOiJIUzI1NiJ9.eyJhIjoiYWNfMjQ2M3dpNCIsImp0aSI6ImNkMDI2ZDk5In0.N2mk5Zg-e7_XC3NtLIM9UD8usbFz5pKRalGVYGkgZbZ"
+carto_api_key = 'eyJhbGciOiJIUzI1NiJ9.eyJhIjoiYWNfY2RlZmdoIiwianRpIjoiYWI2MTIzNDUifQ.BcDeFgHiJkLmNoPqRsTuVwXy'

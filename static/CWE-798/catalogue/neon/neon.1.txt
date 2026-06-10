@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Neon API Key
+# Provider: neon    Rule id (normalized): neon.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.neon.1
+#
+# Pattern: (?x) \b ( napi_ [a-zA-Z0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+napi_f6n4wv0d0nzglfk64c1bnzrc5ug82tmrmekh8h4hsxeq8zd0p5ii234bdkah71kw

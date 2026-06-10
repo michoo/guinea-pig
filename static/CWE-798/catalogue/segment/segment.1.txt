@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Segment Public API Token
+# Provider: segment    Rule id (normalized): segment.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.segment.1
+#   - noseyparker np.segment.1
+#   - titus       np.segment.1
+#
+# Pattern: (?xi) \b ( sgp_[A-Z0-9_-]{60,70} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sgp_pOqmnKCOAdIxlEbeRLlJKUOE4ravQJ3ZEijxzK4bpPrWaMNPP35kz4OU7ZVsDtgU
+"token": "sgp_b8eaD5d9Ae59a15a407bb7C88350bc85dc959EBE8277883d50Bc84dc960eE826"

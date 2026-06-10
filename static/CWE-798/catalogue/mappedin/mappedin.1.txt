@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mappedin API Key
+# Provider: mappedin    Rule id (normalized): mappedin.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mappedin.1
+#
+# Pattern: (?x) \b ( mik_[a-zA-Z0-9]{26} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MAPPEDIN_KEY=mik_a1B2c3D4e5F6g7H8i9J0k1L2m3

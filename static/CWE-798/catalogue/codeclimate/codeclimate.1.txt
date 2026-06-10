@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: CodeClimate Reporter ID
+# Provider: codeclimate    Rule id (normalized): codeclimate.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.codeclimate.1
+#   - noseyparker np.codeclimate.1
+#   - titus       np.codeclimate.1
+#
+# Pattern: (?xi) (?: CODECLIMATE| CC_TEST_REPORTER_ID) (?:.|[\n\r]){0,64}? \b ( [a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+- RAILS_ENV=test CODECLIMATE_REPO_TOKEN=d37a8b9e09642cb73cfcf4e1284815fc3d6a55a7714110187ac59856ae4ab5ad
+- uses: paambaati/codeclimate-action@v2.2.4
+env:
+  CC_TEST_REPORTER_ID: 945dfb58a832d233a3caeb84e3e6d3be212e8c7abcb48117fce63b9adcb43647
+CODECLIMATE_API_TOKEN=d37a8b9e09642cb73cfcf4e1284815fc3d6a55a7714110187ac59856ae4ab5ad
+CODECLIMATE_API_TOKEN="d37a8b9e09642cb73cfcf4e1284815fc3d6a55a7714110187ac59856ae4ab5ad"

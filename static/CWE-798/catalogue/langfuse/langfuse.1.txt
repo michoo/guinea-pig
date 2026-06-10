@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Langfuse Secret Key
+# Provider: langfuse    Rule id (normalized): langfuse.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.langfuse.1
+#
+# Pattern: (?x) \b ( sk-lf -[0-9a-fA-F]{8} -[0-9a-fA-F]{4} -[0-9a-fA-F]{4} -[0-9a-fA-F]{4} -[0-9a-fA-F]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sk-lf-a1b2c3d4-e5f6-7890-abcd-ef1234567890
+LANGFUSE_SECRET_KEY="sk-lf-9f8e7d6c-5b4a-3210-fedc-ba0987654321"

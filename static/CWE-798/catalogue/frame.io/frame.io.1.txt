@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Frame.io API token
+# Provider: frame.io    Rule id (normalized): frame.io.1
+#
+# Detected by this rule:
+#   - titus       kingfisher.frame.io.1
+#
+# Pattern: (?xi) \b ( fio-u-(?:[A-Z0-9_-]{16}){4} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+fio-u-TaWoPIBovaGCbBkUtGPKWS0D3cu254VA33IFCCrtwl8J2Dtq2pMJ9MvNHmNoL2XX

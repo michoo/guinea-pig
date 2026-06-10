@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Docker Hub Username
+# Provider: dockerhub    Rule id (normalized): dockerhub.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dockerhub.2
+#
+# Pattern: (?xi) \b docker (?:.|[\n\r]){0,32}? (?: -u\s+ | --username[=\s]+ | user(?:name)?[=:\s]+["']? ) ( [a-z0-9][a-z0-9_-]{2,29} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+docker login -u gemesa -p dckr_pat_xxx
+docker login --username=myuser
+DOCKER_USERNAME=myuser
+docker_user: "myuser"

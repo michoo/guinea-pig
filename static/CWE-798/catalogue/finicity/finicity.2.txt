@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Finicity client secret
+# Provider: finicity    Rule id (normalized): finicity.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.finicity.2
+#   - titus       kingfisher.finicity.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    finicity-api-token
+#   - gitleaks    finicity-client-secret
+#   - betterleaks finicity-api-token
+#   - betterleaks finicity-client-secret
+#
+# Pattern: (?xi) \b finicity (?:.|[\n\r]){0,64}? \b ( [a-z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+finicity-clientsecret = 'geruj4LFyu0NBeBOnQvo'

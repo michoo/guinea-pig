@@ -1,0 +1,31 @@
+# Remediation for CWE-653: Improper Isolation or Compartmentalization
+# Fix: Disable host namespaces (hostPID/hostIPC/hostNetwork:false) and harden the container securityContext.
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example
+spec:
+  hostPID: false
+  hostIPC: false
+  hostNetwork: false
+  containers:
+    - name: web
+      image: nginx
+      ports:
+        - name: web
+          containerPort: 80
+          protocol: TCP
+      securityContext:
+        allowPrivilegeEscalation: false
+        runAsNonRoot: true
+        capabilities:
+          drop:
+            - ALL
+      resources:
+        limits:
+          cpu: "500m"
+          memory: "256Mi"
+        requests:
+          cpu: "100m"
+          memory: "128Mi"

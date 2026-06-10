@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pinata JWT
+# Provider: pinata    Rule id (normalized): pinata.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pinata.3
+#
+# Pattern: (?x) (?i:pinata) (?:.|[\n\r]){0,32}? \b ( (?:ey|ewogIC)[A-Za-z0-9_-]{12,512} \. ey[A-Za-z0-9_-]{0,512} \. [A-Za-z0-9_-]{24,512} ) (?:[^A-Za-z0-9_-]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PINATA_JWT=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE4MDc5MTQxNjAsImF1dGhlbnRpY2F0aW9uVHlwZSI6InNjb3BlZEtleSIsInNjb3BlZEtleUtleSI6IjAxN2JiMzkyZGNmZTFmY2ZlMDA5Iiwic2NvcGVkS2V5U2VjcmV0IjoiYzljNzY2MzQ3MGZmZTZhMTFkMmU5ZWY2MDdiYTMyOTU0ZTRlYTNkYTdkN2U2NjI2NTBkMGViYThiY2MyODAxZiJ9.abcdefghijklmnopqrstuvwxyzABCDEF
+pinata JWT: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE4MDc5MTQxNjAsImF1dGhlbnRpY2F0aW9uVHlwZSI6InNjb3BlZEtleSIsInNjb3BlZEtleUtleSI6IjAxN2JiMzkyZGNmZTFmY2ZlMDA5Iiwic2NvcGVkS2V5U2VjcmV0IjoiYzljNzY2MzQ3MGZmZTZhMTFkMmU5ZWY2MDdiYTMyOTU0ZTRlYTNkYTdkN2U2NjI2NTBkMGViYThiY2MyODAxZiJ9.abcdefghijklmnopqrstuvwxyzABCDEF

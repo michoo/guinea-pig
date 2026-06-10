@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Akamai API Client Secret
+# Provider: akamai    Rule id (normalized): akamai.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.akamai.2
+#
+# Pattern: (?x) \b (?i:client[_-]?mysecret|client[_-]?secret) \s*=\s* ( [A-Za-z0-9+/=-]{20,36} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+client-secret=431733QPkO-TgxBHBnH6alirfy
+client-mysecret=BcDeFgHi2345JKLM67nopqRS
+client_secret = C113nt53KR3TN6N90yVuAgICxIRwsObLi0E67/N8eRN=

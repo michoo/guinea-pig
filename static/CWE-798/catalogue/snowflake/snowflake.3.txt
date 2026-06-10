@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Snowflake Account Host
+# Provider: snowflake    Rule id (normalized): snowflake.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.snowflake.3
+#
+# Pattern: (?xi) \b ( [a-z0-9_-]+(?:\.[a-z0-9_-]+)*\.snowflakecomputing\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+account = "xy12345.us-east-1.snowflakecomputing.com"
+host=acme-prod.eu-west-1.aws.snowflakecomputing.com

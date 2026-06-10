@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DevCycle Mobile SDK Key
+# Provider: devcycle    Rule id (normalized): devcycle.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.devcycle.2
+#
+# Pattern: (?x) \b ( dvc_mobile_[A-Za-z0-9]{8,32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+dvc_mobile_abc12345
+mobileKey: "dvc_mobile_abcdefg1234"

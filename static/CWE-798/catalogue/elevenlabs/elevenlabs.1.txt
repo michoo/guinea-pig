@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: ElevenLabs API Key
+# Provider: elevenlabs    Rule id (normalized): elevenlabs.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.elevenlabs.1
+#   - titus       kingfisher.elevenlabs.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks elevenlabs-api-key
+#
+# Pattern: (?x) \b ( sk_ [0-9a-fA-F]{48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sk_2a30e5a0d39d5f2c5f6a9d2f95cd016049a6323985479bfd
+sk_da9c0613fdeecfab10b302d6f39a3e371f774feb9eafed56
+sk_82a331629e2128ef70396600809b6a2ff4e433154fa27e1b

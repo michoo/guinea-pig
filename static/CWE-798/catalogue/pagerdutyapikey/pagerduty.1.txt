@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PagerDuty API Key
+# Provider: pagerdutyapikey    Rule id (normalized): pagerduty.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pagerduty.1
+#   - titus       kingfisher.pagerduty.1
+#
+# Pattern: (?xi) (?: pd[_-]? | pagerduty[_-]? | pagerduty ) \W{0,20} (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( u\+[A-Z0-9_+-]{18} | # personal user token (20 chars) [A-Z0-9_-]{20} | # legacy PAT (20 chars, mixed case) [a-f0-9]{32} # …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pagerduty: Token token=u+Lyhd2_N2MCy+ZoH-S5
+pd_key = u+3xVszZ-b4m+T6d23KA
+pagerduty token=ABCDEF1234567890ABCDEF1234567890

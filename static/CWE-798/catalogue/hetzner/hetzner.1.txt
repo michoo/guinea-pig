@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Hetzner Cloud API Token
+# Provider: hetzner    Rule id (normalized): hetzner.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hetzner.1
+#
+# Pattern: (?xi) \b (?:hetzner|hcloud) (?:.|[\n\r]){0,48}? \b ( [A-Z0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HETZNER_API_TOKEN=CqM049yakVZO8EndHyyawia3EjIboWMVeoEeMW0UVN0SpTXryKh0zrtnGpeyAjTs
+HCLOUD_TOKEN=aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789aBcDeFgHiJkLmNoPqRsTuVwXy012

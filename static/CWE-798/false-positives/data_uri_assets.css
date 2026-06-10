@@ -1,0 +1,13 @@
+/*
+  FALSE POSITIVE — not a secret.
+  Resembles: base64 secret / generic high-entropy rules (long base64 blob).
+  Why benign: inline data: URIs embed small static assets (a 1x1 PNG, an SVG icon)
+  as base64. The payload is image bytes, not a credential.
+*/
+.spinner {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==");
+}
+
+.checkmark {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTkgMTYuMkw0LjggMTJsLTEuNCAxLjRMOSAxOSAyMSA3bC0xLjQtMS40eiIvPjwvc3ZnPg==");
+}

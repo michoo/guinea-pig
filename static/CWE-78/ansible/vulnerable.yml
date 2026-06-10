@@ -1,0 +1,8 @@
+# CWE-78: Improper Neutralization of Special Elements used in an OS Command (Command Injection)
+# The shell task interpolates an unsanitized user-controlled variable directly into a command.
+---
+- name: Command injection example
+  hosts: all
+  tasks:
+    - name: Run command with user input
+      ansible.builtin.shell: "grep {{ user_input }} /var/log/app.log"

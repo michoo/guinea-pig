@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry (regex-scanner-only): vault-service-token
+#
+# Detected by this rule:
+#   - betterleaks vault-service-token
+#   - gitleaks    vault-service-token
+#
+# Identified a Vault Service Token, potentially compromising infrastructure security and access to sensitive credentials.
+# Regex: \b((?:hvs\.[\w-]{90,120}|s\.(?i:[a-z0-9]{24})))(?:[\x60'"\s;]|\\[nr]|$)
+#
+# Synthesized fake credential matching the regex — safe to commit.
+
+hvs.Ab1cD2eF3Ab1cD2eF3Ab1cD2eF3Ab1cD2eF3Ab1cD2eF3Ab1cD2eF3Ab1cD2eF3Ab1cD2eF3Ab1cD2eF3Ab1cD2eF3Ab1cD2eF3gH4iJ

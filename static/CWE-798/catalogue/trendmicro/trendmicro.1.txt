@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Trend Micro Deep Security API Key
+# Provider: trendmicro    Rule id (normalized): trendmicro.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.trendmicro.1
+#
+# Pattern: (?xi) (?:deepsecurity|api[_-]?secret[_-]?key) (?:.|[\n\r]){0,32}? [=:"'\s] \b ( [A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12} : [A-Fa-f0-9]{8}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{4}-[A-Fa-f0-9]{12} : [A-Z …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+configuration.api_key['api-secret-key'] = "A1B2C3D4-123F-789B-8730-BFB8F436C404:8C8ABCB9-C17A-4074-B439-C80F512FCC8A:0b84PcDP8pMKfhY28a5cTXL03bgrMnPYHzuKLxwvz8U="
+api_secret_key = "E5F6A7B8-1234-5678-ABCD-EF0123456789:12345678-ABCD-1234-ABCD-123456789ABC:Xk93PcDP8pMKfhY28a5cTXL03bgrMnPYHzuKLxwvXY="

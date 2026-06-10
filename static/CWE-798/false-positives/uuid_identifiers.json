@@ -1,0 +1,7 @@
+{
+  "_false_positive_note": "NOT secrets. Resembles hex/token rules via 32 hex digits. These are random UUID v4 resource identifiers — opaque public ids, not credentials.",
+  "tenantId": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+  "requestId": "9b2e4d1a-7c3f-4e8b-a1d6-2f5c8e0b9a47",
+  "correlationId": "550e8400-e29b-41d4-a716-446655440000",
+  "traceId": "0af7651916cd43dd8448eb211c80319c"
+}

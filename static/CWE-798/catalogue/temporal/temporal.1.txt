@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Temporal Cloud API Key
+# Provider: temporal    Rule id (normalized): temporal.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.temporal.1
+#
+# Pattern: (?x) \b ( eyJ[A-Za-z0-9_-]{10,} \. [A-Za-z0-9_-]*Y2NvdW50X2lk (?# payload contains "account_id" ) [A-Za-z0-9_-]*InRlbXBvcmFsLmlv (?# payload contains "temporal.io" ) [A-Za-z0-9_-]*(?:ICJrZXlfaWQiOi|a2V5X2lk|rZXlfaWQi) (?# payload contains " …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+temporal_api_key="eyJhbGciOiJFUzI1NiIsImtpZCI6IlNhbXBsZSJ9.eyJhY2NvdW50X2lkIjoic2FtcGxlIiwiYXVkIjpbInRlbXBvcmFsLmlvIl0sImlzcyI6InRlbXBvcmFsLmlvIiwia2V5X2lkIjoic2FtcGxlLWtleSIsInN1YiI6InVzZXItMTIzIiwiZXhwIjoyMDAwMDAwMDAwfQ.c2lnbmF0dXJlX3BsYWNlaG9sZGVyXzEyMzQ1Njc4OTA"
+temporal --profile cloud config set --prop api_key --value "eyJhbGciOiJFUzI1NiIsImtpZCI6IkFub3RoZXJLZXkifQ.eyJhY2NvdW50X2lkIjoidGVzdC1hY2N0IiwiYXVkIjpbInRlbXBvcmFsLmlvIl0sImlzcyI6InRlbXBvcmFsLmlvIiwia2V5X2lkIjoidGVzdC1rZXktaWQiLCJzdWIiOiJ1c2VyLXRlc3QiLCJleHAiOjIwMDAwMDAwMDB9.c2lnbmF0dXJlX3Rlc3RfdmFsdWVfMDEyMzQ1Njc4OTAi

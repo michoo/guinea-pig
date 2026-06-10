@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Clearbit API Key
+# Provider: clearbit    Rule id (normalized): clearbit.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.clearbit.1
+#   - titus       kingfisher.clearbit.1
+#
+# Pattern: (?xi) \b clearbit (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [0-9a-z_]{35} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+clearbit_token = tq50141fm92fl4nid9c1c7liouhbertbvg1

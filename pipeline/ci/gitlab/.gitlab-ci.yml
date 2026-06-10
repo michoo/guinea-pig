@@ -1,0 +1,22 @@
+# Intentionally-insecure GitLab CI pipeline (test fixture for plumber / CI scanners).
+# Documented weaknesses:
+#   CWE-829 : mutable image tag (node:latest) — no digest pin
+#   CWE-494 : curl | sh — remote script executed without integrity check
+#   CWE-94  : eval of an untrusted CI variable
+#   CWE-532 : secret echoed into the job log
+stages: [build, deploy]
+
+build:
+  stage: build
+  image: node:latest                       # CWE-829: unpinned mutable image
+  script:
+    - curl -s https://example.com/install.sh | sh   # CWE-494: pipe-to-shell
+    - eval "$CI_MERGE_REQUEST_TITLE"        # CWE-94: eval of untrusted variable
+    - npm install && npm run build
+
+deploy:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Deploy token is $DEPLOY_TOKEN"  # CWE-532: secret printed to the log
+    - ./deploy.sh

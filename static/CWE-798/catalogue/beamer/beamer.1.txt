@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Beamer API token
+# Provider: beamer    Rule id (normalized): beamer.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.beamer.1
+#   - titus       kingfisher.beamer.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    beamer-api-token
+#   - betterleaks beamer-api-token
+#
+# Pattern: (?xi) \b beamer (?:.|[\n\r]){0,64}? \b ( b_[A-Z0-9=_\\/\\\-+]{44} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+beamer = b_ByDfulghx2vmHbArJSF9QhxemJPQHOwplxuydlKEEbfe
+BEAMER_key = 'b_ByDfulghxvvmHb3rJSFfQhxe5JPQHOwplxuydlKEEbfe'
+beamer = b_ByDfulghxvvmHbArJSFfQhxemJPQHOwplxuydlKEEbfe
+BEAMER_key = 'b_ByDfulghxvvmHbArJSFfQhxemJPQHOwplxuydlKEEbfe'

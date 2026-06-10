@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry (regex-scanner-only): infomaniak-api-token
+#
+# Detected by this rule:
+#   - betterleaks infomaniak-api-token
+#
+# Detected an Infomaniak API token, which may expose hosting, mail, and cloud services to unauthorized access.
+# Regex: (?i)[\w.-]{0,50}?(?:infomaniak)(?:[ \t\w.-]{0,20})[\s'"]{0,3}(?:=|>|:{1,3}=|\|\||:|=>|\?=|,)[\x60'"\s=]{0,5}([A-Za-z0-9_\-]{60,100})(?:\\?['"\x60]|[\s;]|\\[nr]|$)
+#
+# Synthesized fake credential matching the regex — safe to commit.
+
+infomaniak_token = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"

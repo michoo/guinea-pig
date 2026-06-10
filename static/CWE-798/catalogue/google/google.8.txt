@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Google Maps API Key
+# Provider: google    Rule id (normalized): google.8
+#
+# Detected by this rule:
+#   - titus       np.google.8
+#
+# Pattern: (?xi) (?:google|gmap|gmaps|maps) (?:.|[\n\r]){0,30}? (?:api)? (?:.|[\n\r]){0,10}? (?:key|token|secret) (?:.|[\n\r]){0,20}? (?P<key>AIza[0-9A-Za-z_-]{35}) (?:[^0-9A-Za-z_-]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+googleMapsApiKey = "AIzaSyDxY1tef3VPt_15mO8JZvb70RAYHfUKeos"
+GOOGLE_MAPS_KEY=AIzaSyB4sUaCes5bR_87qNb7eUVQN72_vv8mpbU
+gmaps_api_key: AIzaSyAKqPaCesigvvNNcRt_gL0A6cgx3ZB-kuQ
+GMAP_KEY="AIzaSyBnAoaCesVUco4MXf4enYCVBg6ZnpY49N-"

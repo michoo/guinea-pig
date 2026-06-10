@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Telnyx API V2 Key
+# Provider: telnyx    Rule id (normalized): telnyx.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.telnyx.1
+#
+# Pattern: (?x) \b ( KEY[0-9A-Za-z_-]{55} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TELNYX_API_KEY=KEY017D98C041711C2B8B6F5A2E50702659_hwntpZaC4XD1OEQEaKWydG

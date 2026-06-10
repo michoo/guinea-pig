@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Endor Labs API Key
+# Provider: endorlabs    Rule id (normalized): endorlabs.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.endorlabs.1
+#   - titus       kingfisher.endorlabs.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks endorlabs-api-key
+#   - betterleaks endorlabs-api-secret
+#
+# Pattern: (?xi) \b ENDOR_API_CREDENTIALS_KEY (?:.|[\n\r]){0,32}? ( endr\+[A-Za-z0-9-]{16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ENDOR_API_CREDENTIALS_KEY=endr+foo1234567890abc

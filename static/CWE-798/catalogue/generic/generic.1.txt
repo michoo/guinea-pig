@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic Secret
+# Provider: generic    Rule id (normalized): generic.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.generic.1
+#   - noseyparker np.generic.1
+#   - titus       np.generic.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?xi) secret .{0,20} ( [0-9a-z]{32,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+private static String CLIENT_SECRET = "6fb1cff7690db9ac066cadbbde8e3c078efdabcf";

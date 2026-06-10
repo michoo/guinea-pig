@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Stripe Publishable API Key
+# Provider: stripe    Rule id (normalized): stripe.3
+#
+# Detected by this rule:
+#   - titus       np.stripe.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    stripe-access-token
+#   - betterleaks stripe-access-token
+#
+# Pattern: (?x)(?i) (?: publishable_key | publishablekey | api_key | apikey | access_key | accesskey ) .{0,3} [\ \t]* (?: : | = | := | => | , | ' | " ) [\ \t]* .{0,3} (?P<key> pk_ (?:live|test) _ [a-z0-9]{24,} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+apiKey=pk_live_51H2Bv2eZvKYlo2C0qTNQN6z
+STRIPE_PUBLISHABLE_KEY=pk_test_aQbfVWeaCesES5FRSY7iIjk9
+publishable_key: "pk_live_AbCdEfGhIjKlMnOpQrStUvWx"

@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Adobe IO Product ID
+# Provider: adobe    Rule id (normalized): adobe.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.adobe.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    adobe-client-id
+#   - gitleaks    adobe-client-secret
+#   - betterleaks adobe-client-id
+#   - betterleaks adobe-client-secret
+#
+# Pattern: (?xi) \b adobe (?:.|[\n\r]){0,64}? \b ( [a-z0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+adobeProduct = lV9ASPsd2P3d

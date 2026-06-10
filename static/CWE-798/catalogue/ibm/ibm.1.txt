@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: IBM Cloud User API Key
+# Provider: ibm    Rule id (normalized): ibm.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ibm.1
+#   - titus       kingfisher.ibm.1
+#
+# Pattern: (?xi) \b (?:ibm(?:cloud)?|bx) (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? ( [0-9A-Z_-]{42,44} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ibmcloud_apikey = abcdef0123_56789abcdef0123456789abcdef01234
+ibm_platform_key="f-_RrJDVnuVh07HNTcmnQx_b6CbcQsxmEarVm9P_RWtF"

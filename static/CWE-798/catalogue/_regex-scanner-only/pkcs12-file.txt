@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry (regex-scanner-only): pkcs12-file
+#
+# Detected by this rule:
+#   - betterleaks pkcs12-file
+#   - gitleaks    pkcs12-file
+#
+# Found a PKCS #12 file, which commonly contain bundled private keys.
+#
+# Synthesized fake credential matching the regex — safe to commit.
+
+# (filename-based rule; no inline example)

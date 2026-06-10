@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry (regex-scanner-only): private-key
+#
+# Detected by this rule:
+#   - betterleaks private-key
+#   - gitleaks    private-key
+#
+# Identified a Private Key, which may compromise cryptographic security and sensitive data encryption.
+# Regex: (?i)-----BEGIN[ A-Z0-9_-]{0,100}PRIVATE KEY(?: BLOCK)?-----[\s\S-]{64,}?KEY(?: BLOCK)?-----
+#
+# Synthesized fake credential matching the regex — safe to commit.
+
+-----BEGIN RSA PRIVATE KEY-----
+MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4
+-----END RSA PRIVATE KEY-----

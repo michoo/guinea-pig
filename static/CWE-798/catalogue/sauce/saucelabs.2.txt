@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sauce Labs API Endpoint
+# Provider: sauce    Rule id (normalized): saucelabs.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.saucelabs.2
+#
+# Pattern: (?xi) ( (?:api|ondemand)\.(?:us|eu)-(?:west|east|central)-[0-9]\.saucelabs\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+api.us-west-1.saucelabs.com
+api.eu-central-1.saucelabs.com
+ondemand.eu-central-1.saucelabs.com

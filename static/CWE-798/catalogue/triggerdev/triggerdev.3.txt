@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Trigger.dev Project Reference
+# Provider: triggerdev    Rule id (normalized): triggerdev.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.triggerdev.3
+#
+# Pattern: (?xi) \b (?:TRIGGER_PROJECT_REF|projectRef|trigger(?:\.config)?|trigger\.dev) (?:.|[\n\r]){0,48}? ( proj_[a-z0-9]{12,32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TRIGGER_PROJECT_REF=proj_yubjwjsfkxnylobaqvqz
+projectRef: "proj_yubjwjsfkxnylobaqvqz"

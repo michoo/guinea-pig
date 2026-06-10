@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Intra42 Client Secret (s-s4t2ud/af)
+# Provider: intra42    Rule id (normalized): intra42.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.intra42.2
+#   - titus       kingfisher.intra42.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    intra42-client-secret
+#   - betterleaks intra42-client-secret
+#
+# Pattern: (?xi) \b ( s-s4t2(?:ud|af)-[a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+INTRA42_CLIENT_SECRET="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"

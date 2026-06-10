@@ -1,0 +1,25 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Shopify access token
+# Provider: shopify    Rule id (normalized): shopify.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.shopify.1
+#   - noseyparker np.shopify.1
+#   - titus       np.shopify.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    shopify-access-token
+#   - gitleaks    shopify-custom-access-token
+#   - gitleaks    shopify-private-app-access-token
+#   - gitleaks    shopify-shared-secret
+#   - betterleaks shopify-access-token
+#   - betterleaks shopify-custom-access-token
+#   - betterleaks shopify-private-app-access-token
+#   - betterleaks shopify-shared-secret
+#
+# Pattern: (?xi) \b ( (?:shpat|shpca|shppa|shpss)_[a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+shopify_app_secret: "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"
+handsomestranger.myshopify.com
+store.handsomestranger.myshopify.com

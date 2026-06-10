@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Databento API Key
+# Provider: databento    Rule id (normalized): databento.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.databento.1
+#
+# Pattern: (?x) \b ( db-[A-Za-z0-9]{29} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DATABENTO_API_KEY=db-abc123def456ghi789jkl012mno34

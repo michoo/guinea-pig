@@ -1,0 +1,13 @@
+# Remediation for CWE-78: Improper Neutralization of Special Elements used in an OS Command (Command Injection)
+# Fix: Use the command module with an argv list so the user variable is passed as a literal argument, not shell-interpolated.
+---
+- name: Safe command example
+  hosts: all
+  tasks:
+    - name: Run command with user input safely
+      ansible.builtin.command:
+        argv:
+          - grep
+          - "--"
+          - "{{ user_input }}"
+          - /var/log/app.log

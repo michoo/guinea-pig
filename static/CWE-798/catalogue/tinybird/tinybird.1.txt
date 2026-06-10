@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tinybird Static Token
+# Provider: tinybird    Rule id (normalized): tinybird.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tinybird.1
+#
+# Pattern: (?x) \b ( p\.eyJ1I[A-Za-z0-9_-]{80,260}\.[A-Za-z0-9_-]{43} ) (?:[^A-Za-z0-9_-]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+workspace admin token: p.eyJ1IjogIjdmMmM5YTQxLWI2ZDgtNGUwMy05MWFhLTU4YzI0YjdkMGU5NiIsICJpZCI6ICI1YTBiOGM3MS1kM2U0LTRmMjktOGI2NS0wYzlkMmU3YTRmMTMiLCAiaG9zdCI6ICJnY3AtZXVyb3BlLXdlc3QyIn0.QgGQO4xKgNTfZ6GHe8_sBeTk4b2axbZLEdvzCQYvHnw
+admin token: "p.eyJ1IjogImM5NGE3ZDUyLThmMDMtNDdiZS05YTE2LTJlODBkNWI3YzM0MSIsICJpZCI6ICIwZDdiMmY0OC02YTkxLTRjNWUtOGYzMC1iMmE2ZDU5ZTAxN2MiLCAiaG9zdCI6ICJnY3AtdXMtZWFzdDEifQ.rziyKeAZJYhenUJChcWxV1K8n_3ejHiS4XlzXK49jFI"
+user token: p.eyJ1IjogIjNiOGU3MmQwLWE5MTQtNGY2Yy04NmQxLTA1YzdlMjlhNGI2OCIsICJpZCI6ICJlMTdjNmYzMC00YjhhLTQxZDktOTI3ZS02YTA1YjM4YzJmNzQiLCAiaG9zdCI6ICJhd3MtdXMtZWFzdC0xIn0.IIU-mUxglkE7kOSc8tweaZIcwACiBNCqoGAnoeluISA

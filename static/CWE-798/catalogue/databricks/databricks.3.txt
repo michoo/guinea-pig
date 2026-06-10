@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Databricks Domain
+# Provider: databricks    Rule id (normalized): databricks.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.databricks.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    databricks-api-token
+#   - betterleaks databricks-api-token
+#
+# Pattern: (?xi) \b ( [a-z0-9-]+ (?: \.[a-z0-9\-]+ )* \. ( cloud\.databricks\.com | gcp\.databricks\.com | azurewebsites\.net ) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+company-name.cloud.databricks.com

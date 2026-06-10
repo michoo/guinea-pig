@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Linear API Key
+# Provider: linear    Rule id (normalized): linear.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.linear.1
+#   - titus       kingfisher.linear.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    linear-api-key
+#   - gitleaks    linear-client-secret
+#   - betterleaks linear-api-key
+#   - betterleaks linear-client-secret
+#
+# Pattern: (?xi) \b ( lin_api_ (?:[0-9A-Z]{8}){5} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+linear_api_key = lin_api_2thngjik222gkiihzivh242LU7zvkdvdgB14B41S
+lin_api_token:"lin_api_9A6bCDeF0Gh1Ij2Klm3No4PQr5St6Uv7Wx8YZaBc"

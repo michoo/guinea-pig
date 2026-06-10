@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tolgee Personal Access Token
+# Provider: tolgee    Rule id (normalized): tolgee.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tolgee.2
+#
+# Pattern: (?x) \b ( tgpat_[a-z0-9]{40,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TOLGEE_PAT=tgpat_c813fppevpm6smlv8gld2fqq7knqqfht5ri1vgo57gj6ivkbhp5

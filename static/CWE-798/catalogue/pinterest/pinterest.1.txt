@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pinterest Access Token
+# Provider: pinterest    Rule id (normalized): pinterest.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pinterest.1
+#
+# Pattern: (?x) \b ( pina_[a-zA-Z0-9_-]{20,200} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PINTEREST_ACCESS_TOKEN=pina_AbCdEfGhIjKlMnOpQrStUvWxYz1234567890

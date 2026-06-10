@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: OpenRouter API Key
+# Provider: openrouter    Rule id (normalized): openrouter.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.openrouter.1
+#   - titus       kingfisher.openrouter.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks openrouter-api-key
+#
+# Pattern: (?xi) \b ( sk-or-v1-[0-9a-f]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+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
+Authorization: Bearer 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

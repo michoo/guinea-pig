@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Nylas API Key
+# Provider: nylas    Rule id (normalized): nylas.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.nylas.1
+#   - titus       kingfisher.nylas.1
+#
+# Pattern: (?xi) \b nylas (?:.|[\n\r]){0,64}? (?:api[_-]?key|apikey|secret|private|access|token) (?:.|[\n\r]){0,64}? \b ( nyk_[A-Z0-9]{67} # common v3 API key format (71 chars total) | [0-9A-Z]{30} # legacy/older patterns seen in repos ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+NYLAS_API_KEY=nyk_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234
+nylas_token = 2temab2qpfioneggb01j2dhfllqgiu

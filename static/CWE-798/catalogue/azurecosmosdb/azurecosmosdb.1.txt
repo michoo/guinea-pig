@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure CosmosDB Account Key
+# Provider: azurecosmosdb    Rule id (normalized): azurecosmosdb.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurecosmosdb.1
+#
+# Pattern: (?x) \b (?: (?i:cosmos(?:db)?[_\s-]*(?:key|account[_\s-]*key|primary[_\s-]*key|secondary[_\s-]*key|master[_\s-]*key)) | (?i:azure[_\s-]*cosmos(?:db)?[_\s-]*(?:key|account_key|primary_key|master_key)) | (?i:documentdb(?:authkey|key)) ) (?:.| …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AZURE_COSMOSDB_KEY=oqb4TdY9T0hphvktd5fJnMiHuQqzVy1jd5sSuOpAbGkaoqTlrHl0BOJN2okcasinVLOJzfDbZo1L+ASt68RAhA==
+DocumentDbAuthKey=B/1EVX2Ui47X09tqU3GI/j+Nko9r5COPm0Hea9tfzitF9MQX9lZZiNO3tYQckWnt+rtlGIWS+sCx+AStkq8ZLg==

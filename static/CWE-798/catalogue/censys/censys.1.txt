@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Censys API ID
+# Provider: censys    Rule id (normalized): censys.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.censys.1
+#
+# Pattern: (?xi) \b censys (?:.|[\n\r]){0,32}? (?:API[_-]?ID|APP[_-]?ID|ID) (?:.|[\n\r]){0,16}? \b ( [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CENSYS_API_ID=a1b2c3d4-e5f6-7890-abcd-ef1234567890

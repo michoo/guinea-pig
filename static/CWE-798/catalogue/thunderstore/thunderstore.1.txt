@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Thunderstore API Token
+# Provider: thunderstore    Rule id (normalized): thunderstore.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.thunderstore.1
+#
+# Pattern: (?x) \b ( tss_[a-zA-Z0-9_-]{20,80} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+THUNDERSTORE_TOKEN=tss_AbCdEfGhIjKlMnOpQrStUvWxYz123456

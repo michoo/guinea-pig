@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: ThingsBoard Access Token
+# Provider: thingsboard    Rule id (normalized): thingsboard.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.thingsboard.1
+#   - noseyparker np.thingsboard.1
+#   - titus       np.thingsboard.1
+#
+# Pattern: (?x) \b thingsboard\.cloud/api/v1/ ( [a-z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+http://thingsboard.cloud/api/v1/354u1g321kcqc1oad3w7/telemetry
+https://thingsboard.cloud/api/v1/354u1g321kcqc1oad3w7/telemetry
+coap://coap.thingsboard.cloud/api/v1/354u1g321kcqc1oad3w7/telemetry

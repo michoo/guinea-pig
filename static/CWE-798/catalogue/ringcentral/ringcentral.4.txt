@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: RingCentral Redirect URI
+# Provider: ringcentral    Rule id (normalized): ringcentral.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ringcentral.4
+#
+# Pattern: (?xi) \b ring.?central (?:.|[\n\r]){0,64}? (?:redirect[_-]?uri|oauth[_-]?redirect)\b (?:.|[\n\r]){0,16}? [=:"'\s] ( https?://[^\s"'<>]{6,200} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RINGCENTRAL_REDIRECT_URI=https://example.com/ringcentral/callback
+ringcentral.redirect_uri = "https://localhost:8080/oauth/ringcentral"

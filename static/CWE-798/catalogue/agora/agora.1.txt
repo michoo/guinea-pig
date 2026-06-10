@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Agora App ID
+# Provider: agora    Rule id (normalized): agora.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.agora.1
+#
+# Pattern: (?xi) \b agora (?:.|[\n\r]){0,32}? (?:\b|_)(?:app[_-]?id|customer[_-]?id)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AGORA_APP_ID=78b8de76d5678a6feb2605721c0aefbe
+agora_app_id = "cf80de76d5430a6fbc2605721c0aefbe"

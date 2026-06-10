@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Okta Domain
+# Provider: okta    Rule id (normalized): okta.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.okta.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    okta-access-token
+#   - betterleaks okta-access-token
+#
+# Pattern: (?xi) ( [a-z0-9-]{1,40}\.okta(?:preview|-emea)?\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+company-name.okta.com

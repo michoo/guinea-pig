@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: ImageKit Private API Key
+# Provider: imagekit    Rule id (normalized): imagekit.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.imagekit.1
+#   - titus       kingfisher.imagekit.1
+#
+# Pattern: (?xi) \b imagekit (?:.|[\n\r]){0,64}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|PRIVATE_KEY) (?:.|[\n\r]){0,64}? \b ( (?-i:private_)[A-Z0-9_-]{8,128} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+IMAGEKIT_PRIVATE_KEY=private_rGAPQJbhBx
+imagekit token private_AbDcEf0124356789GhIjKlMn
+imagekit token private_AbCdEf0123456789GhIjKlMn

@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Elastic Cloud API Key
+# Provider: elastic    Rule id (normalized): elastic.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.elastic.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks elastic-cloud-api-key
+#
+# Pattern: (?x) \b (?: (?i:elastic(?:[_\s-]*(?:search|cloud))?) (?:.|[\n\r]){0,24}? (?i:api[_\s-]*key|apikey) | (?i:EC_API_KEY) ) (?:.|[\n\r]){0,16}? ( [A-Za-z0-9+/=]{40,120} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ELASTIC_CLOUD_API_KEY=VnVhQ2ZHY0JDZGJrUW0tZTVhT3g6dWkybHAyYXhUTm1zeWFrdzl0dk5udw==

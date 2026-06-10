@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Storage Account Name
+# Provider: azurestorage    Rule id (normalized): azurestorage.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurestorage.1
+#
+# Pattern: (?xi) (?: # A) Connection string: AccountName=<name> (?i:AccountName)\s*=\s*([a-z0-9]{3,24})(?:\b|[^a-z0-9]) | # B) Blob endpoint URL: <name>.blob.core.windows.net ([a-z0-9]{3,24})\.blob\.core\.windows\.net\b | # C) Explicit KV labels near  …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AccountName=mystorageaccount
+mystorageaccount.blob.core.windows.net
+azure_storage_name="prodblob2024"

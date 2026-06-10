@@ -1,0 +1,8 @@
+# CWE-829: Inclusion of Functionality from Untrusted Control Sphere
+# The job uses a mutable image tag (node:latest) with no digest, so the pulled code is not pinned.
+build:
+  image: node:latest
+  stage: build
+  script:
+    - npm ci
+    - npm run build

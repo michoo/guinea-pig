@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Jira Data Center Personal Access Token
+# Provider: jira    Rule id (normalized): jira.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.jira.3
+#
+# Pattern: (?x) (?i:jira|atlassian) (?:.|[\n\r]){0,16}? \b ( [MNO][A-Za-z0-9+/]{15} O[g-v] [A-Za-z0-9+/]{26} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+jira_token: "Mjc2NTIyMTkxNTY2OkurZAe0a40+xLE2fJRBcq/P2vsL"
+atlassian_PAT=OTI0NTIyOQkzMTk3OgyypbjdwdDzTavLf2R1Ls0XJAPm

@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Vercel API Token (legacy 24-char)
+# Provider: vercel    Rule id (normalized): vercel.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.vercel.1
+#   - titus       kingfisher.vercel.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks vercel-ai-gateway-key
+#   - betterleaks vercel-api-token
+#   - betterleaks vercel-app-access-token
+#   - betterleaks vercel-app-refresh-token
+#   - betterleaks vercel-integration-token
+#
+# Pattern: (?xi) \b vercel (?:.|[\n\r]){0,32}? \b ( [A-Z0-9]{24} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+vercel-key = DdZV6ZDZW6Vpl7n7JqtrCE5i
+vercel_token = zyMBA1qVEMAf4UNNZtCAbg6u
+vercel_api_key = MTg0AW799OY1HmyDdn84or3C
+vercel_secret = A7n9Xfp3tBz7D0XpOTMWpiOM

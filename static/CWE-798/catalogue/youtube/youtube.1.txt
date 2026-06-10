@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: YouTube API Key
+# Provider: youtube    Rule id (normalized): youtube.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.youtube.1
+#   - titus       np.youtube.1
+#
+# Pattern: (?x) \b (?i:youtube) (?:.|[\n\r]){0,32}? \b ( AIza[a-zA-Z0-9_\-\\]{35} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+"youtube":{"api_key":"AIzaSyCKHtojSg-UNteBWlLUR2kHSgjGpUScYjk"
+YOUTUBE_API_KEY=AIzaSyAKqPaCesigvvNNcRt_gL0A6cgx3ZB-kuQ
+var config = {
+  apiKey: 'AIzaSyBJguaCesZXozdkPVpBZNbGMVJ_LTOYuQA',
+  channelId: 'UCxxxxxxxxxxxxxxxxxxxxxx'
+};
+youtube_key: AIzaSyDDwPaCesKWwf-6Rq7vkpOkihlVr6uaxkA

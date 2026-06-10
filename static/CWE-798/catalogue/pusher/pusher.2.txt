@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pusher Channels App Secret
+# Provider: pusher    Rule id (normalized): pusher.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pusher.2
+#
+# Pattern: (?xi) \b (?:pusher|beams|chatkit|channels) (?:.|[\n\r]){0,64}? \b(?:app[_-]?secret|secret)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [a-f0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pusher
+app_secret=4dc86652b4f69252461e
+pusher.secret = 'a1b2c3d4e5f678901234'

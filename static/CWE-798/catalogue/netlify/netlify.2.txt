@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Netlify API Key
+# Provider: netlify    Rule id (normalized): netlify.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.netlify.2
+#   - titus       kingfisher.netlify.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    netlify-access-token
+#   - betterleaks netlify-access-token
+#
+# Pattern: (?xi) \b netlify (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9_-]{43,45} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+netlify_token=G5yT54abRasekrOpe7SaArsowiuHTeR45sfEhsH-K1L2
+netlify_key=H7xZ98cdWbsemqNpv8UaXtsnyjKgVeQ34rsDkpM-N5P6

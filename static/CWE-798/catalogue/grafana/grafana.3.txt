@@ -1,0 +1,37 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Grafana Service Account Token
+# Provider: grafana    Rule id (normalized): grafana.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.grafana.3
+#   - noseyparker np.grafana.3
+#   - titus       np.grafana.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    grafana-api-key
+#   - gitleaks    grafana-cloud-api-token
+#   - gitleaks    grafana-service-account-token
+#   - betterleaks grafana-api-key
+#   - betterleaks grafana-cloud-api-token
+#   - betterleaks grafana-service-account-token
+#
+# Pattern: (?xi) \b ( glsa_[A-Z0-9]{32}_[A-F0-9]{8} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+curl -H "Authorization: Bearer glsa_HOruNAb7SOiCdshU7algkrq7FDsNSLAa_55e2f8be" -X GET '<grafana_url>/api/org' | jq
+// headers: { Authorization: `Bearer glsa_Sof0HKi3agxrQP9qm5r2G98VacBNwV5P_9b638c45` }
+curl -H "Authorization: Bearer glsa_HOruNAb7SOiCdshU7algkrq7FDsNSLAa_55e2f8be" -X GET '<grafana_url>/api/access-control/user/permissions' | jq
+// getData()
+// {
+//  let url="http://localhost:4200/api/search"
+//  const headers = new HttpHeaders({
+//    'Content-Type': 'application/json',
+//    'Authorization': `Bearer glsa_Sof0HKi3agxrQP9qm5r2G98VacBNwV5P_9b638c45`
+//  })
+//  return this.http.get(url, {headers: headers});
+// }
+Authorization: Bearer glsa_HOruNAb7SOiCdshU9algkrq7FDsNSLAa_54e2f8be
+GRAFANA_TOKEN=glsa_9244xlVFZK0j8Lh4fU8Cz6Z5tO664zIi_7a762939
+const headers = new HttpHeaders({
+  'Authorization': `Bearer glsa_Sof0HKi3agxrQP9qm5r2G98VacBNwV5P_9b638c45`
+})

@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Google Cloud Storage Bucket
+# Provider: google    Rule id (normalized): gcs.1
+#
+# Detected by this rule:
+#   - noseyparker np.gcs.1
+#   - titus       np.gcs.1
+#
+# Pattern: (?x) (?: ^ | [\s/"'] | %2F ) ( (?: [a-zA-Z0-9_-]+ \. )+ (?# bucket name as subdomain ) storage\.googleapis\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+c.storage.googleapis.com
+some-bucket.example.com.storage.googleapis.com

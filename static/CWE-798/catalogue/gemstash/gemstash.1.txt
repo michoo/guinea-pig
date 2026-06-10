@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Gemstash API Key
+# Provider: gemstash    Rule id (normalized): gemstash.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gemstash.1
+#
+# Pattern: (?xi) :gemstash[_-]?key: \s* ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+:gemstash_key: f485c343aec6ec5829e0b32ae74cd521
+:gemstash-key: 2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e

@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MySQL URI with Credentials
+# Provider: mysql    Rule id (normalized): mysql.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mysql.1
+#   - titus       kingfisher.mysql.1
+#
+# Pattern: (?xi) ( mysql:\/\/ (?: [a-z0-9._%+\-]+ ) : (?: [^\s:@]+ ) @ (?: \[ [0-9a-f:.]+ \] | [a-z0-9.-]+ ) (?:: \d{2,5} )? (?: \/ [^\s"'?:]+ )? (?: \? [^\s"']* )? )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CONNECTION_URI="mysql://nimda:m42p!o@2wd@google.com:3306/elephant"
+mysql://user:pass@example.com:4406/app_db?ssl-mode=REQUIRED

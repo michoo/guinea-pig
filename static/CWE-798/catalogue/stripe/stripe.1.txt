@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Stripe Publishable Key
+# Provider: stripe    Rule id (normalized): stripe.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.stripe.1
+#   - noseyparker np.stripe.1
+#   - titus       np.stripe.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    stripe-access-token
+#   - betterleaks stripe-access-token
+#
+# Pattern: (?x) \b ( pk_live_[A-Za-z0-9]{24,128} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+stripe_pub_key = pk_live_HQS0j4H75XpthOW87eY1sXa2BYz3Ab
+stripe_pub_key = pk_live_51O4GlNLQpd8Ph8H3or6Sv8fhuSPIQncX0dY318y8Hc9SYRyS4aeyrTN19ztOmAsuVZSTKNfI7RZoSOwNkLa0cwm010oLA68VFA
+Stripe.api_key = "sk_live_dhhfUUyfrAace5dBAZ10JrAD"
+var stripe = require("stripe")("sk_live_qdyFazIVmace52bThiOzbEVT");

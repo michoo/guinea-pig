@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sendbird API Token
+# Provider: sendbird    Rule id (normalized): sendbird.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sendbird.2
+#   - titus       kingfisher.sendbird.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sendbird-access-id
+#   - gitleaks    sendbird-access-token
+#   - betterleaks sendbird-access-id
+#   - betterleaks sendbird-access-token
+#
+# Pattern: (?xi) sendbird (?:.|[\\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sendbird_api_token: 1234567890abcdef1234567890abcdef12345678

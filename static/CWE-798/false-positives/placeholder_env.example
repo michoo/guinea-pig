@@ -1,0 +1,12 @@
+# FALSE POSITIVE — not secrets.
+# Resembles: generic-api-key / password assignment rules (KEY = "value").
+# Why benign: this is a committed .env.example template. Every value is an obvious
+# placeholder the developer is expected to replace locally; none is a real credential.
+
+DATABASE_URL=postgres://user:password@localhost:5432/mydb
+API_KEY=your_api_key_here
+SECRET_TOKEN=changeme
+STRIPE_SECRET_KEY=sk_test_xxxxxxxxxxxxxxxxxxxxxxxx
+JWT_SECRET=replace-with-a-random-string
+ADMIN_PASSWORD=CHANGE_ME_BEFORE_DEPLOY
+GITHUB_TOKEN=ghp_0000000000000000000000000000000000

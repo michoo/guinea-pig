@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Elastic Email API Key
+# Provider: elasticemail    Rule id (normalized): elasticemail.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.elasticemail.1
+#
+# Pattern: (?xi) \b elasticemail (?:.|[\n\r]){0,64}? \b(?:api[_-]?key|apikey|key)\b (?:.|[\n\r]){0,16}? [=:"'\s>] \b ( [a-f0-9]{8}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+elasticemail
+apikey => '8a2d35a4-2e83-41c2-9509-5c6e116ebc2b'
+elasticemail
+api-key = 7b1f46a3-3d92-52b1-a81e-6d7f227fcd3c

@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Hashicorp Vault Unseal Key
+# Provider: hashicorp    Rule id (normalized): hashicorp.7
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hashicorp.7
+#   - noseyparker np.hashicorp.7
+#   - titus       np.hashicorp.7
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    hashicorp-tf-api-token
+#   - gitleaks    hashicorp-tf-password
+#   - betterleaks hashicorp-tf-api-token
+#   - betterleaks hashicorp-tf-password
+#
+# Pattern: (?x) (?i: unseal ) \b .{1,10} ([a-zA-Z0-9+/]{44}) (?: [^a-zA-Z0-9+/] | $ )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Unseal Key 2: 0tZn+7QQCxphpHwTm7/dC3LpP5JGIbYl3PK8Sy81R+P2
+oc -n vault exec -ti vault-0 -- vault operator unseal 98m+o2ylRhVbOi+3o5ub6PbP343ocFUVORgSYeypMDjh

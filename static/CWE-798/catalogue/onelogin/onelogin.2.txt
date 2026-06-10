@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: OneLogin Client Secret
+# Provider: onelogin    Rule id (normalized): onelogin.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.onelogin.2
+#
+# Pattern: (?xi) \b one[\s_.-]*login (?:.|[\n\r]){0,64}? (?: api[\s_.-]*client[\s_.-]*secret | client[\s_.-]*secret | api[\s_.-]*secret | [\s_.\-:"'=]secret\b ) (?:.|[\n\r]){0,20}? [=:"'\s_-]* (?:secret[_-])? ( [a-z0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ONELOGIN_CLIENT_SECRET=51exgkt8tf875584xr5awedi6y48txm0vzdwjzxxgp3119o5rpyubn07gm6a5u2l
+onelogin secret: "secret_51exgkt8tf875584xr5awedi6y48txm0vzdwjzxxgp3119o5rpyubn07gm6a5u2l"
+one-login
+client_secret=51exgkt8tf875584xr5awedi6y48txm0vzdwjzxxgp3119o5rpyubn07gm6a5u2l

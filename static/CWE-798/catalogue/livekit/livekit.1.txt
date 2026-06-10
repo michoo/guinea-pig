@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LiveKit API Key
+# Provider: livekit    Rule id (normalized): livekit.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.livekit.1
+#
+# Pattern: (?x) \b (?i:livekit) (?:.|[\n\r]){0,32}? \b ( API[A-Za-z0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+LIVEKIT_API_KEY=APIAb1Cd2Ef3Gh4
+livekit_key: "APIQw2Er3Ty4Ui5"

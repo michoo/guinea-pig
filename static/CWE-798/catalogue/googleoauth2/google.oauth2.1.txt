@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Google OAuth2 Access Token
+# Provider: googleoauth2    Rule id (normalized): google.oauth2.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.google.oauth2.1
+#   - titus       kingfisher.google.oauth2.1
+#
+# Pattern: (?x) \b ( ya29\.(?i:[a-zA-Z0-9_-]{30,}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ya29.A0ARrdaM9Ra8K7R9AcxA1PpIMLVQ021H0TL0PRh2s_HH0_tn5gCSSf
+ya29.Cj0KCQjwgLr5BRC3ARIsAKEd0AR9_Fg5fjV5pVXZlFYobyfz7Bb9SyOv

@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic Password in JavaScript Object
+# Provider: generic    Rule id (normalized): generic.17
+#
+# Detected by this rule:
+#   - titus       np.generic.17
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?x)(?i) [a-zA-Z0-9_]{1,40} (?# camelCase key prefix, e.g. "oauth" ) (?: pass (?:word|wd|phrase)? | passwd ) (?# password suffix keyword ) ["']? (?# optional quote around key ) \s* : \s* (?# colon binder - JS object / JSON style ) " ( [^"$\ …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+adminPassword:"thisismypassword"
+dbPasswd:"s3cr3tP@ss!"
+"userPass":"open_sesame123"
+appPassphrase:"correct horse battery"

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Permit.io API Key
+# Provider: permitio    Rule id (normalized): permitio.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.permitio.1
+#
+# Pattern: (?x) \b ( permit_key_[0-9A-Za-z]{85,86} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PERMIT_API_KEY=permit_key_ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVW
+permit_key: "permit_key_9876543210zyxwvutsrqponmlkjihgfedcbaZYXWVUTSRQPONMLKJIHGFEDCBA9876543210zyxwvutsrqponm"

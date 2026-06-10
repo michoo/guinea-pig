@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Unkey API Key Secret (creation-only plaintext)
+# Provider: unkey    Rule id (normalized): unkey.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.unkey.3
+#
+# Pattern: (?xi) unkey (?:_(?:secret|plaintext|key|create)){1,3} \s* [=:] \s* ['"]? (?P<secret>[A-Za-z0-9]{20,48}) ['"]? \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+unkey_secret = "3Zem2ZG4U1rsRiMSxy6pBjvZ"
+UNKEY_KEY_SECRET: 3Zem2ZG4U1rsRiMSxy6pBjvZ

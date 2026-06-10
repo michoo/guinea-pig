@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mercury Production API Token
+# Provider: mercury    Rule id (normalized): mercury.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mercury.1
+#
+# Pattern: (?x) \b ( mercury_production_ [a-z]{3,6} _ [a-zA-Z0-9]{40,50} _yrucrem ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Bearer secret-token:mercury_production_wma_24SCp4G81X3yHL4Wq8FgzuaP9ye3VKf2mgTDctXyRg5HY_yrucrem

@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: New Relic Admin API Key
+# Provider: newrelic    Rule id (normalized): newrelic.4
+#
+# Detected by this rule:
+#   - noseyparker np.newrelic.4
+#   - titus       np.newrelic.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    new-relic-browser-api-token
+#   - gitleaks    new-relic-insert-key
+#   - gitleaks    new-relic-user-api-id
+#   - gitleaks    new-relic-user-api-key
+#   - betterleaks new-relic-browser-api-token
+#   - betterleaks new-relic-insert-key
+#   - betterleaks new-relic-user-api-id
+#   - betterleaks new-relic-user-api-key
+#
+# Pattern: (?x)(?i) \b (nraa-[a-f0-9]{27}) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+admin_access:NRAA-4780f48c47df5882dbec3fd82c7

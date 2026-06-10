@@ -1,0 +1,8 @@
+# FALSE POSITIVE — not a secret.
+# Resembles: private-key / base64 secret rules (ssh-... + long base64 blob).
+# Why benign: these are SSH PUBLIC keys (the contents of authorized_keys / *.pub).
+# Public keys are meant to be shared; the corresponding PRIVATE key is what would be
+# a finding. Note the "ssh-ed25519"/"ssh-rsa" prefix and absence of any BEGIN ... PRIVATE block.
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIChTq4Q3W5q3sJ2nO9pR8tU7vW1xY0zA2bC3dE4fG5h deploy@ci
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDQ2m8sZ7kL0nP3rT6uW9xZ2aB4cD6eF8gH0iJ2kL4mN6oP8qR0sT2uV4wX6yZ8aB0cD2eF4gH6iJ8kL0mN2oP4qR6sT8uV0wX2yZ4aB6cD8eF0gH2iJ4kL6mN8oP0qR2sT4uV6wX8yZ jane@laptop

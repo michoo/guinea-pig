@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Coveralls Repo Identifier
+# Provider: coveralls    Rule id (normalized): coveralls.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.coveralls.1
+#   - titus       kingfisher.coveralls.1
+#
+# Pattern: (?xi) (?: coveralls\.io/ (?: (?: github|bitbucket|gitlab ) / ( [A-Z0-9_.-]+ ) / ( [A-Z0-9_.-]+ ) ) | api/v1/repos/ ( github|bitbucket|gitlab ) / ( [A-Z0-9_.-]+ ) )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://coveralls.io/github/lemurheavy/coveralls-public
+https://coveralls.io/gitlab/group/project
+https://coveralls.io/api/v1/repos/github/octocat/hello-world

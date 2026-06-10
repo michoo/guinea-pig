@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Daily API Key
+# Provider: daily    Rule id (normalized): daily.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.daily.1
+#
+# Pattern: (?xi) \b daily (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API) (?:.|[\n\r]){0,32}? \b ( [A-Za-z0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DAILY_API_KEY=abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890
+daily_api_key = "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6a7b8c9d0e1f2a3b4c5d6a7b8c9d0e1f2"

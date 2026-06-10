@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: OpenWeather Map API Key
+# Provider: openweathermap    Rule id (normalized): openweather.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.openweather.1
+#   - titus       kingfisher.openweather.1
+#
+# Pattern: (?xi) (?:pyowm|openweather|\bowm\b) (?:.|[\n\r]){0,64}? \b ( [a-z0-9]{32} | APPID= [a-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pyowm = '3k144a5af729351d0fc58bdrj9a21mkr'
+owm = '3k144a5af729351d0fc58bdrj9a21mkr'
+openweatherapikey=cd2b1d12d01ae2deffecfebafcc3c31d
+apikey=openweather:cd2b1d12d01ae2deffecfebafcc3c31d

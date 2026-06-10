@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Search URL
+# Provider: azuresearchquery    Rule id (normalized): azuresearch.url.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azuresearch.url.1
+#   - titus       kingfisher.azuresearch.url.1
+#
+# Pattern: (?xi) \b azure (?:.|[\n\r]){0,32}? https:\/\/ ( [0-9a-z]{5,40} \.search\.windows\.net \/indexes\/ [0-9a-z]{5,40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+azure_search_url=https://myservice.search.windows.net/indexes/myindex

@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Storage Account Key
+# Provider: azurestorage    Rule id (normalized): azurestorage.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurestorage.2
+#   - titus       kingfisher.azurestorage.2
+#
+# Pattern: (?x) # Avoid leading \b: env vars like MONGODB_..._AZURE_STORAGE_ACCOUNT_KEY have no # word break before AZURE (alnum or underscore). Consume a non-lowercase char (or # start-of-input) so we still block mid-camelCase (myAzureStorage...) wit …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+"MONGODB_AGENT_ONLINE_ARCHIVE_TEST_AZURE_STORAGE_ACCOUNT_KEY": "/dibjbwrou+tGcn7jfrrLXRXONqGOuVN2VwMy1qRvWtXTdNnR6zqzHo6HcnPb52/3DsQwmM/1VVr+AStZUyYCA=="
+Azure AccountKey=oqb4TdY9T0hphvktd5fJnMiHuQqzVy1jd5sSuOpAbGkaoqTlrHl0BOJN2okcasinVLOJzfDbZo1L+ASt68RAhA==
+Azure AccountKey=B/1EVX2Ui47X09tqU3GI/j+Nko9r5COPm0Hea9tfzitF9MQX9lZZiNO3tYQckWnt+rtlGIWS+sCx+AStkq8ZLg==
+Azure AccountKey=u45diQdTiXeuSKl5r4EjgbPP72EYpuTNEzfMTi0mk+d2sTisA4gWzt4H1Ag3kqFaCykWZv2S6KQo+AStHF56RQ==
+Azure AccountKey=b8a/Z4wFAbhOPQTMa4PUTKr2XQhwoyWtP/3PnEto3mK86CFQnVYyTV/HSrij88h5jVYyzwUk0oTw+AStIKN/4w==
+Azure AccountKey=JJD1GDiHCmtTpCOKpBYkXgZKrZvi7P4mRDe3jNVGc/JL/bp51uWcWL0rkOByk5VsX2MM62A/ABkE+AStU9qMkA==
+Azure AccountKey=Xy9aB8cD7eF6gH5iJ4kL3mN2oP1qR0sT9uV8wX7yZ6aB5cD4eF3gH2iJ1kL0mN9oP8qR7sT6uV5wX4yZ3aB2cD1q
+Azure AccountKey=Ky7aC1cD7eF6gH5iJ4kL3mN2oP1qR0sT9uV8wX7yZ6aB5cD4eF3gH2iJ1kL0mN9oP8qR7sT6uV5wX4yZ3aB2cD1g==\

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Nx Cloud Access Token
+# Provider: nxcloud    Rule id (normalized): nxcloud.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.nxcloud.1
+#
+# Pattern: (?xi) \b nx[_-]?cloud[_-]?token (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [A-Za-z0-9+/]{60,80}={0,2} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+nx_cloud_token = "UDM4ZGY4NWUtZDU4ZS01Z2I4LWNkZWUtYjcyMTAzN2RjOGI0fHJlYWQtd3JpdGU="
+NX_CLOUD_TOKEN=VEN5ZWY5NmYtZTY5Zi02aGM5LWRlZmYtYzgzMjE0OGVkOWM1fHJlYWQtb25seQ==

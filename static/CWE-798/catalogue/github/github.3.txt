@@ -1,0 +1,29 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GitHub OAuth Access Token
+# Provider: github    Rule id (normalized): github.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.github.3
+#   - noseyparker np.github.3
+#   - titus       np.github.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    github-app-token
+#   - gitleaks    github-fine-grained-pat
+#   - gitleaks    github-oauth
+#   - gitleaks    github-pat
+#   - gitleaks    github-refresh-token
+#   - betterleaks github-app-token
+#   - betterleaks github-fine-grained-pat
+#   - betterleaks github-oauth
+#   - betterleaks github-pat
+#   - betterleaks github-refresh-token
+#
+# Pattern: (?x) ( gho_(?P<body>[A-Za-z0-9]{30})(?P<checksum>[A-Za-z0-9]{6}) )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+"url": "git+https://FelipeMestre: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@github.com/gontarz/PW_2021_Website-FelipeMestre.git"
+oauth_token: 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
+"token": "ghu_16C7e42F292c69C2E7C10c838347Ae178B4a",
+Example usage:
+git clone http://ghs_RguXIkihJjwHAP6eXEYxaPNvywurTr5IOAbg@github.com/username/repo.git

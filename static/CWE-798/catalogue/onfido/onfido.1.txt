@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Onfido API Token
+# Provider: onfido    Rule id (normalized): onfido.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.onfido.1
+#
+# Pattern: (?x) \b ( api_(?:live|sandbox)\.[a-zA-Z0-9_-]{20,80} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ONFIDO_API_TOKEN=api_live.AbCdEfGhIjKlMnOpQrStUvWxYz123456
+onfido_token: api_sandbox.AbCdEfGhIjKlMnOpQrStUvWxYz123456

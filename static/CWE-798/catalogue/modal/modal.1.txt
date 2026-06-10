@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Modal CLI Token Pair
+# Provider: modal    Rule id (normalized): modal.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.modal.1
+#
+# Pattern: (?x) (?P<TOKEN_ID> (?:ak|as)-[A-Za-z0-9]{22} ) \b (?:.|[\n\r]){0,80}? \b ( (?:ak|as)-[A-Za-z0-9]{22} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+modal token set --token-id ak-BJbwFRtNnI4Y11oxC4hngY --token-secret as-sRul9S1EAi9qNlq3G6NTIb

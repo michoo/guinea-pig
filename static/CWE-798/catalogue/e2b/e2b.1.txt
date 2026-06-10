@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: E2B API Key
+# Provider: e2b    Rule id (normalized): e2b.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.e2b.1
+#
+# Pattern: (?x) \b ( e2b_[a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+E2B_API_KEY=e2b_5f088ea8ea8502827d3d7d79448bdf75e4fe3c37
+X-API-Key: e2b_d3b87681ab9d0b856a22de1c64e0dbc07f673a3e

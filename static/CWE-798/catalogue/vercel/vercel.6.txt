@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Vercel AI Gateway API Key (vck_)
+# Provider: vercel    Rule id (normalized): vercel.6
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.vercel.6
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks vercel-ai-gateway-key
+#   - betterleaks vercel-api-token
+#   - betterleaks vercel-app-access-token
+#   - betterleaks vercel-app-refresh-token
+#   - betterleaks vercel-integration-token
+#
+# Pattern: (?x) \b ( vck_(?P<body>[A-Za-z0-9_-]{50})(?P<checksum>[A-Za-z0-9]{6}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+vck_2YkmQj1uHqCVNoUx5a9uvRTe81gmAcln5hoRMPWFBU4tulufUf0OzP2K

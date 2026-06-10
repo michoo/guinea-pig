@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Twilio API Key
+# Provider: twilio    Rule id (normalized): twilio.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.twilio.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    twilio-api-key
+#   - betterleaks twilio-api-key
+#
+# Pattern: (?xi) \b twilio (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [a-z0-9]{32} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Twilio_key=Cd2Bd1dE1201aE2DFFEcfeBafCc3c31D

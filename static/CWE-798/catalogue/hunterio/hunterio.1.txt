@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Hunter.io API Key
+# Provider: hunterio    Rule id (normalized): hunterio.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hunterio.1
+#
+# Pattern: (?xi) \b hunter (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( [A-Za-z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+hunter_api_key = "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6a7b8c9d0"
+HUNTER_KEY=abcdef1234567890abcdef1234567890abcdef12

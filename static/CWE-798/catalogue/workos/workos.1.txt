@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WorkOS API Key
+# Provider: workos    Rule id (normalized): workos.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.workos.1
+#
+# Pattern: (?x) \b (?i:workos) (?:.|[\n\r]){0,24}? \b ( sk_live_a2V5Xz[A-Za-z0-9+/]{69}={0,2} ) (?:[^A-Za-z0-9+/=]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WORKOS_API_KEY="sk_live_a2V5XzAxS1BSWE1LTjBEWE1INlpBU0VEWjU2VFE3LFdjOWxFMTNDS29xRkdlYU9uMUpDbUpTZWE"

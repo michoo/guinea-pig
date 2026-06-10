@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Zendesk Account Email
+# Provider: zendesk    Rule id (normalized): zendesk.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.zendesk.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    zendesk-secret-key
+#   - betterleaks zendesk-secret-key
+#
+# Pattern: (?xi) \b (?:zendesk|zd) (?:.|[\n\r]){0,32}? (?:email|user(?:name)?) (?:.|[\n\r]){0,12}? ( [A-Za-z0-9._%+\-]+ @ [A-Za-z0-9.\-]+\.[A-Za-z]{2,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ZENDESK_EMAIL=agent@example.com
+zendesk_user: "support.bot@example.org"

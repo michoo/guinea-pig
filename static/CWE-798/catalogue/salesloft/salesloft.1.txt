@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Salesloft API Key
+# Provider: salesloft    Rule id (normalized): salesloft.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.salesloft.1
+#
+# Pattern: (?xi) \b salesloft (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|API|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( ak_[a-fA-F0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SALESLOFT_API_KEY=ak_de656ec86bcab24878c24ff4d86758f8963d8ea6bcd4e90f8fae846ba8f9ac62
+salesloft_key = "ak_1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef"

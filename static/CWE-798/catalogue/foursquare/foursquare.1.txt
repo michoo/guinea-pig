@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Foursquare Client ID
+# Provider: foursquare    Rule id (normalized): foursquare.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.foursquare.1
+#   - titus       kingfisher.foursquare.1
+#
+# Pattern: (?xi) (?: \bclient_id\b\s*[:=]\s*["']? | \bclient_id= ) ( [0-9A-Z]{48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+client_id=0F12A345BB67C8D901EFG23H45IJKL67MNO89PQ12RST34UV
+client_id: "0F12A345BB67C8D901EFG23H45IJKL67MNO89PQ12RST34UV"

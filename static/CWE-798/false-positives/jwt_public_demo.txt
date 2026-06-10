@@ -1,0 +1,7 @@
+FALSE POSITIVE — not a secret.
+Resembles: JWT detection rules (eyJ... header.payload.signature).
+Why benign: this is the canonical demo token shown on jwt.io. It is signed with the
+well-known key "your-256-bit-secret", carries the example payload {sub:1234567890,
+name:"John Doe"}, and is reproduced in countless docs. It grants access to nothing.
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c

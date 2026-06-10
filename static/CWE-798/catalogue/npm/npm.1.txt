@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: NPM Access Token (fine-grained)
+# Provider: npm    Rule id (normalized): npm.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.npm.1
+#   - noseyparker np.npm.1
+#   - titus       np.npm.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    npm-access-token
+#   - betterleaks npm-access-token
+#
+# Pattern: (?xi) \b ( npm_(?P<body>[A-Za-z0-9]{30})(?P<checksum>[A-Za-z0-9]{6}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+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
+npm_TCllNwh2WLQlMWVhybM1iQrsTj6rMQ0BOh6d

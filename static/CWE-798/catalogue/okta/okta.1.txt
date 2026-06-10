@@ -1,0 +1,24 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Okta API Token
+# Provider: okta    Rule id (normalized): okta.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.okta.1
+#   - noseyparker np.okta.1
+#   - titus       np.okta.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    okta-access-token
+#   - betterleaks okta-access-token
+#
+# Pattern: (?xi) (?s) (?:okta|ssws) (?:.|[\n\r]){0,64}? \b ( 00[a-z0-9_-]{39}[a-z0-9_] ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+okta_api_token=00hqNORUpnTcdFWA5WEM4YwOkw6RXeFw21lFDRKmY1
+okta_secret:  00QCjAl4MlV-WPXM-ABCDEFGHIJKL-0HmjFx-vbGua
+Authorization: SSWS 00QCjAl4MlV-WPXM-ABCDEFGHIJKL-0HmjFx-vbGua
+variable "corp_okta_api_token" {
+  default = "004EWTpRQT_HJtG_nL-agxacgzYHjxPcF99kJsFzWg"
+}
+okta_api_token = 00aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+OKTA_API_KEY = "00-aaaaaaaaaaaaa-aaaaaaaaaaaaaaaaaaaaaaaaa"

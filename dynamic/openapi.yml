@@ -1,0 +1,84 @@
+openapi: 3.0.3
+info:
+  title: guinea-pig dynamic target
+  version: "1.0.0"
+  description: >
+    Intentionally-vulnerable HTTP API used as a DAST benchmark target.
+    Each operation carries an `x-cwe` extension naming the weakness it exposes,
+    so a DAST tool's findings can be scored against this ground truth.
+    Test fixture only — never deploy on a reachable network.
+servers:
+  - url: http://localhost:3000
+paths:
+  /search:
+    get:
+      summary: Reflected search (echoes the query into HTML)
+      x-cwe: CWE-79
+      x-vuln: Reflected Cross-Site Scripting — `q` is reflected unescaped.
+      parameters:
+        - { name: q, in: query, schema: { type: string }, example: "<script>alert(1)</script>" }
+      responses: { "200": { description: HTML page reflecting the query } }
+  /login:
+    post:
+      summary: Login (string-concatenated SQL)
+      x-cwe: CWE-89
+      x-vuln: SQL Injection via username/password; also CWE-209 (verbose SQL errors).
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties: { username: { type: string }, password: { type: string } }
+            example: { username: "' OR '1'='1", password: "x" }
+      responses: { "200": { description: logged in }, "401": { description: invalid } }
+  /users:
+    get:
+      summary: Lookup user by id (string-concatenated SQL)
+      x-cwe: CWE-89
+      x-vuln: SQL Injection via `id`.
+      parameters:
+        - { name: id, in: query, schema: { type: string }, example: "1 OR 1=1" }
+      responses: { "200": { description: JSON array of users } }
+  /ping:
+    get:
+      summary: Ping a host (shell command)
+      x-cwe: CWE-78
+      x-vuln: OS Command Injection — `host` is interpolated into a shell command.
+      parameters:
+        - { name: host, in: query, schema: { type: string }, example: "127.0.0.1;id" }
+      responses: { "200": { description: ping output } }
+  /download:
+    get:
+      summary: Download a file from ./public
+      x-cwe: CWE-22
+      x-vuln: Path Traversal — `file` is not confined to the public dir.
+      parameters:
+        - { name: file, in: query, schema: { type: string }, example: "../../etc/passwd" }
+      responses: { "200": { description: file bytes }, "404": { description: not found } }
+  /redirect:
+    get:
+      summary: Redirect to a URL
+      x-cwe: CWE-601
+      x-vuln: Open Redirect — redirects to any user-supplied URL.
+      parameters:
+        - { name: url, in: query, schema: { type: string }, example: "https://evil.example" }
+      responses: { "302": { description: redirect } }
+  /fetch:
+    get:
+      summary: Server-side fetch of a URL
+      x-cwe: CWE-918
+      x-vuln: SSRF — server requests an arbitrary URL (cloud metadata reachable).
+      parameters:
+        - { name: url, in: query, schema: { type: string }, example: "http://169.254.169.254/latest/meta-data/" }
+      responses: { "200": { description: fetched body }, "502": { description: upstream error } }
+  /set-cookie:
+    get:
+      summary: Set a session cookie
+      x-cwe: CWE-1004
+      x-vuln: Session cookie set without HttpOnly/Secure/SameSite (also CWE-614).
+      responses:
+        "200":
+          description: cookie set
+          headers:
+            Set-Cookie: { schema: { type: string }, description: "session=abc123 (insecure flags)" }

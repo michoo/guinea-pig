@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Salesforce Refresh Token
+# Provider: salesforce    Rule id (normalized): salesforce.6
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.salesforce.6
+#
+# Pattern: (?xi)(?s) (?:salesforce|sforce|login\.salesforce\.com|test\.salesforce\.com|my\.salesforce\.com) (?:.|[\n\r]){0,256}? \brefresh(?:_|[\s-])token\b (?:.|[\n\r]){0,24}? (?: [:=] | ["']\s*:\s*["'] ) \s* ( 5A[A-Z0-9._~-]{40,510} ) (?: \b | ["']  …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+{
+  "instance_url": "https://mydomain.my.salesforce.com",
+  "refresh_token": "5Aep861vGfRt9a8nT3qgV7wU1rYp3kL2mN8dQ6zX4cB7jH9sT1vW2xY3zA4bC5dE6fG7hI8jK9mN0pQ1rS2tU3vW4xY5z"
+}
+salesforce:
+  token_endpoint: https://login.salesforce.com/services/oauth2/token
+  refresh_token: 5AefmTn2q8JdV4pP7xR1wY5zC9kL3mN6qS0uV2xY8bD1fG4hJ7kM9nQ2rT5vW8yZ1aC3eF6gH9jK2mP5sR8uV1xY4

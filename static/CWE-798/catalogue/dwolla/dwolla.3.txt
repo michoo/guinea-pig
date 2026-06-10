@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Dwolla API Base URL
+# Provider: dwolla    Rule id (normalized): dwolla.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dwolla.3
+#
+# Pattern: (?xi) \b ( https://api(?:-sandbox)?\.dwolla\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DWOLLA_API_BASE=https://api.dwolla.com
+DWOLLA_BASE_URL="https://api-sandbox.dwolla.com"

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Segment API Key
+# Provider: segment    Rule id (normalized): segment.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.segment.2
+#
+# Pattern: (?xi) (?:segment|sgmt) (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( [A-Z0-9_-]{40,50}\.[A-Z0-9_-]{40,50} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+segment_token=FYbcC23QtDKym0b_bapKDaYKcIv5Ggu0B9icU9cfVud.1mSaWEYOh1GIKw11-VVtS3TVXzI04BkCvyijbHWdZK7

@@ -1,0 +1,34 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Slack App Token
+# Provider: slack    Rule id (normalized): slack.5
+#
+# Detected by this rule:
+#   - noseyparker np.slack.5
+#   - titus       np.slack.5
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    slack-app-token
+#   - gitleaks    slack-bot-token
+#   - gitleaks    slack-config-access-token
+#   - gitleaks    slack-config-refresh-token
+#   - gitleaks    slack-legacy-bot-token
+#   - gitleaks    slack-legacy-token
+#   - gitleaks    slack-legacy-workspace-token
+#   - gitleaks    slack-user-token
+#   - gitleaks    slack-webhook-url
+#   - betterleaks slack-app-token
+#   - betterleaks slack-bot-token
+#   - betterleaks slack-config-access-token
+#   - betterleaks slack-config-refresh-token
+#   - betterleaks slack-legacy-bot-token
+#   - betterleaks slack-legacy-token
+#   - betterleaks slack-legacy-workspace-token
+#   - betterleaks slack-session-cookie
+#   - betterleaks slack-session-token
+#   - betterleaks slack-user-token
+#   - betterleaks slack-webhook-url
+#
+# Pattern: \b(xapp-[0-9]{12}-[a-zA-Z0-9/+]{24})\b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ENV SLACK_TOKEN="xapp-083452001657-ShAYwge/87H4lC3j7lZ48pAL" \

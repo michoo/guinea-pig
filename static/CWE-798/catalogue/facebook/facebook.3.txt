@@ -1,0 +1,25 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Facebook Access Token
+# Provider: facebook    Rule id (normalized): facebook.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.facebook.3
+#   - titus       np.facebook.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    facebook-access-token
+#   - gitleaks    facebook-page-access-token
+#   - gitleaks    facebook-secret
+#   - betterleaks facebook-access-token
+#   - betterleaks facebook-page-access-token
+#   - betterleaks facebook-secret
+#
+# Pattern: (?xi) (?: \b (?:facebook|fb\b) (?:.|[\n\r]){0,32}? (?:access_token|access[\s-]token) (?:.|[\n\r]){0,32}? )? ( EAACEdEose0cBA[A-Z0-9]{20,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+url = 'https://graph.facebook.com/me/friends?access_token=EAACEdEose0cBAD5XZCz5JXYvqyeJzcSvFZC42toHiWyfjhcZCMZBZCpE3uRJnEBsrhUEMRK1wWs6SsdiDCaCI1mYwyoNuMix2XZCpvsKbZB9TumtZBlcLeIpl4pa931Ce9rTinEAhtyVVZAAZAX4NmfpBUqWtzCRC0fX5GZBn7ZC28mPKAZDZD'
+fb_access_token: "EAACEdEose0cBAMZD123456789abcdefghijklmnopqrstuvwxyz"
+FACEBOOK_ACCESS_TOKEN=EAACEdEose0cBAZAQW123456789abcdefghijklmnopqrstuvwxyzASDFGHJKL
+{"facebook": {"app_id": "1241440636013546", "app_secret": "c0acf898d0cf77b57dfae30210d6acf9"}}
+"facebook": {"client_id":"675602312638739","client_secret":"912251e0d28f315451baa7ab63427c57"}
+FACEBOOK = {"app_id": "884621454736122", "app_secret": "fd67f5083bc4791b06eccf6b08ccf437"}

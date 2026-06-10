@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SslMate API Key
+# Provider: sslmate    Rule id (normalized): sslmate.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sslmate.1
+#   - titus       kingfisher.sslmate.1
+#
+# Pattern: (?xi) \b sslmate (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9]{36} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sslmate_key="10000r90kriAAAAAseZJwsawemws03jdlmZY"
+SSLMATE_SECRET_KEY=ABCDEFGHIJ1234567890ABCDEFGHIJ123456

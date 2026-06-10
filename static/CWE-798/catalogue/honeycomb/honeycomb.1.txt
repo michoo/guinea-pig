@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Honeycomb API Key
+# Provider: honeycomb    Rule id (normalized): honeycomb.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.honeycomb.1
+#   - titus       kingfisher.honeycomb.1
+#
+# Pattern: (?xi) \b honeycomb (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{32}| [0-9a-zA-Z]{22} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+honeycomb_secret_key=8f14e45fceea167a5a36dedd4bea2543
+honeycomb_token=z0d1f2bcaloumn3456789P

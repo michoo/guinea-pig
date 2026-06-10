@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Blynk Organization Access Token
+# Provider: blynk    Rule id (normalized): blynk.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.blynk.2
+#   - noseyparker np.blynk.2
+#   - titus       np.blynk.2
+#
+# Pattern: (?xi) https://(?:fra1\.|lon1\.|ny3\.|sgp1\.|blr1\.)?blynk\.cloud/api/[A-Z0-9_\-\s/\\]* -H\s*"Authorization:\s*Bearer\s* ([A-Z0-9_\-]{40}) "
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+curl https://fra1.blynk.cloud/api/organization/profile -H "Authorization: Bearer eIdWHQqRfFmvP5LDDh-IGxPUzi7I27HthzCPAVmS"
+curl https://fra1.blynk.cloud/api/organization/profile \
+-H "Authorization: Bearer eIdWHQqRfFmvP5LDDh-IGxPUzi7I27HthzCPAVmS"

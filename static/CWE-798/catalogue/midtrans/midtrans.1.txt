@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Midtrans Sandbox Server/Client Key
+# Provider: midtrans    Rule id (normalized): midtrans.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.midtrans.1
+#
+# Pattern: (?x) \b ( SB-Mid-(?:server|client)- [A-Za-z0-9_]{10,20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MIDTRANS_SERVER_KEY="SB-Mid-server-Xk93PcDP8pMKfhY2"
+midtrans_client_key = 'SB-Mid-client-py_WqVmIjA462VHz'

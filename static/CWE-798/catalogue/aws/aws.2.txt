@@ -1,0 +1,34 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: AWS Secret Access Key
+# Provider: aws    Rule id (normalized): aws.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.aws.2
+#   - noseyparker np.aws.2
+#   - titus       np.aws.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    aws-access-token
+#   - gitleaks    aws-amazon-bedrock-api-key-long-lived
+#   - gitleaks    aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-access-token
+#   - betterleaks aws-amazon-bedrock-api-key-long-lived
+#   - betterleaks aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-secret-access-key
+#
+# Pattern: (?xi) (?: (?:\b|_) (?:AWS|AMAZON|AMZN|A3T[A-Z0-9]|AKIA|ASIA) (?:.|[\n\r]){0,64}? [^A-Za-z0-9_+!@\#$%^&*()\]./] ([A-Za-z0-9/+]{40}) [^A-Za-z0-9_+!@\#$%^&*()\]./] | (?:\b|_)(?:AWS|AMAZON|AMZN|A3T[A-Z0-9]|AKIA|ASIA) (?:.|[\n\r]){0,96}? (?:SECR …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+foo.backup.archive.aws.secretkey=sBmHlDFrNcsz35N+LRjwlUxF8/wypT4tiJCQ0wP4
+"awsSecretKey":"3lyTWqHMt5UySny2drdPYheRTEzrNux8Cn5JWFHL"
+"\"awsSecretKey\":\"3lyTWqHMt5UySny2drdPYheRTEzrNux8Cn5JWFHL\"," +
+"Whiteboard" : {
+  "type" : "aws-s3",
+  "config" : {
+    "accessKeyId" : "AKIAIVOURJN3SXRRLZFQ",
+    "region" : "us-east-1",
+    "secretAccessKey" : "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"
+  },
+aws_secret_access_key:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aws_secret_access_key => aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aws_access_key_id = FakeValues99ESPW3ALMEZ6U\n  aws_secret_access_key = FakeValues99cl9bqJFVA3iFUm+yqVe08HxhXFE/

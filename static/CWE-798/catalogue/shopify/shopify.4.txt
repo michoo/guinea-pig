@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Shopify Access Token (Custom App)
+# Provider: shopify    Rule id (normalized): shopify.4
+#
+# Detected by this rule:
+#   - noseyparker np.shopify.4
+#   - titus       np.shopify.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    shopify-access-token
+#   - gitleaks    shopify-custom-access-token
+#   - gitleaks    shopify-private-app-access-token
+#   - gitleaks    shopify-shared-secret
+#   - betterleaks shopify-access-token
+#   - betterleaks shopify-custom-access-token
+#   - betterleaks shopify-private-app-access-token
+#   - betterleaks shopify-shared-secret
+#
+# Pattern: \b(shpca_[a-fA-F0-9]{32})\b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+const TEMP_CONTENT = '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 handsomestranger.myshopify.com'

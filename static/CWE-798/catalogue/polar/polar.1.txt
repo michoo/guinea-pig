@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Polar Personal Access Token
+# Provider: polar    Rule id (normalized): polar.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.polar.1
+#
+# Pattern: (?x) \b ( polar_(?:at|oat|rt)_[a-zA-Z0-9_-]{20,100} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+POLAR_TOKEN=polar_at_AbCdEfGhIjKlMnOpQrStUvWxYz1234
+polar_org_token: polar_oat_AbCdEfGhIjKlMnOpQrStUvWx12

@@ -1,0 +1,17 @@
+# Remediation for CWE-732: Incorrect Permission Assignment for Critical Resource
+# Fix: Replace world-writable 0777 modes with restrictive permissions (0640 for files, 0750 for directories).
+---
+- name: Secure file permissions example
+  hosts: all
+  tasks:
+    - name: Copy config with restrictive mode
+      ansible.builtin.copy:
+        src: app.conf
+        dest: /etc/app/app.conf
+        mode: '0640'
+
+    - name: Create directory with restrictive mode
+      ansible.builtin.file:
+        path: /opt/app/data
+        state: directory
+        mode: '0750'

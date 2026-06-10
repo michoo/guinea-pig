@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: RingCentral Client ID
+# Provider: ringcentral    Rule id (normalized): ringcentral.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ringcentral.1
+#
+# Pattern: (?x) \b (?i:ringcentral|ring.?central) (?:.|[\n\r]){0,32}? (?i:CLIENT.?ID|APP.?KEY|APP.?ID) (?:.|[\n\r]){0,32}? \b ( [A-Za-z0-9_-]{22} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RINGCENTRAL_CLIENT_ID="aB1cD2eF3gH4iJ5kL6mN7o"

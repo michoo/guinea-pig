@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Algolia Admin API Key
+# Provider: algolia    Rule id (normalized): algolia.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.algolia.1
+#   - titus       kingfisher.algolia.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    algolia-api-key
+#   - betterleaks algolia-api-key
+#
+# Pattern: (?xi) algolia (?:.|[\n\r]){0,32}? ( [a-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+algolia_api_key = "ij1mut5oe606wlrf5z4u8u31264z3gag"

@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WireGuard Private Key
+# Provider: wireguard    Rule id (normalized): wireguard.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.wireguard.1
+#   - noseyparker np.wireguard.1
+#   - titus       np.wireguard.1
+#
+# Pattern: PrivateKey\s*=\s*([A-Za-z0-9+/]{43}=)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+[Interface]
+Address = 10.200.200.3/32
+PrivateKey = AsaFot43bfs1fEWjvtty+rGcjh3rP1H6sug1l3u19ix=
+DNS = 8.8.8.8

@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Fal.ai API Key
+# Provider: falai    Rule id (normalized): falai.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.falai.1
+#
+# Pattern: (?xi) \b (?: (?:fal(?:\.ai)?|falai) (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API) | fal-api ) (?:.|[\n\r]){0,16}? \b ( (?P<key_id> [a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12} ) : (?P<key_secret> [a-f0-9]{16}[a …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+FAL_KEY=847c02a9-db27-42d5-b781-9cf5c72b3e0d:48299b8e125e5861715a35fc653a0855
+fal.ai api key: 56673bfb-3727-48e1-a3c4-2297a7133693:f8ca0f7de94702dbe0b6797f3e8f4b42
+falai token = 17b2a0a9-362e-4756-b981-c4ac07e77e2f:f88af09b578212a6ddc7503e314c1c94
+fal-api = 6adacb14-1d60-4f64-85d7-b7624fa3e8e9:a30520804ec44185a563e107349cf7b7

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DocuSign Auth Host
+# Provider: docusign    Rule id (normalized): docusign.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.docusign.3
+#
+# Pattern: (?xi) \b ( account(?:-d)?\.docusign\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+account.docusign.com
+account-d.docusign.com

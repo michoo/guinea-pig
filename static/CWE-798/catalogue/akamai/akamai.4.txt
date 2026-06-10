@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Akamai API Host
+# Provider: akamai    Rule id (normalized): akamai.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.akamai.4
+#
+# Pattern: (?x) \b (?i:host) \s*=\s* ( [A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.akamaiapis\.net ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+host = akab-h05tnam3wl42son7nktnlnnx-kbob3i3v.luna.akamaiapis.net

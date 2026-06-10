@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Shortcut API Token
+# Provider: shortcut    Rule id (normalized): shortcut.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.shortcut.1
+#
+# Pattern: (?x) \b (?i:shortcut|clubhouse) (?:.|[\n\r]){0,32}? (?i:TOKEN|API) (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{8} - [0-9a-f]{4} - [0-9a-f]{4} - [0-9a-f]{4} - [0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SHORTCUT_API_TOKEN="62dc7d80-a1b2-4c3d-8e5f-6a7b8c9d0e1f"
+clubhouse_token = '0a1b2c3d-4e5f-6789-abcd-ef0123456789'

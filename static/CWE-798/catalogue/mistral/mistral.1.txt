@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mistral AI API Key
+# Provider: mistral    Rule id (normalized): mistral.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mistral.1
+#   - titus       kingfisher.mistral.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks mistral-api-key
+#
+# Pattern: (?xi) \b mistral (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mistral_token = 47cFZMzkoEo9DBapfvhrmMst3zfV2EIh
+mistral_api_key = olI6zlb3F0jO8jjDQUi34skQLPzvox84
+mistral secret: kMrbwHjG78fYzneT934Pn34NQxVSxniq

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure SAS Token
+# Provider: azuresastoken    Rule id (normalized): azuresastoken.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azuresastoken.1
+#
+# Pattern: (?x) ( (?i:(?:sv|SharedAccessSignature\s+sr))=[0-9]{4}-[0-9]{2}-[0-9]{2} (?:&(?i:[a-z]{2,4})=[^&\s"']{1,200}){2,10} (?i:&sig=)[a-zA-Z0-9%+/=]{20,100} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sv=2021-06-08&ss=bfqt&srt=sco&sp=rwdlacupiytfx&se=2024-12-31&st=2024-01-01&spr=https&sig=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890%2BABCDE%3D

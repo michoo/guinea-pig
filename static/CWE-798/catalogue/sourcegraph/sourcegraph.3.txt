@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sourcegraph Cody Gateway Key
+# Provider: sourcegraph    Rule id (normalized): sourcegraph.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sourcegraph.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sourcegraph-access-token
+#   - betterleaks sourcegraph-access-token
+#
+# Pattern: (?xi) \b slk_[a-f0-9]{64} \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+slk_27b0a1f1926e7376dd8bdfcb0ade3c397c462b6e68c854a5521a17dd2b704ce6

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tencent Cloud Secret ID
+# Provider: tencent    Rule id (normalized): tencent.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tencent.1
+#
+# Pattern: (?xi) \b tencent (?:.|[\n\r]){0,32}? \b(?:secret[_-]?id)\b (?:.|[\n\r]){0,16}? [=:"'\s>] \b ( AKID [A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+tencent_secret_id => 'AKIDzODdB1nOELz0T8CEjTEkgKJOob3t2Tos'
+TENCENT_SECRET_ID=AKIDaBcDeFgHiJkLmNoPqRsTuVwXyZ012345

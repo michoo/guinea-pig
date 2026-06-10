@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Twitch API Token
+# Provider: twitch    Rule id (normalized): twitch.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.twitch.1
+#   - noseyparker np.twitch.1
+#   - titus       np.twitch.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    twitch-api-token
+#   - betterleaks twitch-api-token
+#
+# Pattern: (?xi) \b twitch (?:.|[\n\r]){0,32}? \b ( [a-z0-9]{30} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TWITCH_TOKEN=abCDefghijklmnopqrstuvwx123456
+twitch_api_token: '0123456789ABcdefghijklmnopqrst'
+STREAM_KEY=live_126031192_RJVJxpxq8Q1X1Qdc9SwwTvpXonANmi
+live_126031192_tiX3sbwIzL9VmkecdxioBMA1LJ9S4m
+live_126031192_IgvUabrXbWSihj2ENnA59G1F8349jn
+live_126031192_m3owJxYRKOf531B9Zc3ZQcLfOLCzKK

@@ -22,8 +22,8 @@ only if genuinely ambiguous.
 - `static` → one `static_scan` call. Covers SCA + secrets + SAST + **IaC** +
   **license** + pipeline over a local directory. No running app needed.
 - `dynamic` → one `dynamic_scan` call. **Requires a running target URL.** If no
-  app is running, start the `dast/` app first (`node dast/app.js`) and use its
-  URL. Ask for the target URL if not obvious.
+  app is running, start the `dynamic/` app first (`cd dynamic && npm start`, i.e.
+  `node dynamic/app.js`) and use its URL. Ask for the target URL if not obvious.
 - `both` → `static_scan` + `dynamic_scan`.
 - Category words (`sast`, `sca`, `secrets`, `iac`, `license`, `dast`,
   `pipeline`) → call just that category's individual tool(s) below.

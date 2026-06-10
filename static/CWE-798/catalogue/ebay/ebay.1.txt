@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: eBay Production Client ID
+# Provider: ebay    Rule id (normalized): ebay.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ebay.1
+#
+# Pattern: (?x) \b ( [a-zA-Z0-9_-]+-[a-zA-Z0-9_-]+-PRD-[a-f0-9]{8,12}-[a-f0-9]{8,12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+EBAY_CLIENT_ID=MyApp-MyApp-PRD-1a2b3c4d-567890ab

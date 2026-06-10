@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Ollama API Key
+# Provider: ollama    Rule id (normalized): ollama.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ollama.1
+#   - titus       kingfisher.ollama.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks ollama-api-key
+#
+# Pattern: (?xi) \b ollama (?:.|[\n\r]){0,32}? \b ( [a-f0-9]{32}\.[a-zA-Z0-9_-]{24} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ollama key = 8bcdd9b4e28e4e1b8bf14a2eb8701220.QH5p5TU2BDwzHu5_RCtvJXsj
+ollama key = e56714bd7c1146e4b4801244bc2bc67a.3GAswjZGZ5YY6Qdgt0xg56vM
+ollama key = 872658d00c284033a707abf1725d4b6c.-4JpTp0dQHmf0nb89xI-wgP-
+ollama key = 0c4e6bf1222c4ffc87025a7a9ffd5cac.z-fgt1JO9-LadzA2cL23qLH3
+ollama key = dae874a007d442cdb807910c4c57c6f5.B_aHUSdeAe42UR-X41StUFJq

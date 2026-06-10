@@ -1,0 +1,18 @@
+# CWE-250: Execution with Unnecessary Privileges
+# The workflow grants write-all permissions to the GITHUB_TOKEN instead of least-privilege scopes.
+name: release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions: write-all
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/publish.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

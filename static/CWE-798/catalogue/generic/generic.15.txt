@@ -1,0 +1,30 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic Secret
+# Provider: generic    Rule id (normalized): generic.15
+#
+# Detected by this rule:
+#   - noseyparker np.generic.15
+#   - titus       np.generic.15
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?x)(?i) \b if \b .{0,50} \b (?: secret | pass | password | challenge ) \b \s* (?: == | != | === | !== ) \s* " ( [^"\n]{3,60} ) "
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+if creds.Secret != "open-sesame" {
+  http.Error(rw, "unauthorized", http.StatusUnauthorized)
+}
+username = request.form["username"]
+password = request.form["password"]
+
+if username == "jojoba" and password == "team10":
+    return redirect(url_for('profile'))
+else:
+    return render_template("login.html", error="Invalid credentials")
+password = request.form.get('password')
+result = "Incorrect Username or Password"
+if username == "adM1n1sTrat0R" and password == "123P4ssW0rd@@":
+    result = "Logged in successfully as an Admin"
+return render_template('vulnerabilities/sensitive-data-exposure-low.html',msg=result)

@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Scaleway Secret Key
+# Provider: scaleway    Rule id (normalized): scaleway.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.scaleway.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks scaleway-secret-key
+#
+# Pattern: (?xi) \b scaleway (?:.|[\n\r]){0,64}? \b(?:token|secret[_-]?key|auth)\b (?:.|[\n\r]){0,32}? [=:"'\s] \b ( [a-f0-9]{8}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+scaleway token 56bd4fd9-f2db-b40d-a2b4-bfde7fab5ed3
+scaleway
+secret_key=b7c3f1d9-8a5e-4b02-92f6-10db7e431abc

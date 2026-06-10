@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure OpenAI Host
+# Provider: azureopenai    Rule id (normalized): azureopenai.host.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azureopenai.host.1
+#   - titus       kingfisher.azureopenai.host.1
+#
+# Pattern: (?xi) \b ( [a-z0-9-]{3,32} \.openai\.azure\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+my-instance.openai.azure.com
+mycompany-east-us.openai.azure.com

@@ -1,0 +1,24 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: TrueNAS Instance URL
+# Provider: truenas    Rule id (normalized): truenas.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.truenas.3
+#   - titus       np.truenas.3
+#
+# Pattern: (?x) \b ( https?://[a-zA-Z0-9._:-]+ ) /api/v2\.0/ (?:system|pool|device|sharing|jail|vm|chart|app|zvol|dataset|replication|snapshot|boot|tunable|smb|nfs|iscsi|certificate|acme|filesystem|reporting|alert|update|core|initshutdownscript)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+http://192.168.0.30/api/v2.0/system/info
+https://truenas.example.com/api/v2.0/device/get_info
+https://nas.local:443/api/v2.0/pool/dataset
+http://10.0.0.1/api/v2.0/sharing/smb
+https://truenas.local/api/v2.0/jail/query
+http://192.168.1.50:80/api/v2.0/zvol/id
+https://nas:443/api/v2.0/boot/environment
+TRUENAS_API_KEY=8-Lp22ov7halMBLUpG97Wg4y7fibQi3CW19VJiZcCu746zgCs0mdDdTCoOcpgEucgu
+truenas_token: "10-6LZBVhNq8zze0rzXJptfSWDBoskWuThnQb3fUVw4sVNgJ7GKT3ITVIovhwPf34oL"
+"truenas_api_key": "9-hTSZDBPyg0PjRZvWb8omoxJ7X2gAjRGmiPKql9ENGIUP9OPtEAzz5f6g9YIMVbZT"
+tn_api_key = "8-Lp22ov7halMBLUpG97Wg4y7fibQi3CW19VJiZcCu746zgCs0mdDdTCoOcpgEucgu"
+true-nas_secret=9-hTSZDBPyg0PjRZvWb8omoxJ7X2gAjRGmiPKql9ENGIUP9OPtEAzz5f6g9YIMVbZT

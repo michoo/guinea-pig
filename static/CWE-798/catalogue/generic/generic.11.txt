@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic Password
+# Provider: generic    Rule id (normalized): generic.11
+#
+# Detected by this rule:
+#   - noseyparker np.generic.11
+#   - titus       np.generic.11
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?x)(?i) the\ (?: default\ )? password\ is\ ' ( [^'\n\#$|"{<+\ ()\\] (?# more restrictive first character to eliminate common interpolation forms ) [^'\n]{3,60} )'
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+echo "Rrun 'bin/ipa_kinit admin' to acquire a Kerberos ticket"
+echo "The password is 'Secret123'"
+The Blooby has a default Access Point Name 'Blooby'
+The default Password is 'blooberry'

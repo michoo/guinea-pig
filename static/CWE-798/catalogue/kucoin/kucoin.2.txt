@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: KuCoin API Secret
+# Provider: kucoin    Rule id (normalized): kucoin.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.kucoin.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    kucoin-access-token
+#   - gitleaks    kucoin-secret-key
+#   - betterleaks kucoin-access-token
+#   - betterleaks kucoin-secret-key
+#
+# Pattern: (?xi) \b kucoin (?:.|[\n\r]){0,32}? (?: api[_-]?secret | secret ) (?:.|[\n\r]){0,12}? ( [a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+KUCOIN_API_SECRET=7d70f6c7-42e9-4261-8a8d-8ca2d5028d4f
+kucoin_secret: a1b2c3d4-e5f6-7890-abcd-ef1234567890

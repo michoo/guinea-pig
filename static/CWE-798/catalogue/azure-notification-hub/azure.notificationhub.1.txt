@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Notification Hub Namespace Host
+# Provider: azure-notification-hub    Rule id (normalized): azure.notificationhub.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.notificationhub.1
+#
+# Pattern: (?xi) \b (?: endpoint \s*=\s* sb:// | notification (?:.|[\n\r]){0,48}? https:// ) ( [a-z0-9] [a-z0-9-]{1,62} \.servicebus\.windows\.net ) (?:/|;|\b)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Endpoint=sb://acme-push.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=VGhpcytpcythK3Rlc3Qra2V5K3ZhbHVlLzEyMzQ1Njc4OTA=
+notificationHubEndpoint: "https://mobile-prod.servicebus.windows.net"

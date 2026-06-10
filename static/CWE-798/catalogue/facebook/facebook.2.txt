@@ -1,0 +1,25 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Facebook Secret Key
+# Provider: facebook    Rule id (normalized): facebook.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.facebook.2
+#   - noseyparker np.facebook.2
+#   - titus       np.facebook.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    facebook-access-token
+#   - gitleaks    facebook-page-access-token
+#   - gitleaks    facebook-secret
+#   - betterleaks facebook-access-token
+#   - betterleaks facebook-page-access-token
+#   - betterleaks facebook-secret
+#
+# Pattern: (?xi) \b (?: facebook | fb ) (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|AUTH) (?:.|[\n\r]){0,48}? .{0,2} \s{0,20} .{0,2} \s{0,20} .{0,2} \b ( [a-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+# config.facebook.key = "34cebc81c056a21bc66e212f947d73ec"
+var fbApiKey = '0278fc1adf6dc1d82a156f306ce2c5cc';
+fbApiKey:            "171e84fd57f430fc59afa8fad3dbda2a",
+"facebook appSecret = "ce3f9f0362bbe5ab01dfc8ee565e4372"
+url = 'https://graph.facebook.com/me/friends?access_token=EAACEdEose0cBAD5XZCz5JXYvqyeJzcSvFZC42toHiWyfjhcZCMZBZCpE3uRJnEBsrhUEMRK1wWs6SsdiDCaCI1mYwyoNuMix2XZCpvsKbZB9TumtZBlcLeIpl4pa931Ce9rTinEAhtyVVZAAZAX4NmfpBUqWtzCRC0fX5GZBn7ZC28mPKAZDZD'

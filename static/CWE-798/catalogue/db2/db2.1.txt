@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: IBM DB2 / AS400 Credentials
+# Provider: db2    Rule id (normalized): db2.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.db2.1
+#
+# Pattern: (?xi) \b (?:db2|as400) (?:.|[\n\r]){0,64}? \b(?:password|passwd|pass|pwd)\b (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [^\s"']{6,128} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+db2.password=mY5ecureP4ss
+db.url=jdbc:db2://db.example.com/dev
+db.password=sup3rs3cr3t
+as400.pass=r4ndP@ssw0rd

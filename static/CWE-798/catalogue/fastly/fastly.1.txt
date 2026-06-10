@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Fastly API token
+# Provider: fastly    Rule id (normalized): fastly.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.fastly.1
+#   - titus       kingfisher.fastly.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    fastly-api-token
+#   - betterleaks fastly-api-token
+#
+# Pattern: (?xi) \b fastly (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [a-z0-9_-]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Fastly token: fgsb3ef237afd6c1b9d91f81cdba64f3

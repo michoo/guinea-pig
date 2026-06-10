@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Upstash Account Email
+# Provider: upstash    Rule id (normalized): upstash.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.upstash.3
+#
+# Pattern: (?xi) \b (?: UPSTASH_EMAIL | upstash (?:.|[\n\r]){0,40}? email ) (?:.|[\n\r]){0,12}? ( [A-Za-z0-9._%+\-]+ @ [A-Za-z0-9.\-]+\.[A-Za-z]{2,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+UPSTASH_EMAIL=agent@example.com
+upstash email: "ops.bot@example.org"

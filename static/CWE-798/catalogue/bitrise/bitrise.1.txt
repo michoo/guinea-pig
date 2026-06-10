@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Bitrise Personal Access Token
+# Provider: bitrise    Rule id (normalized): bitrise.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.bitrise.1
+#
+# Pattern: (?x) \b (?i:bitrise) (?:.|[\n\r]){0,24}? (?i:token|pat|personal[_\s-]*access) (?:.|[\n\r]){0,16}? ( [a-zA-Z0-9_-]{60,120} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BITRISE_TOKEN=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890AbCdEfGhIjKlMnOpQrStUvWxYz12

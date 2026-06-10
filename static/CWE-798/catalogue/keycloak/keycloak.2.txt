@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Keycloak Client Secret
+# Provider: keycloak    Rule id (normalized): keycloak.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.keycloak.2
+#
+# Pattern: (?xi) \b keycloak (?:.|[\n\r]){0,96}? \b(?:credentials?[._-]secret|secret)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [a-f0-9]{8}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+keycloak.credentials.secret=0aa1dabc-1d8a-4c00-85c2-82bc88c42dc7
+keycloak:
+  credentials:
+    secret: 7b3e1234-abcd-4567-8901-23456789abcd

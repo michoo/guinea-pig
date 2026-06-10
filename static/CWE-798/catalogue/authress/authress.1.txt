@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Authress Service Client Access Key
+# Provider: authress    Rule id (normalized): authress.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.authress.1
+#   - titus       kingfisher.authress.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    authress-service-client-access-key
+#   - betterleaks authress-service-client-access-key
+#
+# Pattern: (?xi) ( (?:sc|ext|scauth|authress)_[a-z0-9]{5,30}\.[a-z0-9]{4,6}\.acc[_-][a-z0-9-]{10,32}\.[a-z0-9+/_=-]{30,120} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sc_a6DTktFwMEvh87xstYV1BXl.ihwj.acc-0xd1a47h1rr0f.MC4CAQAwBQYDKAVwBCIEIB1wYB62EK24FKxEPHbW0ishcstwp2qs30uLXdWgu4V0

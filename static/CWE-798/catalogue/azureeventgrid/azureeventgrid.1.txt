@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Event Grid Key
+# Provider: azureeventgrid    Rule id (normalized): azureeventgrid.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azureeventgrid.1
+#
+# Pattern: (?x) \b (?: (?i:event[_\s-]*grid[_\s-]*(?:key|access[_\s-]*key|topic[_\s-]*key)) | (?i:azure_event_grid[_\s-]*(?:key|access_key|topic_key)) | (?i:aeg-sas-key) ) (?:.|[\n\r]){0,16}? ( [A-Za-z0-9+/]{40,50}={0,2} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AZURE_EVENT_GRID_KEY=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890ABCDEFG==
+aeg-sas-key: AbCdEfGhIjKlMnOpQrStUvWxYz1234567890ABCDEFG==

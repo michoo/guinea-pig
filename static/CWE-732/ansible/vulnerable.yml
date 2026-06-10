@@ -1,0 +1,17 @@
+# CWE-732: Incorrect Permission Assignment for Critical Resource
+# A file is created with world-writable permissions (0777), allowing any user to modify it.
+---
+- name: Insecure file permissions example
+  hosts: all
+  tasks:
+    - name: Copy config with overly permissive mode
+      ansible.builtin.copy:
+        src: app.conf
+        dest: /etc/app/app.conf
+        mode: '0777'
+
+    - name: Create directory world-writable
+      ansible.builtin.file:
+        path: /opt/app/data
+        state: directory
+        mode: '0777'

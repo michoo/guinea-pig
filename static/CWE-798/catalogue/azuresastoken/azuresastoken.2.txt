@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure SAS Token in URL
+# Provider: azuresastoken    Rule id (normalized): azuresastoken.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azuresastoken.2
+#
+# Pattern: (?x) ( (?i:https://[a-z0-9-]+\.(?:blob|queue|table|file|dfs)\.core\.windows\.net/)[^\s"']* \?[^\s"']*(?i:sig=)[a-zA-Z0-9%+/=]{20,100}[^\s"']* )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://mystorageaccount.blob.core.windows.net/mycontainer/myblob?sv=2021-06-08&st=2024-01-01&se=2024-12-31&sr=b&sp=r&sig=AbCdEfGhIjKlMnOp%2BQrStUvWxYz%3D

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: hCaptcha Site Verify Secret Key
+# Provider: hcaptcha    Rule id (normalized): hcaptcha.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hcaptcha.1
+#
+# Pattern: (?x) \b ( (?: 0x[a-fA-F0-9]{40} | ES_[a-fA-F0-9]{32} ) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HCAPTCHA_SECRET=0x0000000000000000000000000000000000000000
+hcaptcha_secret: ES_abcdef1234567890abcdef1234567890

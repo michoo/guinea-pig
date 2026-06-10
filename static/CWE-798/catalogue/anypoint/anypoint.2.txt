@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Anypoint OAuth Client ID
+# Provider: anypoint    Rule id (normalized): anypoint.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.anypoint.2
+#
+# Pattern: (?xi) \b anypoint (?:.|[\n\r]){0,48}? (?: client[\s_.-]*id | app[\s_.-]*id | connected[\s_.-]*app[\s_.-]*id ) (?:.|[\n\r]){0,16}? \b ( [0-9a-f]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ANYPOINT_CLIENT_ID="4f2c9d1081ab7c3de56f9081a2bc4d7e"
+anypoint connected app id: 9c7a21e45d6f0b8c3a1d4e6f7b2c9a10

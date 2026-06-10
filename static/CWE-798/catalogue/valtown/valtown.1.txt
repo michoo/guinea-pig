@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Val Town API Token
+# Provider: valtown    Rule id (normalized): valtown.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.valtown.1
+#
+# Pattern: (?x) \b ( vtwn_[a-zA-Z0-9_-]{20,80} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+VALTOWN_TOKEN=vtwn_AbCdEfGhIjKlMnOpQrStUvWxYz123456

@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PackageCloud API Key
+# Provider: packagecloud    Rule id (normalized): packagecloud.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.packagecloud.1
+#   - titus       kingfisher.packagecloud.1
+#
+# Pattern: (?xi) \b packagecloud (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API[_-]?TOKEN|AUTH) (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+packagecloud accessKEY 1234567890abcdef1234567890abcdef1234567890abcdef
+packagecloud:token=1234567890abcdef1234567890abcdef1234567890abcdef
+"config": {
+  "packagecloud_secret": "1234567890abcdef1234567890abcdef1234567890abcdef"
+}
+packagecloudPRIVATEkey 1234567890abcdef1234567890abcdef1234567890abcdef

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: HOP Personal Access Token
+# Provider: hop    Rule id (normalized): hop.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hop.2
+#
+# Pattern: (?x) (?:^|['"\x60\s>=:(,]) ( hop_pat_[a-zA-Z0-9_-]{20,80} ) (?:$|['"\x60\s<),])
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HOP_PAT="hop_pat_AbCdEfGhIjKlMnOpQrStUvWxYz123456"

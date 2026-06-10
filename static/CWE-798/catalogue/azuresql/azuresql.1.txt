@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure SQL Connection String
+# Provider: azuresql    Rule id (normalized): azuresql.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azuresql.1
+#
+# Pattern: (?x) (?i:Server=tcp:(?:[a-z0-9-]+\.database\.windows\.net),\d+;) (?:.|[\n\r]){0,100}? (?i:Password=)( [^;'"]{8,128} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Server=tcp:myserver.database.windows.net,1433;Initial Catalog=mydb;Persist Security Info=False;User ID=admin;Password=MyP@ssw0rd!123;

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MailerSend API Token
+# Provider: mailersend    Rule id (normalized): mailersend.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mailersend.1
+#
+# Pattern: (?x) \b ( mlsn\.[a-zA-Z0-9]{30,100} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MAILERSEND_API_TOKEN=mlsn.AbCdEfGhIjKlMnOpQrStUvWxYz1234567890AbCdEfGhIj

@@ -1,0 +1,24 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Twitter/X Access Token
+# Provider: twitter    Rule id (normalized): twitter.4
+#
+# Detected by this rule:
+#   - titus       np.twitter.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    twitter-access-secret
+#   - gitleaks    twitter-access-token
+#   - gitleaks    twitter-api-key
+#   - gitleaks    twitter-api-secret
+#   - gitleaks    twitter-bearer-token
+#   - betterleaks twitter-access-secret
+#   - betterleaks twitter-access-token
+#   - betterleaks twitter-api-key
+#   - betterleaks twitter-api-secret
+#   - betterleaks twitter-bearer-token
+#
+# Pattern: (?x)(?i) (?: twitter | x[\-_]?api ) .? (?: access | oauth | user )? .? (?: token | key ) .{0,2} \s{0,20} .{0,2} \s{0,20} .{0,2} (?# string terminators, whitespace, binding operators, etc ) \b (?P<access_token>[0-9]{15,20}-[a-zA-Z0-9]{30,45} …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TWITTER_ACCESS_TOKEN = "1234567890123456789-abcdefABCDEFghijklABCD12345678"
+x_api_access_token = "9876543210987654321-XYZabcdefghijklmnopqrstuvwxyz12"

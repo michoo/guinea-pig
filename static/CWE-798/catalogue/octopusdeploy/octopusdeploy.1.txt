@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Octopus Deploy Server URL
+# Provider: octopusdeploy    Rule id (normalized): octopusdeploy.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.octopusdeploy.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    octopus-deploy-api-key
+#   - betterleaks octopus-deploy-api-key
+#
+# Pattern: (?xi) (?: \boctopus(?:[_\s.-]?deploy)?(?:[_\s.-]?(?:url|server|host))?\b (?:.|[\n\r]){0,32}? [:=] | \boctopus(?:url|server|host)\b \s*[:=] ) \s*["']? ( https:// [A-Za-z0-9.-]+ (?::\d{2,5})? ) ["']?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+OCTOPUS_URL=https://deploy.acme.example
+octopus_server: "https://octopus.internal.example:8443"

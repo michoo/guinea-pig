@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Gamma API Key
+# Provider: gamma    Rule id (normalized): gamma.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gamma.1
+#
+# Pattern: (?x) \b ( sk-gamma- [A-Za-z0-9_-]{8} (?:[A-Za-z0-9_-]{8}){3,7} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+GAMMA_API_KEY="sk-gamma-a1b2c3d4E5f6g7h8I9j0k1l2M3n4o5p6"

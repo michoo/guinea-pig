@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Statsig Server Secret Key
+# Provider: statsig    Rule id (normalized): statsig.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.statsig.1
+#
+# Pattern: (?x) \b ( secret- [A-Za-z0-9]{40,48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+STATSIG_SERVER_KEY="secret-K9mT4xRpWsLqZvAnBcDeFgHiJkLmNoPqRsTuVwXy"
+statsig.initialize("secret-AbCdEfGhIjKlMnOpQrStUvWxYz0123456789ABCD", options)

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Contentstack API Key
+# Provider: contentstack    Rule id (normalized): contentstack.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.contentstack.2
+#
+# Pattern: (?xi) \b contentstack (?:.|[\n\r]){0,32}? (?:API[_\s]?KEY|STACK[_\s]?API[_\s]?KEY) (?:.|[\n\r]){0,16}? \b ( blt[a-f0-9]{10} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CONTENTSTACK_API_KEY=blt1234567890

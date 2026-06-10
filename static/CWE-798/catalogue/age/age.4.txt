@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Age Identity (MLKEM768-X25519 secret key)
+# Provider: age    Rule id (normalized): age.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.age.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    age-secret-key
+#   - betterleaks age-secret-key
+#   - betterleaks upstage-api-key
+#
+# Pattern: (?x) \b ( AGE-SECRET-KEY-PQ-1[0-9A-Z]{58} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+# created: 2025-11-17T12:15:17+01:00
+# public key: age1pq1pd[... 1950 more characters ...]
+AGE-SECRET-KEY-PQ-1XXC4XS9DXHZ6TREKQTT3XECY8VNNU7GJ83C3Y49D0GZ3ZUME4JWS6QC3EF

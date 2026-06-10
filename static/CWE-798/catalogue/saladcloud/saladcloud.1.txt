@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SaladCloud API Key
+# Provider: saladcloud    Rule id (normalized): saladcloud.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.saladcloud.1
+#
+# Pattern: (?x) \b ( salad_cloud_[0-9A-Za-z]{1,7}_[0-9A-Za-z]{7,40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SALAD_API_KEY=salad_cloud_abc1234_xY9zW8vU7tS6rQ5pN4mL3kJ2iH1gF0e
+salad_key: "salad_cloud_org42_a1B2c3D4e5F6g7H8i9J0"

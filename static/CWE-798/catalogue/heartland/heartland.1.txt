@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Heartland Portico API Key
+# Provider: heartland    Rule id (normalized): heartland.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.heartland.1
+#
+# Pattern: (?x) \b ( skapi_cert_ [A-Za-z0-9]{34,42} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+config.secretApiKey = "skapi_cert_AeUdFKCJ8mBl5ThCDPCFdEgDJi8k9AaKO7c"
+HEARTLAND_API_KEY=skapi_cert_ZfVeXwDUBbMlJnQIEsJGLbMkrQOiPtNh8e2

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SonarQube Host
+# Provider: sonarqube    Rule id (normalized): sonarqube.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sonarqube.2
+#
+# Pattern: (?xi) sonar.{0,8}host (?:.|[\n\r]){0,64}? ( https?://.*?:\d{2,6} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sonar.host=https://sonar.internal.company.com:9000

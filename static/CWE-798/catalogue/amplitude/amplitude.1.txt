@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Amplitude Secret Key
+# Provider: amplitude    Rule id (normalized): amplitude.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.amplitude.1
+#   - titus       np.amplitude.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks amplitude-secret-key
+#
+# Pattern: (?xi) \b amplitude (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|AUTHORIZATION) (?:.|[\n\r]){0,16}? \b ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+amplitude_api_key=8b6f8d6594749cb659b1be03e6a0a2e7
+AMPLITUDE_API_KEY=ef929907c3923e8f3da83c24f0255aa6
+AMPLITUDE_SECRET_KEY=8b6f8d6594749cb659b1be03e6a0a2e7
+AMPLITUDE_API_KEY=a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6
+amplitude.init("e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9");

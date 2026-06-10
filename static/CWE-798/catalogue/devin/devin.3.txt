@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cognition Devin Service User Token
+# Provider: devin    Rule id (normalized): devin.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.devin.3
+#
+# Pattern: (?x) \b ( cog_[a-z2-7]{52} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+cog_l5osrifmypvazi4j3yko52gj6jfj7qprsmy4lrcf27jas4szffha
+DEVIN_API_KEY=cog_uv23fh6fc5kpaxdqif7hyvmzslnbmwriqita7cqkbb4rpaixnleq
+Authorization: Bearer cog_nxcgv6nuzdvwpgla5wcqsf6dhqrvjmi63j6f6say2au72ihjlxua

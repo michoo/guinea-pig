@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tableau Personal Access Token
+# Provider: tableau    Rule id (normalized): tableau.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tableau.1
+#
+# Pattern: (?xi) (?: \btableau\b (?:.|[\n\r]){0,96}? | PersonalAccessTokenAuth (?:.|[\n\r]){0,32}? | X-Tableau-Auth (?:.|[\n\r]){0,16}? ) (?: (?P<TABLEAU_PAT_NAME>[A-Za-z0-9+/]{12,24} (?:={1,2})? ) : (?P<TOKEN>[A-Za-z0-9+/=_-]{24,48}) )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+tableau_auth = TSC.PersonalAccessTokenAuth('prod_svc', 'WLQKWBs1TnuBx4G7gIzz/w==:yDwZ74EWDPIgU6cSlz8RDJHp7CV2rtFP', 'companysite')
+curl -H "X-Tableau-Auth:oJzK8bqwPTnmSl1/E2+aXw==:ZvTsRqFmKpWuLdNhYcBjXiGe" https://tableau.example.com/api/3.17/sites

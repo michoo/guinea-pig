@@ -1,0 +1,25 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Container Registry URL
+# Provider: azure    Rule id (normalized): azure.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.4
+#   - noseyparker np.azure.4
+#   - titus       np.azure.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    azure-ad-client-secret
+#   - betterleaks azure-ad-client-secret
+#
+# Pattern: (?xi) ( [a-z0-9][a-z0-9-]{1,100}[a-z0-9] )\.azurecr\.io
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+myregistry.azurecr.io
+6RtqHqPc66Y6DYbkydbrrFJTYnRoA7r40ts7LWS2SkINSFsRABxhJQQJ99BFACAAAAALGcqjAAASAZDO3eqU
+aQwErTy123456789AbCdEf0123456789AbCdEf0123456789AbCdEf0123456789AbCdEf012345AZDOabc1
+team = 'ChickenBone Team'
+token = '23IcywOgHQTktCPK7D1r1zLjJkRiDu9m1udhpuOnl9XKhUzybqlMJQQJ98BAACAAAAATbLuLAAASAZDOWP7X'
+# Use your real DevOps org & PAT
+azure_devops_url             = "https://dev.azure.com/Example-Team-DevSecOps/"
+azure_devops_pat             = "GBVknRcxXb9mv097EZvvmJhvdKEjmmllsz8puwgJHpnA8rAd912ZJQQJ96BBACAAAAAP0mgpAAASAZDO4Ssi"
+azure_devops_agent_pool_name = "Default"

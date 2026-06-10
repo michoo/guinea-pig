@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Aikido Client Secret
+# Provider: aikido    Rule id (normalized): aikido.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.aikido.3
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks aikido-ci-token
+#   - betterleaks aikido-client-id
+#   - betterleaks aikido-client-secret
+#
+# Pattern: (?x) \b ( AIK_SECRET_[A-Za-z0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AIK_CLIENT_SECRET=AIK_SECRET_a1B2c3D4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0u1V2w3X4y5Z6a7B8c9D0e1F2

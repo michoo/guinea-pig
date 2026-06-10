@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Stability AI API Key
+# Provider: stabilityai    Rule id (normalized): stabilityai.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.stabilityai.1
+#   - titus       kingfisher.stabilityai.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks stability-ai-api-key
+#
+# Pattern: (?x) \b ( sk- [A-Za-z0-9]{48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sk-AnmgropvAII5XEoxVPjbnSMG3XhacEwhJlLh8ossXh7K1iLP
+sk-gQHyuK4k6Vw2viJRaAnLh6zAULaWtUg40ZHWcYjw7JGutlW6
+sk-nwvJypEMFNASJLiPBgNnzJj1xsDwlHChbFRMNwVkzy3e4UJg
+stability_api_key = sk-AnmgropvAII5XEoxVPjbnSMG3XhacEwhJlLh8ossXh7K1iLP
+STABILITYAI_TOKEN=sk-gQHyuK4k6Vw2viJRaAnLh6zAULaWtUg40ZHWcYjw7JGutlW6
+stable_diffusion_key = sk-nwvJypEMFNASJLiPBgNnzJj1xsDwlHChbFRMNwVkzy3e4UJg
+dreamstudio_api_key=sk-nwvJypEMFNASJLiPBgNnzJj1xsDwlHChbFRMNwVkzy3e4UJg

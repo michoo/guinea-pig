@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Alibaba STS Access Key ID
+# Provider: alibaba    Rule id (normalized): alibabacloud.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.alibabacloud.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    alibaba-access-key-id
+#   - gitleaks    alibaba-secret-key
+#   - betterleaks alibaba-access-key-id
+#   - betterleaks alibaba-secret-key
+#   - betterleaks alibaba-sts-access-key-id
+#   - betterleaks alibaba-sts-access-key-secret
+#   - betterleaks alibaba-sts-security-token
+#
+# Pattern: (?x) \b ( STS\.[A-Za-z0-9]{16,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+STS.NTKaenSkmLhG4HpM576UV
+STS.FJ6EMcS1JLZgAcBJSTDG1Z4CE

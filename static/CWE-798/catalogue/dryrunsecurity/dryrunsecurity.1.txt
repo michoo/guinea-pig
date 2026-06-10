@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DryRun Security API Key
+# Provider: dryrunsecurity    Rule id (normalized): dryrunsecurity.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dryrunsecurity.1
+#
+# Pattern: (?x) \b ( dryrunsec_[A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DRYRUN_API_KEY="dryrunsec_XRO3RsNlZm4M3VyZoPb02PzTv7yaEWoF"
+Authorization: Bearer dryrunsec_hdKJINE3Bbe4SI3MsP4RoeCp5oY31MLZ
+dryrun_token=dryrunsec_1lTU5w3SuCqJ59aqmri3rhLVJtabQ0BM

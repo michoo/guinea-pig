@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WakaTime Prefixed API Key
+# Provider: wakatime    Rule id (normalized): wakatime.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.wakatime.2
+#   - titus       np.wakatime.2
+#
+# Pattern: (?xi) \b ( waka_[a-z0-9]{36,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WAKATIME_API_KEY=waka_a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8
+api_key: "waka_f9e8d7c6b5a4321098765abcdef012345678"

@@ -1,0 +1,31 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Credentials in ODBC Connection String
+# Provider: odbc    Rule id (normalized): odbc.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.odbc.1
+#   - noseyparker np.odbc.1
+#   - titus       np.odbc.1
+#
+# Pattern: (?xi) (?: User | User\ Id | UserId | Uid) \s*=\s* ([^\s;]{3,100}) \s* ; [\ \t]* .{0,10} [\ \t]* (?: Password | Pwd) \s*=\s* ([^\t\ ;]{3,100}) \s* (?: [;] | $)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+//Database Info
+$host = "localhost";
+$database = "NHOHVA";
+$user = "mg1021"; $password = "goodspec";
+//Database Info
+$host = "localhost";
+$database = "NHOHVA";
+$user = "mg1021"; $password = goodspec;
+Server=host;Port=5432;User Id=username;Password=secret;Database=databasename;
+Server=host;Port=5432;SomeOtherKey=SomeOtherValue;User Id=username;Password=secret;Database=databasename;
+Data Source=190.190.200.100,1433;Network Library=DBMSSOCN;Initial Catalog=myDataBase;User ID=myUsername;Password=myPassword;
+Data Source=190.190.200.100,1433;Network_library=DBMSSOCN;Initial Catalog=myDataBase;User ID=myUsername;Password=myPassword;
+Provider=SQLNCLI;Server=myServerName,myPortNumber;Database=myDataBase;Uid=myUsername;Pwd=myPassword;
+adoConn.Open("Provider=SQLOLEDB.1;User ID=specialbill_user; " & "Password =specialbill_user;Initial Catalog=SpecialBill_PROD;Data Source=uszdba01;")
+"driver={SQL Server};server=(#{datastore['DBHOST']});database=#{datastore['DBNAME']};uid=#{datastore['DBUID']};pwd=#{datastore['DBPASSWORD']}"
+//Database Info\r\n\t\t\t\t\t$host = \"localhost\";\r\n\t\t\t\t\t$database = \"NHOHVA\";\r\n\t\t\t\t\t$user = \"mg1021\";              $password = \"goodspec\";
+//Database Info\r\n\t\t\t\t\t$host = \"localhost\";\r\n\t\t\t\t\t$database = \"NHOHVA\";\r\n\t\t\t\t\t$user = \"mg1021\";              $password = goodspec;
+<add name="DevQATrucks" connectionString="Server=hookupsqlqa1\gpkqa; Database=YogurtDelay: User Id=kmwulfliq; password= sK!g2Ex_=jJ6Gx5v" providerName="System.Data.SqlClient" />

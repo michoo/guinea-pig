@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mixpanel API Secret
+# Provider: mixpanel    Rule id (normalized): mixpanel.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mixpanel.1
+#
+# Pattern: (?xis) \b mixpanel .{0,32}? (?:SECRET|API.?SECRET|API.?KEY|PROJECT.?SECRET|TOKEN) .{0,32}? \b ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MIXPANEL_API_SECRET="a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6"
+MIXPANEL_API_KEY="0fff5f614cbcafefb9c1ba319b9905d2"
+Mixpanel SECRET Token
+a2813cd4502f94a77de470f2d7adc8d7

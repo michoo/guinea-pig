@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Bunny.net API Key
+# Provider: bunnynet    Rule id (normalized): bunnynet.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.bunnynet.1
+#
+# Pattern: (?xi) \b (?:bunny(?:\.net)?|api\.bunny\.net) (?:.|[\n\r]){0,40}? (?:access[_\s-]*key|accesskey|api[_\s-]*key|token|key) (?:.|[\n\r]){0,24}? ( [a-f0-9]{8} -[a-f0-9]{4} -[a-f0-9]{4} -[a-f0-9]{4} - (?: [a-f0-9]{12} | [a-f0-9]{20}(?:-[a-f0-9]{4 …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BUNNY_API_KEY="19f4c2ab-7d30-4e85-91bc-0d4a8f7e2c61"
+bunny_access_key = "7a3c2d18-4f90-4b6e-83ad-12f0ab34cd56ef78ab90-1d2c-4a7b-8e9f-1234567890ab"

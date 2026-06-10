@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Finnhub API Token
+# Provider: finnhub    Rule id (normalized): finnhub.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.finnhub.1
+#   - titus       kingfisher.finnhub.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    finnhub-access-token
+#   - betterleaks finnhub-access-token
+#
+# Pattern: (?xi) \b finnhub (?:.|[\n\r]){0,24}? \b ( [a-z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+FINNHUB_API_KEY=cd3f1a2b3c4d5e6f7a8b
+"finnhubToken": "9b8a7c6d5e4f3a2b1c0d"

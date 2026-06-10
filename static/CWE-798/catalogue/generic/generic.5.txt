@@ -1,0 +1,34 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic Password
+# Provider: generic    Rule id (normalized): generic.5
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.generic.5
+#   - noseyparker np.generic.5
+#   - titus       np.generic.5
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?xi) password (?:.|[\n\r]){0,16}? ["'] ([^$<%@.,\s'"(){}&/\#\-][^\s'"(){}/]{4,}) (?# password ) ["']
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+password = "super$ecret"
+password="super$ecret"
+String usernamePassword = "application:" + appKey + ":" + appSecret;
+my_password: "super$ecret"
+"password": "super$ecret",
+my_password := "super$ecret"
+password   =>   "super$ecret"
+"ApplicationServicesConnection" : {
+    "ServiceAddress" : "https://services-dev.examples.com",
+    "AdminPassword" : "thisismypassword"
+}
+private const string DevFolkoosComPfxPassword = "thisismypassword";
+"password": "YOURPASSWROD"
+create_random_name('sfrp-cli-cert2', 24),
+            'cluster_name': self.create_random_name('sfrp-cli-', 24),
+            'vm_password': "Pass123!@#",
+            'policy_path': os.path.join(TEST_DIR, 'policy.json')
+        })

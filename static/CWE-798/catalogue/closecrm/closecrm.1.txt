@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Close CRM API Key
+# Provider: closecrm    Rule id (normalized): closecrm.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.closecrm.1
+#
+# Pattern: (?xi) \b close (?:.|[\n\r]){0,32}? (?:API[_-]?KEY|SECRET|TOKEN|KEY) (?:.|[\n\r]){0,16}? \b ( api_[A-Za-z0-9]{18,26}\.[A-Za-z0-9]{18,26} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CLOSE_API_KEY=api_7b8KOSMa0OevK9qJvT6F9s.2H3Bt8ktGaQ9kVK45P7j7p
+close_key: "api_aBcDeFgHiJkLmNoPqRsT.uVwXyZ0123456789abcD"

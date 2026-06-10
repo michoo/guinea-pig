@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Guardian API Key
+# Provider: guardian    Rule id (normalized): guardian.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.guardian.1
+#   - titus       kingfisher.guardian.1
+#
+# Pattern: (?xi) \b guardian (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API) (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+guardian SECRET=abcdef12-1234-abcd-5678-abcdef123456
+guardianPRIVATEKEY=abcdef12-1234-abcd-5678-abcdef123456

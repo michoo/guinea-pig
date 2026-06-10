@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LangSmith Personal Access Token
+# Provider: langchain    Rule id (normalized): langchain.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.langchain.1
+#   - titus       kingfisher.langchain.1
+#
+# Pattern: (?xi) \b ( lsv2_(?:pt)_[0-9a-f]{32}_[0-9a-f]{10} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+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

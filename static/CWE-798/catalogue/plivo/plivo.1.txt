@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Plivo Auth ID
+# Provider: plivo    Rule id (normalized): plivo.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.plivo.1
+#
+# Pattern: (?xi) \b plivo (?:.|[\n\r]){0,32}? \b(?:auth[_-]?id|account[_-]?sid)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( MA[a-z0-9]{18} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PLIVO_AUTH_ID = 'MABDY4DMVMZESYNGY0NV'
+plivo_auth_id = 'MA9kl2nmpxwbuvqr73fh'

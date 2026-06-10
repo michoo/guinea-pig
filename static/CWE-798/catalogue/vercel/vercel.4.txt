@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Vercel App Access Token (vca_)
+# Provider: vercel    Rule id (normalized): vercel.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.vercel.4
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks vercel-ai-gateway-key
+#   - betterleaks vercel-api-token
+#   - betterleaks vercel-app-access-token
+#   - betterleaks vercel-app-refresh-token
+#   - betterleaks vercel-integration-token
+#
+# Pattern: (?x) \b ( vca_(?P<body>[A-Za-z0-9_-]{50})(?P<checksum>[A-Za-z0-9]{6}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+vca_BQuu9ChDu3n6Pfh6YQnCshpoYkWDSFKogLqmBtQ0tC8NAA5rXt340sjz

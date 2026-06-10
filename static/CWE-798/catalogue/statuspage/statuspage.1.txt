@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Statuspage API Key
+# Provider: statuspage    Rule id (normalized): statuspage.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.statuspage.1
+#   - titus       kingfisher.statuspage.1
+#
+# Pattern: (?xi) \b statuspage (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API) (?:.|[\n\r]){0,48}? \b ( [0-9a-f]{64} | # Legacy UUID-ish keys (seen in older configs) [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+statuspage_api: OAuth 89a229ce1a8dbcf9ff30430fbe35eb4c0426574bca932061892cefd2138aa4b1
+statuspage_key = 123e4567-e89b-12d3-a456-426614174000

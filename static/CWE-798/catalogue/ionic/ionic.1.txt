@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Ionic API token
+# Provider: ionic    Rule id (normalized): ionic.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ionic.1
+#   - titus       kingfisher.ionic.1
+#
+# Pattern: (?x) \b ( ion_ [a-zA-Z0-9]{42} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ion_VNR17uGgdxr9P2aOrCulvSLTFDqijIV2ImQsOUhDEI

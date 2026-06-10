@@ -1,0 +1,23 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DigitalOcean API Key
+# Provider: digitalocean    Rule id (normalized): digitalocean.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.digitalocean.1
+#   - noseyparker np.digitalocean.1
+#   - titus       np.digitalocean.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    digitalocean-access-token
+#   - gitleaks    digitalocean-pat
+#   - gitleaks    digitalocean-refresh-token
+#   - betterleaks digitalocean-access-token
+#   - betterleaks digitalocean-pat
+#   - betterleaks digitalocean-refresh-token
+#
+# Pattern: (?x) \b ( (?:dop|doo)_v1_ [a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+dop_v1_1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef
+token         = "dop_v1_ef0e04edc13918192246e0c90f0735c7f4db7a5a036a857e48d6cc98f1c9576b"
+curl -X GET -H "Content-Type: application/json" -H "Authorization: Bearer doo_v1_c46dde8bd620fcc382e70d5d43be6eebb141fa2452e8f8fa882433377898ebf2" "https://api.digitalocean.com/v2/cdn/endpoints"

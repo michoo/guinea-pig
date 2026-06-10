@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Dify API Key
+# Provider: dify    Rule id (normalized): dify.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dify.1
+#
+# Pattern: (?xi) (?: \b (?:dify|dify[_-]?api(?:[_-]?key)?|dify[_-]?app(?:[_-]?api(?:[_-]?key)?)?) \b (?:.|[\n\r]){0,96}? ) \b ( app-[a-f0-9]{24} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DIFY_API_KEY=app-1f2e3d4c5b6a7980c1d2e3f4
+dify_app_api_key: "app-a0b1c2d3e4f5678901234abc"

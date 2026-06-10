@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Miro Client Secret
+# Provider: miro    Rule id (normalized): miro.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.miro.2
+#
+# Pattern: (?xi) \b miro (?:.|[\n\r]){0,40}? (?:client[_-]?secret|app[_-]?secret) (?:.|[\n\r]){0,20}? \b ( [A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MIRO_CLIENT_SECRET=5VEWim0jDbaytgKXN7ReM7MkfpQ8Rm3d

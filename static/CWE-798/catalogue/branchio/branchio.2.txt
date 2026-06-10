@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Branch.io Test Key
+# Provider: branchio    Rule id (normalized): branchio.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.branchio.2
+#   - titus       np.branchio.2
+#
+# Pattern: (?x) \b ( key_test_[a-zA-Z0-9]{16,40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BRANCH_KEY=key_test_jfdwlg5PtY8mDoR3fGpv4hkesztiqEWZ
+branch.init("key_test_plqYW3Aq9Xija1cobGMieipndBzO5y7J");

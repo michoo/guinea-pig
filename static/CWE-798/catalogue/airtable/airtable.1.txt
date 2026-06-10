@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Airtable Personal Access Token
+# Provider: airtable    Rule id (normalized): airtable.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.airtable.1
+#   - titus       kingfisher.airtable.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    airtable-api-key
+#   - gitleaks    airtable-personnal-access-token
+#   - betterleaks airtable-api-key
+#   - betterleaks airtable-oauth-token
+#   - betterleaks airtable-personnal-access-token
+#
+# Pattern: (?x) \b ( pat [A-Za-z0-9]{14} \. [a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+airtable_pat = patXfsZBLOgxbJqSi.fd6210cfb2e0b2049bd8e7fa0e69f26a3a704412af6fcbd93a097c42507fc893

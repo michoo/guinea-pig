@@ -1,0 +1,17 @@
+# CWE-829: Inclusion of Functionality from Untrusted Control Sphere
+# Third-party and official actions are pinned to mutable tags/branches instead of immutable commit SHAs.
+name: build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: some-org/some-action@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - run: make build

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pangea Service Token
+# Provider: pangea    Rule id (normalized): pangea.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pangea.1
+#
+# Pattern: (?x) \b ( pts_[a-z0-9]{20,60} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PANGEA_TOKEN=pts_gqmqvvxk4yhirapuhw6bs7nswu
+pangea_token: pts_hpbc3klkkq54tigu4osc5eygthxps6vf

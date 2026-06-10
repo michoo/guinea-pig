@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Docker Hub Organization Access Token
+# Provider: dockerhub    Rule id (normalized): dockerhub.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dockerhub.3
+#
+# Pattern: (?xi) \b ( dckr_oat_[A-Z0-9_-]{32} ) (?: $ | [^A-Z0-9_-] )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+docker login -u docker-test -p dckr_oat_7bA9zRt5-JqX3vP0l_MnY8sK2wE-dF6h

@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sidekiq Sensitive URL
+# Provider: sidekiq    Rule id (normalized): sidekiq.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sidekiq.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sidekiq-secret
+#   - gitleaks    sidekiq-sensitive-url
+#   - betterleaks sidekiq-secret
+#   - betterleaks sidekiq-sensitive-url
+#
+# Pattern: (?xi) ( https?:// [a-f0-9]{8}:[a-f0-9]{8} @ (?: gems\.contribsys\.com | enterprise\.contribsys\.com ) (?: /[^ \t\r\n"'<>]* | \?[^ \t\r\n"'<>]* | \#[^ \t\r\n"'<>]* | :[0-9]{1,5}(?:/[^ \t\r\n"'<>]*)? )? )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://cafe1234:dead5678@gems.contribsys.com/kingfisher-example-not-found
+http://ca1eb4b3:d3ad533f@enterprise.contribsys.com:80/kingfisher-example-not-found?param1=true

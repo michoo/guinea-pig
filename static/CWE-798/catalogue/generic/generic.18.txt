@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic Username and Password in JavaScript Object
+# Provider: generic    Rule id (normalized): generic.18
+#
+# Detected by this rule:
+#   - titus       np.generic.18
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?x)(?i) [a-zA-Z0-9_]{0,40} (?# camelCase key prefix ) (?: user (?:name)? ) (?# user suffix keyword ) ["']? (?# optional quote around key ) \s* : \s* (?# colon binder ) " ( [^"\n]{3,50} ) " (?# username value ) \s* , \s* (?# JS object comma …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+dbUser:"admin",dbPassword:"s3cr3tP@ss!"
+oauthUser:"service-account",oauthPassword:"XKskiswok812KS"

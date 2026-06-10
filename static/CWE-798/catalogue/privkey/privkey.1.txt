@@ -1,0 +1,26 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Contains encrypted RSA private key
+# Provider: privkey    Rule id (normalized): privkey.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.privkey.1
+#   - titus       kingfisher.privkey.1
+#
+# Pattern: (?xi) (?msi) ( -----BEGIN\s (?:RSA)\s PRIVATE\sKEY (\sBLOCK)? ----- ) [\r\n] Proc-Type:.*?ENCRYPTED [\r\n] DEK-INFO.*? [\r\n][\r\n] [a-z0-9/+=\r\n\\n]{32,}? -----END\s (?:RSA)\s PRIVATE\sKEY (\sBLOCK)? -----
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-256-CBC,1F77CE6d2Bb6B18537633Ec3aD093b9C
+
+kyx3
+wbfxsauty36i7t
+i9z9jp/m7wiptdmxpx2zh
+wehs0oz1abuede+tq4ama6kjrywq0
+xw2mbgz1fmxw+8ub4rf2wkm/qlvnopukbitesk2+
+b55+04h565guxlu+8u4+mynsoqgahx0p5jg4h1vo0lpw/ru1qe60p4nz7635xeel868y72bsysa5/90qkhnt1bkxcqyqkmw3
+949mmahkh/cd9+f+x9wprv4mtq02ks1pzpb6zz6t
++ril
+frnc129xvp11ndqbyjqlg3jf9ovlb1qula84ftj8m
+-----END RSA PRIVATE KEY-----

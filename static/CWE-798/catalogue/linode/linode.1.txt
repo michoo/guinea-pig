@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Linode Personal Access Token
+# Provider: linode    Rule id (normalized): linode.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.linode.1
+#
+# Pattern: (?xi) \b (?: linode(?:[_\s-]*api)?(?:[_\s-]*(?:token|key|access)) | linode(?:[_\s-]*personal)?(?:[_\s-]*access)?(?:[_\s-]*token) ) \b (?:.|[\n\r]){0,24}? (?: [=:] | ["']\s*:\s*["'] ) \s* ["']? ( [a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+linode_api_token = "3f87c1b4e9a26d70f4c1b9658e2a3d7992b4f1c8a6d03e57f19b48c2d6a7e1f4"
+LINODE_PERSONAL_ACCESS_TOKEN: "6b2e04f19ca378d5e16ab0c4f278e35d94bc7a6e183f0d57a2c6e419fd38ab51"

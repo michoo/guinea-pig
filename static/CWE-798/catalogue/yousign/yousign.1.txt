@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: YouSign API Key
+# Provider: yousign    Rule id (normalized): yousign.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.yousign.1
+#
+# Pattern: (?xi) \b yousign[_-]?api[_-]?key (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [a-f0-9]{32} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+yousign_api_key = "8ab7d4ced4483472fb898df8f520eb10";
+YOUSIGN_API_KEY=9ac8e5def5594583ec909e09a631fc21

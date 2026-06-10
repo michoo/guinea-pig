@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Container Registry Password
+# Provider: azure    Rule id (normalized): azure.5
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.5
+#   - titus       np.azure.5
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    azure-ad-client-secret
+#   - betterleaks azure-ad-client-secret
+#
+# Pattern: (?xi) \b ( [A-Z0-9+/]{42}\+ACR[A-Z0-9]{6} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Abcdefghijklmnopqrstuvwxyz123456789012ABCD+ACRefg123
+Ocp-Apim-Subscription-Key: 1df236930c4f41d4a6ea8a5696d318a2
+"Ocp-Apim-Subscription-Key": "b2c3d4e5f67890a1b2c3d4e5f6789012"
+subscription_key = "abcd1234ef567890abcd1234ef567890"
+headers = {"Ocp-Apim-Subscription-Key": "a1b2c3d4e5f67890a1b2c3d4e5f67890"}
+subscription-key=1234567890abcdef1234567890abcdef

@@ -1,0 +1,11 @@
+# Remediation for CWE-494: Download of Code Without Integrity Check
+# Fix: Download the installer to disk, verify its SHA-256 checksum, and only then execute it (no curl|sh).
+install:
+  stage: build
+  variables:
+    INSTALL_SHA256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  script:
+    - set -euo pipefail
+    - curl -sSL -o install.sh https://example.com/install.sh
+    - echo "${INSTALL_SHA256}  install.sh" | sha256sum -c -
+    - sh install.sh

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MiniMax API Key
+# Provider: minimax    Rule id (normalized): minimax.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.minimax.1
+#
+# Pattern: (?x) \b ( MINIMAX-[A-Z0-9]{8}-[A-Z0-9]{8}-[A-Z0-9]{8}-[A-Z0-9]{8} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MINIMAX_API_KEY=MINIMAX-A1B2C3D4-E5F6G7H8-I9J0K1L2-M3N4O5P6

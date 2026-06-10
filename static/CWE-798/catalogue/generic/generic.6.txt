@@ -1,0 +1,28 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Weak Password Pattern
+# Provider: generic    Rule id (normalized): generic.6
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.generic.6
+#   - noseyparker np.generic.6
+#   - titus       np.generic.6
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?xi) ( blink\d{3,6} |correcthorsebatterystaple\d{0,6} |letmein\d{1,6} |newpass\d{1,6} |p@ssw0rd\d{0,6} |pa55word\d{0,6} |pass4now\d{0,6} |password\d{1,6} |qwer\d{4,6} |qwerty\d{3,6} |trustno\d{1,6} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+password123
+blink5678
+letmein42
+p@ssw0rd99
+qwerty456
+:password       => '4ian1234',
+common.then_log_in({username: 'geronimo', password: '52VeZqtHDCdAr5yM'});
+beta => {
+  host            => 'foo.example.com',
+  user            => 'joe',
+  password        => 'thisismypassword',
+}

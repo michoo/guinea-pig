@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Hex.pm Organization Repository Key
+# Provider: hexpm    Rule id (normalized): hexpm.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hexpm.1
+#
+# Pattern: (?xi) \b (?: mix \s+ hex\.organization \s+ (?:auth|key) | HEX_ORGANIZATION_KEY | hexpm | hex\.pm ) (?:.|[\n\r]){0,64}? ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mix hex.organization auth acme --key 126d49fb3014bd26457471ebae97c625
+HEX_ORGANIZATION_KEY=126d49fb3014bd26457471ebae97c625

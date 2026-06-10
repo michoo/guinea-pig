@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Composio Project API Key
+# Provider: composio    Rule id (normalized): composio.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.composio.1
+#
+# Pattern: (?x) \b ( ak_[A-Za-z0-9_-]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+COMPOSIO_API_KEY="ak_LPktODfyN3W_btXn_d47"
+composio x-api-key: ak_0f1e2d3c4b5a69788796

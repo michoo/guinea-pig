@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Baseten API Key
+# Provider: baseten    Rule id (normalized): baseten.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.baseten.1
+#   - titus       kingfisher.baseten.1
+#
+# Pattern: (?x) \b baseten (?:.|[\n\r]){0,32}? \b ( [A-Za-z0-9]{8} \. [A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+baseten_key = WSsDXzCD.uOcxAp7k82IvCKyY36TnpVbP4ZszP1qw
+baseten_key = crXCQC3W.CgCGGY1b9IfJan5TppW0Z07C9oMN2DmR
+baseten_key = h2wFkhFC.3WFVwVcxGFr4Qup0gyhvIuONwQxEpL0A
+baseten_key = XqbIpj04.x73j1zLUOEgGIKROqVbxsmggPdL8JvAY

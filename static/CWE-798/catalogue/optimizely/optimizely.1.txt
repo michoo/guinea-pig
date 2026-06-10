@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Optimizely Personal Access Token
+# Provider: optimizely    Rule id (normalized): optimizely.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.optimizely.1
+#   - titus       kingfisher.optimizely.1
+#
+# Pattern: (?xi) \b optimizely (?:.|[\n\r]){0,64}? \b ( [0-9A-Z-:]{54} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+OPTIMIZELY_TOKEN=AbCDefGhijKlmnOpqrStuvWxYz01-23:45AbCDefGhijKlmnOpqrSt
+Optimizely Authorization: Bearer AbCDefGhijKlmnOpqrStuvWxYz01-23:45AbCDefGhijKlmnOpqrSt

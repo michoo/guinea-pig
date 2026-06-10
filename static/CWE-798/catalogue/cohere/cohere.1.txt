@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cohere API Key
+# Provider: cohere    Rule id (normalized): cohere.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.cohere.1
+#   - titus       kingfisher.cohere.1
+#
+# Pattern: (?xi) \b cohere (?:.|[\n\r]){0,16}? \b ( [A-Z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+cohere_key = 5fNtU1ytdUcOX3jfvgjlr61EPxBqxOojOklDD6BG
+cohere secret key = QfsfCM0HdHH9x5ZlhsGzeignSk4pCeBwBrzYqgGV
+cohere_token: x7PX0fac8a2GW2fgnNqdtqIwMQvFbrL6E7lKrKOv

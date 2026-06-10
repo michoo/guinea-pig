@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Signifyd API Key
+# Provider: signifyd    Rule id (normalized): signifyd.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.signifyd.1
+#
+# Pattern: (?xi) \b signifyd (?:.|[\n\r]){0,64}? \b(?:api[_-]?key|apikey|key|token)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [A-Za-z0-9]{24,28} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+signifyd
+apikey=KSqPR9cGmJRxIfNLkRsJ09A9z
+signifyd.key = 'MRnOQ9bGlIRsIfNLkRsJ09A9z'

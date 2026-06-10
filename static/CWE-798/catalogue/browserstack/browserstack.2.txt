@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: BrowserStack Username
+# Provider: browserstack    Rule id (normalized): browserstack.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.browserstack.2
+#
+# Pattern: (?xi) \b (?:BROWSERSTACK_USERNAME|BROWSERSTACK_USER|browserstack[._-]?user(?:name)?) \s* [=:] \s* ["']? ( [a-zA-Z0-9_-]+ ) ["']?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BROWSERSTACK_USERNAME=build-user
+browserstack_user: "ci_bot_01"

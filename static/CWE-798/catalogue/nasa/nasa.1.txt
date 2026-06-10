@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: NASA API Key
+# Provider: nasa    Rule id (normalized): nasa.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.nasa.1
+#   - noseyparker np.nasa.1
+#   - titus       np.nasa.1
+#
+# Pattern: (?xi) \b nasa\.gov/.{0,200} (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+get('https://api.nasa.gov/planetary/earth/imagery?api_key=fWfSMcDzyHfMuH8BW6jiIUBYaj0hKRyKBRTBqgEQ')
+  .then(...)
+get('https://api.nasa.gov/planetary/earth/imagery?api_key=fWfSMcDzyHfMuH8BW6jiIUBYaj0hKRyKBRTBqgEQ')
+  .then(function(response) {
+    // There is an issue with the image being pulled from the API, so using a different one instead
+    document.getElementsByClassName('targetImage')[0].src = "https://api.nasa.gov/images/earth.png";

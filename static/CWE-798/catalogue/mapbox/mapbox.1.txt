@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mapbox Public Access Token
+# Provider: mapbox    Rule id (normalized): mapbox.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mapbox.1
+#   - noseyparker np.mapbox.1
+#   - titus       np.mapbox.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    mapbox-api-token
+#   - betterleaks mapbox-api-token
+#
+# Pattern: (?i)(?s)mapbox.{0,30}(pk\.[a-z0-9\-+/=]{32,128}\.[a-z0-9\-+/=]{20,30})\b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mapboxApiKey:
+  'pk.eyJ1Ijoia3Jpc3R3IiwiYSI6ImNqbGg1N242NTFlczczdnBcf99iMjgzZ2sifQ.lUneM-o3NucXN189EYyXxQ'
+mapboxApiKey:
+  'pk.eyJ1Ijoia3Jpc3R3IiwiYSI6ImNqbGg1N242NTFlczczdnBcf99iMjgzZ2sifQ.lUneM-o3NucXN189EYyXxQ',

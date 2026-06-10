@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: FileZilla stored password (Pass plaintext)
+# Provider: filezilla    Rule id (normalized): filezilla.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.filezilla.2
+#   - titus       kingfisher.filezilla.2
+#
+# Pattern: <Pass>\s*([^<\r\n]{4,128})\s*</Pass>
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+<Pass>ExamplePas123</Pass>
+<FileZilla3><Servers><Server><Pass>superS3cret!</Pass></Server></Servers></FileZilla3>

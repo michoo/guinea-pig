@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Paystack API Key
+# Provider: paystack    Rule id (normalized): paystack.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.paystack.1
+#   - titus       kingfisher.paystack.1
+#
+# Pattern: (?xi) \b ( sk_ [a-z]{1,} _ [A-Z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sk_test_abcdef1234567890abcdef1234567890abcdef12
+sk_live_gwjaoi1234567890abcdef1234567890abcdef12

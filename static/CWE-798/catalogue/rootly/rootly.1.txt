@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Rootly API Key
+# Provider: rootly    Rule id (normalized): rootly.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.rootly.1
+#
+# Pattern: (?x) \b ( rootly_[a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ROOTLY_API_KEY=rootly_abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890

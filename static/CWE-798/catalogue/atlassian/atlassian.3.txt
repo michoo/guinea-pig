@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Atlassian Admin API Key
+# Provider: atlassian    Rule id (normalized): atlassian.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.atlassian.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    atlassian-api-token
+#   - betterleaks atlassian-api-token
+#
+# Pattern: (?x) (?:atlassian|api\.atlassian\.com) (?:.|[\n\r]){0,128}? \b ( AT [A-Za-z0-9_\-=]{60,260} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+# Example usage calling the Atlassian admin APIs
+curl --request GET \
+  'https://api.atlassian.com/admin/v1/orgs' \
+  --header 'Authorization: Bearer ATEXAMPLE1234567890abcdefghijklmnopqrstuvwxyz_-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789foobarAA11BB22'

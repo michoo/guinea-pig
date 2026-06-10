@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Storyblok API Token
+# Provider: storyblok    Rule id (normalized): storyblok.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.storyblok.1
+#
+# Pattern: (?xi) \b storyblok (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API) (?:.|[\n\r]){0,32}? \b ( [A-Za-z0-9]{22}tt ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+STORYBLOK_ACCESS_TOKEN=ExampleBogusTokenXYZ12tt
+storyblok_token = "FakeExampleTok45AB67CDtt"

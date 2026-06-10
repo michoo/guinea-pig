@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tigris Access Key ID
+# Provider: tigris    Rule id (normalized): tigris.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tigris.1
+#
+# Pattern: (?x) \b ( tid_[A-Za-z0-9_]{50} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TIGRIS_ACCESS_KEY=tid_A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q7r8S9t0U1v2W3x4Y5
+AWS_ACCESS_KEY_ID=tid_Z9y8X7w6V5u4T3s2R1qPoNmLkJiHgFeDcBa_1234QwErTyUiOp

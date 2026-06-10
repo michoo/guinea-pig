@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Private AI API Key
+# Provider: privateai    Rule id (normalized): privateai.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.privateai.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    privateai-api-token
+#   - betterleaks privateai-api-token
+#
+# Pattern: (?xi) \b (?: private[_-]?ai | limina ) (?:.|[\n\r]){0,32}? (?: api[_-]?key | x-api-key | token ) (?:.|[\n\r]){0,12}? ( [a-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PRIVATEAI_API_KEY=4fa2d7c81be9063d4ea8bc1f6d2a7e9c
+privateai_x_api_key: 2ab4d6e8f0c1a3b5d7e9f1a2b4c6d8e0

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: RingCentral OAuth Base URL
+# Provider: ringcentral    Rule id (normalized): ringcentral.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ringcentral.3
+#
+# Pattern: (?xi) \b ( https://platform(?:\.devtest)?\.ringcentral\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RINGCENTRAL_BASE_URL=https://platform.ringcentral.com
+RINGCENTRAL_SANDBOX_URL=https://platform.devtest.ringcentral.com

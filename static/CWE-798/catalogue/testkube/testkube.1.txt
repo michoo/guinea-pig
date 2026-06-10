@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Testkube API Key
+# Provider: testkube    Rule id (normalized): testkube.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.testkube.1
+#
+# Pattern: (?xi) \b ( tkcapi_[a-z0-9]{30,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TK_ACCESS_TOKEN=tkcapi_yj871onwc7zk7ov14yl1iukkpu37dx
+testkubeToken: tkcapi_ic1hq66xskn42i1cy168oj43rixud1

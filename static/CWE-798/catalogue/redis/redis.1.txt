@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Redis URI Connection String
+# Provider: redis    Rule id (normalized): redis.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.redis.1
+#   - titus       np.redis.1
+#
+# Pattern: (?xi) (?P<TOKEN> (?: redis | rediss | redis\+sentinel ) :// (?: (?P<username>[a-zA-Z0-9%;._~!$&'()*+,;=-]*) : )? (?P<password>[a-zA-Z0-9%;._~!$&'()*+,;:=/+-]{8,}) @ (?P<host>(?:\[[0-9a-fA-F:.]+\]|[a-zA-Z0-9_.-]{1,})) (?: :(?P<port>\d{1,5})) …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+REDIS_URL="redis://user:EXAMPLEp4ssw0rd123@cache.prod.internal:6379/0"
+rediss://admin:TESTsecur3K3y456@redis.cache.internal:6380/1
+redis+sentinel://default:SAMPLEr3d1sK3y789@sentinel.cluster.local:26379
+redis://:oJs3RjFV5CVDyObDiooJk8NGGSylGTlNmAzCaPVydjM=@gainazurecacheforredis03.eastus.redisenterprise.cache.azure.net:10000
+redis://default:MyP4ssw0rd@192.168.1.10:6379/2
+rediss://:token123@[::1]:6380/0
+REDIS_URL="redis://user:EXAMPLEp4ssw0rd123@localhost:6379/0"
+rediss://admin:TESTsecur3K3y456@redis.example.com:6380/1
+redis+sentinel://default:SAMPLEr3d1sK3y789@sentinel.host:26379

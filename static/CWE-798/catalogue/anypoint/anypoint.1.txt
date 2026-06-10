@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Anypoint API Key
+# Provider: anypoint    Rule id (normalized): anypoint.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.anypoint.1
+#   - titus       kingfisher.anypoint.1
+#
+# Pattern: (?xi) anypoint (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [0-9a-z]{8} - [0-9a-z]{4} - [0-9a-z]{4} - [0-9a-z]{4} - [0-9a-z]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+anypoint_key = "33333333-cccc-dddd-eeee-444444444444"

@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Gitea Access Token
+# Provider: gitea    Rule id (normalized): gitea.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gitea.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks gitea-access-token
+#
+# Pattern: (?xi) \b (?:gitea) (?:.|[\n\r]){0,16}? (?:token|key|secret|pat|access[_-]?token|api[_-]?key)\b (?:.|[\n\r]){0,32}? \b ( [a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+GITEA_TOKEN=5aab40e433037523cc70af7d3894a0fa8b4338b0
+gitea_access_token: 4c1cc89e363477a554b0eb629d3bc50bc810dfa2
+GITEA_KEY=def2fac70d12fd8ec8046ce554577298dbd99414
+[gitea]
+token = 8b40bcd90946073dfa9df0f0cb999b21da6a372d

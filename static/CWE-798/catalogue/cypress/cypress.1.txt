@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cypress Record Key
+# Provider: cypress    Rule id (normalized): cypress.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.cypress.1
+#   - titus       np.cypress.1
+#
+# Pattern: (?xi) (?:cypress) (?:.|[\n\r]){0,16}? \b ( [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CYPRESS_RECORD_KEY=a1b2c3d4-e5f6-7890-abcd-ef1234567890
+cypress_record_key: "f8e7d6c5-b4a3-2190-fedc-ba0987654321"
+--record --key a9b8c7d6-e5f4-3210-abcd-ef9876543210

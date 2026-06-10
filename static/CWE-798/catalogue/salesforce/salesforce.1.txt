@@ -1,0 +1,23 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Salesforce Access Token
+# Provider: salesforce    Rule id (normalized): salesforce.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.salesforce.1
+#   - noseyparker np.salesforce.1
+#   - titus       np.salesforce.1
+#
+# Pattern: (?xi) \b ( 00 [A-Z0-9]{13} ! [A-Z0-9._-]{80,260} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+00DE0X0A0M0PeLE!CJoAQOx1GCLf1UIt4UU9y0VOPLUZAYN6I8DsdGEDyHh5cO02egObcAhIDHYiGCfi94c53oFbr4HB.xZfuYRGhvNuxobAAXRe
+=== Org Description
+KEY               VALUE
+────────────────  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Access Token      00DE0X0A0M0PeLE!AQcAQH0dMHEXAMPLEzmpkb58urFRkgeBGsxL_QJWwYMfAbUeeG7c1EXAMPLEDUkWe6H34r1AAwOR8B8fLEz6nEXAMPLEAAAA
+Client Id         PlatformCLI
+Connected Status  Connected
+Id                00D5fORGIDEXAMPLE
+Instance Url      https://MyDomainName.my.salesforce.com
+Username          juliet.capulet@empathetic-wolf-g5qddtr.com

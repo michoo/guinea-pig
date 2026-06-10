@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cursor Integrations (User) API Key
+# Provider: cursor    Rule id (normalized): cursor.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.cursor.1
+#   - titus       kingfisher.cursor.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks cursor-api-key
+#
+# Pattern: (?x) \b ( key_ [0-9a-fA-F]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+key_8c5a7657fc397e114def1b51dd520410ad50ece61e30b64261ff369ab275ef29
+key_86aed0092d14dd6aae4e8ad107d52f760c5efa4bc3753730ca6983babc2b1072
+key_d9ba91e29d81f1bf2085b55b06f5ac43885749005cff565bee7f406ca2e2f3f9

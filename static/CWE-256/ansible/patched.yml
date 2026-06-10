@@ -1,0 +1,15 @@
+# Remediation for CWE-256: Plaintext Storage of a Password
+# Fix: Pull the password from Ansible Vault / a vaulted variable and suppress logging with no_log.
+---
+- name: Vaulted password example
+  hosts: db_servers
+  vars:
+    db_password: "{{ vault_db_password }}"
+  tasks:
+    - name: Create MySQL user with vaulted password
+      community.mysql.mysql_user:
+        name: appuser
+        password: "{{ db_password }}"
+        priv: "*.*:ALL"
+        state: present
+      no_log: true

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Storage Account Name (Label)
+# Provider: azurestorage    Rule id (normalized): azurestorage.1c
+#
+# Detected by this rule:
+#   - titus       kingfisher.azurestorage.1c
+#
+# Pattern: (?xi) \bazure(?:[_\s-]*)(?:storage|account)(?:[_\s-]*)(?:name)\b [\s:=\"']{0,6} (?P<account_name>[a-z0-9]{3,24})
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+azure_storage_name="prodblob2024"

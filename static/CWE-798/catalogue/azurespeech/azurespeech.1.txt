@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Speech Region
+# Provider: azurespeech    Rule id (normalized): azurespeech.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurespeech.1
+#
+# Pattern: (?xi) \b (?: SPEECH_REGION | AZURE_SPEECH_REGION | speech[_-]?region | azure[_-]?speech[_-]?region ) \b (?:.|[\n\r]){0,16}? [=:] \s*["']? ( [a-z0-9-]{4,32} ) ["']?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SPEECH_REGION=eastus
+azure_speech_region="westus2"

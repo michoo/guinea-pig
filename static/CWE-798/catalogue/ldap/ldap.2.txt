@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LDAP Bind URI Credentials
+# Provider: ldap    Rule id (normalized): ldap.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ldap.2
+#
+# Pattern: (?xi) \b (?P<TOKEN> (?P<LDAP_SCHEME>ldaps?):// (?P<LDAP_BIND_DN>[^:@\s]{1,128}) : (?P<LDAP_PASSWORD>[^@\s]{6,128}) @ (?P<LDAP_HOST>[^\s/"':]{4,128}) (?::(?P<LDAP_PORT>\d{2,5}))? (?:/[^\s"']*)? )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ldap://cn=admin,dc=example,dc=com:Tr0ub4dor%263!@ldap.example.com:389
+ldaps://uid=svc-reader,ou=people,dc=corp,dc=example,dc=com:S3cur3BindPass@directory.corp.example.com

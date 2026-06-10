@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Seam API Key
+# Provider: seam    Rule id (normalized): seam.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.seam.1
+#
+# Pattern: (?x) \b ( seam_(?:test2|live)[a-zA-Z0-9]{1,8}_[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{20,32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SEAM_API_KEY=seam_test2bMS_94SrGUXuNR2JmJkjtvBQDg5c
+SEAM_API_KEY="seam_liveK3_7Zum8CdnFeJi2CysRnTBh3"

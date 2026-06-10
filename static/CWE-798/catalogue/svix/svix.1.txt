@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Svix Webhook Signing Secret
+# Provider: svix    Rule id (normalized): svix.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.svix.1
+#
+# Pattern: (?x) \b ( whsec_(?:[A-Za-z0-9+/]{32}|[A-Za-z0-9+/]{43}=|[A-Za-z0-9+/]{42}==) ) (?:\b|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WEBHOOK_SECRET=whsec_MfKQ9r8GKYqrTwjUPD8ILPZIo2LaLaSw
+SVIX_WEBHOOK_SECRET="whsec_C2FVsBQIhrscChlQIMV+b5sSYspob7oD"

@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Bitbucket Secret
+# Provider: bitbucket    Rule id (normalized): bitbucket.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.bitbucket.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    bitbucket-client-id
+#   - gitleaks    bitbucket-client-secret
+#   - betterleaks bitbucket-client-id
+#   - betterleaks bitbucket-client-secret
+#
+# Pattern: (?xi) \b bitbucket (?:.|[\n\r]){0,32}? \b ( [a-z0-9+_\-+]{44} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+bitbucket_key=HedmnK9h6KD_eh9KK8FlI9ahUc8WfaNZ4gulbrtN2ouV
+bitbucket_secret=kd8j2h4jf9s8mf6l4k9j2h4jf9s8mf6l4k9j2h4jf9s8

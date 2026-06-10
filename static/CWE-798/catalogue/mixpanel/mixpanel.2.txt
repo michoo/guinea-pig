@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mixpanel Service Account Secret
+# Provider: mixpanel    Rule id (normalized): mixpanel.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mixpanel.2
+#
+# Pattern: (?xs) mp-service-account .{0,64}? \b ( [A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+example-svc-1.abcdef.mp-service-account
+Secret: FakeExampleServiceAcctSecretAb12

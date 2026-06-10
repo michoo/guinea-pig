@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DocuSign Redirect URI
+# Provider: docusign    Rule id (normalized): docusign.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.docusign.4
+#
+# Pattern: (?xi) \b docusign (?:.|[\n\r]){0,64}? (?:redirect[_-]?uri|oauth[_-]?redirect)\b (?:.|[\n\r]){0,16}? [=:"'\s] ( https?://[^\s"'<>]{6,200} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DOCUSIGN_REDIRECT_URI=https://example.com/docusign/callback
+docusign.redirect_uri = "https://localhost:3000/oauth/docusign"

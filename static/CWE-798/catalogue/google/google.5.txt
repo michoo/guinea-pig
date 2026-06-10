@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Google API Key
+# Provider: google    Rule id (normalized): google.5
+#
+# Detected by this rule:
+#   - noseyparker np.google.5
+#   - titus       np.google.5
+#
+# Pattern: (?x) \b (AIza[0-9A-Za-z_-]{35}) (?: [^0-9A-Za-z_-] | $ )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+var DEVELOPER_KEY = 'AIzaSyB4sU8lU15bR_87qNb7eUVQN72_vv8mpbU';
+value="AIzaSyBnAoO3VNVUco4MXf4enYCVBg6ZnpY49N-
+var DEVELOPER_KEY = 'AIzaSyB4sUaCes5bR_87qNb7eUVQN72_vv8mpbU';
+GOOGLE_API_KEY=AIzaSyBnAoaCesVUco4MXf4enYCVBg6ZnpY49N-
+api_key: AIzaSyAKqPaCesigvvNNcRt_gL0A6cgx3ZB-kuQ

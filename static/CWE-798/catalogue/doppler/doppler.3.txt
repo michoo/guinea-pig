@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Doppler Service Token
+# Provider: doppler    Rule id (normalized): doppler.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.doppler.3
+#   - noseyparker np.doppler.3
+#   - titus       np.doppler.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    doppler-api-token
+#   - betterleaks doppler-api-token
+#
+# Pattern: (?xi) \b (dp\.st\.(?:[a-z0-9\-_]{2,35}\.)?[A-Z0-9]{40,44}) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+dp.st.dev.bAqhcVzrhy5cRHkOlNTc0Ve6w5NUDCpcutm8vGE9myi

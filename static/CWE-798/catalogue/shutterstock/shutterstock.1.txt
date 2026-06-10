@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Shutterstock OAuth Token
+# Provider: shutterstock    Rule id (normalized): shutterstock.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.shutterstock.1
+#
+# Pattern: (?x) \b (?i:shutterstock) (?:.|[\n\r]){0,32}? \b ( v2/[A-Za-z0-9+/]{40,512}={0,2} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SHUTTERSTOCK_TOKEN="v2/ODYwYmRlNzBiYjMzNTE2M2UyZTQvYTc0NjI3NjEvNjBiMQ"
+shutterstock_access_token: 'v2/ZDk4YWUxMGQtZGYyYy00ZGQwLWJiOWMtOTM3Y2E1NTA1YjYx'

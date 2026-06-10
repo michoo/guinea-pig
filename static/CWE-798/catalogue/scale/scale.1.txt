@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Scale API Key
+# Provider: scale    Rule id (normalized): scale.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.scale.1
+#   - titus       kingfisher.scale.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks exoscale-api-key
+#   - betterleaks exoscale-api-secret
+#
+# Pattern: (?x) \b ( live_ [0-9a-f]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+live_8df31399ec4a4755a7cf9e0fb59f967a
+live_54d1bd2d1e62430bb2d521d298ec4231
+live_1b9fc721a4624a478211ce613c674a03

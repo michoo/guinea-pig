@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MailJet Basic Auth
+# Provider: mailjet    Rule id (normalized): mailjet.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mailjet.2
+#   - titus       kingfisher.mailjet.2
+#
+# Pattern: (?xi) \b mailjet (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9]{87}= )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mailjet_token = neno01fy530zukbtvq8xunwec74b7m7lsmzha8su93zdvy4mp4dc5gctfa2rcwetllcjzncirjv58se7iwkehhh=

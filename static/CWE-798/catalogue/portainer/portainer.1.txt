@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Portainer API Token
+# Provider: portainer    Rule id (normalized): portainer.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.portainer.1
+#
+# Pattern: (?x) \b ( ptr_[A-Za-z0-9/+_=-]{32,52} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PORTAINER_API_KEY=ptr_aBcDeFgHiJkLmNoPqRsTuVwXyZ012345678901
+portainer_token: "ptr_xY9zW8vU7tS6rQ5pN4mL3kJ2iH1gF0eD9cB8aZ7"

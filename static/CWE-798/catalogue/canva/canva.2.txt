@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Canva Connect API Client ID
+# Provider: canva    Rule id (normalized): canva.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.canva.2
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks canva-client-id
+#   - betterleaks canva-client-secret
+#
+# Pattern: (?x) \b (?i:canva|CANVA_CLIENT_ID) (?:.|[\n\r]){0,32}? (?i:client[_\s-]*id|app[_\s-]*id) (?:.|[\n\r]){0,16}? \b ( OC-[A-Za-z0-9_-]{8,16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+canva client id: OC-AZ2dqZiY_lec
+CANVA_CLIENT_ID=OC-FAB12-AbCdEf

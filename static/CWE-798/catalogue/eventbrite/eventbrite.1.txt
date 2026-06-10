@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Eventbrite API Key
+# Provider: eventbrite    Rule id (normalized): eventbrite.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.eventbrite.1
+#   - titus       kingfisher.eventbrite.1
+#
+# Pattern: (?xi) \b eventbrite (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [0-9A-Z]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+eventbrite secretkey X7W8HTTHLVYXPPVRZJZS
+eventbrite privatekey YTR4GR5T89WQP8HJKLDF
+"eventbrite private access key ZXC2JK3HV4TY5UIO6PLK"
+eventbrite token ABCDEF1234567890QRST

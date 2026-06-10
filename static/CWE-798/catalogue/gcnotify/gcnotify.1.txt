@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GC Notify API Key
+# Provider: gcnotify    Rule id (normalized): gcnotify.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gcnotify.1
+#
+# Pattern: (?xi) \b ( ApiKey-v1 \s+ gcntfy-[a-z0-9_]+ - [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} - [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Authorization: "ApiKey-v1 gcntfy-my_test_key-26785a09-ab16-4eb0-8407-a37497a57506-3d844edf-8d35-48ac-975b-e847b4f122b0"

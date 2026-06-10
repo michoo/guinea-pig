@@ -1,0 +1,7 @@
+# CWE-94: Improper Control of Generation of Code (Code Injection)
+# An untrusted CI variable is interpolated and evaluated in a shell command, allowing code injection.
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying branch $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME"
+    - eval "echo $CI_MERGE_REQUEST_TITLE"

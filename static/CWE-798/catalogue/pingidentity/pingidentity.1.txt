@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PingOne Client ID
+# Provider: pingidentity    Rule id (normalized): pingidentity.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pingidentity.1
+#
+# Pattern: (?xi) \b ping(?:one|identity) (?:.|[\n\r]){0,32}? \b(?:client[_-]?id)\b (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [0-9a-fA-F]{8} -[0-9a-fA-F]{4} -[0-9a-fA-F]{4} -[0-9a-fA-F]{4} -[0-9a-fA-F]{12} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pingone client_id = 7fe9af06-7f40-ce8d-6ebf-55aafe4d9bf4
+pingone
+client_id=8af0ba17-8a51-df9e-7fca-66bbaf5e0ca5

@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Laravel Application Encryption Key
+# Provider: laravel    Rule id (normalized): laravel.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.laravel.1
+#
+# Pattern: (?xi) \b app[_-]?key (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( base64: [A-Za-z0-9+/]{43}= | [A-Za-z0-9]{32} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+APP_KEY=base64:SomeRandomBase64xStr1234567890ABCDEFGabcdef=
+APP_KEY=AbCdEf1234GhIjKl5678MnOpQr90StUv
+'key' => env('APP_KEY', 'base64:xK9mP2qR8sT4wY6zA1cD3eF5gH7iJ0kLmNpQrStuVwx=')

@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SMTP Credentials
+# Provider: smtp    Rule id (normalized): smtp.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.smtp.1
+#
+# Pattern: (?xi) \b (?:email[_-]?host[_-]?password|smtp[_-]?password|smtp[_-]?pass) (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [^\s"']{6,128} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+EMAIL_HOST_PASSWORD = Nftu435p2634
+smtp_password = s3cureEmAilP@ss
+EMAIL_HOST_PASSWORD=aXyz789#Secure

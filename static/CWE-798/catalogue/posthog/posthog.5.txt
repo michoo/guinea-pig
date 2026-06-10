@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PostHog OAuth Refresh Token
+# Provider: posthog    Rule id (normalized): posthog.5
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.posthog.5
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks posthog-project-api-key
+#
+# Pattern: (?x) ( phr_[A-Za-z0-9]{40,43} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+phr_9csMsAjlUNEW3T9hjDELzJE7RFbNZjvfpZWmxeoksHV
+phr_cObbRbJqZpvTSr9UEyUG1NxQDfwKMNouxrEiwQuaoER

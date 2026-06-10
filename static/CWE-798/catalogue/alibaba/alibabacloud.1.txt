@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Alibaba Access Key ID
+# Provider: alibaba    Rule id (normalized): alibabacloud.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.alibabacloud.1
+#   - titus       kingfisher.alibabacloud.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    alibaba-access-key-id
+#   - gitleaks    alibaba-secret-key
+#   - betterleaks alibaba-access-key-id
+#   - betterleaks alibaba-secret-key
+#   - betterleaks alibaba-sts-access-key-id
+#   - betterleaks alibaba-sts-access-key-secret
+#   - betterleaks alibaba-sts-security-token
+#
+# Pattern: (?x) \b ( LTAI[A-Za-z0-9]{17,21} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+LTAI8x2NiGqfyJGx7eLDhp12
+LTAI5GqyJGhp12ad31L5hpix

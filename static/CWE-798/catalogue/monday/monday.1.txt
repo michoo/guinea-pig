@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Monday.com API Key
+# Provider: monday    Rule id (normalized): monday.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.monday.1
+#   - titus       kingfisher.monday.1
+#
+# Pattern: (?xi) \b monday (?:.|[\n\r]){0,40}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,40}? \b ( eyJ[A-Za-z0-9-_]{10,200}\.eyJ[A-Za-z0-9-_]{50,1000}\.[A-Za-z0-9-_]{20,500} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+monday SECRET_TOKEN=eyJhbGciOiJIUzI1TiJ9.eyJ0aWQiOjU7OTC4MzIwMywiYWFpIjoxMSwidWlkIjo5NjYwMzk5MCwiaWBkIjoiMjAyNS0xMS0yMVQwMDoyNjoxMy43OCVaIiwicGVyIjoibWU6d3JpdGUiLCJhY3RpZCI6MzI2MDI5MTIsInJnbiI6InVzZTEifQ.wQtV6psL1JqFHdXgRB2J7-qslSyS2I4TYJHtkX9ofvk

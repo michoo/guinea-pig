@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Snyk API Key
+# Provider: snyk    Rule id (normalized): snyk.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.snyk.1
+#   - titus       kingfisher.snyk.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    snyk-api-token
+#   - betterleaks snyk-api-token
+#
+# Pattern: (?xi) \b snyk (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? ( [A-Z0-9]{8}-(?:[A-Z0-9]{4}-){3}[A-Z0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+snyk_token = 123e4567-e89b-12d3-a456-426614174000
+snyk_key = 123e4567-e89b-12d3-a456-426614174abc

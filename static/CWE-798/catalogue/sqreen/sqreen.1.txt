@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sqreen Token
+# Provider: sqreen    Rule id (normalized): sqreen.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sqreen.1
+#
+# Pattern: (?x) \b ( org_ [0-9a-f]{56,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sqreen-install.sh 'org_9ce0e9cdbc0cda31efe49c21b18621c3c7ee0bd6897578d7b3e0e99204f0bcde'
+SQREEN_TOKEN=org_2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c

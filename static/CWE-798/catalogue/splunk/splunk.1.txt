@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Splunk Authentication Token
+# Provider: splunk    Rule id (normalized): splunk.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.splunk.1
+#
+# Pattern: (?xi) \b splunk (?:.|[\n\r]){0,64}? \b(?:token|auth|key|hec)\b (?:.|[\n\r]){0,32}? \b ( [A-Fa-f0-9]{8}- [A-Fa-f0-9]{4}- [A-Fa-f0-9]{4}- [A-Fa-f0-9]{4}- [A-Fa-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+splunk.token = "C73A9E41-B2F0-4D18-A563-F9E73B012ABC"
+splunk.token=a4d7e19c-3b25-4f0c-8d61-720a9b3e4f58
+splunk.hec=D6BD1AD4-CB62-4D80-A637-593EE2B17391

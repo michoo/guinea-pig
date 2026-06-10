@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: JSON Web Token (base64url-encoded)
+# Provider: jwt    Rule id (normalized): jwt.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.jwt.1
+#   - noseyparker np.jwt.1
+#   - titus       np.jwt.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    jwt
+#   - gitleaks    jwt-base64
+#   - betterleaks jwt
+#   - betterleaks jwt-base64
+#
+# Pattern: (?x) ( (?:ey|ewogIC)[A-Za-z0-9_-]{12,} (?# header ) \. ey[A-Za-z0-9_-]{12,} (?# payload ) \. [A-Za-z0-9_-]{24,} (?# signature ) ) (?:[^A-Za-z0-9_-]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmEmMjLiuyu5CSpyHI
+NUCLEAR_SERVICES_ANON_KEY=eyJhbGciOiJIUzI1NiIsEnR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFqcnVqc2lzY2Nzdnl2am5xdG5xIiwicm9sZSI6ImEub24iLCJpYXQiOjE2NTY1OTY0NjEsImV4cCI6MTk3MjE3MjQ2MX0.WQWcwBAQFNE259f2o8ruFln_UMLTFEnEaUD7KHrs9Aw

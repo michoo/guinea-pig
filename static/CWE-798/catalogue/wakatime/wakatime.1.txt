@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WakaTime API Key
+# Provider: wakatime    Rule id (normalized): wakatime.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.wakatime.1
+#   - titus       np.wakatime.1
+#
+# Pattern: (?xi) (?:wakatime|waka_time|WAKATIME) (?:.|[\n\r]){0,32}? (?:KEY|TOKEN|SECRET|API) (?:.|[\n\r]){0,16}? \b ( [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WAKATIME_API_KEY=a1b2c3d4-e5f6-7890-abcd-ef1234567890
+wakatime_api_key: "d4e5f6a7-b8c9-0123-4567-89abcdef0123"
+export WAKATIME_API_KEY=f9e8d7c6-b5a4-3210-fedc-ba9876543210

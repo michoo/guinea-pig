@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure API Management Subscription Key
+# Provider: azureapim    Rule id (normalized): azureapim.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azureapim.1
+#
+# Pattern: (?x) \b (?: (?i:(?:apim|api[_\s-]*management)[_\s-]*(?:subscription[_\s-]*key|key)) | (?i:Ocp-Apim-Subscription-Key) ) (?:.|[\n\r]){0,16}? ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Ocp-Apim-Subscription-Key: 1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d
+APIM_SUBSCRIPTION_KEY=abcdef0123456789abcdef0123456789

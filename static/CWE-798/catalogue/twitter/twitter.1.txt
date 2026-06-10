@@ -1,0 +1,31 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: X / Twitter Bearer Token (App-only)
+# Provider: twitter    Rule id (normalized): twitter.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.twitter.1
+#   - noseyparker np.twitter.1
+#   - titus       np.twitter.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    twitter-access-secret
+#   - gitleaks    twitter-access-token
+#   - gitleaks    twitter-api-key
+#   - gitleaks    twitter-api-secret
+#   - gitleaks    twitter-bearer-token
+#   - betterleaks twitter-access-secret
+#   - betterleaks twitter-access-token
+#   - betterleaks twitter-api-key
+#   - betterleaks twitter-api-secret
+#   - betterleaks twitter-bearer-token
+#
+# Pattern: (?xi) \b (?:twitter|x.com|twtr)? (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|BEARER) (?:.|[\n\r]){0,16}? \b ( A{10,}[A-Za-z0-9_\-]{40,200} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Twitter Secret: Bearer AAAAAAAAAAAAAAAAAAAb342O1ksbnZiwemJv0g9LrF6cRazflLJEDbmmuAr8GQbDkDrYHoqPM1xr8tmP5LGW1Vq_soJIsolxqOXtAPA2hUGXIBYubxWPLVZkUs7jYBizqlDRDSHRGXKP2nuCzdbNlxKcgMQzrm
+TWITTER_BEARER="AAAAAAAAAAAAAAxrrTSuijZNLygaTAEMAc_iY1nOdFRc1OP4fpMZiEkTQ4D-QaCvOhvBvpu5zwH67VvwE9MlmL78ptDdFP_FX6fgcJnQOcvsedOXNP9t3D1fYkJcJT3kXldAIJJ"
+TWITTER_ID:               "DkWLqcP3ace3wHuJ7fiw",
+# TWITTER_API_KEY = 'UZYoBAfBzNace3mBwPOGYw'
+# TWITTER_API_SECRET = 'ngHaeaRPKA5BDQNXace3LWA1PvTA1kBGDaAJmc517E'
+X_API_KEY:                "UZYoBAfBzNace3mBwPOGY",
+x_api_client_id = "DkWLqcP3ace3wHuJ7fiw"

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Lichess Personal Access Token
+# Provider: lichess    Rule id (normalized): lichess.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.lichess.1
+#
+# Pattern: (?x) \b ( lip_[a-zA-Z0-9_]{16,60} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+LICHESS_TOKEN=lip_AbCdEfGhIjKlMnOpQr12

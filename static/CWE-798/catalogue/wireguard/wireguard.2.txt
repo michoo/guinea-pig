@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WireGuard Preshared Key
+# Provider: wireguard    Rule id (normalized): wireguard.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.wireguard.2
+#   - noseyparker np.wireguard.2
+#   - titus       np.wireguard.2
+#
+# Pattern: PresharedKey\s*=\s*([A-Za-z0-9+/]{43}=)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+[Peer]
+PublicKey = [Server's public key]
+PresharedKey = uRsfsZ2Ts1rach4Zv3hhwcx6wa5fuIo2u3w7sa+7j81=
+AllowedIPs = 0.0.0.0/0, ::/0
+Endpoint = [Server Addr:Server Port]

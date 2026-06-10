@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Credentials in Connect-VIServer Invocation
+# Provider: vmware    Rule id (normalized): vmware.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.vmware.1
+#   - noseyparker np.vmware.1
+#   - titus       np.vmware.1
+#
+# Pattern: (?xi) Connect-VIServer .{0,50} -User \s+ (\S{3,30}) \s+ (?# username ) .{0,50} -Password \s+ (\S{3,30}) (?# password )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Connect-VIServer -Server 192.168.1.51 -User administrator@vSphere.local -Password VMware1!
+#Set-PowerCLIConfiguration -InvalidCertificateAction:Ignore
+Connect-VIServer "$endpoint" -User "$username" -Password "$password" | Out-Null
+Connect-VIServer $ESXiHost.EsxiHost -user $ESXiUser -password $ESXipass
+$null = connect-viserver vc.lab.local -user administrator@vsphere.local -password VMware1!

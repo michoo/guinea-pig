@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Gumroad Access Token
+# Provider: gumroad    Rule id (normalized): gumroad.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gumroad.1
+#   - titus       kingfisher.gumroad.1
+#
+# Pattern: (?xi) \b gumroad (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|ACCESS_TOKEN|OAUTH) (?:.|[\n\r]){0,48}? \b ( [a-f0-9]{64} | [A-Z0-9-]{43} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+gumroad_access_token=abf11e4ab2850ffd50ef690257f7a1c998a443059513d1a4826f2b3159620505
+gumroadSECRET = abf11e4ab2850ffd50ef690257f7a1c998a443059513d1a4826f2b3159620505
+gumroadPRIVATE-abf11e4ab2850ffd50ef690257f7a1c998a443059513d1a4826f2b3159620505

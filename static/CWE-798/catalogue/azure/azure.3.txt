@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Personal Access Token
+# Provider: azure    Rule id (normalized): azure.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.3
+#   - noseyparker np.azure.3
+#   - titus       np.azure.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    azure-ad-client-secret
+#   - betterleaks azure-ad-client-secret
+#
+# Pattern: (?xi) (?i: ADO_PAT | pat_token | personal_?access_?token | \$token ) \s* = \s* ["'] ([a-z0-9]{52}) ["']
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+var personalAccessToken = "zpczok4kqgnw5prpfy3ehiylbqvgbjfkdiqkejsxqamy7qbkep7q";  // Provide a value or retrieve it from configuration
+$token = "58oo4mvqr2tpw7b4w3loeckwfu5o6nw3sihfckvlwoxgqimlddza"
+if __name__ == "__main__":
+    ado_pat =  "iyfmob6xjrfmit67anxbot64umfx2clwx7dz5ynxi4q2z3uqegvq"

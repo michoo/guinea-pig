@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Flickr OAuth Token
+# Provider: flickr    Rule id (normalized): flickr.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.flickr.2
+#   - titus       kingfisher.flickr.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    flickr-access-token
+#   - betterleaks flickr-access-token
+#
+# Pattern: (?xi) \b flickr (?:.|[\n\r]){0,32}? (?:OAUTH|ACCESS|TOKEN)? (?:.|[\n\r]){0,32}? ( [a-f0-9]{32} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+flickr_oauth_token: a8c1b9f1d9d34aa5a1edbd43234bcdef

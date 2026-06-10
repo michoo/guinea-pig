@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Firecrawl API Key
+# Provider: firecrawl    Rule id (normalized): firecrawl.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.firecrawl.1
+#   - noseyparker np.firecrawl.1
+#   - titus       np.firecrawl.1
+#
+# Pattern: (?x) \b ( fc-[a-fA-F0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+app = FirecrawlApp(api_key="fc-7da8b1ca1d2150c496e91440d777fea8")

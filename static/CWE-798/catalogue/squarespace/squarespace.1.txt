@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Squarespace API Key
+# Provider: squarespace    Rule id (normalized): squarespace.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.squarespace.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    squarespace-access-token
+#   - betterleaks squarespace-access-token
+#
+# Pattern: (?x) \b (?i:squarespace) (?:.|[\n\r]){0,32}? (?i:KEY|TOKEN|API) (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{8} - [0-9a-f]{4} - [0-9a-f]{4} - [0-9a-f]{4} - [0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SQUARESPACE_API_KEY="a1b2c3d4-e5f6-7890-abcd-ef1234567890"
+squarespace_token: '62dc7d80-9a1b-4c3d-8e5f-6a7b8c9d0e1f'

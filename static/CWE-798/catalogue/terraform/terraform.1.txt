@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Terraform Cloud / HCP Terraform API Token
+# Provider: terraform    Rule id (normalized): terraform.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.terraform.1
+#
+# Pattern: (?x) \b ( [A-Za-z0-9]{1,32} \.atlasv1\. [A-Za-z0-9_-]{60,90} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TERRAFORM_TOKEN=aBcDeF.atlasv1.AbCdEfGhIjKlMnOpQrStUvWxYz1234567890abcdefghijklmnopqrstuvwxyz0123
+token = "xK9mP2.atlasv1.qRsT4wY6zA1cD3eF5aH7iJ0kLmN8oPqR2sT5uV7wX9yZ1aB3cD6eF8aB9c0d"

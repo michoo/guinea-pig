@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Brave Search API Key
+# Provider: brave    Rule id (normalized): brave.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.brave.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks brave-search-api-key
+#
+# Pattern: (?x) \b ( BSA[A-Za-z0-9_-]{24,40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BRAVE_SEARCH_API_KEY="BSAp7_Mi4q7zWv9NeL2asR0kF6hTbQx"
+headers = {"X-Subscription-Token": "BSAk4_Vm8nDp3Qw7Ls0raF2jHx6ZuCt"}

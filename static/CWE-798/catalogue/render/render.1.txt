@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Render API Key
+# Provider: render    Rule id (normalized): render.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.render.1
+#
+# Pattern: (?xi) \b render (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API) (?:.|[\n\r]){0,32}? \b ( (?:[A-Za-z0-9]{32}|rnd_[A-Za-z0-9]{33}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RENDER_API_KEY=abcdef1234567890abcdef1234567890
+render_api_key = "rnd_abc123def456ghi789jkl012mno345pqr"

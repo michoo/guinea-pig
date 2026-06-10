@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: HOP Project Token
+# Provider: hop    Rule id (normalized): hop.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hop.1
+#
+# Pattern: (?x) \b ( ptk_[a-zA-Z0-9_-]{20,80} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HOP_TOKEN=ptk_AbCdEfGhIjKlMnOpQrStUvWxYz123456

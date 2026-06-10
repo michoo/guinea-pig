@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Function Master/Host Key
+# Provider: azurefunctionkey    Rule id (normalized): azurefunctionkey.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurefunctionkey.2
+#
+# Pattern: (?x) \b (?: (?i:azure[_\s-]*function[_\s-]*(?:key|master[_\s-]*key|host[_\s-]*key)) | (?i:x-functions-key) ) (?:.|[\n\r]){0,16}? ( [a-zA-Z0-9_/+=-]{40,100} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AZURE_FUNCTION_KEY=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890ABCDEFGH/+==
+x-functions-key: AbCdEfGhIjKlMnOpQrStUvWxYz1234567890ABCDEFGH

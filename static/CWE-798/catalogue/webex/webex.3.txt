@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Webex Redirect URI
+# Provider: webex    Rule id (normalized): webex.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.webex.3
+#
+# Pattern: (?xi) \b webex (?:.|[\n\r]){0,64}? (?:redirect[_-]?uri|oauth[_-]?redirect)\b (?:.|[\n\r]){0,16}? [=:"'\s] ( https?://[^\s"'<>]{6,200} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WEBEX_REDIRECT_URI=https://example.com/webex/callback
+webex.redirect_uri = "https://localhost:3000/oauth/webex"

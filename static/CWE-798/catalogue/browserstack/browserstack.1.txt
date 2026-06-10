@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: BrowserStack Access Key
+# Provider: browserstack    Rule id (normalized): browserstack.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.browserstack.1
+#   - titus       np.browserstack.1
+#
+# Pattern: (?xi) \b(?:browserstack|BROWSERSTACK) (?:.|[\n\r]){0,64}? (?:access[_-]?key|key|secret|token) (?:.|[\n\r]){0,32}? \b ( [a-zA-Z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BROWSERSTACK_ACCESS_KEY=qA1bC2dE3fG4hI5jK6lM
+browserstack.access_key = "rN7oP8qR9sT0uV1wX2yZ"

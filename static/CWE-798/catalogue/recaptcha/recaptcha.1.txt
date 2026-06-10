@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: reCAPTCHA API Key
+# Provider: recaptcha    Rule id (normalized): recaptcha.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.recaptcha.1
+#   - titus       kingfisher.recaptcha.1
+#
+# Pattern: (?xi) recaptcha (?:.|[\n\r]){0,16}? \b ( 6l[c-f][a-z0-9_-].{36} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+recaptcha apikey = 6Lcr--w-BBBBBw-w-w----w-w-www-www--ww-w-
+recaptcha_secret = 6Lcw--w-AAAAAw-w-w----w-w-www-www--ww-w-
+"recaptcha": { "site_key": "6Lcs--w-AAAAAw-w-w----w-w-www-www--ww-w-" }

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Liveblocks Secret Key
+# Provider: liveblocks    Rule id (normalized): liveblocks.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.liveblocks.1
+#
+# Pattern: (?x) \b ( sk_(?:prod|dev)_[A-Za-z0-9_-]{64} ) (?:\b|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+LIVEBLOCKS_SECRET_KEY=sk_prod_a1B2c3D4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0_-a1B2c3D4e5F6g7H8i9J0k1
+LIVEBLOCKS_SECRET_KEY="sk_dev_Z9y8X7w6V5u4T3s2R1qPoNmLkJiHgFeDcBa9876543210_-Z9y8X7w6V5u4T3s2R"

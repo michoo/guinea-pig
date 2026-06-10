@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Google Client ID
+# Provider: google    Rule id (normalized): google.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.google.1
+#   - noseyparker np.google.1
+#   - titus       np.google.1
+#
+# Pattern: (?i)\b([0-9]+-[a-z0-9_]{32})\.apps\.googleusercontent\.com
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+'clientID' : '231545488769-4d1mcev9vifvlncrern52id2pqqf5u5l.apps.googleusercontent.com',
+//$google_client_id     = '244082345999-o6m8f1pmb1e76tjfj9v7b96j31e53ps5.apps.googleusercontent.com';
+GOOGLE_OAUTH2_CLIENT_ID = '607830223128-4qgthc7ofdqce232dk690t5jgkm1ce33.apps.googleusercontent.com'
+$cordovaOauth.google("653512027492-5u9blotr1521fa0lo1172nhv4pmqgttq.apps.googleusercontent.com", ["email"]).then(function(result) {

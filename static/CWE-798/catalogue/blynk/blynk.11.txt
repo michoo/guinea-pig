@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Blynk OAuth Client ID
+# Provider: blynk    Rule id (normalized): blynk.11
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.blynk.11
+#
+# Pattern: (?xi) \b ( oa2-client-id_[A-Z0-9_\-]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+oa2-client-id_Ab12Cd34Ef56Gh78Ij90Kl12Mn34Op56
+client_id=oa2-client-id_Zx98Yw76Vu54Ts32Rq10Po98Nm76Lk54

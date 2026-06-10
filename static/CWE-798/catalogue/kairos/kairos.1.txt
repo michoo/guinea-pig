@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Kairos API App ID
+# Provider: kairos    Rule id (normalized): kairos.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.kairos.1
+#
+# Pattern: (?xi) \b kairos (?:.|[\n\r]){0,64}? \b(?:app[_-]?id)\b (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [a-f0-9]{8} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+$app_id = 'a28c1ced';
+KAIROS_APP_ID=b39d2dfe

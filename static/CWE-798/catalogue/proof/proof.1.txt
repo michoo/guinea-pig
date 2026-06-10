@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Proof API Key
+# Provider: proof    Rule id (normalized): proof.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.proof.1
+#
+# Pattern: (?x) \b ( prf_(?:(?:cli_)?test_)?[a-zA-Z0-9_-]{20,80} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PROOF_API_KEY=prf_AbCdEfGhIjKlMnOpQrStUvWxYz123456
+proof_key: prf_test_AbCdEfGhIjKlMnOpQrStUvWxYz123456
+proof_key: prf_cli_AbCdEfGhIjKlMnOpQrStUvWxYz123456
+proof_key: prf_cli_test_AbCdEfGhIjKlMnOpQrStUvWxYz123456

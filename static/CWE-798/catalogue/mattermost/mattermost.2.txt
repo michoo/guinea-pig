@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mattermost Access Token
+# Provider: mattermost    Rule id (normalized): mattermost.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mattermost.2
+#   - titus       kingfisher.mattermost.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    mattermost-access-token
+#   - betterleaks mattermost-access-token
+#
+# Pattern: (?xi) \b mattermost (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9]{26} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mattermost_token: abcde12345fghij67890klmno1
+mattermost_token: 9xuqwrwgstrb3mzrxb83nb357a
+MATTERMOST_ACCESS_TOKEN=bh5q3yjrufdr7z68nt1msp8oqr
+MM_ACCESS_TOKEN=bh5q3yjrufdr7z68nt1msp8oqr

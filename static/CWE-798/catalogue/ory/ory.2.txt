@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Ory Session Token
+# Provider: ory    Rule id (normalized): ory.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ory.2
+#
+# Pattern: (?x) \b ( ory_st_[A-Za-z0-9_-]{24,48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ory_session_token=ory_st_xK8m2LpQr5nW0vYz3cJ7aB4dE6fG8h

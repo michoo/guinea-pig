@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LarkSuite Tenant Access Token
+# Provider: lark    Rule id (normalized): lark.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.lark.1
+#   - titus       kingfisher.lark.1
+#
+# Pattern: (?xi) (?:lark|larksuite) (?:.|[\n\r]){0,64}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|ACCESS_KEY) (?:.|[\n\r]){0,32}? \b ( t-[A-Z0-9_.]{14,50} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+larksuite_tenant_access_token="t-AbCdEfGhIjKlMnOpQrStUvWxYz_1234"

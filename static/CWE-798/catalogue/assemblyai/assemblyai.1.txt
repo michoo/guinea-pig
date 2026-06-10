@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: AssemblyAI API Key
+# Provider: assemblyai    Rule id (normalized): assemblyai.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.assemblyai.1
+#   - titus       kingfisher.assemblyai.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks assemblyai-api-key
+#
+# Pattern: (?xi) \b assemblyai (?:.|[\n\r]){0,32}? \b ( [0-9a-z]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+assemblyai = fa0ed91518b345468f9df7570f31f18a
+assemblyai_token = a741b921ae1f4446826a784726b6a71a

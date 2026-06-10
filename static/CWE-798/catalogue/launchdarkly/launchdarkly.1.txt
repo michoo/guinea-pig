@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LaunchDarkly Access Token
+# Provider: launchdarkly    Rule id (normalized): launchdarkly.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.launchdarkly.1
+#   - titus       kingfisher.launchdarkly.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    launchdarkly-access-token
+#   - betterleaks launchdarkly-access-token
+#
+# Pattern: (?xi) launchdarkly (?:.|[\n\r]){0,32}? \b ( [a-z0-9_\-=]{40} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+LAUNCHDARKLY_TOKEN=api-123abc456def789ghi012jkl345mno678pqr
+"launchdarkly": "ld-abcdefghijklmno1234567890pqrstuvwxzab"

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Voiceflow Project ID
+# Provider: voiceflow    Rule id (normalized): voiceflow.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.voiceflow.2
+#
+# Pattern: (?xi) \b (?:VOICEFLOW_PROJECT_ID|projectID|project_id|voiceflow \s+ project \s+ id) (?:.|[\n\r]){0,48}? ( [0-9a-f]{24} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+VOICEFLOW_PROJECT_ID=63204daf2c4a550006873771
+projectID: "63204daf2c4a550006873771"

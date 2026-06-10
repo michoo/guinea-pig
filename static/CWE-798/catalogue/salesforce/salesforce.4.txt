@@ -1,0 +1,50 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Salesforce Consumer Secret
+# Provider: salesforce    Rule id (normalized): salesforce.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.salesforce.4
+#
+# Pattern: (?xi)(?s) consumerSecret\b (?:.|[\n\r]){0,32}? \b ( [A-Za-z0-9+/=._-]{16,256} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://login.example.com/oauth/login/v2/authorize?authHint=SALESFORCE_OAUTH2&amp;authType=oauth2&amp;prompt=login</authorizeUrl>
+    <consumerKey>012cbddfa6b05ec1941143c0d37a036291492be9f2df0b42c5c0c220198185de</consumerKey>
+    <consumerSecret>7TVG9nQ8gW5RaRxV8i1SaI7vwa0xtQQoejTa48AR5QR6HBYV9YBKPnAzPU7bs6QxOgdjJy9TPabQYVTZtgT83</consumerSecret>
+    <friendlyName>ExampleProviderOne</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://login.example.com/oauth/login/v2/token</tokenUrl>
+</AuthProvider>
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://api.example.net/oauth/authorize</authorizeUrl>
+    <consumerKey>012cbddfa6b05ec1941143c0d37a036291492be9f2df0b42c5c0c220198185de</consumerKey>
+    <consumerSecret>7TVG9nQ8gW5RaRxV8i1SaI7vwa0xtQQoejTa48AR5QR6HBYV9YBKPnAzPU7bs6QxOgdjJy9TPabQYVTZtgT83</consumerSecret>
+    <friendlyName>ExampleBatchConnect</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://api.example.net/oauth/token</tokenUrl>
+</AuthProvider>
+<?xml version="1.0" encoding="UTF-8"?>
+<AuthProvider xmlns="http://soap.sforce.com/2006/04/metadata">
+    <authorizeUrl>https://api.example.net/oauth/authorize</authorizeUrl>
+    <consumerKey>012cbddfa6b05ec1941143c0d37a036291492be9f2df0b42c5c0c220198185de</consumerKey>
+    <consumerSecret>7TVG9nQ8gW5RaRxV8i1SaI7vwa0xtQQoejTa48AR5QR6HBYV9YBKPnAzPU7bs6QxOgdjJy9TPabQYVTZtgT83</consumerSecret>
+    <friendlyName>ExampleConnect</friendlyName>
+    <includeOrgIdInIdentifier>false</includeOrgIdInIdentifier>
+    <providerType>OpenIdConnect</providerType>
+    <sendAccessTokenInHeader>true</sendAccessTokenInHeader>
+    <sendClientCredentialsInHeader>false</sendClientCredentialsInHeader>
+    <sendSecretInApis>true</sendSecretInApis>
+    <tokenUrl>https://api.example.net/oauth/token</tokenUrl>
+</AuthProvider>

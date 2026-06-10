@@ -1,0 +1,6 @@
+# CWE-494: Download of Code Without Integrity Check
+# A remote script is piped directly into a shell with no checksum or signature verification.
+install:
+  stage: build
+  script:
+    - curl -sSL https://example.com/install.sh | sh

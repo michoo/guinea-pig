@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: HERE API Key
+# Provider: hereapi    Rule id (normalized): hereapi.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hereapi.1
+#   - titus       kingfisher.hereapi.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    cohere-api-token
+#   - betterleaks cohere-api-token
+#
+# Pattern: (?xi) \b hereapi (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|APIKEY) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9_-]{43} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+hereapi_key=XxK6G3m_pQ8nR2vT4wY9jL5bN7cA1dF3hJ0iM4eP9su
+HEREAPI_SECRET=ZzY8xW6vU4tS2qP0nM5kJ9hF7dC1bA3gL8iK4eR9wQm

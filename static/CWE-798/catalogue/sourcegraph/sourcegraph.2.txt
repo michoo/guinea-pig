@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sourcegraph _Legacy_ API Key
+# Provider: sourcegraph    Rule id (normalized): sourcegraph.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sourcegraph.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sourcegraph-access-token
+#   - betterleaks sourcegraph-access-token
+#
+# Pattern: (?xi) \b sourcegraph (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? ( (?:sgp_(?:[a-f0-9]{16}_local_)?[a-f0-9]{40}|[a-f0-9]{40}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sourcegraph SECRET sgp_abcdef1234567890_local_0123456789abcdef0123456789abcdef01234567

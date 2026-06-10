@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Zhipu (BigModel) API Key
+# Provider: zhipu    Rule id (normalized): zhipu.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.zhipu.1
+#   - titus       kingfisher.zhipu.1
+#
+# Pattern: (?xi) \b ( [A-F0-9]{32} \. [A-Z0-9]{16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+3494c505cf244a3fb17417d6894d404c.LLSZ2InjarUXEhNr
+a64cb6a9b4e840919351d041dbe65654.eh1YZt0SAhSTOsNR
+4d140d7d21c4477ab20d5090e530496c.A5pEbmgcid2deKNA

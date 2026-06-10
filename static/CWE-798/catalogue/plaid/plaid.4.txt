@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Plaid Access Token (Production)
+# Provider: plaid    Rule id (normalized): plaid.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.plaid.4
+#   - titus       kingfisher.plaid.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    plaid-api-token
+#   - gitleaks    plaid-client-id
+#   - gitleaks    plaid-secret-key
+#   - betterleaks plaid-api-token
+#   - betterleaks plaid-client-id
+#   - betterleaks plaid-secret-key
+#
+# Pattern: (?xi) \b ( access-production- [0-9a-f]{8}- [0-9a-f]{4}- [0-9a-f]{4}- [0-9a-f]{4}- [0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+plaid_api_token="access-production-822f6ce0-ee1a-221e-3cd8-f3ce5094b3e2"

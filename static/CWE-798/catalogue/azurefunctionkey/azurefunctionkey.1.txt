@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Function Key in URL
+# Provider: azurefunctionkey    Rule id (normalized): azurefunctionkey.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurefunctionkey.1
+#
+# Pattern: (?x) ( (?i:https://[a-z0-9-]+\.azurewebsites\.net/api/)[a-zA-Z0-9_-]+ (?i:\?code=)[a-zA-Z0-9_/+=-]{20,100} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://myfunc.azurewebsites.net/api/HttpTrigger1?code=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890/+==

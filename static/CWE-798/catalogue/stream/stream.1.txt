@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Stream.io API Key
+# Provider: stream    Rule id (normalized): stream.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.stream.1
+#
+# Pattern: (?xi) \b (?:stream|getstream) (?:.|[\n\r]){0,32}? \b(?:api[_-]?key|key|connect)\b (?:.|[\n\r]){0,16}? [=:"'(\s] \b ( [a-z0-9]{8,14} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+stream.connect('sb0ylw7hjx5', apiSecret, '71748')
+STREAM_API_KEY=og8lrq3kyc14

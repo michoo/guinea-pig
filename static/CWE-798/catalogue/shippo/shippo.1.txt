@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Shippo API Token
+# Provider: shippo    Rule id (normalized): shippo.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.shippo.1
+#   - titus       kingfisher.shippo.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    shippo-api-token
+#   - betterleaks shippo-api-token
+#
+# Pattern: (?xi) \b ( shippo_(?:live|test)_[a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SHIPPO_TOKEN=shippo_test_1234567890abcdef1234567890abcdef12345678
+Authorization: "ShippoToken shippo_live_abc12fabcdefabcdefabcdefabcdefabcdefabcd"
+Authorization: "ShippoToken shippo_live_abcdefabcdefabcdefabcdefabcdefabcdefabcd"

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mandrill API Key
+# Provider: mandrill    Rule id (normalized): mandrill.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mandrill.1
+#   - titus       kingfisher.mandrill.1
+#
+# Pattern: (?xi) \b mandrill (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( (?:[0-9A-Z_-]{11}){2} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mandrill_token = taqnVL1P5AJrM4oU4opSqQ

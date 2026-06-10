@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MariaDB Credentials
+# Provider: mariadb    Rule id (normalized): mariadb.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mariadb.1
+#
+# Pattern: (?xi) \b maria(?:db)? (?:.|[\n\r]){0,128}? \b(?:password|passwd|pass|pwd)\b (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [^\s"']{6,128} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mariadb.password=mY5ecureP4ss
+mariadb
+password=Tr0ub4dor&3
+db.url=jdbc:mariadb://db.example.com mariadb.password=r8tqvmx1kp!

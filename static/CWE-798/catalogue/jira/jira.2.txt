@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Jira Token
+# Provider: jira    Rule id (normalized): jira.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.jira.2
+#   - titus       kingfisher.jira.2
+#
+# Pattern: (?xi) \b jira (?:.|[\n\r]){0,8}? (?:SECRET|PRIVATE|ACCESS|KEY|PASSWORD|TOKEN) (?:.|[\n\r]){0,16}? \b ( [a-z0-9-]{24} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Here is my Jira token: VDOheDe1sSCeGkuTARhkFDE2
+public static final String JIRA_PASSWORD = "VDOheDe1sSCeGkuTARhkFDE2";

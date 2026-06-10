@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Unkey API Key (key_ prefix)
+# Provider: unkey    Rule id (normalized): unkey.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.unkey.2
+#
+# Pattern: (?x) \b ( key_[A-Za-z0-9]{10,48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+UNKEY_API_KEY=key_KH1V87o2X2GW
+x-api-key: key_KH1V87o2X2GW
+Authorization: Bearer key_KH1V87o2X2GW

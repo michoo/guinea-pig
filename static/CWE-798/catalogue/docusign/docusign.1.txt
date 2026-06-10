@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DocuSign API Secret Key
+# Provider: docusign    Rule id (normalized): docusign.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.docusign.1
+#
+# Pattern: (?xi) \b docusign (?:.|[\n\r]){0,64}? \b(?:secret[_-]?key|ds[_-]?secret|secret)\b (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [a-f0-9]{8}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+docusign.secret_key = 12345678-abcd-9876-5432-abcdef123456
+docusign
+ds_secret = 87654321-fedc-1234-abcd-fedcba987654

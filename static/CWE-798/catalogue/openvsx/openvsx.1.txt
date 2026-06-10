@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: OpenVSX Access Token
+# Provider: openvsx    Rule id (normalized): openvsx.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.openvsx.1
+#
+# Pattern: (?x) \b ( (?:ovsxat|ovsxp)_[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+OVSX_PAT=ovsxat_7c1cdc14-260b-4e40-b5e4-38372be59a13
+OVSX_PAT=ovsxp_89abcdef-0123-4abc-8def-0123456789ab

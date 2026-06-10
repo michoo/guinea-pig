@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Docker Robot Credentials (plaintext pair)
+# Provider: generic    Rule id (normalized): generic.9
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.generic.9
+#   - noseyparker np.generic.9
+#   - titus       np.generic.9
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?xi) ( (?P<USER> [a-z0-9._-]+ \+ [a-z0-9._-]+ ) : (?P<PASS> [A-Z0-9]{32,80} ) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+some+thing:02PDFMQN2PL2ZAB9OX3IOHC1XMIW1SE5NWG3RETG58JUZJ310WFYESRA7F0LM461
+org+builder:1C2F9D0BB1E67E9F6B3B5B9A2A3D4E5F6A7B8C9D0E1F2A3B4C5D6E7F8A9B0C1
+<add key="FromEmailAddress" value="killer.joe@example.com"/>
+<add key="FromEmailPassword" value="Prestigitariu$"/>

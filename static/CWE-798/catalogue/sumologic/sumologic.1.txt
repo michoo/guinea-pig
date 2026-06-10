@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sumo Logic Access ID
+# Provider: sumologic    Rule id (normalized): sumologic.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sumologic.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sumologic-access-id
+#   - gitleaks    sumologic-access-token
+#   - betterleaks sumologic-access-id
+#   - betterleaks sumologic-access-token
+#
+# Pattern: (?xi) \b sumo (?:.|[\n\r]){0,32}? (?:access|id) (?:.|[\n\r]){0,16}? \b ( su[A-Za-z0-9]{10,14} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+config.sumologic.access.id = "suK9mP2nQ7rT4wX8"

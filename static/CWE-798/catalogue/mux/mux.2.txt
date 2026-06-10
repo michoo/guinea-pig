@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mux Access Token ID
+# Provider: mux    Rule id (normalized): mux.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mux.2
+#
+# Pattern: (?xi) \b mux (?:.|[\n\r]){0,32}? (?:TOKEN[_\s]?ID|ACCESS[_\s]?TOKEN[_\s]?ID) (?:.|[\n\r]){0,16}? \b ( [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MUX_TOKEN_ID=44c819de-4add-4c9f-b2e9-384a0a71bede

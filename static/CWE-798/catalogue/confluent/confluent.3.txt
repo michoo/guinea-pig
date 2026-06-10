@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Confluent API Secret - Updated Format
+# Provider: confluent    Rule id (normalized): confluent.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.confluent.3
+#   - titus       kingfisher.confluent.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    confluent-access-token
+#   - gitleaks    confluent-secret-key
+#   - betterleaks confluent-access-token
+#   - betterleaks confluent-secret-key
+#
+# Pattern: (?xi) \b ( cflt(?P<body>[A-Za-z0-9\+/]{54})(?P<checksum>[A-Za-z0-9\+/]{6}) )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+confluent secret=cfltcUBElySxR0ubmwjcLaVic7aOYceZ1HzCyW9BbhBhC+KbPgaTcGc9S4HfrjhA
+confluent secret=cfltqPLd2lLPAtWtHGNhN32WlZxoEj30pcg8mzaPlPJ937JlMa7n9YCRLooqgifw

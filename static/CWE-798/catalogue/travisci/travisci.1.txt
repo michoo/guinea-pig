@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Travis CI Token
+# Provider: travisci    Rule id (normalized): travisci.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.travisci.1
+#   - titus       kingfisher.travisci.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    travisci-access-token
+#   - betterleaks travisci-access-token
+#
+# Pattern: (?xi) \b travis (?:.|[\\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( [A-Z-_0-9]{22} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+travis_token splendid21RANDOMCONTEN

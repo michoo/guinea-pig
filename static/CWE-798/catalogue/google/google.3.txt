@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Google OAuth Client Secret
+# Provider: google    Rule id (normalized): google.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.google.3
+#   - noseyparker np.google.3
+#   - titus       np.google.3
+#
+# Pattern: (?i)(?:client[_\-. ]?secret)(?:.|[\n\r]){0,20}?[=:][ \t]*['"]?([A-Z0-9_-]{24})['"]?(?:[^A-Z0-9_-]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+//$google_client_secret = 'fnhqAakzWrX-mtFQ4PRdMoy0';
+'clientSecret' : 'Ufvuj-d6alhwGKvvLh_8Nq0K'
+"client_secret":"aaaaaaaaaaaaaaaaaaaaaaa-"

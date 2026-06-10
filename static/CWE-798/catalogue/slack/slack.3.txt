@@ -1,0 +1,42 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Slack Webhook
+# Provider: slack    Rule id (normalized): slack.3
+#
+# Detected by this rule:
+#   - noseyparker np.slack.3
+#   - titus       np.slack.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    slack-app-token
+#   - gitleaks    slack-bot-token
+#   - gitleaks    slack-config-access-token
+#   - gitleaks    slack-config-refresh-token
+#   - gitleaks    slack-legacy-bot-token
+#   - gitleaks    slack-legacy-token
+#   - gitleaks    slack-legacy-workspace-token
+#   - gitleaks    slack-user-token
+#   - gitleaks    slack-webhook-url
+#   - betterleaks slack-app-token
+#   - betterleaks slack-bot-token
+#   - betterleaks slack-config-access-token
+#   - betterleaks slack-config-refresh-token
+#   - betterleaks slack-legacy-bot-token
+#   - betterleaks slack-legacy-token
+#   - betterleaks slack-legacy-workspace-token
+#   - betterleaks slack-session-cookie
+#   - betterleaks slack-session-token
+#   - betterleaks slack-user-token
+#   - betterleaks slack-webhook-url
+#
+# Pattern: (?i)(https://hooks.slack.com/services/T[a-z0-9_]{8}/B[a-z0-9_]{8,12}/[a-z0-9_]{24})
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+#notifications_marcus: https://hooks.slack.com/services/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
+// Import and Configure Console.Slack (Thanks David <3)
+// const slack = require('console-slack');
+// slack.options = {
+//   webhook : "https://hooks.slack.com/services/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",
+//   username: "console.slack.bot",
+//   emoji : ":trollface:",
+//   channel : "#payx-logs"
+// };

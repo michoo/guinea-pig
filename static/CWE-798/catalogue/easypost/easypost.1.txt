@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: EasyPost API token
+# Provider: easypost    Rule id (normalized): easypost.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.easypost.1
+#   - titus       kingfisher.easypost.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    easypost-api-token
+#   - gitleaks    easypost-test-api-token
+#   - betterleaks easypost-api-token
+#   - betterleaks easypost-test-api-token
+#
+# Pattern: (?x) \b ( EZ[AT]K [A-Za-z0-9]{54} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+"EZTKXxNbJDeDLDyrXuIgHd3cr1YmP7MFqY9cHAPYMOXhUN8nJ671JKaGME"
+EZAK1234abcd5678efgh9012ijkl3456mnop7890qrst1234uvwx5678yz

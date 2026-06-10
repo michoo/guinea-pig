@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Unkey Root Key
+# Provider: unkey    Rule id (normalized): unkey.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.unkey.1
+#
+# Pattern: (?x) \b ( unkey_[A-Za-z0-9]{20,32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+UNKEY_ROOT_KEY=unkey_3ZVfA2xpgBS9WJjN4m8ApeJg
+Authorization: Bearer unkey_3ZV3tmPyoE5mmf1P6EHFJfG3
+unkey_root_key = "unkey_3ZV4z6rNpDCjmyadJH1MttTh"

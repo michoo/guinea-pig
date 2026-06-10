@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: FullContact API Key
+# Provider: fullcontact    Rule id (normalized): fullcontact.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.fullcontact.1
+#
+# Pattern: (?xi) (?: \bfullcontact\b (?:.|[\n\r]){0,64}? | \bx-fullcontact-apikey\b (?:.|[\n\r]){0,16}? ) \b ( [A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+fullcontact.api_key = "u8jzPde0IgxLd6GncfBAepfJBd0Kh8oO"
+X-FullContact-APIKey: OL8dKLzdocJ2isAjIhKt40RlgLKOmxgJ

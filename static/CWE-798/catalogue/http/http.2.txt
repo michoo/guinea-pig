@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: HTTP Bearer Token
+# Provider: http    Rule id (normalized): http.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.http.2
+#   - noseyparker np.http.2
+#   - titus       np.http.2
+#
+# Pattern: (?x)(?i) Authorization (?: :\s+ | \s*.{1, 5}\s*) Bearer \s+ ([a-zA-z0-9._~+/-]{6,} =*) (?: [^a-zA-z0-9._~+/=-] | $ )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+GET /resource HTTP/1.1
+Host: server.example.com
+Authorization: Bearer mF_9.B5f-4.1JqM

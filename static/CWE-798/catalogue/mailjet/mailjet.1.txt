@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MailJetSMS API Key
+# Provider: mailjet    Rule id (normalized): mailjet.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mailjet.1
+#   - titus       kingfisher.mailjet.1
+#
+# Pattern: (?xi) \b mailjet (?:.|[\n\r]){0,32}? \b ( [A-Z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mailjet ABCDEFGHIJKLMNOPQRSTUVWXYZ012345
+mailjet-token 9A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P

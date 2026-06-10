@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry (regex-scanner-only): civo-api-key
+#
+# Detected by this rule:
+#   - betterleaks civo-api-key
+#
+# Detected a Civo Cloud API key, which may expose Kubernetes clusters and compute resources to unauthorized access.
+# Regex: (?i)[\w.-]{0,50}?(?:civo)(?:[ \t\w.-]{0,20})[\s'"]{0,3}(?:=|>|:{1,3}=|\|\||:|=>|\?=|,)[\x60'"\s=]{0,5}([a-z0-9]{50})(?:\\?['"\x60]|[\s;]|\\[nr]|$)
+#
+# Synthesized fake credential matching the regex — safe to commit.
+
+civo_token = "abcdefghijklmnopqrstuvwxyz0123456789abcdef01234567"

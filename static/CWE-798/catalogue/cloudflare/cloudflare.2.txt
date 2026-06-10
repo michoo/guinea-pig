@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cloudflare CA Key
+# Provider: cloudflare    Rule id (normalized): cloudflare.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.cloudflare.2
+#   - titus       kingfisher.cloudflare.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    cloudflare-api-key
+#   - gitleaks    cloudflare-global-api-key
+#   - gitleaks    cloudflare-origin-ca-key
+#   - betterleaks cloudflare-api-key
+#   - betterleaks cloudflare-global-api-key
+#   - betterleaks cloudflare-origin-ca-key
+#
+# Pattern: (?xi) \b (?:cloudflare|x-auth-user-service-key) (?:.|[\n\r]){0,64}? ( v1\.0-[a-z0-9._-]{160,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+X-Auth-User-Service-Key = v1.0-e26de050e02ddeaeef6de8d5ee267df5e78f68666ddd0ee76f22d26a0d20756f-eda77de60e8e76077e162727656787de2005d25e2f6e502e2d067657ed65722eade065275001a0f6f6e521e5e1fd76a6e8d7e2d6da8a2ee01e66e061e22570e2-07f2ede0aed78e82e8d2e620aaef8656d81e762266d7d226a205de7e18e2256a
+cloudflare_service_key: "v1.0-e26de050e02ddeaeef6de8d5ee267df5e78f68666ddd0ee76f22d26a0d20756f-eda77de60e8e76077e162727656787de2005d25e2f6e502e2d067657ed65722eade065275001a0f6f6e521e5e1fd76a6e8d7e2d6da8a2ee01e66e061e22570e2-07f2ede0aed78e82e8d2e620aaef8656d81e762266d7d226a205de7e18e2256a"

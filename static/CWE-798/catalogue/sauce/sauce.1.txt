@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sauce Token
+# Provider: sauce    Rule id (normalized): sauce.1
+#
+# Detected by this rule:
+#   - noseyparker np.sauce.1
+#   - titus       np.sauce.1
+#
+# Pattern: (?x)(?i) sauce .{0,50} \b ([a-f0-9-]{36}) (?: [^a-f0-9-] | $ )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+- SAUCE_USERNAME=vitess
+- SAUCE_ACCESS_KEY=2397f603-c2c4-4897-a8ca-587ace5dc8dd
+- SAUCE_ACCESS_KEY=2397f603-c2c4-4897-a8ca-587ace5dc8d-

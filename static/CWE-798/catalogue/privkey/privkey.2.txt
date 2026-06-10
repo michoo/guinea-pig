@@ -1,0 +1,30 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Contains Private Key
+# Provider: privkey    Rule id (normalized): privkey.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.privkey.2
+#   - titus       kingfisher.privkey.2
+#
+# Pattern: (?xims) ( -----BEGIN\s (?: RSA | PGP | DSA | OPENSSH | ENCRYPTED | EC )? \s{0,1} PRIVATE\sKEY (\sBLOCK)? ----- [a-z0-9 /+=\r\n\\n]{32,}? -----END\s (?: RSA | PGP | DSA | OPENSSH | ENCRYPTED | EC )? \s{0,1} PRIVATE\sKEY (\sBLOCK)? ----- )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+-----BEGIN PRIVATE KEY-----
+34fNwLAJYISQf4pT4wgMrzN1p3kdMYLTEYXw12k+SlKL=QLKQj=SP=hOpCG5Cdj/Hkk0ARyOgoZbJycYA
+8D9r9K2m6N1ZaUT96UrFqjlL9nAqmZ+13D82H1CYLKy0NOAY3XBLzLk46HZd8na2
+-----END PRIVATE KEY-----
+-----BEGIN RSA PRIVATE KEY-----
+34fNwLAJYISQf4pT4wgMrzN1p3kdMYLTEYXw12k+SlKL=QLKQj=SP=hOpCG5Cdj/Hkk0ARyOgoZbJycYA
+8D9r9K2m6N1ZaUT96UrFqjlL9nAqmZ+13D82H1CYLKy0NOAY3XBLzLk46HZd8na2
+-----END RSA PRIVATE KEY-----
+-----BEGIN ENCRYPTED PRIVATE KEY-----
+FPaBqPQWx0nxTJbSrPavSaNtmAyAH6etkjZs0/In
+-----END ENCRYPTED PRIVATE KEY-----
+-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC7a7kN8LymUu8Z
+8D9r9K2m6N1ZaUT96UrFqjlL9nAqmZ+13D82H1CYLKy0NOAY3XBLzLk46HZd8na2
+-----END PRIVATE KEY-----
+-----BEGIN ENCRYPTED PRIVATE KEY BLOCK-----
+V75NeIrlsI80Gf0aTS2RZQvEcUQ3n6XwFnOvB/O5rRv3HGqvptc3P3n0bxfEg5KA
+-----END ENCRYPTED PRIVATE KEY BLOCK-----

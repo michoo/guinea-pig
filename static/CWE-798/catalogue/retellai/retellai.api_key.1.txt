@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Retell AI API Key
+# Provider: retellai    Rule id (normalized): retellai.api_key.1
+#
+# Detected by this rule:
+#   - titus       kingfisher.retellai.api_key.1
+#
+# Pattern: (?xi) \b ( key_[0-9a-f]{28} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+key_8c08a175a1bf29f79d6bd4b125bc
+key_08f00bd7c1fec315592048630f87
+key_b15e562e497dce7ea90d1ba6a016

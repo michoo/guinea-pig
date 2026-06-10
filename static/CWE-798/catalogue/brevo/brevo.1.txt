@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Brevo API Token
+# Provider: brevo    Rule id (normalized): brevo.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.brevo.1
+#
+# Pattern: (?x) \b ( xkeysib-[a-fA-F0-9]{64}-[a-zA-Z0-9]{16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BREVO_API_KEY=xkeysib-abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcd-1234567890abcd12
+"brevo": "xkeysib-1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef-ab12cd34ef56gh78"

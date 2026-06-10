@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Inngest Event Key
+# Provider: inngest    Rule id (normalized): inngest.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.inngest.2
+#
+# Pattern: (?xi) \b (?:inngest|INNGEST_EVENT_KEY) (?:.|[\n\r]){0,48}? \b (?:EVENT(?:[\s_-]*KEY)?|KEY) (?:.|[\n\r]){0,16}? \b ( [A-Za-z0-9_-]{86} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+INNGEST EVENT_KEY=AbCdEfGhIjKlMnOpQrStUvWxYz0123456789_-AbCdEfGhIjKlMnOpQrStUvWxYz0123456789_-AbCdEfGhIj
+inngest event key: "ZyXwVuTsRqPoNmLkJiHgFeDcBa9876543210_-ZyXwVuTsRqPoNmLkJiHgFeDcBa9876543210_-ZyXwVuTsRq"

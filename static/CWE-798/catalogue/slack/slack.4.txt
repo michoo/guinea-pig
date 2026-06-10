@@ -1,0 +1,39 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Slack Webhook
+# Provider: slack    Rule id (normalized): slack.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.slack.4
+#   - noseyparker np.slack.4
+#   - titus       np.slack.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    slack-app-token
+#   - gitleaks    slack-bot-token
+#   - gitleaks    slack-config-access-token
+#   - gitleaks    slack-config-refresh-token
+#   - gitleaks    slack-legacy-bot-token
+#   - gitleaks    slack-legacy-token
+#   - gitleaks    slack-legacy-workspace-token
+#   - gitleaks    slack-user-token
+#   - gitleaks    slack-webhook-url
+#   - betterleaks slack-app-token
+#   - betterleaks slack-bot-token
+#   - betterleaks slack-config-access-token
+#   - betterleaks slack-config-refresh-token
+#   - betterleaks slack-legacy-bot-token
+#   - betterleaks slack-legacy-token
+#   - betterleaks slack-legacy-workspace-token
+#   - betterleaks slack-session-cookie
+#   - betterleaks slack-session-token
+#   - betterleaks slack-user-token
+#   - betterleaks slack-webhook-url
+#
+# Pattern: (?xi) \b ( https://hooks\.slack\.com/services/ T[a-z0-9_-]{8,12}/ B[a-z0-9_-]{8,12}/ [a-z0-9_-]{20,30} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://hooks.slack.com/services/TY40v9sZ9/BxIqhIXIi/NGUyXK6nK7HMAqd0ASzXluoV
+https://hooks.slack.com/services/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
+python log_announce.py xoxp-513768634356-513201028496-513937500594-185e196ace562dd6443b5d29b1d817c2 "This is a test run. Ignore"
+curl -X POST -H "Content-type: application/json" -H "Authorization: Bearer xoxp-283316862324-298911817009-298923149681-44f585044dace54f5701618e97cd1c0b" --data @data.json https://wirecard-issuing.slack.com/api/chat.postMessage
+url := "https://slack.com/api/channels.history?token=xoxp-113726990690-113803571044-155105854433-53ffb9d16ace50aa79aa1c425a68b131&channel=C4D8D3XMX&count=1&pretty=1"

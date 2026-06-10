@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: OVH Application Key
+# Provider: ovh    Rule id (normalized): ovh.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ovh.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks ovh-application-key
+#   - betterleaks ovh-application-secret
+#   - betterleaks ovh-consumer-key
+#
+# Pattern: (?xi) \b (?:ovh|ovhcloud) (?:.|[\n\r]){0,32}? \b(?:application[_-]?key|app[_-]?key)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [A-Za-z0-9]{16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+[ovh-eu]
+application_key=H4JXYD1BdSZzoY8m
+OVH_APPLICATION_KEY=K3IXYC0BeSZzoY6i

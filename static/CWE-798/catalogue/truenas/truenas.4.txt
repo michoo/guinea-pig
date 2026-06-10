@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: TrueNAS API Key (keyword proximity)
+# Provider: truenas    Rule id (normalized): truenas.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.truenas.4
+#
+# Pattern: (?xi) \b(?:truenas|true[_-]nas|tn[_-]) (?:.|[\n\r]){0,64}? (?:api[_-]?key|api[_-]?token|key|token|secret|password|auth) (?:.|[\n\r]){0,32}? ( \d+-[a-zA-Z0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TRUENAS_API_KEY=8-Lp22ov7halMBLUpG97Wg4y7fibQi3CW19VJiZcCu746zgCs0mdDdTCoOcpgEucgu
+truenas_token: "10-6LZBVhNq8zze0rzXJptfSWDBoskWuThnQb3fUVw4sVNgJ7GKT3ITVIovhwPf34oL"
+"truenas_api_key": "9-hTSZDBPyg0PjRZvWb8omoxJ7X2gAjRGmiPKql9ENGIUP9OPtEAzz5f6g9YIMVbZT"
+tn_api_key = "8-Lp22ov7halMBLUpG97Wg4y7fibQi3CW19VJiZcCu746zgCs0mdDdTCoOcpgEucgu"
+true-nas_secret=9-hTSZDBPyg0PjRZvWb8omoxJ7X2gAjRGmiPKql9ENGIUP9OPtEAzz5f6g9YIMVbZT

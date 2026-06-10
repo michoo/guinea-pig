@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sauce Labs Username
+# Provider: sauce    Rule id (normalized): saucelabs.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.saucelabs.1
+#
+# Pattern: (?xi) \b sauce (?:.|[\n\r]){0,16}? (?:USER|ID|NAME|CLIENT|OAUTH) (?:.|[\n\r]){0,16}? \b ( [A-Z0-9_.-]{2,70} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SAUCE_USERNAME=oauth-someusername-487ea
+SAUCE_USERNAME="oauth-ci-bot-487ea"
+"sauce_username":"build-user"
+saucelabs user oauth-release-bot

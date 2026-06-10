@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PubNub Subscription Key
+# Provider: pubnub    Rule id (normalized): pubnub.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pubnub.2
+#   - titus       kingfisher.pubnub.2
+#
+# Pattern: (?xi) \b ( sub-c-[a-z0-9]{8}(?:-[a-z0-9]{4}){3}-[a-z0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sub-c-12345678-abcd-1234-efgh-567890abcdef

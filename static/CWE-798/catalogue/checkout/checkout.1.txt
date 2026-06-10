@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Checkout.com Secret Key
+# Provider: checkout    Rule id (normalized): checkout.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.checkout.1
+#
+# Pattern: (?x) \b ( sk_ (?:[a-f0-9]{8}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{12}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+const cko = new Checkout('sk_0b9b5db6-fabc-49d0-b68f-13343bb4f708')
+Authorization: sk_be458ac1-fabc-4194-bf58-123b5fae88c7

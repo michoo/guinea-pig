@@ -1,0 +1,24 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: AWS Access Key ID
+# Provider: aws    Rule id (normalized): aws.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.aws.1
+#   - noseyparker np.aws.1
+#   - titus       np.aws.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    aws-access-token
+#   - gitleaks    aws-amazon-bedrock-api-key-long-lived
+#   - gitleaks    aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-access-token
+#   - betterleaks aws-amazon-bedrock-api-key-long-lived
+#   - betterleaks aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-secret-access-key
+#
+# Pattern: (?x) \b ( (?:A3T[A-Z0-9]|AKIA|ASIA) [A-Z0-9]{16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ASIAOZW6VBVAZFJHJLQA
+A3T0ABCDEFGHIJKLMNOP
+AKIADEADBEEFDEADBEEF

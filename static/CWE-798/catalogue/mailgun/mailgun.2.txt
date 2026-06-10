@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MailGun Primary Key
+# Provider: mailgun    Rule id (normalized): mailgun.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mailgun.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    mailgun-private-api-token
+#   - gitleaks    mailgun-pub-key
+#   - gitleaks    mailgun-signing-key
+#   - betterleaks mailgun-private-api-token
+#   - betterleaks mailgun-pub-key
+#   - betterleaks mailgun-signing-key
+#
+# Pattern: (?xi) (?:mailgun|mg) (?:.|[\n\r]){0,64}? \b ( key-(?:[0-9a-f]{8}){4} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+key-mailgun_token= key-ad13dfc23adf55fa404a91e76d96f472

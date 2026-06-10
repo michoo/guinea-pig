@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Detectify API Key
+# Provider: detectify    Rule id (normalized): detectify.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.detectify.1
+#
+# Pattern: (?xi) \b detectify (?:.|[\n\r]){0,32}? (?:API[_-]?KEY|SECRET|TOKEN|KEY) (?:.|[\n\r]){0,16}? \b ( [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DETECTIFY_API_KEY=2230dbea-051a-47f1-bc1d-c1b73b609420

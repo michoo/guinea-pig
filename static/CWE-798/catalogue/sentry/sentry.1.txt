@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sentry Access Token
+# Provider: sentry    Rule id (normalized): sentry.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sentry.1
+#   - titus       kingfisher.sentry.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sentry-access-token
+#   - gitleaks    sentry-org-token
+#   - gitleaks    sentry-user-token
+#   - betterleaks sentry-access-token
+#   - betterleaks sentry-org-token
+#   - betterleaks sentry-user-token
+#
+# Pattern: (?xi) \b sentry (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SENTRY_TOKEN=cbadefcbadefc12defcbadefcbadefcbadefcbadefcbadefcbadefcbadefcbad
+"sentry-key": "3214567890cbadef3214567890cbadef3214567890cbadef3214567890cbadef"
+SENTRY_TOKEN=cbadefcbadefcbadefcbadefcbadefcbadefcbadefcbadefcbadefcbadefcbad

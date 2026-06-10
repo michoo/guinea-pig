@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: JFrog API Key
+# Provider: jfrog    Rule id (normalized): jfrog.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.jfrog.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    jfrog-api-key
+#   - gitleaks    jfrog-identity-token
+#
+# Pattern: (?xi) \b (?: jfrog | artifactory | bintray | xray ) (?:.|[\n\r]){0,32}? (?: api[_-]?key | password | token | secret ) (?:.|[\n\r]){0,12}? ( [A-Za-z0-9]{73} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+jfrog_api_key=Ab12Cd34Ef56Gh78Ij90Kl12Mn34Op56Qr78St90Uv12Wx34Yz56Ab78Cd90Ef12Gh34Ij5Kl
+jfrog_password=Ab12Cd34Ef56Gh78Ij90Kl12Mn34Op56Qr78St90Uv12Wx34Yz56Ab78Cd90Ef12Gh34Ij5Kl

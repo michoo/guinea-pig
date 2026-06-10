@@ -1,0 +1,26 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Grafana API Token
+# Provider: grafana    Rule id (normalized): grafana.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.grafana.1
+#   - noseyparker np.grafana.1
+#   - titus       np.grafana.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    grafana-api-key
+#   - gitleaks    grafana-cloud-api-token
+#   - gitleaks    grafana-service-account-token
+#   - betterleaks grafana-api-key
+#   - betterleaks grafana-cloud-api-token
+#   - betterleaks grafana-service-account-token
+#
+# Pattern: (?x) \b ( eyJrIjoi [A-Za-z0-9+/]{40,380} ={0,2} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Authorization: Bearer eyJrIjoiWHZiSWd5NzdCYUZnNUtibE8obUpESmE2bzJYNDRIc1UiLCJuIjoibXlrZXkiLCJpZCI6MX0=
+admin_client = GrafanaClient("eyJrIjoiY21sM1JRYjB6RnVYSTNLenRWQkFEaWN2bXI2V202U2IiLCJuIjoiYWRtaW5rZXkiLCJpZCI6MX0=", host=grafana_host, port=3000, protocol="http")
+Authorization: Bearer eyJrIjoiWHZiSWd5NzdCYUZnNUtibE8obUpESmE2bzJYNDRIc1UiLCJuIjoibXlrZXkiLCJpZCI7MX1
+Authorization: Bearer eyJrIjoiWHZiSWd5NzdCYUZnNUtibE9obUpESmE2bzJYNDRIc1UiLCJuIjoibXlrZXkiLCJpZCI6MX0=
+admin_client = GrafanaClient("eyJrIjoiY21sM1JRYjB6RnVYSTNLenRWQkFEaWN2bXI2V202U2IiLCJuIjoiYWRtaW5rZXkiLCJpZCI6MX0=", host=grafana_host)
+GRAFANA_API_KEY=eyJrIjoiSnp6N0N2WGJwZFJoYTB0OVpORW5uaGFaamwzWHo5WjQiLCJuIjoiYmFja3VwcyIsImlkIjoxfQ==

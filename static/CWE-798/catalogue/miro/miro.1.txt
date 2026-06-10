@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Miro Access Token
+# Provider: miro    Rule id (normalized): miro.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.miro.1
+#
+# Pattern: (?x) \b (?i:miro) (?:.|[\n\r]){0,32}? (?i:(?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|AUTH|TOKEN)) (?:.|[\n\r]){0,32}? \b ( eyJtaXJv [A-Za-z0-9-]{10,64} _ [A-Za-z0-9_-]{20,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+miro_key = eyJtaXJvLm9yaWdpbiI6ImV1MDEifQ_o-P91OccaII0A63CDSK--x21xiI
+MIRO_TOKEN="eyJtaXJvLm9yaWdpbiI6InVzMDEifQ_kL8m2Nq7RpWxYz3AbCdEfGhI"

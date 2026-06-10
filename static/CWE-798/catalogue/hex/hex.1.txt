@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Hex Technologies API Token
+# Provider: hex    Rule id (normalized): hex.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hex.1
+#
+# Pattern: (?xi) \b ( hxt[wp]_ [a-f0-9]{16} (?:[a-f0-9]{16}){5} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HEX_API_TOKEN=hxtp_0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+HEX_WORKSPACE_TOKEN=hxtw_fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210fedcba9876543210

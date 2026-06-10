@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Neo4j Database Credentials
+# Provider: neo4j    Rule id (normalized): neo4j.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.neo4j.1
+#
+# Pattern: (?xi) \b neo4j (?:.|[\n\r]){0,128}? \b(?:password|passwd|pwd)\b (?:.|[\n\r]){0,16}? [=:"'\s] ( [^\s"']{8,64} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+spring.data.neo4j.password: Tr0ub4dor&3xampL
+neo4j.password: ze0h!zafFEa

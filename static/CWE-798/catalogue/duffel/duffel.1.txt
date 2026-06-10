@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Duffel API Token
+# Provider: duffel    Rule id (normalized): duffel.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.duffel.1
+#   - titus       kingfisher.duffel.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    duffel-api-token
+#   - betterleaks duffel-api-token
+#
+# Pattern: (?x) \b ( duffel_(?:test|live)_[a-zA-Z0-9_\-=]{43} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DUFFEL_TOKEN=duffel_test_qwertyuiopasdfghjklzxcvbnm123456789abcdefgh
+Authorization: "Bearer duffel_live_abcd1234efgh5678ijkl9012mnop3456qrstuvwxyza"

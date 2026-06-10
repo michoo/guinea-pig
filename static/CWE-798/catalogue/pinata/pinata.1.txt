@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pinata API Key ID
+# Provider: pinata    Rule id (normalized): pinata.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pinata.1
+#
+# Pattern: (?x) (?: (?i:pinata)\s+API\s+Key | PINATA_API_KEY | API\s+Key ) \s*[:=]\s* ( [0-9a-f]{20} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PINATA_API_KEY=017bb392dcfe1fcfe009
+API Key: 017bb392dcfe1fcfe009

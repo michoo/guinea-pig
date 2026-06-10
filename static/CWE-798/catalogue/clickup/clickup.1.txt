@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: ClickUp Personal API Token
+# Provider: clickup    Rule id (normalized): clickup.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.clickup.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks clickup-personal-api-token
+#
+# Pattern: (?x) \b (?i:clickup) (?:.|[\n\r]){0,32}? \b ( pk_\d{8,9}_[0-9A-Z]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CLICKUP_API_TOKEN=pk_204249739_138RCYNYCVO0GRJ8INODHFRMXN0QSV75
+clickup_token: "pk_204249739_GSJCPRLQEX43KH4WN8093RZ9DW3CJGM4"

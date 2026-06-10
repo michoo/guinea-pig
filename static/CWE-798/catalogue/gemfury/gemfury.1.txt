@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Gemfury Deploy or Push Token
+# Provider: gemfury    Rule id (normalized): gemfury.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gemfury.1
+#
+# Pattern: (?xi) https:// ( [A-Za-z0-9_-]{20,36} ) @ (?:repo|push)\.fury\.io/
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+extra-index-url = https://2yryChg-4CDmo6lyRtjCEpOQuHegzKAF@repo.fury.io/myuser
+push_token = https://OS7Jq-grMnyU5pMtBs7btYY0LUTWgfgR@push.fury.io/myorg/

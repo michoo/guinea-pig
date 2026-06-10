@@ -1,0 +1,23 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: New Relic Insights Insert Key
+# Provider: newrelic    Rule id (normalized): newrelic.5
+#
+# Detected by this rule:
+#   - noseyparker np.newrelic.5
+#   - titus       np.newrelic.5
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    new-relic-browser-api-token
+#   - gitleaks    new-relic-insert-key
+#   - gitleaks    new-relic-user-api-id
+#   - gitleaks    new-relic-user-api-key
+#   - betterleaks new-relic-browser-api-token
+#   - betterleaks new-relic-insert-key
+#   - betterleaks new-relic-user-api-id
+#   - betterleaks new-relic-user-api-key
+#
+# Pattern: (?x)(?i) \b (nrii-[a-z0-9_-]{32}) (?: [^a-z0-9_-] | $)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+insertKey: "NRII-3nbcrMjHHs0RrT3GhRNqpd16YVMFHdcI")
+"Api-Key": "NRII-7a6SL_Pau5Dz923jEuBEylu3clzXzfby"

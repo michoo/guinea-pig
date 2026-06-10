@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Yandex API Key
+# Provider: yandex    Rule id (normalized): yandex.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.yandex.1
+#   - titus       kingfisher.yandex.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    yandex-access-token
+#   - gitleaks    yandex-api-key
+#   - gitleaks    yandex-aws-access-token
+#   - betterleaks yandex-access-token
+#   - betterleaks yandex-api-key
+#   - betterleaks yandex-aws-access-token
+#
+# Pattern: (?xi) \b yandex (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9.]{83} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+yandex_api_key= 'pdct.1.1.20218925T124723Z.07193b9c567c0c90.ebba3042fcf1acfc4d682db12c01a5289f9769c0'
+yandex_secret=1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTU

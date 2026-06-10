@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: HuggingFace User Access Token
+# Provider: huggingface    Rule id (normalized): huggingface.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.huggingface.1
+#   - noseyparker np.huggingface.1
+#   - titus       np.huggingface.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    huggingface-access-token
+#   - gitleaks    huggingface-organization-api-token
+#   - betterleaks huggingface-access-token
+#   - betterleaks huggingface-organization-api-token
+#
+# Pattern: (?xi) (?: ( (?:api_org|hf)_ (?:[0-9A-Z]{17}){2} ) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HF_TOKEN:"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"
+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

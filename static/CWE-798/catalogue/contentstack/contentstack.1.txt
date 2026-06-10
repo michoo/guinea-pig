@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Contentstack Management Token
+# Provider: contentstack    Rule id (normalized): contentstack.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.contentstack.1
+#
+# Pattern: (?xi) \b contentstack (?:.|[\n\r]){0,32}? (?:MANAGEMENT[_\s]?TOKEN|AUTH[_\s]?TOKEN|TOKEN) (?:.|[\n\r]){0,32}? \b ( cs[a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CONTENTSTACK_MANAGEMENT_TOKEN=cs1234567890abcdef1234567890abcdef
+contentstack_token = "csa1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4"

@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Supabase Management Token
+# Provider: supabase    Rule id (normalized): supabase.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.supabase.1
+#   - titus       kingfisher.supabase.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks supabase-management-token
+#   - betterleaks supabase-project-api-key
+#   - betterleaks supabase-project-url
+#
+# Pattern: (?xi) ( sbp_[a-z0-9_-]{40} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sbp_abcd1234efgh5678ijkl9012mnop3456qrst7890
+sbp_1234567890abcdefghij1234567890klmnopqrst

@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Forest Admin Auth Secret
+# Provider: forestadmin    Rule id (normalized): forestadmin.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.forestadmin.1
+#
+# Pattern: (?xi) \b forest[_-]?auth[_-]?secret (?:.|[\n\r]){0,16}? [=:"'\s]+ ['"]* ( [A-Za-z0-9+/]{20,96} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+forest_auth_secret: CJh5orog8MCU99dBf1TblR
+FOREST_AUTH_SECRET=CuFtspjuNN6OuTVZNFgmS8wELetNfgMh
+FOREST_AUTH_SECRET=d9474A33894d755182b8cef87eA80845c06bca625156ad60

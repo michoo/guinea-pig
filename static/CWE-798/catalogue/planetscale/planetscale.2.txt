@@ -1,0 +1,24 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PlanetScale Username
+# Provider: planetscale    Rule id (normalized): planetscale.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.planetscale.2
+#   - titus       kingfisher.planetscale.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    planetscale-api-token
+#   - gitleaks    planetscale-oauth-token
+#   - gitleaks    planetscale-password
+#   - betterleaks planetscale-api-token
+#   - betterleaks planetscale-id
+#   - betterleaks planetscale-oauth-token
+#   - betterleaks planetscale-password
+#
+# Pattern: (?xi) (?:pscale|planetscale) (?:.|[\n\r]){0,16}? (?:USER|ID|NAME) (?:.|[\n\r]){0,16}? ( [a-z0-9]{12} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pscale_user = 0dm7fw8prpel
+planetscale_id: 0dm7fw8prpel
+pscale_user = abcdefghijkl
+planetscale_id: hgtmrnzlv1t7

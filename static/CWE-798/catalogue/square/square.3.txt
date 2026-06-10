@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Square OAuth Secret
+# Provider: square    Rule id (normalized): square.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.square.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    square-access-token
+#   - betterleaks square-access-token
+#
+# Pattern: (?x) \b ( sq0csp-[a-zA-Z0-9_-]{43} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sq0csp-pyRoa8ZyBlEisE5NQtN7sS-PqR6sK3W9JoF_Ov3Es2M
+sq0csp-P9QoCwVRh4tnAS8NbPGoGy-9psN3-8BGz3uNq5D_EFM

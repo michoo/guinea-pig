@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Paddle API Key
+# Provider: paddle    Rule id (normalized): paddle.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.paddle.1
+#
+# Pattern: (?x) \b ( pdl_live_apikey_ [a-z0-9]{26} _ [A-Za-z0-9]{22} _ [A-Za-z0-9]{3} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PADDLE_API_KEY=pdl_live_apikey_01kps076233qscw38dxz320d0e_Ab3D5fGb7Jk9LmNpQrStUv_X2z

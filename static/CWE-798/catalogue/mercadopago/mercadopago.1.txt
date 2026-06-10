@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mercado Pago Access Token
+# Provider: mercadopago    Rule id (normalized): mercadopago.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mercadopago.1
+#
+# Pattern: (?x) \b ( APP_USR-[A-Za-z0-9]{6,20}(?:-[A-Za-z0-9]{4,64}){2,4} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+APP_USR-9032451187654321-040126-1a2b3c4d5e6f7081920a1b2c3d4e5f60-5729013384
+token = "APP_USR-7812450099887766-120125-b4c35d6e7f8091a2b3c4d5e6f708192a-6419027731"

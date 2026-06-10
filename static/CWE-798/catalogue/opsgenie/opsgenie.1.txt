@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: OpsGenie API Key
+# Provider: opsgenie    Rule id (normalized): opsgenie.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.opsgenie.1
+#   - titus       kingfisher.opsgenie.1
+#
+# Pattern: (?xi) \b opsgenie (?:.|[\\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+opsgenie_api_key = '12345678-9abc-def0-1234-56789abcdef0'

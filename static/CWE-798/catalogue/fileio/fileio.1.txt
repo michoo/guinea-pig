@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: FileIO Secret Key
+# Provider: fileio    Rule id (normalized): fileio.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.fileio.1
+#   - titus       kingfisher.fileio.1
+#
+# Pattern: (?xi) \b fileio (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( [A-Z0-9]{20} \.[A-Z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+fileio SECRETKEY = Z9Y8X7W6V5U4T3S2R1Q0.P9O8N7M6L5K4J3H2G1FV
+fileio.PRIVATE.TOKEN = F0E1D2C3B4A596877869.5E4D3C2B1A0Z9Y8X7W6V
+fileio_key = M8N6B4V2C0X9Z7L5K3J1.H2G4F6D8S0A9P7O5I3U1

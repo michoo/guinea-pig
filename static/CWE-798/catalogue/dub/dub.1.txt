@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Dub.co API Key
+# Provider: dub    Rule id (normalized): dub.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dub.1
+#
+# Pattern: (?x) \b ( dub_[A-Za-z0-9]{24} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+dub_QySryYEmGAcFDSGHsFy6eUc5
+dub_g7bN73nl6KqLGDZOtgQV5HKa

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: AI71 API Key
+# Provider: ai71    Rule id (normalized): ai71.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ai71.1
+#
+# Pattern: (?xi) \b ( ai71-api- [a-f0-9]{8}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AI71_API_KEY=ai71-api-7c12f4e9-4b3d-4a1e-8c72-5d91a6b7c8d9
+ai71_key: "ai71-api-1b9e3c7d-2f44-4ab1-9d20-6e5f7a8b9c0d"

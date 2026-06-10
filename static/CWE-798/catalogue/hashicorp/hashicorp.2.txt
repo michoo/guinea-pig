@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Hashicorp Vault Batch Token (< v1.10)
+# Provider: hashicorp    Rule id (normalized): hashicorp.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hashicorp.2
+#   - noseyparker np.hashicorp.2
+#   - titus       np.hashicorp.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    hashicorp-tf-api-token
+#   - gitleaks    hashicorp-tf-password
+#   - betterleaks hashicorp-tf-api-token
+#   - betterleaks hashicorp-tf-password
+#
+# Pattern: (?x) (?i: hashicorp | vault | token | key | secret ) ["':=\ ]{0,5} (b\.[A-Za-z0-9_-]{24,500}) (?: [^A-Za-z0-9_-] | $ )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+VAULT_CLIENT_TOKEN="b.Z4bTMtngfLeQ18AqVoBBkUAOD1"

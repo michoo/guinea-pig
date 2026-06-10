@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Kraken API Secret
+# Provider: kraken    Rule id (normalized): kraken.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.kraken.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    kraken-access-token
+#   - betterleaks kraken-access-token
+#
+# Pattern: (?xi) \b kraken (?:.|[\n\r]){0,32}? (?: api[_-]?secret | secret | private[_-]?key | token ) (?:.|[\n\r]){0,12}? ( [A-Za-z0-9+/=_-]{80,90} ) (?:[^A-Za-z0-9+/=_-]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+KRAKEN_API_SECRET=dGhpcy1sb29rcy1saWtlLWEtYmFzZTY0LWtyYWtlbi1zZWNyZXQtdGhhdC1pcy1sb25nLWVub3VnaA==
+kraken_secret="Aq1Bq2Cr3Ds4Et5Fu6Gv7Hw8Ix9Jy0Kz1La2Mb3Nc4Od5Pe6Qf7Rg8Sh9Ti0Uj1Vk2Wm3Xn4Yo5Za6Bc7"

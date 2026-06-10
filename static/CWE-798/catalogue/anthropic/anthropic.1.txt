@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Anthropic API Key
+# Provider: anthropic    Rule id (normalized): anthropic.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.anthropic.1
+#   - noseyparker np.anthropic.1
+#   - titus       np.anthropic.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    anthropic-admin-api-key
+#   - gitleaks    anthropic-api-key
+#   - betterleaks anthropic-admin-api-key
+#   - betterleaks anthropic-api-key
+#
+# Pattern: (?x) ( sk-ant-api \d{2,4} - [\w\-]{93} AA )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sk-ant-api668-Clm512odot9WDD7itfUU9R880nefA1EtYZDbpE-C9b0XQEWpqFKf9DQUo03vOfXl16oSmyar1CLF1SzV3YzpZJ6bahcpLAA
+sk-ant-api03-gOe0gMC1pt-tUe3PC6bqj3YqGhkHvyvJgtwIjGhmQIScHCRbIinUwsgFuqyQnnaTDXrHCaTmX2GkSU117pxITQ-XhkxPAAA
+sk-ant-api03-jSq6OMjv1syXaEUE0bvOckLe_GtCKy8lvZdko3eOJgV8TH-f2iyzRekyZNSby5d9ScikGYuqQhsrxML3X3N3rQ-XwQaQAAA
+sk-ant-api03-f-SD8UXTHZuL3dhlRLMzMh7sxOopjFG510MC0B6g5Whzu2gM6gYJrQUduYWWQkG8XvkjeVj-MfYvtzMBF7NXSg-W34tmAAA

@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Redis Password (Standalone Config)
+# Provider: redis    Rule id (normalized): redis.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.redis.3
+#
+# Pattern: (?i)\b(?:redis[-_.]?(?:password|pass|passwd|auth|secret|token)|config\.redis\.auth)\b(?:.|[\n\r]){0,24}?[=:][ \t]*['"]?([a-zA-Z0-9%;._~!$&'()*+,;=/*+-]{8,64})['"]?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+REDIS_PASSWORD="EXAMPLEp4ssw0rd123"
+redis_password=MyS3cur3R3d1sK3y
+config.redis.auth = 'secretT0ken456'
+REDIS_AUTH: "aB3cD4eF5gH6iJ7kL8"

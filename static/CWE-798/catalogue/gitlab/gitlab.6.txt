@@ -1,0 +1,43 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GitLab Deploy Token
+# Provider: gitlab    Rule id (normalized): gitlab.6
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gitlab.6
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    gitlab-cicd-job-token
+#   - gitleaks    gitlab-deploy-token
+#   - gitleaks    gitlab-feature-flag-client-token
+#   - gitleaks    gitlab-feed-token
+#   - gitleaks    gitlab-incoming-mail-token
+#   - gitleaks    gitlab-oauth-app-secret
+#   - gitleaks    gitlab-pat
+#   - gitleaks    gitlab-pat-routable
+#   - gitleaks    gitlab-ptt
+#   - gitleaks    gitlab-rrt
+#   - gitleaks    gitlab-runner-authentication-token
+#   - gitleaks    gitlab-runner-authentication-token-routable
+#   - gitleaks    gitlab-scim-token
+#   - gitleaks    gitlab-session-cookie
+#   - betterleaks gitlab-cicd-job-token
+#   - betterleaks gitlab-deploy-token
+#   - betterleaks gitlab-feature-flag-client-token
+#   - betterleaks gitlab-feed-token
+#   - betterleaks gitlab-incoming-mail-token
+#   - betterleaks gitlab-oauth-app-secret
+#   - betterleaks gitlab-pat
+#   - betterleaks gitlab-pat-routable
+#   - betterleaks gitlab-pat-routable-versioned
+#   - betterleaks gitlab-ptt
+#   - betterleaks gitlab-rrt
+#   - betterleaks gitlab-runner-authentication-token
+#   - betterleaks gitlab-runner-authentication-token-routable
+#   - betterleaks gitlab-scim-token
+#   - betterleaks gitlab-session-cookie
+#
+# Pattern: (?x) \b ( gldt- [0-9a-zA-Z_-]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+gldt-xY9kLmNpQrStUvWxYz01
+DEPLOY_TOKEN=gldt-3dEfGhIjK4MnOpQrStUv

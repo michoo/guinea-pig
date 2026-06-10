@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: RunPod API Key
+# Provider: runpod    Rule id (normalized): runpod.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.runpod.1
+#
+# Pattern: (?x) \b ( rpa_[A-Z0-9]{40}[A-Za-z0-9]{6} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RUNPOD_API_KEY=rpa_ABC123DEF456GHI789JKL012MNO345PQR678STUVX9y2z7

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Browser Use API Key
+# Provider: browseruse    Rule id (normalized): browseruse.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.browseruse.1
+#
+# Pattern: (?x) \b ( bu_[A-Za-z0-9_-]{42,46} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BROWSER_USE_API_KEY="bu_7U8x7aOi0uXig8bf3ubvJLqb7TWf_pskUMN5XTPfUCg"
+browser-use apiKey: "bu_oMANI1IOblFfFeBillhzHIuOG9MmVO7qAnSE4_eRBWk"

@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Microsoft Teams Webhook
+# Provider: microsoftteamswebhook    Rule id (normalized): microsoftteamswebhook.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.microsoftteamswebhook.1
+#   - titus       kingfisher.microsoftteamswebhook.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    microsoft-teams-webhook
+#   - betterleaks microsoft-teams-webhook
+#
+# Pattern: (?xi) \b ( https://[A-Z0-9]+\.webhook\.office\.com/webhookb2 / [A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12} @ [A-Z0-9]{8}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{4}-[A-Z0-9]{12} / IncomingWebhook / [A-Z0-9]{32} / [A-Z0-9]{8}-[A-Z0- …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://contoso.webhook.office.com/webhookb2/12345678-abcd-1234-efgh-56789abcdef0@12345678-abcd-1234-efgh-56789abcdef0/IncomingWebhook/abcdefgh12345678abcdefgh12345678/12345678-abcd-1234-efgh-56789abcdef0

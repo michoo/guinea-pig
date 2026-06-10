@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WooCommerce Consumer Key
+# Provider: woocommerce    Rule id (normalized): woocommerce.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.woocommerce.2
+#
+# Pattern: (?x) \b ( ck_[a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WC_CONSUMER_KEY=ck_a1b2c3d4e5f60708a9b0c1d2e3f4a5b6c7d8e9f0

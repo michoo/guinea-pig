@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Artifactory Access Token
+# Provider: artifactory    Rule id (normalized): artifactory.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.artifactory.1
+#   - noseyparker np.artifactory.1
+#   - titus       np.artifactory.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    artifactory-api-key
+#   - gitleaks    artifactory-reference-token
+#   - betterleaks artifactory-api-key
+#   - betterleaks artifactory-jfrog-url
+#   - betterleaks artifactory-reference-token
+#
+# Pattern: (?x) \b ( AKCp[A-Za-z0-9]{68,70} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+export HOMEBREW_ARTIFACTORY_API_TOKEN=AKCp8igrDNFerC357m4422e4tmu7xB983QLPxJhKFcSMfoux2RFvp8rc4jC8t9ncdmYCMFD8W
+export HOMEBREW_ARTIFACTORY_API_USER=kashorn
+jfrog rt dl --url=http://localhost:8071/artifactory --apikey=AKCp2WXX7SDvcsmny528sSDnaB3zACkNQoRcD8D1WmxhMV9gk6Wp8mVWC8bh38kJQbXagUT8Z generic-local/hello.txt

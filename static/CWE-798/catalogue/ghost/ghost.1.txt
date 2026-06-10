@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Ghost CMS Admin API Key
+# Provider: ghost    Rule id (normalized): ghost.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ghost.1
+#
+# Pattern: (?xi) \b ghost (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{24}:[0-9a-f]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+GHOST_ADMIN_API_KEY=1efedd9db174adee2d23d982:4b74dca0219bad629852191af326a45037346c2231240e0f7aec1f9371cc14e8
+ghost_key = "6101c750c9d0ab0e34567890:abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890"

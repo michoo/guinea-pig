@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mixpanel Service Account Username
+# Provider: mixpanel    Rule id (normalized): mixpanel.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mixpanel.4
+#
+# Pattern: (?x) \b ( [a-zA-Z0-9_-]+ \. [0-9a-f]{6} \. mp-service-account ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MIXPANEL_USERNAME=kingfisher-svc-1.b500ae.mp-service-account
+kingfisher-svc-2.6c6256.mp-service-account

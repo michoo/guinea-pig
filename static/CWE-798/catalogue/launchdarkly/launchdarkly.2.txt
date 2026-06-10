@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LaunchDarkly Client-side ID
+# Provider: launchdarkly    Rule id (normalized): launchdarkly.2
+#
+# Detected by this rule:
+#   - titus       kingfisher.launchdarkly.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    launchdarkly-access-token
+#   - betterleaks launchdarkly-access-token
+#
+# Pattern: (?xi) ["']?(?:LD|LAUNCHDARKLY)[_-]?CLIENT[_-]?(?:SIDE[_-]?)?ID["']? \s*[":=]\s*["']? ( [a-f0-9]{24} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+LD_CLIENT_SIDE_ID=0123456789abcdef01234567
+LAUNCHDARKLY_CLIENT_ID="abcdef0123456789abcdef01"
+"LD_CLIENT_SIDE_ID":"0123456789abcdef01234567"

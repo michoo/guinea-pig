@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sendinblue API Token
+# Provider: sendinblue    Rule id (normalized): sendinblue.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sendinblue.1
+#   - titus       kingfisher.sendinblue.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sendinblue-api-token
+#   - betterleaks sendinblue-api-token
+#
+# Pattern: (?x) \b ( xkeysib-[a-fA-F0-9]{64}-[a-zA-Z0-9]{16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+XKEYSIB_TOKEN=xkeysib-abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcd-1234567890abcd12
+"sendinblue": "xkeysib-1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef-ab12cd34ef56gh78"

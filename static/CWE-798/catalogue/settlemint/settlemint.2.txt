@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SettleMint Application Access Token
+# Provider: settlemint    Rule id (normalized): settlemint.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.settlemint.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    settlemint-application-access-token
+#   - gitleaks    settlemint-personal-access-token
+#   - gitleaks    settlemint-service-access-token
+#   - betterleaks settlemint-application-access-token
+#   - betterleaks settlemint-personal-access-token
+#   - betterleaks settlemint-service-access-token
+#
+# Pattern: (?x) \b ( sm_aat_[A-Za-z0-9]{16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BLOCKSCOUT_SETTLEMINT_APPLICATION_ACCESS_TOKEN=sm_aat_A1b2C3d4E5f6G7h8
+x-auth-token: sm_aat_Z9y8X7w6V5u4T3s2

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Upstash Management API Key
+# Provider: upstash    Rule id (normalized): upstash.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.upstash.4
+#
+# Pattern: (?xi) \b (?i:upstash) (?:.|[\n\r]){0,24}? \b ( [0-9a-f]{8} - [0-9a-f]{4} - 4[0-9a-f]{3} - [89ab][0-9a-f]{3} - [0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+UPSTASH_API_KEY=7e6fbb80-71d8-4f97-9b38-62c17a3de154
+upstash management api key: "9d13b4f2-2d43-4378-8f32-4fca3d6be861"

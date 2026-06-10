@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cloudinary Cloud Name
+# Provider: cloudinary    Rule id (normalized): cloudinary.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.cloudinary.3
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks cloudinary-api-key
+#   - betterleaks cloudinary-api-secret
+#   - betterleaks cloudinary-cloud-name
+#
+# Pattern: (?xi) \b cloudinary (?:.|[\n\r]){0,32}? (?:CLOUD[_\s]?NAME|CLOUD) (?:.|[\n\r]){0,16}? \b ( [a-z0-9_-]{3,32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CLOUDINARY_CLOUD_NAME=demo

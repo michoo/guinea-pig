@@ -1,0 +1,37 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic Username and Password
+# Provider: generic    Rule id (normalized): generic.8
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.generic.8
+#   - noseyparker np.generic.8
+#   - titus       np.generic.8
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?xi) (?: db_user | db_USERNAME | db_name) (?:.|[\n\r]){0,8}? ["'] ([^"']{5,40}) ["'] (?:.|[\n\r]){0,32}? ( db_password | db_pass \b (?:.|[\n\r]){0,16}? ["'] [^"']{5,40} ) ["']
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+credential = UsernamePasswordCredential(
+    client_id='da34859b-2ae4-48c3-bfe0-1b28b7cf2eed',
+    username='donjuandemarco',
+    password='1qay@WXS????',
+    tenant_id='bc877b20-f135-4c13-a266-8ed26b8f0f4b')
+hostname = '10.11.12.13'
+username = 'donjuandemarco@example.com'
+password = '`123QWERasdf'
+hostname = '10.11.12.13'
+USERNAME = 'donjuandemarco@example.com'
+# some comment
+# some other comment
+PASS = '`123QWERasdf'
+user = 'abuser'  # some comment
+password = 'abuser123456'  # some other comment
+user = 'Aladdin'
+password = 'open sesame'
+$domain = New-Object DirectoryServices.DirectoryEntry("LDAP://10.10.10.1","domain\user", "secret")
+new DirectoryEntry("LDAP://EXAMPLE.COM",
+          "ADMNALRRHH@EXAMPLE.COM",
+          "Rrhh1234");

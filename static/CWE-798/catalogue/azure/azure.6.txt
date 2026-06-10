@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure AD Client Secret (Microsoft Entra ID)
+# Provider: azure    Rule id (normalized): azure.6
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.6
+#   - titus       np.azure.6
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    azure-ad-client-secret
+#   - betterleaks azure-ad-client-secret
+#
+# Pattern: (?x) (?:^|['"\x60\s>=:(,]) ( [a-zA-Z0-9_~.]{3} \d Q~ [a-zA-Z0-9_~.\-]{31,34} ) (?:$|['"\x60\s<),])
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+"aBc4Q~xY9kLmNpQrStUvWxYz01234567890abcd"
+AZURE_CLIENT_SECRET=xY14Q~abcdefghijklmnopqrstuvwxyz01234
+my-ai-service.cognitiveservices.azure.com
+contoso-doc-intel.cognitiveservices.azure.com
+mycompany-vision-eastus.cognitiveservices.azure.com

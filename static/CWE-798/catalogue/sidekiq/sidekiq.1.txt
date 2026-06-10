@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sidekiq Enterprise Credential
+# Provider: sidekiq    Rule id (normalized): sidekiq.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sidekiq.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sidekiq-secret
+#   - gitleaks    sidekiq-sensitive-url
+#   - betterleaks sidekiq-secret
+#   - betterleaks sidekiq-sensitive-url
+#
+# Pattern: (?xi) \b (?: BUNDLE_ENTERPRISE__CONTRIBSYS__COM | BUNDLE_GEMS__CONTRIBSYS__COM ) \s*[:=]\s* ["']? ( [a-f0-9]{8}:[a-f0-9]{8} ) ["']? \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BUNDLE_ENTERPRISE__CONTRIBSYS__COM=cafe1234:dead5678
+export BUNDLE_GEMS__CONTRIBSYS__COM="ca1eb4b3:d3ad533f"

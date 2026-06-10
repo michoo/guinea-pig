@@ -1,0 +1,23 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Kubernetes Bootstrap Token
+# Provider: kubernetes    Rule id (normalized): kubernetes.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.kubernetes.2
+#   - noseyparker np.kubernetes.2
+#   - titus       np.kubernetes.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    gitlab-kubernetes-agent-token
+#   - gitleaks    kubernetes-secret-yaml
+#   - betterleaks gitlab-kubernetes-agent-token
+#   - betterleaks kubernetes-secret-yaml
+#
+# Pattern: (?xi) \b (?: bootstrap(?:[-_ ]token)? | tls[-_ ]bootstrap[-_ ]token ) (?:.|[\n\r]){0,12}? ( [a-z0-9]{6} \. [a-z0-9]{16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BOOTSTRAP_TOKEN=be8dfd.da8a689a46edc282
+--tls-bootstrap-token abcdef.1234567890abcdef
+# Token ID and secret. Required.
+token-id: 07402b
+token-secret: f395accd245ae53d

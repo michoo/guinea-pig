@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: UptimeRobot API Key
+# Provider: uptimerobot    Rule id (normalized): uptimerobot.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.uptimerobot.1
+#
+# Pattern: (?xi) \b uptimerobot (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( (?:ur[A-Za-z0-9-]{29}|[A-Za-z0-9]{28}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+uptimerobot_api_key = "ur123456-7890abcdef1234567890ab"
+UPTIMEROBOT_KEY=abcdef1234567890abcdef123456

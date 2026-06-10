@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Snowflake Connection URI Credentials
+# Provider: snowflake    Rule id (normalized): snowflake.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.snowflake.1
+#
+# Pattern: (?xi) \b snowflake[a-z+.-]* :// [A-Za-z0-9_.@%+!-]+ # username (non-capturing) : ([^@\s"'<>]{6,128}?) # password (captured) @ [A-Za-z0-9_.-]+ # host (?:\.snowflakecomputing\.com)? [/\s"'?]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CONNECTION_URI="db:snowflake://myuser:P4ssw0rd!@xyz123.us-east-1.snowflakecomputing.com/mydb"
+engine = create_engine("snowflake://admin:S3cr3tPassw0rd@acct987.snowflakecomputing.com/warehouse")

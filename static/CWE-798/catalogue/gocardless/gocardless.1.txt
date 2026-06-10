@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GoCardless API Token
+# Provider: gocardless    Rule id (normalized): gocardless.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gocardless.1
+#   - titus       kingfisher.gocardless.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    gocardless-api-token
+#   - betterleaks gocardless-api-token
+#
+# Pattern: (?xi) \b gocardless (?:.|[\n\r]){0,16}? \b ( live_ [A-Z0-9=_-]{16} (?:[A-Z0-9=_-]{8}){3} [A-Z0-9=_-]{0,2} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+gocardless_token = "live_8uq9fsUA28SqKT=CTsQxgKrqB6_7QV5tA39I8y5H
+GOCARDLESS_LIVE_KEY = "live_80M81I_T_DG2T604LSO5HVGVMJS40-CVUOS2S69YNY"
+GOCARDLESS_LIVE_KEY = "live_cpo0k9jbnb2djeaq=tga45ua_bnhev5ivv294a6cs"

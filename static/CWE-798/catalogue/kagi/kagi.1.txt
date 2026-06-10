@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Kagi API Key
+# Provider: kagi    Rule id (normalized): kagi.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.kagi.1
+#   - noseyparker np.kagi.1
+#   - titus       np.kagi.1
+#
+# Pattern: (?x)(?s) (?: kagi | KAGI ) .{0,100} ( [a-zA-Z0-9_-]{11}\.[a-zA-Z0-9_-]{43} ) (?: $ | [^a-zA-Z0-9_-] )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+KAGI_API_KEY='AQAAUPJ-iQc.yLFDzC5RRHzPNDThhulREdoG0Bn3PiZMwJ6yqC6uJLE'
+https://kagi.com/search?token=uwHBLWXZpgY.STzubkAbVXqpfV39Q6TOfzp43KulJeYWK6-963uz1-o

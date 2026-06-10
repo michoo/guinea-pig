@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Polymarket Builder Secret
+# Provider: polymarket    Rule id (normalized): polymarket.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.polymarket.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks polymarket-address
+#   - betterleaks polymarket-api-key
+#   - betterleaks polymarket-api-secret
+#   - betterleaks polymarket-passphrase
+#   - betterleaks polymarket-private-key
+#
+# Pattern: (?xi) \b poly(?:market)? (?:.|[\n\r]){0,32}? (?:builder|api)? (?:.|[\n\r]){0,16}? secret (?:.|[\n\r]){0,12}? ( [A-Za-z0-9+/]{40,88}={0,2} ) (?:[^A-Za-z0-9+/=]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+POLY_BUILDER_SECRET=QmFzZTY0U2VjcmV0VGVzdEtleTEyMzQ1Njc4OTBBQkNERUY=
+polymarket_builder_secret: Q29tcGxleFNlY3JldE1hdGVyaWFsMTIzNDU2Nzg5MDEyMzQ=

@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Curl Header Authentication
+# Provider: curl    Rule id (normalized): curl.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.curl.2
+#   - titus       kingfisher.curl.2
+#
+# Pattern: (?i)\bcurl\s.*(?:-H|--header)\s+['"]Authorization:\s*(?:Bearer|Basic|Token)\s+(?P<TOKEN>[a-zA-Z0-9+/=_-]{20,})['"]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+curl -H 'Authorization: Basic YnJvd3Nlcjo='
+curl -H "Authorization: Bearer cfcabd11c7ed9a41b1a3e063c32d5114"
+curl -H "Authorization: Token 22cb987851bc5659229114c62e60c79abd0d2c08"

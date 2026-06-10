@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Salesforce Connected App Consumer Key (Prefixed)
+# Provider: salesforce    Rule id (normalized): salesforce.7
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.salesforce.7
+#
+# Pattern: (?x)(?s) \b ( 3MVG9[A-Za-z0-9._~-]{20,180} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+3MVG9P8aWj9n4kT2xQ5mV7rY1bC3dF6gH8jK0mN2pR4tU6wX8zA1cE3gH5kM7qS9uV2xY4bD6fJ8nP1rT3vW5yZ7

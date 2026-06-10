@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Iterative DVC Studio Access Token
+# Provider: iterative    Rule id (normalized): iterative.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.iterative.1
+#
+# Pattern: (?x) \b ( isat_[a-zA-Z0-9_-]{20,80} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DVC_STUDIO_TOKEN=isat_AbCdEfGhIjKlMnOpQrStUvWxYz123456

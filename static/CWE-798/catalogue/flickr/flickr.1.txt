@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Flickr API Key
+# Provider: flickr    Rule id (normalized): flickr.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.flickr.1
+#   - titus       kingfisher.flickr.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    flickr-access-token
+#   - betterleaks flickr-access-token
+#
+# Pattern: (?xi) \b flickr (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+flickr_api_key: d1953fb62a9798593bfdb4287ed2423e

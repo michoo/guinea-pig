@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Ngrok API Key
+# Provider: ngrok    Rule id (normalized): ngrok.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ngrok.1
+#   - titus       kingfisher.ngrok.1
+#
+# Pattern: (?xi) \b ngrok (?:.|[\\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? ( (?:[a-z0-9]{25,30}_\d[a-z0-9]{20} | (?:cr_|ak_)[a-z0-9]{25,30}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ngrok authtoken: 2Ot3hdNCKF3JRJDCioqNV2J0PPc_6th2CSUm9KsjfXdtRDvzT

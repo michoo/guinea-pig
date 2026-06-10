@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Nightfall AI API Key
+# Provider: nightfall    Rule id (normalized): nightfall.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.nightfall.1
+#
+# Pattern: (?x) \b ( NF-[a-zA-Z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+NIGHTFALL_API_KEY=NF-a1B2c3D4e5F6g7H8i9J0k1L2m3N4o5P6
+Authorization: Bearer NF-xK8m2LpQr5nW0vYz3cJ7aB4dE6fG8h0i

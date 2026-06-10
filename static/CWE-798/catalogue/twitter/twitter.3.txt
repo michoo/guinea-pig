@@ -1,0 +1,27 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: X / Twitter Consumer Secret
+# Provider: twitter    Rule id (normalized): twitter.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.twitter.3
+#   - titus       np.twitter.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    twitter-access-secret
+#   - gitleaks    twitter-access-token
+#   - gitleaks    twitter-api-key
+#   - gitleaks    twitter-api-secret
+#   - gitleaks    twitter-bearer-token
+#   - betterleaks twitter-access-secret
+#   - betterleaks twitter-access-token
+#   - betterleaks twitter-api-key
+#   - betterleaks twitter-api-secret
+#   - betterleaks twitter-bearer-token
+#
+# Pattern: (?xi) \b twitter (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? ( [A-Z0-9]{50} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TWITTER_SECRET=ZGwXeK2DNCqv49Z9ofwYdqlBgeoHDyh8uoAgHju6OeYC7wTQJq
+TWITTER_BEARER_TOKEN = "AAAAAAAAAAAAAAAAAAAAAMLheAAAAAAA0%2BuSeid%2BULvsea4JtiGRiSd"
+X_API_BEARER_TOKEN="AAAAAAAAAAAAAAAAAAAAANRILEN0Aacc3Aace3mBw2bE4JtiGRiS"
+twitter_access_token: "AAAAAAAAAAAAAAAAAAAAAPYXBAAAAAAACLXUNDekMxqa8h%2F40K4moUkGsoc"

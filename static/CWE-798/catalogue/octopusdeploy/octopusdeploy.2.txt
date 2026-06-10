@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Octopus Deploy API Key
+# Provider: octopusdeploy    Rule id (normalized): octopusdeploy.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.octopusdeploy.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    octopus-deploy-api-key
+#   - betterleaks octopus-deploy-api-key
+#
+# Pattern: (?x) \b ( API-[A-Z0-9]{26} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+OCTOPUS_API_KEY=API-ZNRMR7SL6L3ATMOIK7GKJDKLPY
+set apikey="API-A1B2C3D4E5F6G7H8J9K0LMNOPQ"

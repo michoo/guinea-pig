@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LiveKit URL
+# Provider: livekit    Rule id (normalized): livekit.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.livekit.3
+#
+# Pattern: (?xi) \b(?:livekit|LIVEKIT) (?:.|[\n\r]){0,32}? (?:URL|HOST|WS[_-]?URL|HTTP[_-]?URL) (?:.|[\n\r]){0,16}? ( (?:wss?|https?)://[A-Za-z0-9.-]+(?:livekit\.(?:cloud|io)|[A-Za-z0-9.-]+) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+LIVEKIT_URL=wss://acme-demo.livekit.cloud
+livekit_host=https://acme-voice.livekit.cloud

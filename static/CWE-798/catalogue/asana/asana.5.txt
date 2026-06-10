@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Asana OAuth / Personal Access Token (V2)
+# Provider: asana    Rule id (normalized): asana.5
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.asana.5
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    asana-client-id
+#   - gitleaks    asana-client-secret
+#   - betterleaks asana-client-id
+#   - betterleaks asana-client-secret
+#
+# Pattern: (?xi) \b asana (?:.|[\n\r]){0,64}? \b ( 2/ [0-9]{16} / [0-9]{16} : [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ASANA_TOKEN = "2/1208779539612523/1208824174176866:99d6decca6ce6ef503bf0c5bca554e1a"

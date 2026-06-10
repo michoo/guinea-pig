@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tableau Server URL
+# Provider: tableau    Rule id (normalized): tableau.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tableau.2
+#
+# Pattern: (?xi) \b ( https://(?: (?:[a-z0-9-]+\.)?online\.tableau\.com | (?:[a-z0-9-]+\.)*tableau(?:\.[a-z0-9-]+)+ ) ) (?: /api/\d+\.\d+ )? (?: /[^\s"'<>]{0,120} )?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://tableau.example.com
+https://10ax.online.tableau.com
+server="https://analytics.tableau.example.com"

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Workato API Token
+# Provider: workato    Rule id (normalized): workato.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.workato.1
+#
+# Pattern: (?x) \b ( wrka (?P<REGION>[a-z]{2})? - eyJ[A-Za-z0-9_-]{8,} \. [A-Za-z0-9_-]{16,} \. [A-Za-z0-9_-]{64,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WORKATO_API_TOKEN="wrka-eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXBsb3ktYm90IiwianRpIjoiY2kxMjM0NTY3LXRlc3QiLCJleHAiOjIwMDAwMDAwMDB9.aQ1bC2dE3fG4hI5jK6lM7nO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8jK9lM0nP1qR2sT3uV4wX5yZ6aB7cD8eF9gH0iJ1kL2mN3oP4qR5sT6uV7wX8yZ9AbCdEfGhIjKlMnOpQr"
+Authorization: Bearer wrka-eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjbGllbnQiLCJqdGkiOiI1YzYxZTkwYi1kZW1vLWtleSIsImV4cCI6MjA1MDAwMDAwMH0.Rs7t_v8wXy9ZaBcDeFgHiJkLmNoPqRsTuVwXyZaBcDeFgHiJkLmNoPqRsTuVwXyZaBcDeFgHiJkLmNoPqRsTuVwXyZaBcDeFgHiJkLmNoPqRsTuVw-yZaBcD"

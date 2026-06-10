@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic Password
+# Provider: generic    Rule id (normalized): generic.12
+#
+# Detected by this rule:
+#   - noseyparker np.generic.12
+#   - titus       np.generic.12
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?x)(?i) the\ (?: default\ )? password\ is\ " ( [^'\n\#$|"{<+\ ()\\] (?# restrictive first character to suppress common interpolation forms ) [^"\n]{3,60} )"
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+so at this point, just fill in your mount point name, ensure the password is "centipede" and press the "On" button!

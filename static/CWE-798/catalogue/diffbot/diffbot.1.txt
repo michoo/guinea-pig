@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Diffbot API Key
+# Provider: diffbot    Rule id (normalized): diffbot.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.diffbot.1
+#   - titus       kingfisher.diffbot.1
+#
+# Pattern: (?xi) \b diffbot (?:.|[\n\r]){0,32}? \b ( [0-9a-z]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+diffbot_key = a7424adbafc4624e61482d0f60e43016

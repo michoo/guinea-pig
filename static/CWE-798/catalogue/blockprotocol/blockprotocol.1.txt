@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Block Protocol API Key
+# Provider: blockprotocol    Rule id (normalized): blockprotocol.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.blockprotocol.1
+#
+# Pattern: (?x) \b ( b10ck5\.[a-zA-Z0-9]{32}\.[a-zA-Z0-9]{36} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BLOCK_PROTOCOL_API_KEY=b10ck5.AbCdEfGhIjKlMnOpQrStUvWxYz123456.AbCdEfGhIjKlMnOpQrStUvWxYz1234567890

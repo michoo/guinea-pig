@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Yahoo OAuth2 Client ID
+# Provider: yahoo    Rule id (normalized): yahoo.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.yahoo.1
+#
+# Pattern: (?x) \b ( dj0y [A-Za-z0-9_-]{60,100} -- )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Yahoo Client ID dj0yJmk9FV44A2NEbHFtCdXkKzR9XNesQYh7WVxFWjJVcDNXcsNYctMYIT1uKqI7Y37ta4OaZYRhCFTzYYVjgF2rYA--
+YAHOO_CLIENT_ID=dj0yJmk9GW55B3OFcIGnDeYlLaS0YOfTRZi8XWyGXkKWdEOYdtNZjuNZJU2vLrJ8Z48ub5PaAZSiDGU0ZWWkhG3sZB--

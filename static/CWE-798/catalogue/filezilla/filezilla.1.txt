@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: FileZilla base64 encoded password
+# Provider: filezilla    Rule id (normalized): filezilla.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.filezilla.1
+#   - titus       kingfisher.filezilla.1
+#
+# Pattern: <Pass\b[^>]*\bencoding\s*=\s*"(?:base64|radix64)"[^>]*>\s*([A-Za-z0-9+/]{8,}={0,2})\s*</Pass>
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+<Pass encoding="base64">VGhpc0lzQVRlc3RQYXNzd29yZA==</Pass>
+<FileZilla3><RecentServers><Server><Pass encoding="base64">NjllNWU5ZWMwZDU0MmU5Y2QwOTY4MWM5YzZhMDdkYWVmNjg3OWE3MDMzM2Q4MWJmCg==</Pass></Server></RecentServers></FileZilla3>

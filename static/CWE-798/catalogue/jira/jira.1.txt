@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Jira Domain
+# Provider: jira    Rule id (normalized): jira.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.jira.1
+#   - titus       kingfisher.jira.1
+#
+# Pattern: (?xi) \b ( [a-z][a-z0-9-]{5,24}\.atlassian\.net ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+examplefoo-jira.atlassian.net
+jira.sprintUri= https://example.atlassian.net/rest

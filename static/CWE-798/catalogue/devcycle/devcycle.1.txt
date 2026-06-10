@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DevCycle Client SDK Key
+# Provider: devcycle    Rule id (normalized): devcycle.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.devcycle.1
+#
+# Pattern: (?x) \b ( dvc_client_[A-Za-z0-9]{8,32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+dvc_client_abc12345
+sdkKey: "dvc_client_abcdefg1234"

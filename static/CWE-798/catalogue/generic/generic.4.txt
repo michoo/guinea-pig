@@ -1,0 +1,29 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic Username and Password
+# Provider: generic    Rule id (normalized): generic.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.generic.4
+#   - noseyparker np.generic.4
+#   - titus       np.generic.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?xi) (?: username | user) (?:.|[\n\r]){0,16}? (?: password | pass ) (?:.|[\n\r]){0,16}? (\S{5,30}) (?: \s | $ )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+user = Aladdin
+password = open_sesame
+user = Aladdin
+// some comment
+// some other comment
+password = open_sesame
+:authn_dbd_params => 'host=db_host port=3306 user=apache password=###### dbname=apache_auth',
+[SupportSite]
+Username=thisismyunsername
+Password=thisismypassword
+[HELP_CLIENT]
+AUTO_SESSION_USERNAME=myusername
+AUTO_SESSION_PASSWORD=mypassword

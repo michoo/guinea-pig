@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: crates.io API Key
+# Provider: crates.io    Rule id (normalized): cratesio.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.cratesio.1
+#   - noseyparker np.cratesio.1
+#   - titus       np.cratesio.1
+#
+# Pattern: (?x) \b ( cio[A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Bearer: ciotgp8BGZBlX192iExSQPm0SrUlBunG8zd

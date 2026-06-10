@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Data.gov API Key
+# Provider: datagov    Rule id (normalized): datagov.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.datagov.1
+#   - titus       kingfisher.datagov.1
+#
+# Pattern: (?xi) \b data\.gov (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [a-zA-Z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+data.gov_api_key=pBZm2kXbuPdRfzYyarRT0bvcWAisnJg98YJzBJyJ
+data.gov_token=plZJDnKs4OrPeV8wgBr2fYO6VnXb1YPEcVaZbnYI

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Checkout.com Sandbox Secret Key
+# Provider: checkout    Rule id (normalized): checkout.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.checkout.2
+#
+# Pattern: (?x) \b ( sk_test_ [a-f0-9]{8}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CKO_SECRET_KEY=sk_test_2a3b4c5d-1234-5678-abcd-ef0123456789

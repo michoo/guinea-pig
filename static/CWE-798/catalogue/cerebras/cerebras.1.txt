@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cerebras AI API Key
+# Provider: cerebras    Rule id (normalized): cerebras.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.cerebras.1
+#   - titus       kingfisher.cerebras.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks cerebras-api-key
+#
+# Pattern: (?x) ( csk-[a-zA-Z0-9]{48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+csk-6nptf4w5cx36fw58t3hkx48jvm52wm693pex5tjm29kn55yt
+csk-e2knhj8h3h4erp6crfx6rh52tvecj4xnwmtjf3mtrvtt54et
+csk-rhw8npjrp6kpv9phm55n5nv5rkkm4492jepx3yh65dc9cwe9
+csk-w6p3nxk3dc5249mrpmv642fffert28rwdkepffrpn8rtfr9h

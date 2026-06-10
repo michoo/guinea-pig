@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MongoDB Atlas Service Account Token
+# Provider: mongodb    Rule id (normalized): mongodb.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mongodb.4
+#   - titus       kingfisher.mongodb.4
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks mongodb-atlas-service-account-id
+#   - betterleaks mongodb-atlas-service-account-secret
+#   - betterleaks mongodb-connection-string
+#
+# Pattern: (?xi) \b ( mdb_sa_sk_[0-9A-Z_-]{6}[0-9A-Z]{34} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mdb_sa_sk_BdIX_jLzut2WTgglKzKvSgWMDDj5hEoTqdwOyLOL

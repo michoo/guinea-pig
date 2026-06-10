@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Help Scout OAuth Client Secret
+# Provider: helpscout    Rule id (normalized): helpscout.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.helpscout.2
+#
+# Pattern: (?xi) \b (?:help[\s_-]?scout|helpscout) (?:.|[\n\r]){0,48}? (?: client[\s_.-]*secret | app[\s_.-]*secret | oauth[\s_.-]*secret ) (?:.|[\n\r]){0,16}? ( [A-Za-z0-9]{24,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HELPSCOUT_CLIENT_SECRET=a3B8f29E4d1C6a0578e23D9f41b6C8e2
+helpscout_client_secret: "E7d2A1f849c3B05d6e81F2a794c3D5b0"

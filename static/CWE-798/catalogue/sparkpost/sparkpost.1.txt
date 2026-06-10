@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SparkPost API Key
+# Provider: sparkpost    Rule id (normalized): sparkpost.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sparkpost.1
+#
+# Pattern: (?xi) \b spark(?:\s|_|-)?post (?:.|[\n\r]){0,24}? (?:api[_\s-]*key|authorization|token|secret|key) (?:.|[\n\r]){0,16}? ( [a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sparkpost_api_key = "14ac5499cfdd2bb2859e4476d2e5b1d2bad079bf"
+"X-Service": "sparkpost",
+"Authorization": "3f2c1a7b5d9e8c60124fab37d8519ce20ab46d7f"

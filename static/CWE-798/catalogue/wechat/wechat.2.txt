@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WeChat App Secret
+# Provider: wechat    Rule id (normalized): wechat.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.wechat.2
+#
+# Pattern: (?xi) \b (?:wechat|weixin) (?:.|[\n\r]){0,32}? \b(?:key|secret|app[_-]?secret)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+wechat.key = 9bdaebb9594bff61b28073d91213af23
+wechat
+app_secret=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d

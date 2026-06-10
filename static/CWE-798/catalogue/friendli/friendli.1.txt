@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Friendli.ai API Key
+# Provider: friendli    Rule id (normalized): friendli.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.friendli.1
+#   - titus       kingfisher.friendli.1
+#
+# Pattern: (?x) \b ( flp_[A-Za-z0-9]{46} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+flp_eb8CAc1OHdVISFraFZXFYQeH1CYtqM2VdYFvV1duniWw32
+flp_fYvncz2Ahh4YEfSKbNoT09DWlwPq5I7svZG2l1bdbpOg1c
+flp_kGcjWhZQ4zYQnY7b3O6nukAhflKZJeS7pNDhs79IRrfodc

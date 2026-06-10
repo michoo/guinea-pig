@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Couchbase Capella API Key
+# Provider: couchbase    Rule id (normalized): couchbase.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.couchbase.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks couchbase-capella-api-key
+#
+# Pattern: (?xi) \b (?:couchbase|capella) (?:.|[\n\r]){0,32}? (?: api (?:.|[\n\r]){0,12}? (?:key|secret) | key (?:.|[\n\r]){0,12}? secret ) (?:.|[\n\r]){0,32}? \b ( [A-Za-z0-9+/]{60,120}={0,2} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+COUCHBASE_API_KEY_SECRET="QktxVUtFU1dKV1FlJBYXdnTVlRemFZdmFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6MDJBQ0RF"
+capella_api_secret = 'aB1cD2eF3gH4iJ5kL6mN7oP8qR9sT0uV1wX2yZ3aA4bB5cC6dD7eE8fF9gG0hH1iJ2kL3m=='

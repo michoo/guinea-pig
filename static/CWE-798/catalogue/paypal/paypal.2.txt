@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PayPal OAuth Secret
+# Provider: paypal    Rule id (normalized): paypal.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.paypal.2
+#   - titus       kingfisher.paypal.2
+#
+# Pattern: (?xi) paypal (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9_.-]{78,120} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+paypal_secret=EP0uwUsACKVPcbDRaXFYerX2ij6nbsha71cSdynuQWoSt1pIy4qtIs7gJQRmHwKXu5Icv3g1YQZzAywf

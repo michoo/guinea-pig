@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sendgrid API token
+# Provider: sendgrid    Rule id (normalized): sendgrid.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sendgrid.1
+#   - noseyparker np.sendgrid.1
+#   - titus       np.sendgrid.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sendgrid-api-token
+#   - betterleaks sendgrid-api-token
+#
+# Pattern: (?xi) \b ( SG \. [0-9A-Z_-]{20,24} \. [0-9A-Z_-]{39,47} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+'SENDGRID_API_KEYSID': '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'
+var sendgrid = require('sendgrid')('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');
+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
+SENDGRID_API_KEY=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
+sendgrid_key = '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'
+ENV SENDGRID_API_KEY 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

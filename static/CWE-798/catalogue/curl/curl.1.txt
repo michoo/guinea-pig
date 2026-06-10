@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Curl Basic Authentication Credentials
+# Provider: curl    Rule id (normalized): curl.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.curl.1
+#   - titus       kingfisher.curl.1
+#
+# Pattern: (?i)\bcurl\s.*(?:-u|--user)\s+['"]?(?P<TOKEN>[^:'"\s]+:[^'"\s]+)['"]?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+curl --cacert ca.crt -u elastic:P@ssw0rd$1 https://localhost:9200
+curl -u developer:yqDVtkqPECriaLRi
+curl --user roger23@gmail.com:pQ9wTxu4Fg https://www.dropbox.com

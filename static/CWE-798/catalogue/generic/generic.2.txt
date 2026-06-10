@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic API Key
+# Provider: generic    Rule id (normalized): generic.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.generic.2
+#   - noseyparker np.generic.2
+#   - titus       np.generic.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?xi) (?: api_key | apikey | access_key | accesskey ) (?:.|[\n\r]){0,8}? ( [0-9a-z][0-9a-z\-._/+]{30,62}[0-9a-z] ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+API_KEY = "951bc382db9abad29c68634761dd6e19"
+buildConfigField 'String' , 'API_KEY' , '"951bc382db9cfee29c68634761dd6e19"'	API_KEY

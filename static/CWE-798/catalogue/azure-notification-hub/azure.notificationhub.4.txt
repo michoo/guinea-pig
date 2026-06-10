@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Notification Hub Access Key
+# Provider: azure-notification-hub    Rule id (normalized): azure.notificationhub.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.notificationhub.4
+#
+# Pattern: (?xi) (?: (?:notification\s*hub|Endpoint\s*=\s*sb://[a-z0-9-]{2,63}\.servicebus\.windows\.net/?) (?:.|[\n\r]){0,160}? SharedAccessKey | \b (?:hubAccessKey|notificationHub(?:Access)?Key) \b ) \s*[:=]\s* ["']? ( [A-Za-z0-9+/]{32,88}={0,2} ) [ …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Endpoint=sb://acme-push.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=Q29udG9zb1Rlc3RLZXkrMTIzNDU2Nzg5MC9BQkNERUZHSEk=
+const config = {
+  notificationHubName: "android-prod",
+  hubAccessKey: "U2FmZUtleVZhbHVlKzEyMzQ1Njc4OTBBQkNERUYrLz09"
+};

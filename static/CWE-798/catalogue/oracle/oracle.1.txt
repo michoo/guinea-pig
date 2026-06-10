@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Oracle Database Connection URI
+# Provider: oracle    Rule id (normalized): oracle.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.oracle.1
+#
+# Pattern: (?xi) \b oracle:// [^:@\s]{1,64} : ([^@\s]{6,128}) @ [^\s/"']{4,128}
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CONNECTION_URI="oracle://dbuser:Tr0ub4dor&3@prod-db.example.com:1521/orcl"
+ORACLE_URL=oracle://root:p53pgsx0pf@db.internal:5434/mydb

@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Dependency-Track API Key
+# Provider: dependency_track    Rule id (normalized): dtrack.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dtrack.1
+#   - noseyparker np.dtrack.1
+#   - titus       np.dtrack.1
+#
+# Pattern: (?x) \b ( odt_[A-Za-z0-9]{32,255} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+odt_KTJlDq2AGGGlqG4riKdT7p980AW8RlU5
+odt_ABCDDq2AGxGlrF4ribBT7p98AOM9TlU8
+odt_FHxhQGh77JAHHIYpZ818UQ0aYjXIdMIxxgeR

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Testkube Environment ID
+# Provider: testkube    Rule id (normalized): testkube.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.testkube.3
+#
+# Pattern: (?xi) \b ( tkcenv_[a-z0-9]{16,32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TK_ENV_ID=tkcenv_nwjpsfue4f2zjtia

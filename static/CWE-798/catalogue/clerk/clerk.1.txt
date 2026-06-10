@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Clerk Secret Key
+# Provider: clerk    Rule id (normalized): clerk.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.clerk.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks clerk-secret-key
+#
+# Pattern: (?xi) \b clerk (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|API|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( sk_(?:test|live)_[A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CLERK_SECRET_KEY=sk_live_abcdefghijklmnopqrstuvwxyz123456
+clerk_secret = sk_test_4pX9kL2mN8qR3sT7vY1zA3bC6dE0fG2h

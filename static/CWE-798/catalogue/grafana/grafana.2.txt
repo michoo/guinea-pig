@@ -1,0 +1,25 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Grafana Cloud API Token
+# Provider: grafana    Rule id (normalized): grafana.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.grafana.2
+#   - noseyparker np.grafana.2
+#   - titus       np.grafana.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    grafana-api-key
+#   - gitleaks    grafana-cloud-api-token
+#   - gitleaks    grafana-service-account-token
+#   - betterleaks grafana-api-key
+#   - betterleaks grafana-cloud-api-token
+#   - betterleaks grafana-service-account-token
+#
+# Pattern: (?xi) \b ( glc_ [a-z0-9+/]{40,150} ={0,2} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+"token": "glc_eyJrIjoiZjI0YzZkNGEwZDBmZmZjMmUzNTU3ODcxMmY0ZWZlNTQ1NTljMDFjOCIsIm6iOiJteXRva3VuIiwiaWQiOjF8"
+grafana = glc_etLvNLoNMLt7MTczNNwNbN6Nm1ldGEtbW9paxRvcmlpZt14ZXN4NNwNatN6NLCxdKeH7KTUvWpNqCrHlMKE9EhLcZH7to
+token = "glc_eyJrIjoiZjI0YzZkNGEwZDBmZmZjMmUzNTU3ODcxMmY0ZWZlNTQ1NTljMDFjOCIsIm4iOiJteXRva2VuIiwiaWQiOjF9"
+GRAFANA_CLOUD_API_KEY=glc_eyJrIjoiVGVzdEV4YW1wbGUwZDBmZmZjMmUzNTU3ODcxMmY0ZWZlNTQ1NTljMDFjOCIsIm4iOiJ0ZXN0IiwiaWQiOjF9
+Authorization: Bearer glc_eyJrIjoiU2FtcGxlVG9rZW4wZDBmZmZjMmUzNTU3ODcxMmY0ZWZlNTQ1NTljMDFjOCIsIm4iOiJzYW1wbGUiLCJpZCI6MX0=

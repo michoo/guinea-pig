@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Stytch Project ID
+# Provider: stytch    Rule id (normalized): stytch.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.stytch.1
+#
+# Pattern: (?xi) \b ( project-(?:test|live)-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+project-test-8aed2e54-0266-4793-9b5e-0cc9c56064da

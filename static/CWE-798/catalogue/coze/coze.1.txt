@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Coze Personal Access Token
+# Provider: coze    Rule id (normalized): coze.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.coze.1
+#   - titus       kingfisher.coze.1
+#
+# Pattern: (?xi) coze (?:.|[\n\r]){0,32}? \b ( pat_[A-Z0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+key_coze = pat_DlOG7fNcVfmw8cYhPWNcdfwrjjzwDr9EkV8EBjzHdgRWU2DzqHC1pPe0x590NN5f
+coze_token = pat_93QiTdIvZGuRCFcfGTQJJ1VIYZ9dNHanX88wKoMojwMk3tX5tKqfFtxUp0ux8CjI
+coze-key: pat_WvUTLYq5yZyaqegkyLSxXJMjXAJotjYEuC1sqT8daFlfwM3BiaRVJIZsER42DnhV

@@ -1,0 +1,33 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Slack App Token
+# Provider: slack    Rule id (normalized): slack.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.slack.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    slack-app-token
+#   - gitleaks    slack-bot-token
+#   - gitleaks    slack-config-access-token
+#   - gitleaks    slack-config-refresh-token
+#   - gitleaks    slack-legacy-bot-token
+#   - gitleaks    slack-legacy-token
+#   - gitleaks    slack-legacy-workspace-token
+#   - gitleaks    slack-user-token
+#   - gitleaks    slack-webhook-url
+#   - betterleaks slack-app-token
+#   - betterleaks slack-bot-token
+#   - betterleaks slack-config-access-token
+#   - betterleaks slack-config-refresh-token
+#   - betterleaks slack-legacy-bot-token
+#   - betterleaks slack-legacy-token
+#   - betterleaks slack-legacy-workspace-token
+#   - betterleaks slack-session-cookie
+#   - betterleaks slack-session-token
+#   - betterleaks slack-user-token
+#   - betterleaks slack-webhook-url
+#
+# Pattern: (?xi) (?: .{0,24}[=:] \s{0,8} )? ( xapp- [0-9]{1,3}- [0-9a-z]{10,15}- [0-9a-z]{10,15}- [0-9a-z]{10,66} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+xapp-1-A05V64V7F2B-5062360157732-9f01726eebe77df2c096a65e95acdd02107b2c1e92ca341cff27ca271b7251b4

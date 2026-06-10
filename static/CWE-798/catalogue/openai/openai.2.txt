@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: OpenAI API Key
+# Provider: openai    Rule id (normalized): openai.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.openai.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    openai-api-key
+#   - betterleaks openai-api-key
+#
+# Pattern: (?xi) \b ( (sk-(?:proj|svcacct|None)-[A-Z0-9_-]{100,}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+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
+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
+sk-None-JEBiV9H-bLEZoOhNvLWmCNR74dIbql-p3yWFmWpdYCjeR1PWM_PS40yTLowkF3VzXHYJ3VbFarT3BlbkFJYznRo8bADhczK0Ca7t-WRbdwRlC1DPc8P2EaJm03OIg01Uj0cQxRAPO-4Rjs_TNyKXnVePtkcA

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Wiz Client Secret
+# Provider: wiz    Rule id (normalized): wiz.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.wiz.2
+#
+# Pattern: (?x) \b (?i:wiz) (?:.|[\n\r]){0,32}? \b ( [a-zA-Z0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WIZ_CLIENT_SECRET="aB1cD2eF3gH4iJ5kL6mN7oP8qR9sT0uV1wX2yZ3aA4bB5cC6dD7eE8fF9gG0hH1i"

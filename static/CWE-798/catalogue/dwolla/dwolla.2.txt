@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Dwolla Client Secret
+# Provider: dwolla    Rule id (normalized): dwolla.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dwolla.2
+#
+# Pattern: (?xi) \b dwolla (?:.|[\n\r]){0,64}? \b(?:secret|client[_-]?secret|app[_-]?secret)\b (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [0-9a-zA-Z/+=_-]{28,48} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+dwolla secret = 4d1d407752bfd562bZ=9b7c21f8862fdfc57bc1e45
+dwolla
+client_secret = 7e4e5297691a673cA=0c7d43b997ec1h8dcaf56

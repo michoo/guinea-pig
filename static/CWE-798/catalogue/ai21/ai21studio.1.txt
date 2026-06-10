@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: AI21 Studio API Key
+# Provider: ai21    Rule id (normalized): ai21studio.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ai21studio.1
+#   - titus       kingfisher.ai21studio.1
+#
+# Pattern: (?xi) \b ai21 (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{8} - [0-9a-f]{4} - [0-9a-f]{4} - [0-9a-f]{4} - [0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ai21 = 90cd6930-a9ae-4f15-8da0-dc1bbcd814b9
+ai21_key: befa7ec1-1129-4713-8e92-bb53d1a4f632
+ai21_token = ec2e14e9-0309-459b-ba76-1e59e1f42b87

@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Looker Base URL
+# Provider: looker    Rule id (normalized): looker.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.looker.1
+#   - titus       kingfisher.looker.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    looker-client-id
+#   - gitleaks    looker-client-secret
+#   - betterleaks looker-client-id
+#   - betterleaks looker-client-secret
+#
+# Pattern: (?x) \b ( https?:// (?:[a-z0-9-]+\.)+ looker\.com (?::\d{2,5})? ) (?:/api/(?:4\.0|3\.1))? \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://example.cloud.looker.com
+https://example.cloud.looker.com:19999
+https://example.cloud.looker.com:19999/api/4.0

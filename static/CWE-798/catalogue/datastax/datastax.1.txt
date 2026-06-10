@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DataStax Astra Application Token
+# Provider: datastax    Rule id (normalized): datastax.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.datastax.1
+#
+# Pattern: (?x) \b ( AstraCS:[A-Za-z0-9]{20,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ASTRA_DB_APPLICATION_TOKEN=AstraCS:Q29kZXhWYWxpZGF0aW9uVG9rZW5FeGFtcGxlMTIzNDU2Nzg5

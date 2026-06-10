@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Google Gemini API Key
+# Provider: google    Rule id (normalized): google.7
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.google.7
+#   - titus       np.google.7
+#
+# Pattern: (?xi) \b ( AIzaSy [A-Za-z0-9_-]{33} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AIzaSyByz6BGQf8QtcQLml8spbyy8x5_327PTow
+AIzaSyDhISgbccTi6mfp2GOSmTtqdU__IdevJes
+AIzaSyA_uW1h2CF4ak3vHr7si_RFD_yWxM4tMAM
+"googleMapsApiKey":"QUl6YVN5RHhZMXRlZjNWUHRfMTVtTzhKWnZiNzBSQVlIZlVLZW9z"
+API_KEY=QUl6YVN5QjRzVWFDZXM1YlJfODdxTmI3ZVVWUU43Ml92djhtcGJV
+config.apiKey = "QUl6YVN5QktxUGFDZXNpZ3Z2Tk5jUnRfZ0wwQTZjZ3gzWkIta3VR"

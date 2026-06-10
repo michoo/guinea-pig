@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: redirect.pizza API Token
+# Provider: redirectpizza    Rule id (normalized): redirectpizza.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.redirectpizza.1
+#
+# Pattern: (?x) \b ( rpa_[A-Za-z0-9]{30} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+REDIRECT_PIZZA_TOKEN="rpa_Qj7mN4vK8sL2xP6zT9aBcD3eF5gH1j"
+Authorization: Bearer rpa_P7rT2mK9vL4qN8sX6cA3dF5gH1jZ0Q

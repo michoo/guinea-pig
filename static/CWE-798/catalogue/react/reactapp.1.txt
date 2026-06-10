@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: React App Username
+# Provider: react    Rule id (normalized): reactapp.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.reactapp.1
+#   - noseyparker np.reactapp.1
+#   - titus       np.reactapp.1
+#
+# Pattern: (?xi) \b REACT_APP (?: _[A-Z0-9]+)* _USER (?: NAME)? (?# variable name ) \s* = \s* ['"]? ( [^\s'"$]{3,} ) (?# value ) (?: [\s'"$] | $ )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+# REACT_APP_GUEST_USERNAME=guest
+# REACT_APP_USER=postgres
+REACT_APP_AUTH_USER=postgres
+REACT_APP_AUTH_USERNAME=bowie
+REACT_APP_AUTH_USERNAME=bowie    # some comment
+REACT_APP_MAILER_USERNAME=smtp_username # Enter your SMTP email username

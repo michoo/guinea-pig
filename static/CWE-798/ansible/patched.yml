@@ -1,0 +1,20 @@
+# Remediation for CWE-798: Use of Hard-coded Credentials
+# Fix: Resolve the API token and password from environment / vaulted variables instead of literals, and suppress logging.
+---
+- name: External credentials example
+  hosts: all
+  vars:
+    api_token: "{{ lookup('ansible.builtin.env', 'API_TOKEN') }}"
+    api_password: "{{ vault_api_password }}"
+  tasks:
+    - name: Authenticate to API with externalized token
+      ansible.builtin.uri:
+        url: https://api.example.com/login
+        method: POST
+        headers:
+          Authorization: "Bearer {{ api_token }}"
+        body_format: json
+        body:
+          username: admin
+          password: "{{ api_password }}"
+      no_log: true

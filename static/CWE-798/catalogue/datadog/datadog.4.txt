@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Datadog RUM Client Token
+# Provider: datadog    Rule id (normalized): datadog.4
+#
+# Detected by this rule:
+#   - titus       kingfisher.datadog.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    datadog-access-token
+#   - betterleaks datadog-access-token
+#
+# Pattern: (?xi) (?: ["']?(?:DATADOG|DD)[_-]?(?:RUM[_-]?)?(?:CLIENT[_-]?)?TOKEN["']? | ["']?(?:DATADOG|DD)[_-]?TOKEN["']? ) \s*[":=]\s*["']? (?P<rum_token> pub[a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DATADOG_RUM_TOKEN=pub0123456789abcdef0123456789abcdef
+DD_TOKEN="pub0123456789abcdef0123456789abcdef"
+"DATADOG_RUM_TOKEN":"pub0123456789abcdef0123456789abcdef"

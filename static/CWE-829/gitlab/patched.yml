@@ -1,0 +1,8 @@
+# Remediation for CWE-829: Inclusion of Functionality from Untrusted Control Sphere
+# Fix: Pin the container image by immutable digest (sha256) instead of the mutable :latest tag.
+build:
+  image: node@sha256:8e8b6f8e9f5e7c3a1d2b4c5e6f70819203a4b5c6d7e8f9012345678901234abcd
+  stage: build
+  script:
+    - npm ci
+    - npm run build

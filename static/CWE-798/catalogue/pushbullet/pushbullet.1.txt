@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pushbullet Access Token
+# Provider: pushbullet    Rule id (normalized): pushbullet.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pushbullet.1
+#
+# Pattern: (?x) \b ( o\.[A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PUSHBULLET_ACCESS_TOKEN="o.a9KxT4mQp8Rw2Ls6Nd5Yf1Hg7Jc3Vz0B"
+client = PushBullet("o.T3YzoJfL2PpiSk54KMTsTm9Y0VtSjhhg")

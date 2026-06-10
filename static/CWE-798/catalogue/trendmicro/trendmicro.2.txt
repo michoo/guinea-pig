@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Trend Micro Cloud One API Key
+# Provider: trendmicro    Rule id (normalized): trendmicro.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.trendmicro.2
+#
+# Pattern: (?x) \b ( tmc1 [A-Za-z0-9]{26,32} : [A-Za-z0-9]{60,70} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+apikey = "tmc19x73r7hegUnG30NSt8BO3UxoY3Z:8TdvS0r4ncyB7audRVbMSc2rSehMQWfXCkSJ9crBr0F0rc3GU4nd3rBr0bLernrSp8"
+TMC_API_KEY=tmc1AbCdEfGhIjKlMnOpQrStUvWxYz12:ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789AB

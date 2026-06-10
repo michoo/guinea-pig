@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Mixed Reality / Spatial Anchors Key
+# Provider: azuremixedreality    Rule id (normalized): azuremixedreality.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azuremixedreality.1
+#
+# Pattern: (?x) \b (?: (?i: (?:azure[_\s-]*)?(?:mixed[_\s-]*reality|spatial[_\s-]*anchors?|remote[_\s-]*rendering) [_\s-]*(?:key|account[_\s-]*key|access[_\s-]*key) ) ) (?:.|[\n\r]){0,16}? ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AZURE_SPATIAL_ANCHORS_KEY=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d
+AZURE_REMOTE_RENDERING_KEY=abcdef0123456789abcdef0123456789

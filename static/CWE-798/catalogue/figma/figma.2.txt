@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Figma Personal Access Header Token
+# Provider: figma    Rule id (normalized): figma.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.figma.2
+#
+# Pattern: (?xi) figma (?:.|[\n\r]){0,32}? ( [0-9A-F]{4} -[0-9A-F]{8} (?:-[0-9A-F]{4}){3} -[0-9A-F]{12} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+--header='X-Figma-Token: 1394-0ca7a5be-8e22-40ee-8c40-778d41ab2313'

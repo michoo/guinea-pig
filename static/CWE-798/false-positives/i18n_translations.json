@@ -1,0 +1,8 @@
+{
+  "_false_positive_note": "NOT secrets. Resembles generic-secret rules that key on words like 'token'/'key'/'secret' followed by a string. Here those words are translation keys and the values are UI copy, not credentials.",
+  "auth.token.expired": "Your session token has expired, please sign in again.",
+  "billing.apiKey.label": "API key",
+  "billing.apiKey.help": "Paste the secret key from your provider dashboard here.",
+  "errors.secret.missing": "A required secret is missing from the configuration.",
+  "password.reset.sent": "We sent a password reset link to your email address."
+}

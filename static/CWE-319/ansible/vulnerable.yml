@@ -1,0 +1,16 @@
+# CWE-319: Cleartext Transmission of Sensitive Information
+# Downloads occur over insecure transport with TLS certificate validation disabled.
+---
+- name: Insecure transport example
+  hosts: all
+  tasks:
+    - name: Download file without certificate validation
+      ansible.builtin.get_url:
+        url: https://example.com/package.tar.gz
+        dest: /tmp/package.tar.gz
+        validate_certs: no
+
+    - name: Call API ignoring TLS verification
+      ansible.builtin.uri:
+        url: https://api.example.com/data
+        validate_certs: no

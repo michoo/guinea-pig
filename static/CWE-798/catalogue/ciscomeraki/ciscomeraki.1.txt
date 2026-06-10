@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cisco Meraki API Key
+# Provider: ciscomeraki    Rule id (normalized): ciscomeraki.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ciscomeraki.1
+#   - titus       kingfisher.ciscomeraki.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    cisco-meraki-api-key
+#   - betterleaks cisco-meraki-api-key
+#
+# Pattern: (?xi) meraki (?:.|[\n\r]){0,32}? ( [0-9a-f]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MERAKI_API_KEY=1234567890abcdef1234567890abcdef12345678
+// Meraki configuration
+const MERAKI_KEY = "abcdefabcd12abcdefabcdefabcdefabcdefabcd";
+// Meraki configuration
+const MERAKI_KEY = "abcdefabcdefabcdefabcdefabcdefabcdefabcd";

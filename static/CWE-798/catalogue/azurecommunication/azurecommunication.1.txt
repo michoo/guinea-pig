@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Communication Services Connection String
+# Provider: azurecommunication    Rule id (normalized): azurecommunication.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurecommunication.1
+#
+# Pattern: (?x) (?i:endpoint=https://(?:[a-z0-9-]+\.)?(?:communication|comm)\.azure\.com/;accesskey=) ( [A-Za-z0-9+/]{40,90}={0,2} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+endpoint=https://myresource.communication.azure.com/;accesskey=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890ABCDEFGHIJKLMNOPQRS+/==

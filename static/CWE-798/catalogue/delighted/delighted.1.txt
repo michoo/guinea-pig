@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Delighted API Key
+# Provider: delighted    Rule id (normalized): delighted.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.delighted.1
+#   - titus       np.delighted.1
+#
+# Pattern: (?xi) \b(?:delighted) (?:.|[\n\r]){0,64}? (?:api[_-]?key|secret|key|token) (?:.|[\n\r]){0,32}? \b ( [a-zA-Z0-9]{20,40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DELIGHTED_API_KEY=dELi1a2B3c4D5e6F7g8H9i0JkLm1N2o3P
+delighted_api_key: Rq4s5T6u7V8w9X0yZ1a2B3c4D5e6F7

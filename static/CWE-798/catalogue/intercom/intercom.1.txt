@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Intercom API Token
+# Provider: intercom    Rule id (normalized): intercom.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.intercom.1
+#   - titus       kingfisher.intercom.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    intercom-api-key
+#   - betterleaks intercom-api-key
+#
+# Pattern: (?xi) (?:intercom|ic) (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( [0-9A-Z+/]{59}= )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+intercom_access_token: dG9rOvI0NmJlMTA5XzQwM2NfNDVlM184MjQzXzkwMDnmOTE1NGIyONoxOjA=
+ic_token = "g1ZsclJXTjNfc1pBSzJDemE0eFVDU0U5c25CeDN4Vm9hQ2Zac0hXemZHNPQ=="

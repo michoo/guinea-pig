@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mastra Memory Gateway API Key
+# Provider: mastra    Rule id (normalized): mastra.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mastra.1
+#
+# Pattern: (?x) \b ( msk_[A-Za-z0-9]{32}(?:[A-Za-z0-9]{16}){0,2} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MASTRA_API_KEY="msk_7fKp2Rz9Qa4Vn8Lm3Tx6Yc5Bg1Hd0JsW"
+Authorization: Bearer msk_P7rT2mK9vL4qN8sX6cA3dF5gH1jZ0QaB

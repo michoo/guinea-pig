@@ -1,0 +1,23 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Dropbox API secret/key
+# Provider: dropbox    Rule id (normalized): dropbox.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dropbox.1
+#   - noseyparker np.dropbox.1
+#   - titus       np.dropbox.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    dropbox-api-token
+#   - gitleaks    dropbox-long-lived-api-token
+#   - gitleaks    dropbox-short-lived-api-token
+#   - betterleaks dropbox-api-token
+#   - betterleaks dropbox-long-lived-api-token
+#   - betterleaks dropbox-short-lived-api-token
+#
+# Pattern: (?x) \b ( sl\.[A-Za-z0-9\-\_]{130,152} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+curl -X POST https://api.dropboxapi.com/2/users/get_current_account --header "Authorization: Bearer sl.hAi61Jx1hs3XlhrnsCxnctrEmxK2Q-UK29hbdxxHyAykldSeHmipBAauxTzuBEIqt2jdyyUZw8kgY3t_ars-PNIPS27ySa1ab22132U3sUuqYTXHzf2XlvMxSesUhkzx2G11_9W1f-eo"
+"access_token": "sl.AbX9y6Fe3AuH5o66-gmJpR032jwAwQPIVVzWXZNkdzcYT02akC2de219dZi6gxYPVnYPrpvISRSf9lxKWJzYLjtMPH-d9fo_0gXex7X37VIvpty4-G8f4-WX45AcEPfRnJJDwzv-",
+sl.lMcWXvCOCR9yRAOXwDg1V_VTsbEXdu3Xpsgg35GQTrDahoIuUnij4H5b6bMnwobZx4XnniaQappZU9j-CCWd-LYW81juiU04-yvLhOPV47Nj7Fs8XSE-CweZp6j9nw4E2oWWJ5

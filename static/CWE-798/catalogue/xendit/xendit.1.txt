@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Xendit API Key
+# Provider: xendit    Rule id (normalized): xendit.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.xendit.1
+#
+# Pattern: (?x) \b ( xnd_(?:production|development)_[A-Za-z0-9]{56,72} ) (?:\b|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+XENDIT_SECRET_KEY=xnd_development_A1b2C3d4E5f6G7h8J9kLmNoPqRsTuVwXyZ0123456789AbCdEfGhJkLm
+XENDIT_API_KEY="xnd_production_Z9y8X7w6V5u4T3s2R1qPoNmLkJiHgFeDcBa9876543210QwErTyUiOpLm"

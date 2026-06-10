@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Freshdesk API Key
+# Provider: freshdesk    Rule id (normalized): freshdesk.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.freshdesk.2
+#   - titus       kingfisher.freshdesk.2
+#
+# Pattern: (?xi) \b freshdesk (?:.|[\n\r]){0,64}? (?:api[_-]?key|secret|private|access|key|token) (?:.|[\n\r]){0,32}? \b ( [0-9A-Z]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+FRESHDESK_API_KEY=abcdefghij1234567890
+freshdesk token: ABCDEFGHIJ1234567890

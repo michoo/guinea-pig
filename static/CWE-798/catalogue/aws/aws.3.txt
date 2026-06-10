@@ -1,0 +1,46 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: AWS Account ID
+# Provider: aws    Rule id (normalized): aws.3
+#
+# Detected by this rule:
+#   - noseyparker np.aws.3
+#   - titus       np.aws.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    aws-access-token
+#   - gitleaks    aws-amazon-bedrock-api-key-long-lived
+#   - gitleaks    aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-access-token
+#   - betterleaks aws-amazon-bedrock-api-key-long-lived
+#   - betterleaks aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-secret-access-key
+#
+# Pattern: (?i)aws_?(?:account)_?(?:id)?["'`]?\s{0,30}(?::|=>|=)\s{0,30}["'`]?([0-9]{4}-?[0-9]{4}-?[0-9]{4})
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+KeyMetadata: {
+    AWSAccountId: "324320755747",
+    Arn: "arn:aws:kms:us-east-2:324320755747:key/54348bc1-6e3b-4cda-8b18-c6033ca7d328",
+    CreationDate: 2019-07-12 18:23:13 +0000 UTC,
+    Description: "",
+    Enabled: true,
+    KeyId: "54348bc1-6e3b-4cda-8b18-c6033ca7d328",
+    KeyManager: "CUSTOMER",
+    KeyState: "Enabled",
+    KeyUsage: "ENCRYPT_DECRYPT",
+    Origin: "AWS_KMS"
+}
+4. login into ecr
+
+```bash
+aws_region=eu-central-1
+aws_account_id=891511536143
+aws_profile=serverless-bert
+
+aws ecr get-login-password \
+    --region $aws_region \
+    --profile $aws_profile \
+| docker login \
+    --username AWS \
+    --password-stdin $aws_account_id.dkr.ecr.$aws_region.amazonaws.com
+```

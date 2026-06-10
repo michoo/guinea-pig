@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Moralis API Key
+# Provider: moralis    Rule id (normalized): moralis.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.moralis.1
+#
+# Pattern: (?xi) \b moralis (?:.|[\n\r]){0,32}? \b ( [0-9a-zA-Z]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MORALIS_API_KEY=aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789aBcDeFgHiJkLmNoPqRsTuVwXy012

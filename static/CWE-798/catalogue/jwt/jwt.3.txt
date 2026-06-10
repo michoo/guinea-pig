@@ -1,0 +1,26 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: JSON Web Token Secret
+# Provider: jwt    Rule id (normalized): jwt.3
+#
+# Detected by this rule:
+#   - noseyparker np.jwt.3
+#   - titus       np.jwt.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    jwt
+#   - gitleaks    jwt-base64
+#   - betterleaks jwt
+#   - betterleaks jwt-base64
+#
+# Pattern: (?x)(?m)(?i) ^\s* (?: jwt: \s+ secret: | jwtsecret: ) \s+ '( [^']{6,200} )'
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+something_else: true
+jwt:
+  secret: 'acb1ca5bc8d7fb2ef9f890f1be16d964' #some comment
+  ttl: 640000 #
+JWT:
+  Secret: 'development#product'
+  exp: '50m'
+oauthproviders:
+  jwtsecret: '7`D"}/vYR)T;W\5]EBrf;_&k>qX??]G&3CF=;@vyrVBp[$_hK4^?{qT/EglJe[FYjp:IPgl_t$%r'

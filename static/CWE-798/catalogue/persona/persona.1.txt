@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Persona API Key
+# Provider: persona    Rule id (normalized): persona.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.persona.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks figma-personal-access-header-token
+#   - betterleaks figma-personal-access-token
+#   - betterleaks posthog-personal-api-key
+#   - betterleaks vercel-personal-access-token
+#
+# Pattern: (?x) \b ( persona_(?:production|sandbox)_[a-z0-9_-]{20,80} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PERSONA_API_KEY=persona_production_abc123def456ghi789jkl012mno345pqr
+api_key: persona_sandbox_abc123def456ghi789jkl012mno345pqr

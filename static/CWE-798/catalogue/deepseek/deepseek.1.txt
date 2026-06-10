@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DeepSeek API Key
+# Provider: deepseek    Rule id (normalized): deepseek.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.deepseek.1
+#   - titus       kingfisher.deepseek.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks deepseek-api-key
+#
+# Pattern: (?x) \b ( sk-[a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sk-ba588036180d4d1d9cebbf6456f1e220
+sk-2481fb3538a1453fac54f6cbdca981cb
+sk-8be2c2f8cf2e424aad1643c1d3944377

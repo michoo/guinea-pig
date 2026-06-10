@@ -1,0 +1,27 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GitHub Client ID
+# Provider: github    Rule id (normalized): github.7
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.github.7
+#   - noseyparker np.github.7
+#   - titus       np.github.7
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    github-app-token
+#   - gitleaks    github-fine-grained-pat
+#   - gitleaks    github-oauth
+#   - gitleaks    github-pat
+#   - gitleaks    github-refresh-token
+#   - betterleaks github-app-token
+#   - betterleaks github-fine-grained-pat
+#   - betterleaks github-oauth
+#   - betterleaks github-pat
+#   - betterleaks github-refresh-token
+#
+# Pattern: (?xi) (?:github) .? (?: api | app | application | client | consumer | customer )? .? (?: id | identifier | key ) .{0,2} \s{0,20} .{0,2} \s{0,20} .{0,2} \b ([a-z0-9]{20}) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+GITHUB_CLIENT_ID=ac58d6da7d7a84c039b7
+GITHUB_SECRET=37d02377a3e9d849e18704c3ec883f9c5787d857
+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

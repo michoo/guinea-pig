@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Akamai API Access Token
+# Provider: akamai    Rule id (normalized): akamai.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.akamai.3
+#
+# Pattern: (?x) \b (?i:access[_-]?token) \s*=\s* ( akab- [A-Za-z0-9_-]{18,36} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+access-token=akab-xcsuUf7DY6xJgYscoe
+access_token = akab-acc35t0k3nodujqunph3w7hzp7-gtm6ij

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Docker Swarm Unlock Key
+# Provider: docker    Rule id (normalized): docker.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.docker.3
+#
+# Pattern: (?x) \b ( SWMKEY-1-[A-Za-z0-9+/]{40,50} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+docker swarm unlock --key SWMKEY-1-AbCdEfGhIjKlMnOpQrStUvWxYz1234567890ABCDEFG

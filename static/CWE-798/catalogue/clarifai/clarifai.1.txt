@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Clarifai API Key
+# Provider: clarifai    Rule id (normalized): clarifai.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.clarifai.1
+#   - titus       kingfisher.clarifai.1
+#
+# Pattern: (?xi) \b clarifai (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{32,36} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+clarifai_key = 29ee853d47364107b9edf5e5ad4374c2
+clarifai_token: eb3cf5440b7b45f8954bb4a1fcea0ea5
+clarifai-secret = 8e43e018f61b493c8104024ee124a57f
+clarifai_api = cf3cacafabe747988298298bffcbb459

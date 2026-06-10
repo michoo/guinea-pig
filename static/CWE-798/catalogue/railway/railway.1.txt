@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Railway API Token
+# Provider: railway    Rule id (normalized): railway.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.railway.1
+#
+# Pattern: (?xi) \b railway (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API) (?:.|[\n\r]){0,32}? \b ( (?:[A-Za-z0-9]{32}|[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RAILWAY_API_TOKEN=abcdef1234567890abcdef1234567890
+railway_token = "a1b2c3d4-e5f6-7890-abcd-ef1234567890"

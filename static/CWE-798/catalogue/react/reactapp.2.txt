@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: React App Password
+# Provider: react    Rule id (normalized): reactapp.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.reactapp.2
+#   - noseyparker np.reactapp.2
+#   - titus       np.reactapp.2
+#
+# Pattern: (?xi) \b REACT_APP (?: _[A-Z0-9]+)* _PASS (?: WORD)? (?# variable name ) \s* = \s* ['"]? ( [^\s'"$]{6,} ) (?# value ) (?: [\s'"$] | $ )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+# REACT_APP_GUEST_PASSWORD=mycoin!1
+# REACT_APP_PASS=whiteduke
+REACT_APP_AUTH_PASS=whiteduke
+REACT_APP_AUTH_PASSWORD=whiteduke
+REACT_APP_AUTH_PASSWORD=whiteduke    # some comment
+REACT_APP_MAILER_PASSWORD=smtp_password # Enter your SMTP email password

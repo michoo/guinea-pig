@@ -1,0 +1,38 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Slack Legacy Bot Token
+# Provider: slack    Rule id (normalized): slack.6
+#
+# Detected by this rule:
+#   - noseyparker np.slack.6
+#   - titus       np.slack.6
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    slack-app-token
+#   - gitleaks    slack-bot-token
+#   - gitleaks    slack-config-access-token
+#   - gitleaks    slack-config-refresh-token
+#   - gitleaks    slack-legacy-bot-token
+#   - gitleaks    slack-legacy-token
+#   - gitleaks    slack-legacy-workspace-token
+#   - gitleaks    slack-user-token
+#   - gitleaks    slack-webhook-url
+#   - betterleaks slack-app-token
+#   - betterleaks slack-bot-token
+#   - betterleaks slack-config-access-token
+#   - betterleaks slack-config-refresh-token
+#   - betterleaks slack-legacy-bot-token
+#   - betterleaks slack-legacy-token
+#   - betterleaks slack-legacy-workspace-token
+#   - betterleaks slack-session-cookie
+#   - betterleaks slack-session-token
+#   - betterleaks slack-user-token
+#   - betterleaks slack-webhook-url
+#
+# Pattern: \b(xoxb-[0-9]{10,13}-[a-zA-Z0-9]{24})\b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+this is the api token to connect to the bot user
+
+xoxb-153445930147-Tjy11gGxUW6Cf99YOYwtzG0K
+def send_slack_notification(message):
+    token = "xoxb-47834520726-N3otsrwj8Cf99cs8GhiRZsX1"

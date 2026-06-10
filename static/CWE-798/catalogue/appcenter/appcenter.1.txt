@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Visual Studio App Center API Token
+# Provider: appcenter    Rule id (normalized): appcenter.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.appcenter.1
+#   - titus       np.appcenter.1
+#
+# Pattern: (?xi) (?:appcenter|app[_-]?center) (?:.|[\n\r]){0,32}? (?:API|TOKEN|KEY|SECRET) (?:.|[\n\r]){0,16}? \b ( [a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+APPCENTER_API_TOKEN=a3b8f29e4d1c6a0578e23d9f41b6c8e201234567
+app_center_token: "9f4b2d7e1a3c8056d2e7f1b94a6c3d8001234567"
+export APP_CENTER_KEY=d4e8f2a7b1c39605d2e7f1b94a6c3d8001234567

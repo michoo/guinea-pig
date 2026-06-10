@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Freemius Secret Key
+# Provider: freemius    Rule id (normalized): freemius.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.freemius.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    freemius-secret-key
+#   - betterleaks freemius-secret-key
+#
+# Pattern: (?xi) ["']secret_key["'] \s*=>\s* ["'] ( sk_[^"' \t\r\n]{29} ) ["']
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+$config = array(
+  "secret_key" => "sk_ubb4yN3mzqGR2x8#P7r5&@*xC$utE",
+);

@@ -1,0 +1,27 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GitHub Legacy Secret Key
+# Provider: github    Rule id (normalized): github.8
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.github.8
+#   - titus       np.github.8
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    github-app-token
+#   - gitleaks    github-fine-grained-pat
+#   - gitleaks    github-oauth
+#   - gitleaks    github-pat
+#   - gitleaks    github-refresh-token
+#   - betterleaks github-app-token
+#   - betterleaks github-fine-grained-pat
+#   - betterleaks github-oauth
+#   - betterleaks github-pat
+#   - betterleaks github-refresh-token
+#
+# Pattern: (?xi) \b (?:github|gh) (?:.|[\n\r]){0,4}? (?:oauth|pat|token|key|secret|api[_-]?key|access[_-]?token)\b (?:.|[\n\r]){0,32}? \b ( [a-z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+GITHUB_CLIENT_ID=ac58d6da7d7a84c039b7
+GITHUB_SECRET=37d02377a3e9d849e18704c3ec883f9c5787d857
+ghs_123456_eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhcHBfaWQiLCJpYXQiOjE3MTQyMDgwMDAsImV4cCI6MTcxNDIwODMwMH0.EXAMPLE_SIGNATURE_BASE64URL
+GITHUB_TOKEN=ghs_98765_eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbnN0YWxsYXRpb25faWQiOjEyMzQ1Nn0.EXAMPLE_SIGNATURE_CHARS

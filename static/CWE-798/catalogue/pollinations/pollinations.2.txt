@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pollinations Publishable Key
+# Provider: pollinations    Rule id (normalized): pollinations.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pollinations.2
+#
+# Pattern: (?x) \b ( plln_pk_[a-zA-Z0-9]{24,48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+POLLINATIONS_PUBLIC_KEY=plln_pk_a1B2c3D4e5F6g7H8i9J0k1L2

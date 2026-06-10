@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Airbrake User Key
+# Provider: airbrake    Rule id (normalized): airbrake.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.airbrake.1
+#   - titus       kingfisher.airbrake.1
+#
+# Pattern: (?xi) \b airbrake (?:.|[\n\r]){0,32}? ( [A-Z0-9-]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+airbrake secretKey= a1B2c3D4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0
+airbrakeToken: 'a1B2c3D4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0'

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Trigger.dev Personal Access Token
+# Provider: triggerdev    Rule id (normalized): triggerdev.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.triggerdev.2
+#
+# Pattern: (?x) \b ( tr_pat_[A-Za-z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TRIGGER_ACCESS_TOKEN=tr_pat_G8DwRcZEc0ONFMtkVHt8

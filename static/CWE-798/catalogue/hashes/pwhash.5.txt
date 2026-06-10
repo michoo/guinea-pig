@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Password Hash (Cisco IOS PBKDF2 with SHA256)
+# Provider: hashes    Rule id (normalized): pwhash.5
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pwhash.5
+#   - noseyparker np.pwhash.5
+#   - titus       np.pwhash.5
+#
+# Pattern: (?x) ( \$ 8 \$ [./A-Za-z0-9]{8,16} \$ [./A-Za-z0-9]{43} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+$8$TnGX/fE4KGHOVU$pEhnEvxrvaynpi8j4f.EMHr6M.FzU8xnZnBr/tJdFWk
+$8$mTj4RZG8N9ZDOk$elY/asfm8kD3iDmkBe3hD2r4xcA/0oWS5V3os.O91u.

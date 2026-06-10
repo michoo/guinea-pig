@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Scalingo API Token
+# Provider: scalingo    Rule id (normalized): scalingo.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.scalingo.1
+#   - titus       kingfisher.scalingo.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    scalingo-api-token
+#   - betterleaks scalingo-api-token
+#
+# Pattern: (?xi) \b ( tk-us-[\w-]{48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SCALINGO_TOKEN=tk-us-abcdefabcde12bcdefabcdefabcdefabcdefabcdefabcdef
+"scalingo": "tk-us-1234567890abcdef1234567890abcdef1234567890abcdef"
+SCALINGO_TOKEN=tk-us-abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdef

@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Netlify Personal Access Token (nfp_ prefix)
+# Provider: netlify    Rule id (normalized): netlify.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.netlify.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    netlify-access-token
+#   - betterleaks netlify-access-token
+#
+# Pattern: (?x) \b ( nfp_[a-zA-Z0-9]{40,48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+NETLIFY_AUTH_TOKEN=nfp_a1B2c3D4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9T0

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure API Management Gateway URL
+# Provider: azureapim    Rule id (normalized): azureapim.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azureapim.2
+#
+# Pattern: (?xi) \b ( https://[a-z0-9-]+(?:\.developer)?\.azure-api\.net(?:/[^\s"'<>]{0,200})? )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://contoso.azure-api.net/echo
+APIM_URL=https://contoso.developer.azure-api.net/api

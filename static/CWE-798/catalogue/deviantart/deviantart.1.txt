@@ -1,0 +1,24 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DeviantArt Access Token
+# Provider: deviantart    Rule id (normalized): deviantart.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.deviantart.1
+#   - titus       kingfisher.deviantart.1
+#   - titus       np.deviantart.1
+#
+# Pattern: (?xi) \b(?:deviantart|deviant_art) (?:.|[\n\r]){0,64}? (?:access[_-]?token|token|secret|key) (?:.|[\n\r]){0,32}? \b ( [a-zA-Z0-9]{40,80} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DEVIANTART_ACCESS_TOKEN=aB3cD4eF5gH6iJ7kL8mN9oP0qR1sT2uV3wX4yZ5a
+deviantart_token: "kM2nO3pQ4rS5tU6vW7xY8zA9bC0dE1fG2hI3jK4l"
+deviantart_client_secret = "76b08c69cfb27f26d6161f9ab6d061a1"
+DEVIANTART_CLIENT_SECRET=ccd16fd197588957c0bd74939057fa9d
+deviantart:
+  client_id: "7926"
+  client_secret: "7e9e2374a223c479f70e1bf18874f8c3"
+deviantart() {
+    CLIENT_ID=16531
+    CLIENT_SECRET=68c00f3d0ceab95b0fac638b33a3368e
+}

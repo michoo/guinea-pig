@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Password Hash (bcrypt)
+# Provider: hashes    Rule id (normalized): pwhash.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pwhash.2
+#   - noseyparker np.pwhash.2
+#   - titus       np.pwhash.2
+#
+# Pattern: (\$2[abxy]\$\d+\$[./A-Za-z0-9]{53})
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+$2a$12$R9h/cIPz0gi.URNNX3kh2OPST9/PgBkqquzi.Ss7KIUgO2t0jWMUW
+$2a$05$/VT2Xs2dMd8GJKfrXhjYP.DkTjOVrY12yDN7/6I8ZV0q/1lEohLru
+$2a$05$Uo385Fa0g86uUXHwZxB90.qMMdRFExaXePGka4WGFv.86I45AEjmO
+$2a$05$LhayLxezLhK1LhWvKxCyLOj0j1u.Kj0jZ0pEmm134uzrQlFvQJLF6
+$2y$12$atWJ1Nx6ep65tNx0YIJ4I.jzgI86znQbNRI3lF0qIt/XCYnEPxSc2

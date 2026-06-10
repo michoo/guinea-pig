@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GuardSquare AppSweep API Key
+# Provider: guardsquare    Rule id (normalized): guardsquare.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.guardsquare.1
+#
+# Pattern: (?x) \b ( gs_appsweep_[a-zA-Z0-9_-]{24,48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+APPSWEEP_API_KEY=gs_appsweep_a1B2c3D4e5F6g7H8i9J0k1L2

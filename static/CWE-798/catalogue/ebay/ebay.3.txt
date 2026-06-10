@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: eBay Client Secret
+# Provider: ebay    Rule id (normalized): ebay.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ebay.3
+#
+# Pattern: (?x) \b ( (?:PRD|SBX)-[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4,12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+EBAY_CLIENT_SECRET=PRD-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b
+EBAY_SANDBOX_SECRET=SBX-1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b

@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Flagsmith Organisation API Key
+# Provider: flagsmith    Rule id (normalized): flagsmith.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.flagsmith.1
+#
+# Pattern: (?xi) \b (?i:flagsmith) [^\n\r]{0,16}? \b ( [A-Za-z0-9]{8}\.[A-Za-z0-9]{16}[A-Za-z0-9]{16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+FLAGSMITH_API_KEY=dVoSZFo3.3c5qN55mA1XdLZnTO2moz5Ud1Qwo18Ie
+flagsmith api_key=7SoNiIyO.L6eehZzlmE32iuEPZjdkXskw711I3FLz
+flagsmith api token: zfR3T3VI.GLEC5p3cggDGTDhOwTdNwuYxxqmSMuoA

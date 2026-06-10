@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Box API Access Token
+# Provider: box    Rule id (normalized): box.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.box.1
+#
+# Pattern: (?x) \b (?i:box) (?:.|[\n\r]){0,32}? (?i:ACCESS|TOKEN|DEVELOPER) (?:.|[\n\r]){0,32}? \b ( [A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BOX_DEVELOPER_TOKEN="DkXZmsjUKizvL2z0WiaLvMBeQ756XCGG"
+box_access_token = 'A4bC5dE6fG7hI8jK9lM0nO1pQ2rS3tU4'

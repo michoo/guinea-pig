@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LemonSqueezy API Key
+# Provider: lemonsqueezy    Rule id (normalized): lemonsqueezy.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.lemonsqueezy.1
+#
+# Pattern: (?x) \b (?i:lemon.?squeezy|lemonsqueezy) (?:.|[\n\r]){0,32}? (?i:KEY|TOKEN|API) (?:.|[\n\r]){0,32}? ( eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9 \. [A-Za-z0-9_-]{100,500} \. [A-Za-z0-9_-]{200,700} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+LEMONSQUEEZY_API_KEY="eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJodHRwczovL2FwaS5sZW1vbnNxdWVlenkuY29tIiwiaXNzIjoiaHR0cHM6Ly9sZW1vbnNxdWVlenkuY29tIiwic3ViIjoiMTIzNCIsImlhdCI6MTcwMDAwMDAwMCwiZXhwIjoxNzMwMDAwMDAwLCJzY29wZXMiOltdfQ.abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR"

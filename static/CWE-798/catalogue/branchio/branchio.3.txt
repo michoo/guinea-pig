@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Branch.io Secret
+# Provider: branchio    Rule id (normalized): branchio.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.branchio.3
+#
+# Pattern: (?xi) \b (?:BRANCH_SECRET|branch_secret|BRANCH_KEY_SECRET) \s* [=:] \s* ["']? ( [A-Za-z0-9]{40,64} ) ["']?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BRANCH_SECRET=abcdefghijklmnopqrstuvwxyz1234567890ABCD
+branch_secret: "abcd1234efgh5678ijkl9012mnop3456qrst7890"

@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: ConfigCat SDK Key (Extended)
+# Provider: configcat    Rule id (normalized): configcat.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.configcat.2
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks configcat-sdk-key
+#   - betterleaks configcat-sdk-key-extended
+#
+# Pattern: (?xi) \b ( configcat-sdk-1/[A-Za-z0-9_-]{22}/[A-Za-z0-9_-]{22} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CONFIGCAT_SDK_KEY=configcat-sdk-1/Aa1Bb2Cc3Dd4Ee5Ff6Gg7H/aA1bB2cC3dD4eE5fF6gG7h

@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Exa AI API Key
+# Provider: exaai    Rule id (normalized): exa.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.exa.1
+#   - titus       kingfisher.exa.1
+#
+# Pattern: (?xi) (?: \b(?:exa|exa[_-]?api|exa[_-]?key|exa[_-]?api[_-]?key)\b (?:.|[\n\r]){0,96}? | \bx-api-key\b (?:\s*[:=]\s*|(?:.|[\n\r]){0,16}?) ) \b ( [a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+EXA_API_KEY=3f5a9c1e-2b4d-4a6f-8c10-1d2e3f4a5b6c
+exa_api_key: "3f5a9c1e-2b4d-4a6f-8c10-1d2e3f4a5b6c"
+x-api-key: 3f5a9c1e-2b4d-4a6f-8c10-1d2e3f4a5b6c

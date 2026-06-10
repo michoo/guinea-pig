@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Surge.sh Deploy Token
+# Provider: surge    Rule id (normalized): surge.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.surge.1
+#
+# Pattern: (?xi) \b SURGE[_-]TOKEN (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [a-f0-9]{32} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+export SURGE_TOKEN=a0d3add7d6475f32bb3d0e5c91177b80
+SURGE_TOKEN=b1e4bee8e7586a43cc4e1f6da2288c91

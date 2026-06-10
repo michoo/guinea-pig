@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Discord Webhook URL
+# Provider: discord    Rule id (normalized): discord.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.discord.1
+#   - titus       kingfisher.discord.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    discord-api-token
+#   - gitleaks    discord-client-id
+#   - gitleaks    discord-client-secret
+#   - betterleaks discord-api-token
+#   - betterleaks discord-client-id
+#   - betterleaks discord-client-secret
+#
+# Pattern: (?xi) ( https://discord(app)?\.com/api/webhooks/ [0-9]{17,20} )/ ( [0-9a-z_\-]{60,68} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://discord.com/api/webhooks/123456789012345678/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890abcdef

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: ZeroTier API Token
+# Provider: zerotier    Rule id (normalized): zerotier.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.zerotier.1
+#
+# Pattern: (?xi) \b (?:zerotier|zt) (?:.|[\n\r]){0,32}? \b ( [A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ZEROTIER_API_TOKEN=aBcDeFgHiJkLmNoPqRsTuVwXyZ012345
+ZT_TOKEN=xY9zW8vU7tS6rQ5pN4mL3kJ2iH1gF0eD

@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Scale Callback Auth Key
+# Provider: scale    Rule id (normalized): scale.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.scale.2
+#   - titus       kingfisher.scale.2
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks exoscale-api-key
+#   - betterleaks exoscale-api-secret
+#
+# Pattern: (?x) \b ( live_auth_ [0-9a-f]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+live_auth_250ae896ada542c08a95734f935c871a

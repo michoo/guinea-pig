@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mattermost Incoming Webhook URL
+# Provider: mattermost    Rule id (normalized): mattermost.3
+#
+# Detected by this rule:
+#   - titus       kingfisher.mattermost.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    mattermost-access-token
+#   - betterleaks mattermost-access-token
+#
+# Pattern: (?xi) (?P<webhook> https?:// [a-z0-9.-]*(?:mattermost|mm)[a-z0-9.-]* (?::\d{2,5})? /hooks/ [a-z0-9]{26} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WEBHOOK_URL=https://mattermost.example.com/hooks/9xuqwrwgstrb3mzrxb83nb357a
+webhook: http://mattermost:8065/hooks/bh5q3yjrufdr7z68nt1msp8oqr
+curl -X POST https://chat-mattermost.company.io/hooks/tj4xmdnqpfbryx1gwkhge1ca9h
+webhook: https://mm.example.com:8082/hooks/bh5q3yjrufdr7z68nt1msp8oqr

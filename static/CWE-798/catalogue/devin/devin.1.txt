@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cognition Devin Personal API Key
+# Provider: devin    Rule id (normalized): devin.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.devin.1
+#
+# Pattern: (?x) \b ( apk_user_[A-Za-z0-9+/]{120,180}={0,2} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+apk_user_dXNlci0yMDc5ZjllYTUyZDA0OWE0OTVlOWUwNDc2OTJiNWZhYl9vcmctZmE4NzllMzdjYWRmNGI2YmJmMmE3YWYzMTgxZGVjMTM6MjUwZjRhNzc2ZDEyNGVlMTk0NDk5OGNhNmRmNjBiY2I=
+DEVIN_API_KEY=apk_user_dXNlci0yMDc5ZjllYTUyZDA0OWE0OTVlOWUwNDc2OTJiNWZhYl9vcmctZmE4NzllMzdjYWRmNGI2YmJmMmE3YWYzMTgxZGVjMTM6YTYzNWU0MTA3M2VkNDU3OGFmZDFhMjAxZDhkMjNkODg=
+Authorization: Bearer apk_user_dXNlci0yMDc5ZjllYTUyZDA0OWE0OTVlOWUwNDc2OTJiNWZhYl9vcmctZmE4NzllMzdjYWRmNGI2YmJmMmE3YWYzMTgxZGVjMTM6NDMxYWFhYjBmN2VmNGRmMTlmZjkwNTBiNDhlYmE3NjM=

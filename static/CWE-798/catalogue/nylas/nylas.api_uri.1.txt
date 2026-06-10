@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Nylas API URI
+# Provider: nylas    Rule id (normalized): nylas.api_uri.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.nylas.api_uri.1
+#   - titus       kingfisher.nylas.api_uri.1
+#
+# Pattern: (?xi) \b ( https://api\.(?:us|eu)\.nylas\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://api.us.nylas.com
+https://api.eu.nylas.com

@@ -1,0 +1,23 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Amazon MWS Auth Token
+# Provider: aws    Rule id (normalized): aws.5
+#
+# Detected by this rule:
+#   - noseyparker np.aws.5
+#   - titus       np.aws.5
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    aws-access-token
+#   - gitleaks    aws-amazon-bedrock-api-key-long-lived
+#   - gitleaks    aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-access-token
+#   - betterleaks aws-amazon-bedrock-api-key-long-lived
+#   - betterleaks aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-secret-access-key
+#
+# Pattern: (?i)(amzn\.mws\.[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AWS Access Key:AKIAIDQJ6PTGDFFWYX7A
+secret key:IwJz1SHMccAKUKuskdVoHFfkre73BTyF80nRmcWc
+MWS Authorisation Token:  amzn.mws.dab428a1-ed97-fd8d-e045-950d712f6f58

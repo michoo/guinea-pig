@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Bitly Access Token
+# Provider: bitly    Rule id (normalized): bitly.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.bitly.1
+#   - titus       kingfisher.bitly.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks bitly-access-token
+#
+# Pattern: (?xi) \b bitly (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? ( [a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+bitly_token = 20e9817b9c5ddde1b0cec7622bfc557dbc823791

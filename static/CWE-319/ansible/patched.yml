@@ -1,0 +1,16 @@
+# Remediation for CWE-319: Cleartext Transmission of Sensitive Information
+# Fix: Enable TLS certificate validation (validate_certs: yes) on all HTTP-based tasks.
+---
+- name: Secure transport example
+  hosts: all
+  tasks:
+    - name: Download file with certificate validation
+      ansible.builtin.get_url:
+        url: https://example.com/package.tar.gz
+        dest: /tmp/package.tar.gz
+        validate_certs: yes
+
+    - name: Call API enforcing TLS verification
+      ansible.builtin.uri:
+        url: https://api.example.com/data
+        validate_certs: yes

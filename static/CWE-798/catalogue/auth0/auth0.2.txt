@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Auth0 Client Secret
+# Provider: auth0    Rule id (normalized): auth0.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.auth0.2
+#
+# Pattern: (?xi) \b auth0 (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,64}? \b ( [a-z0-9_-]{64,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+auth0_client_secret: 'v7qhPJv1fDRoUwBjktpWgS8LPVr-hXWOI8tFnRtWrU3jNYZf1hW3hfJjA8rEER9D'
+auth0ClientSecret = 'YOUR_VERY_LONG_AND_SECURE_CLIENT_SECRET_GOES_HERE_12345678900000'
+AUTH0_CLIENT_SECRET='abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890'

@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: particle.io Access Token
+# Provider: particle.io    Rule id (normalized): particleio.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.particleio.2
+#   - noseyparker np.particleio.2
+#   - titus       np.particleio.2
+#
+# Pattern: (?xi) (?:access_token=|Authorization:\s*Bearer\s*) ([A-Z0-9]{40}) \b [\s"\\]*https://api\.particle\.io/v1
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+curl -H "Authorization: Bearer 38bb7b318cc6898c80317decb34525844bc9db55" \
+https://api.particle.io/v1/devices
+curl -d access_token=38bb7b318cc6898c80317decb34525844bc9db55 \
+https://api.particle.io/v1/devices
+curl -H "Authorization: Bearer 38bb7b318cc6898c80317decb34525844bc9db55" https://api.particle.io/v1/devices
+curl -d access_token=38bb7b318cc6898c80317decb34525844bc9db55 https://api.particle.io/v1/devices

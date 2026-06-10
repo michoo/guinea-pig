@@ -1,0 +1,21 @@
+<!--
+  FALSE POSITIVE — not a secret.
+  Resembles: base64 / generic high-entropy secret rules (sha384-/sha512- + base64).
+  Why benign: Subresource Integrity (SRI) hashes are public cryptographic digests of
+  static assets. They are meant to be published in HTML and reveal nothing secret.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdn.example.com/app.css"
+      integrity="sha384-BVYiiSIF- BmwDsOA7XX9ZoIBkfsAHc1bsPiogYKuoq3X0fL2/8u9Y3yXjQ"
+      crossorigin="anonymous" />
+    <script
+      src="https://cdn.example.com/lib.js"
+      integrity="sha512-q2pQy3rD7Tnl8u2cP1c8e3f4G5h6I7j8K9l0M1n2O3p4Q5r6S7t8U9v0W1x2Y3z4A5b6C7d8E9f0g1H2i3J4k5L6m7N8o9P0q1R2s3T4u5V6w7X8y9Z0a1B2c3D4e5F6g=="
+      crossorigin="anonymous"></script>
+  </head>
+  <body></body>
+</html>

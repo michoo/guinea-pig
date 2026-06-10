@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LangSmith Service Key
+# Provider: langchain    Rule id (normalized): langchain.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.langchain.2
+#   - titus       kingfisher.langchain.2
+#
+# Pattern: (?xi) \b ( lsv2_sk_[0-9a-f]{32}_[0-9a-f]{10} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+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

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cfx.re FiveM Server Key
+# Provider: cfxre    Rule id (normalized): cfxre.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.cfxre.1
+#
+# Pattern: (?x) \b ( cfxk_[a-zA-Z0-9_-]{20,100} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sv_licenseKey "cfxk_AbCdEfGhIjKlMnOpQrStUvWxYz1234567890_abcdef"

@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Discord Bot ID
+# Provider: discord    Rule id (normalized): discord.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.discord.3
+#   - titus       kingfisher.discord.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    discord-api-token
+#   - gitleaks    discord-client-id
+#   - gitleaks    discord-client-secret
+#   - betterleaks discord-api-token
+#   - betterleaks discord-client-id
+#   - betterleaks discord-client-secret
+#
+# Pattern: (?xi) (?:discord|botid|bot_id) (?:.|[\n\r]){0,64}? ( \d{17,19} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+discord = 12345678901234567
+bot_id: "123456789012345678"

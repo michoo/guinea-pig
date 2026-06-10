@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure CosmosDB Connection String
+# Provider: azurecosmosdb    Rule id (normalized): azurecosmosdb.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurecosmosdb.2
+#
+# Pattern: (?x) (?i:AccountEndpoint=(?P<COSMOS_ENDPOINT>https://[a-z0-9-]+\.documents\.azure\.com(?::\d+)?)/?;) AccountKey= (?P<secret> (?P<TOKEN> [A-Za-z0-9+/]{86}== ) )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AccountEndpoint=https://myaccount.documents.azure.com:443;AccountKey=oqb4TdY9T0hphvktd5fJnMiHuQqzVy1jd5sSuOpAbGkaoqTlrHl0BOJN2okcasinVLOJzfDbZo1L+ASt68RAhA==;

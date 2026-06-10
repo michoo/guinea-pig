@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Replicate API Token
+# Provider: replicate    Rule id (normalized): replicate.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.replicate.1
+#   - titus       kingfisher.replicate.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks replicate-api-token
+#
+# Pattern: (?x) \b ( r8_ [A-Za-z0-9]{37} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+r8_WesXNvqsCpq7r1gpQABpB3NJvdR21nb2s7HVy
+r8_Lvn3Tsrs8H2wCYSEPDiUfyePqWpBOWi0vQTtN
+r8_XOpqpi4q9UADwsgrbEjCpT9p1cDldUu3t1D8R
+r8_ap8Mo5iTbW01FHJtElPrBUqf7fjz1r40EVrJu

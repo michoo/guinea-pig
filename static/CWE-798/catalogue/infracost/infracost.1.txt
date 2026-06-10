@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Infracost API Token
+# Provider: infracost    Rule id (normalized): infracost.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.infracost.1
+#   - titus       kingfisher.infracost.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    infracost-api-token
+#   - betterleaks infracost-api-token
+#
+# Pattern: (?x) \b ( ico-[a-zA-Z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+export INFRACOST_API_KEY=ico-abcd12abcdefabcdefabcdefabcdefab
+"infracost": "ico-1234567890abcdef1234567890abcdef"
+export INFRACOST_API_KEY=ico-abcdefabcdefabcdefabcdefabcdefab

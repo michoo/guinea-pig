@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mixpanel API Key or Secret
+# Provider: mixpanel    Rule id (normalized): mixpanel.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mixpanel.3
+#
+# Pattern: (?xis) \b API \s+ (?:Key|Secret) \b .{0,20}? \b ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+API Key
+0fff5f614cbcafefb9c1ba319b9905d2
+API Secret
+a2813cd4502f94a77de470f2d7adc8d7

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Anypoint OAuth Client Secret
+# Provider: anypoint    Rule id (normalized): anypoint.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.anypoint.3
+#
+# Pattern: (?xi) \b anypoint (?:.|[\n\r]){0,48}? (?: client[\s_.-]*secret | app[\s_.-]*secret | connected[\s_.-]*app[\s_.-]*secret | oauth[\s_.-]*secret ) (?:.|[\n\r]){0,16}? \b ( [0-9A-Fa-f]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ANYPOINT_CLIENT_SECRET="3E7f94b18c2d6a40f1b7e9c24d6a8b0f"
+anypoint oauth secret = 6a9c1e2f4b7d8a0c3e5f1b2d4a6c8e0f

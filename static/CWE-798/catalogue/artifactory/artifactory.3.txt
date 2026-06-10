@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Artifactory Identity Reference Token
+# Provider: artifactory    Rule id (normalized): artifactory.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.artifactory.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    artifactory-api-key
+#   - gitleaks    artifactory-reference-token
+#   - betterleaks artifactory-api-key
+#   - betterleaks artifactory-jfrog-url
+#   - betterleaks artifactory-reference-token
+#
+# Pattern: (?x) \b ( cmVmd[A-Za-z0-9]{59} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+export HOMEBREW_ARTIFACTORY_API_REFERENCE_TOKEN=cmVmdawqkxT1EE4bMepW0zmTVmBYYdv264WVufgipR9CQAW2xwSnY4CTKap8H5u0

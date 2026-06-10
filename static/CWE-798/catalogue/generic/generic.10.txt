@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Connection String in .NET Configuration
+# Provider: generic    Rule id (normalized): generic.10
+#
+# Detected by this rule:
+#   - noseyparker np.generic.10
+#   - titus       np.generic.10
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?x) < \s* add \s+ key \s* = \s* " ( [^\n"]{0,20} (?: [Cc]onnection[Ss]tring | CONNECTIONSTRING ) [^\n"]{0,20} ) " \s+ value \s* = \s* " ([^\n"]{3,200}) " \s* / \s* >
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+<add key="ConnectionString_B2B" value="Server=awsbman-t,1433;Database=B2B;User ID=b2buser;Password=#gets0m3;Trusted_Connection=False" />

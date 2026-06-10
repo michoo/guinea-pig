@@ -1,0 +1,14 @@
+# CWE-256: Plaintext Storage of a Password
+# A database user password is stored and used in cleartext within the playbook.
+---
+- name: Plaintext password example
+  hosts: db_servers
+  vars:
+    db_password: "MyPlainTextPassword123"
+  tasks:
+    - name: Create MySQL user with plaintext password
+      community.mysql.mysql_user:
+        name: appuser
+        password: "{{ db_password }}"
+        priv: "*.*:ALL"
+        state: present

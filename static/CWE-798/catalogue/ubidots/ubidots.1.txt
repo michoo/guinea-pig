@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Ubidots API Key
+# Provider: ubidots    Rule id (normalized): ubidots.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ubidots.1
+#
+# Pattern: (?x) \b ( BBUS- [A-Za-z0-9]{28,40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+API_KEY = "BBUS-kDvT2Vrm6JThnHZvgzNyO2K7DAHdWs12abc"
+UBIDOTS_TOKEN=BBUS-AbCdEfGhIjKlMnOpQrStUvWxYz0123456

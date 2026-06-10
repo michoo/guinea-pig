@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pastebin API Key
+# Provider: pastebin    Rule id (normalized): pastebin.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pastebin.1
+#   - titus       kingfisher.pastebin.1
+#
+# Pattern: (?xi) \b pastebin (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9_]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pastebin_key=zwD26NeyMCvBsR9nxfaybLHD7TcLh22O
+pastebin_api_token=zwD26NeyMCvBsR9n_faybLHD7TcLh22O

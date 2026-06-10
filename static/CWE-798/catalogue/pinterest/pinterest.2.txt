@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pinterest Refresh Token
+# Provider: pinterest    Rule id (normalized): pinterest.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pinterest.2
+#
+# Pattern: (?x) \b ( pinr_[a-zA-Z0-9._-]{20,500} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PINTEREST_REFRESH_TOKEN=pinr_eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.abc123

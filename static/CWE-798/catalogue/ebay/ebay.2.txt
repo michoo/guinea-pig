@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: eBay Sandbox Client ID
+# Provider: ebay    Rule id (normalized): ebay.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ebay.2
+#
+# Pattern: (?x) \b ( [a-zA-Z0-9_-]+-[a-zA-Z0-9_-]+-SBX-[a-f0-9]{8,12}-[a-f0-9]{8,12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+EBAY_SANDBOX_CLIENT_ID=MyApp-MyApp-SBX-1a2b3c4d-567890ab

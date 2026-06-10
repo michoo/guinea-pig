@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pipedrive API Token
+# Provider: pipedrive    Rule id (normalized): pipedrive.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pipedrive.1
+#
+# Pattern: (?xi) \b (?: pipedrive (?:.|[\n\r]){0,32}? (?:api[_-]?token|x-api-token|token|authorization|key) | x-api-token ) (?:.|[\n\r]){0,16}? \b ( [a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+x-api-token: 659c9fddb16335e48cc67114694b52074e812e03
+PIPEDRIVE_API_TOKEN=740dd23ada464336f353b4d08e83c4a801fc1d86
+x-api-token: 2592440cff58a695e33e5776160c4ee5e73e1b9c
+pipedrive token: bbbe1b93ebbf4b0a68a752916b58c8df9b1acae8
+curl --request GET \
+--url "https://companydomain.pipedrive.com/api/v2/deals" \
+--header "x-api-token: 659c9fddb16335e48cc67114694b52074e812e03"

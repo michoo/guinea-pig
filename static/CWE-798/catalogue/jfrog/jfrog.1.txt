@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: JFrog Cloud Host
+# Provider: jfrog    Rule id (normalized): jfrog.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.jfrog.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    jfrog-api-key
+#   - gitleaks    jfrog-identity-token
+#
+# Pattern: (?xi) \b ( [a-z0-9] (?: [a-z0-9\-]{0,61} [a-z0-9] )? \.jfrog\.io ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+company.jfrog.io
+my-team.jfrog.io

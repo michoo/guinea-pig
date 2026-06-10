@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Keen.io Project ID
+# Provider: keenio    Rule id (normalized): keenio.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.keenio.2
+#
+# Pattern: (?xi) \b (?:KEEN_PROJECT_ID|keen_project_id|PROJECT_ID|project_id) \s* [=:] \s* ["']? ( [a-f0-9]{24} ) ["']?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+KEEN_PROJECT_ID=507f1f77bcf86cd799439011
+project_id: "5f47ac10e91b2a0017b4c8d2"

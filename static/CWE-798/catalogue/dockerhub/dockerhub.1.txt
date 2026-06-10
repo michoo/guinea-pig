@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Docker Hub Personal Access Token
+# Provider: dockerhub    Rule id (normalized): dockerhub.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.dockerhub.1
+#   - noseyparker np.dockerhub.1
+#   - titus       np.dockerhub.1
+#
+# Pattern: (?xi) \b ( dckr_pat_[A-Z0-9_-]{27} ) (?: $ | [^A-Z0-9_-] )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+docker login -u gemesa -p dckr_pat_hc8VxYclixyTr2rDFsa2rqzkP3Y
+docker login -u gemesa -p dckr_pat_tkzBYxjNNC3R_Yg6jd_O-G8FbrJ
+docker login -u gemesa -p dckr_pat_1q8yKET1VDJTpfCwseUDzT8vFh-

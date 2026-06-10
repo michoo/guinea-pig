@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure OpenAI API Key
+# Provider: azureopenai    Rule id (normalized): azureopenai.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azureopenai.1
+#   - titus       kingfisher.azureopenai.1
+#
+# Pattern: (?xi) \b azure (?:.|[\n\r]){0,8}? (?:openai) (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,8}? ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+azure_openai_key=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d
+azure_openai_secret=abcdef0123456789abcdef0123456789

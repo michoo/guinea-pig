@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Crossmint Server API Key
+# Provider: crossmint    Rule id (normalized): crossmint.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.crossmint.1
+#
+# Pattern: (?x) (?i:crossmint) (?:.|[\n\r]){0,32}? \b ( sk_(?:staging|production)_[A-Za-z0-9]{24,48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CROSSMINT_SECRET_KEY=sk_production_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6
+crossmint x-api-key: sk_staging_xK8m2LpQr5nW0vYz3cJ7aB4dE6fG8h

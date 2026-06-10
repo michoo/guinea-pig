@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PdfLayer API Key
+# Provider: pdflayer    Rule id (normalized): pdflayer.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pdflayer.1
+#   - titus       kingfisher.pdflayer.1
+#
+# Pattern: (?xi) (?: \b pdflayer (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|ACCESS_KEY) (?:.|[\n\r]){0,32}? | \bapi\.pdflayer\.com/api/convert\?[^ \t\r\n"'<>]*\baccess_key\s*=\s* ) \b ( [a-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pdflayer_key=1234567890abcdef1234567890abcdef
+PDFLAYER_ACCESS_TOKEN=abcdef1234567890abcdef1234567890
+pdflayer_secret=0123456789abcdef0123456789abcdef

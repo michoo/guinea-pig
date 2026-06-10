@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tableau Site Content URL
+# Provider: tableau    Rule id (normalized): tableau.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tableau.3
+#
+# Pattern: (?xi) \b (?: tableau[_-]?(?:site|content[_-]?url) | tableau (?:.|[\n\r]){0,48}? (?:site|content[_-]?url) ) (?:.|[\n\r]){0,12}? [=:"'\s] ( [A-Za-z0-9._-]{1,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+tableau_site=companysite
+tableau_content_url="default"

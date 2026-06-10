@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Weights and Biases API Key (v1)
+# Provider: weightsandbiases    Rule id (normalized): titus.wandb.1
+#
+# Detected by this rule:
+#   - titus       titus.wandb.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks weights-and-biases-api-key
+#   - betterleaks weights-and-biases-api-key-v1
+#
+# Pattern: (?xi) \b ( wandb_v1_[A-Za-z0-9_]{40,200} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+export WANDB_API_KEY=wandb_v1_ABC123def456GHI789jkl012MNO345pqr678STU901vwx234YZa567bcd890ef0
+wandb login wandb_v1_XYZ987wvu654TSR321qpo098NML765kji432HGF109edc876BAZ543yxw210vut

@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Line Messaging API Token
+# Provider: line    Rule id (normalized): line.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.line.1
+#   - titus       kingfisher.line.1
+#
+# Pattern: (?xi) \b line (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( (?:[0-9A-Z+/]{57}){3}=? )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+line_access_token = 13IRTqF+j0TfDtuJoIWKRBPhpDnqYUaaSlOilnoy0urLE+kbf5hN4HUf5pSPw20ruyO0BFFF1IDjnBojctp5emFw0hZ51WxB8c75qo48upJInfmqDQ1xrFd4yFKBwx4yRBHYXmI/FyrtcWKd0FBoBAdB04t81/1O/w1cDnyilFU=
+linemsg_token:"13IRTqF+j0TfDtuJoIWKRBPhpDnqYUaaSlOilnoy0urLE+kbf5hN4HUf5pSPw20ruyO0BFFF1IDjnBojctp5emFw0hZ51WxB8c75qo48upJInfmqDQ1xrFd4yFKBwx4yRBHYXmI/FyrtcWKd0FBoBAdB04t81/1O/w1cDnyilFU="

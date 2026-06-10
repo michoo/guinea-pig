@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mailchimp API Key
+# Provider: mailchimp    Rule id (normalized): mailchimp.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mailchimp.1
+#   - noseyparker np.mailchimp.1
+#   - titus       np.mailchimp.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    mailchimp-api-key
+#   - betterleaks mailchimp-api-key
+#
+# Pattern: (?xi) \b mailchimp (?:.|[\n\r]){0,128}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( (?:[0-9a-f]{8}){4} -us\d{1,2} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mailchimp_token = abcdef1234567890abcdef1234567890-us1
+mailchimp_key = "0123456789abcdeffedcba9876543210-us20"
+MAILCHIMP_API='bd3777708aecfee66c5335f62a6246a4-us13'

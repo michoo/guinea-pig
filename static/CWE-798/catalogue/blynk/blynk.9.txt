@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Blynk Organization Client Credentials
+# Provider: blynk    Rule id (normalized): blynk.9
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.blynk.9
+#   - noseyparker np.blynk.9
+#   - titus       np.blynk.9
+#
+# Pattern: (?xi) \b oa2-client-id_[A-Z0-9_\-]{32} :([A-Z0-9_\-]{40}) [\s\\]*https://(?:fra1\.|lon1\.|ny3\.|sgp1\.|blr1\.)?blynk\.cloud/oauth2
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+curl -X POST -u oa2-client-id_zmNtW-D0Toqpz4AZnBLCIlklBrz9ynU-:5uC5Y4Mcvdl5rB56rBmxnvB4DZgiIpcyTPbOoEWp https://fra1.blynk.cloud/oauth2/token?grant_type=client_credentials
+curl -X POST -u oa2-client-id_zmNtW-D0Toqpz4AZnBLCIlklBrz9ynU-:5uC5Y4Mcvdl5rB56rBmxnvB4DZgiIpcyTPbOoEWp \
+https://fra1.blynk.cloud/oauth2/token?grant_type=client_credentials

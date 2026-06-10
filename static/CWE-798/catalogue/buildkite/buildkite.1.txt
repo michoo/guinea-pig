@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Buildkite API Key
+# Provider: buildkite    Rule id (normalized): buildkite.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.buildkite.1
+#   - titus       kingfisher.buildkite.1
+#
+# Pattern: (?xi) ( bkua_[a-z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+bkua_3c7019c2e4b6e76fe2e8bdde7c154e3c1a211743

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Eraser API Key
+# Provider: eraserio    Rule id (normalized): eraser.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.eraser.1
+#   - titus       kingfisher.eraser.1
+#
+# Pattern: (?xi) \b eraser (?:[^A-Za-z0-9]{0,16})? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:[^A-Za-z0-9]{0,16})? \b ( [A-Za-z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+eraser_token = Q7MD4J9L2X0B6R3T8W1P

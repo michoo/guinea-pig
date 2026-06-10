@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Strava Access Token
+# Provider: strava    Rule id (normalized): strava.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.strava.1
+#
+# Pattern: (?x) \b (?i:strava) (?:.|[\n\r]){0,32}? (?i:ACCESS|AUTH) (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+STRAVA_ACCESS_TOKEN="83ebeabdec09f6670863766f792ead24d61fe3f9"
+strava_auth_token: '1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b'

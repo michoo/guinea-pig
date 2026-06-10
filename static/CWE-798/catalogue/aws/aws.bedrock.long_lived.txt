@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: AWS Bedrock API Key (Long-lived)
+# Provider: aws    Rule id (normalized): aws.bedrock.long_lived
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.aws.bedrock.long_lived
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    aws-access-token
+#   - gitleaks    aws-amazon-bedrock-api-key-long-lived
+#   - gitleaks    aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-access-token
+#   - betterleaks aws-amazon-bedrock-api-key-long-lived
+#   - betterleaks aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-secret-access-key
+#
+# Pattern: (?x) ( ABSKQmVkcm9ja0FQSUtleS[A-Za-z0-9+/]{91,121}={0,2} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ABSKQmVkcm9ja0FQSUtleS1GU9MjAyNTEyMDVUMjE1MTUxWiZYLUFtei1FeHBpcmVzPTQzMjAwJlgtQW16LVNlY3VyaXR5LVRva2VuPUlRb0piM0pwWjJsdVgyVmpFSjclMk

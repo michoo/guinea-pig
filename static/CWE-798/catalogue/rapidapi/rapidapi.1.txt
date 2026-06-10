@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: RapidAPI Key
+# Provider: rapidapi    Rule id (normalized): rapidapi.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.rapidapi.1
+#   - titus       kingfisher.rapidapi.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    rapidapi-access-token
+#   - betterleaks rapidapi-access-token
+#
+# Pattern: (?xi) \b rapidapi (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Za-z0-9_-]{50} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+rapidapi_key=abcdefghij1234567890ABCDEFGHIJ1234567890abcdefghij
+"rapidapiKey":"ABCDEFGHIJ1234567890abcdefghij1234567890ABCDEFGHIJ"

@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: RabbitMQ Credential
+# Provider: rabbitmq    Rule id (normalized): rabbitmq.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.rabbitmq.1
+#   - titus       kingfisher.rabbitmq.1
+#
+# Pattern: (?xi) (?P<TOKEN> (?P<RABBITMQ_SCHEME>amqps?) :\/\/ (?P<RABBITMQ_USERNAME>[\S]{3,50}) : (?P<RABBITMQ_PASSWORD>[\S]{3,50}) @ (?P<RABBITMQ_HOST>[-.%\w]+) (?::(?P<RABBITMQ_PORT>\d{2,5}))? (?:\/(?P<RABBITMQ_VHOST>[-.%\w\/]+))? ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+amqp://user:password@rabbitmq.example.com/queue
+amqps://admin:3eCa3P@192.168.1.10:5671/vhost
+amqps://myuser:s3cretP4ss@bunny.cloudamqp.com/myvhost
+amqp://app:xK9!mN2$@broker.internal:5672/production

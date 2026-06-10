@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Deepgram API Key
+# Provider: deepgram    Rule id (normalized): deepgram.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.deepgram.1
+#   - titus       kingfisher.deepgram.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks deepgram-api-key
+#
+# Pattern: (?xi) \b deepgram (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+deepgram_key = 948c19ecde2818a1a357fffb14d2fc2a03d3c56e
+deepgram-api: 6c8ba06cb14a32d508948606d8b5d9c8f70e493b
+deepgram = 12e217f37eb173f0c8f1b7309f4207c7dca20186
+deepgram token 1 == 1f8946087e64b14dffd069b78554e217b3ed34d4

@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sourcegraph Access Token
+# Provider: sourcegraph    Rule id (normalized): sourcegraph.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sourcegraph.1
+#   - noseyparker np.sourcegraph.1
+#   - titus       np.sourcegraph.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sourcegraph-access-token
+#   - betterleaks sourcegraph-access-token
+#
+# Pattern: (?x) \b ( sgp_(?:[a-fA-F0-9]{16}|local)_[a-fA-F0-9]{40}|sgp_[a-fA-F0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sgp_210f1131b08e93adcfc3f05faa2d768ff883a61f
+sourcegraph access token sgp_fd1b4edb60bf82b8_a70aabf5f685734b19792789feeb73c6393cd02e<br/>
+access token sgp_b70acbf2f685734c19791789fdeb73c6393dd02a
+access token sgp_local_b70acbf2f685734c19791789fdeb73c6393dd02a
+var applicationId = 'x-sourcegraph-token';
+var accessToken = 'sgp_fd1b4edb60bf82b8_a70aabf5f685734b19792789feeb73c6393cd02e';

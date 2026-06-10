@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Asaas API Token
+# Provider: asaas    Rule id (normalized): asaas.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.asaas.1
+#
+# Pattern: (?x) ( \$aact_(?:prod|hmlg)_[a-zA-Z0-9_-]{20,100} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ASAAS_API_KEY=$aact_prod_abcdefghijklmnop1234567890ABCDEF
+api_token: $aact_hmlg_abcdefghijklmnop1234567890ABCDEF

@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cloudflare User API Token (cfut_ prefix)
+# Provider: cloudflare    Rule id (normalized): cloudflare.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.cloudflare.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    cloudflare-api-key
+#   - gitleaks    cloudflare-global-api-key
+#   - gitleaks    cloudflare-origin-ca-key
+#   - betterleaks cloudflare-api-key
+#   - betterleaks cloudflare-global-api-key
+#   - betterleaks cloudflare-origin-ca-key
+#
+# Pattern: (?x) \b ( cfut_[A-Za-z0-9_-]{41,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CF_API_TOKEN=cfut_a1B2c3D4e5F6g7H8i9J0k1L2m3N4o5P6q7R8s9TuV

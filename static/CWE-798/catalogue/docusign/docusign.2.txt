@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DocuSign Integration Key
+# Provider: docusign    Rule id (normalized): docusign.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.docusign.2
+#
+# Pattern: (?xi) \b docusign (?:.|[\n\r]){0,64}? (?:integration[_-]?key|client[_-]?id|app[_-]?id)\b (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [a-f0-9]{8}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{4}- [a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DOCUSIGN_CLIENT_ID=7a39ce6d-94cf-4bf6-9e9e-9213373c15f4
+docusign.integration_key = "3d2f18c9-2075-4e78-834b-64f57f8757d0"

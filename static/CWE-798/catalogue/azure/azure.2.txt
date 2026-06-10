@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure App Configuration Connection String
+# Provider: azure    Rule id (normalized): azure.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.2
+#   - noseyparker np.azure.2
+#   - titus       np.azure.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    azure-ad-client-secret
+#   - betterleaks azure-ad-client-secret
+#
+# Pattern: (?xi) (https://[A-Z0-9-]+\.azconfig\.io); Id=(.{4}-.{2}-.{2}:[A-Z0-9+/]{18,22}); Secret=([A-Z0-9+/]{36,50}=)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Endpoint=https://foo-nonprod-appconfig.azconfig.io;Id=ABCD-E6-s0:tl6ABcdefGHi7kLMno/p;Secret=abCD1EF+GHIJxLMnOPqRSa53VWX05zaBCdE/fg9hi4k=
+https://foo-nonprod-appconfig.azconfig.io;Id=ABCD-E6-s0:tl6ABcdefGHi7kLMno/p;Secret=abCD1EF+GHIJxLMnOA53ST8uVWX05zaBCdE/fg9hi4k=
+Endpoint=https://appconfig-test01.azconfig.io;Id=09pv-l0-s0:opFCQMC6+9485xJgN5Ws;Secret=GcoEA53t7GLRNJ910M46IrbHO/Vg0tt4HujRdsaCoTY=
+private static string appConfigurationConnectionString = "Endpoint=https://appcs-fg-pwc.azconfig.io;Id=pi5x-l9-s0:SZLlhHA53Nz2MpAl04cU;Secret=CQ+mlfQqkzfZv4XA53gigJ/seeXMKwNsqW/rM3wmtuE=";

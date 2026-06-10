@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: CircleCI API Project Token
+# Provider: circleci    Rule id (normalized): circleci.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.circleci.2
+#   - titus       kingfisher.circleci.2
+#
+# Pattern: (?xi) \b circleci (?:.|[\n\r]){0,64}? ( [a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+circleci_project_secret = 'Ca61263Bf9A4DcEECd00EdAAacb4eaEe74e8682f'
+CIRCLECI_API_TOKEN: a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2

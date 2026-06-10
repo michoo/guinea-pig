@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: VolcEngine Access Key ID
+# Provider: volcengine    Rule id (normalized): volcengine.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.volcengine.1
+#
+# Pattern: (?x) \b (?i:volcengine) (?:.|[\n\r]){0,32}? \b ( AKLT[a-zA-Z0-9_-]{46,48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+VOLCENGINE_ACCESS_KEY=AKLTY2IwOGJIMTdiZmI5NGU1MWFiNWE3MWJkNWY2MDdmOGUxYz

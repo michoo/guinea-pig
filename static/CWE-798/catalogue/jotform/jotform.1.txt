@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Jotform API Key
+# Provider: jotform    Rule id (normalized): jotform.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.jotform.1
+#   - titus       kingfisher.jotform.1
+#
+# Pattern: (?xi) \b jotform (?:.|[\n\r]){0,64}? (?:api[_-]?key|apikey|token|secret|key) (?:.|[\n\r]){0,32}? \b ( [0-9A-Z]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+jotform apikey=abcde12345abcde67890abcde12345fg

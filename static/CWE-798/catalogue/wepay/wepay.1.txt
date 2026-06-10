@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WePay Access Token
+# Provider: wepay    Rule id (normalized): wepay.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.wepay.1
+#
+# Pattern: (?x) \b ( (?:STAGE|PRODUCTION)_ [0-9a-f]{60,68} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Bearer STAGE_9b20b006c6c96547ebe6de2497ec2aaa548abd06a25c5a505eb606317b679012
+WEPAY_ACCESS_TOKEN=PRODUCTION_a5512f7329063d48e00e596f1873e4a5c617dd27d73dcb77c71638b4895d0987
+WEPAY_SANDBOX_ACCESS_TOKEN: STAGE_fccef80fa32e922d2191683d1d86888a3e4eabf043c136767b35a782bc8b5678

@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sendbird Application ID
+# Provider: sendbird    Rule id (normalized): sendbird.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sendbird.1
+#   - titus       kingfisher.sendbird.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sendbird-access-id
+#   - gitleaks    sendbird-access-token
+#   - betterleaks sendbird-access-id
+#   - betterleaks sendbird-access-token
+#
+# Pattern: (?xi) sendbird (?:.|[\\n\r]){0,32}? (?:APPLICATION|APP_ID|APP|CLIENT|ID) (?:.|[\n\r]){0,32}? \b ( [0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sendbird_app_id: 12345678-1234-1234-1234-1234567890ab

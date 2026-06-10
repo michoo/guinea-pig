@@ -1,0 +1,25 @@
+# Intentionally-insecure GitHub Actions workflow (test fixture for plumber / poutine).
+# Documented weaknesses:
+#   CWE-250 : permissions: write-all — excessive GITHUB_TOKEN privileges
+#   CWE-829 : actions pinned to mutable tags/branches instead of a commit SHA
+#   CWE-94  : untrusted PR title interpolated into a run: shell command (script injection)
+#   CWE-494 : curl | bash — remote script executed without integrity check
+name: ci
+on:
+  pull_request_target:                 # runs with repo secrets on untrusted PRs
+    types: [opened, synchronize]
+
+permissions: write-all                 # CWE-250: excessive privileges
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4      # CWE-829: mutable tag
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}   # checks out untrusted PR code
+      - uses: some-org/some-action@main                     # CWE-829: mutable branch
+      - name: Greet
+        run: echo "Building PR: ${{ github.event.pull_request.title }}"  # CWE-94: script injection
+      - name: Bootstrap
+        run: curl -s https://example.com/setup.sh | bash    # CWE-494: pipe-to-shell

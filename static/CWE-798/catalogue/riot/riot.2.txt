@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Riot Games API Key
+# Provider: riot    Rule id (normalized): riot.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.riot.2
+#   - titus       kingfisher.riot.2
+#
+# Pattern: (?x) \b ( RGAPI-[a-zA-Z0-9_-]{36} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RGAPI-4sb3f6a1-2941-5a81-9c23-4bf3a83c14f3

@@ -1,0 +1,21 @@
+# Remediation for CWE-250: Execution with Unnecessary Privileges
+# Fix: Grant least-privilege permissions (contents: read) at workflow level and scope only what the job needs.
+name: release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - run: ./scripts/publish.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

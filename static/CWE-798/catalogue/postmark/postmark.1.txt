@@ -1,0 +1,23 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Postmark API Token
+# Provider: postmark    Rule id (normalized): postmark.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.postmark.1
+#   - noseyparker np.postmark.1
+#   - titus       np.postmark.1
+#
+# Pattern: (?xi) postmark [a-z0-9_-]{0,20} .{0,10} \b ( [a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+postmark: "f59dffd2-83ea-47c7-ba8f-95e053a6d0ae",
+postmark: {
+  fromEmail: '...@....com', // must be verified with postmarkapp.com
+  postmarkApiToken: '00917922-dbe7-4882-bedc-10b93fc4c4c5', // our account token
+},
+headers: {
+  Accept: "application/json",
+  "Content-Type": "application/json",
+  "X-Postmark-Server-Token": "c2321bd2-5a8f-46f2-b8fb-dbc706bd6923",
+},

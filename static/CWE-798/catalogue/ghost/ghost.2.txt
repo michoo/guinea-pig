@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Ghost CMS Content API Key
+# Provider: ghost    Rule id (normalized): ghost.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ghost.2
+#
+# Pattern: (?xi) \b(?:ghost|content[_-]?api) (?:.|[\n\r]){0,48}? (?:KEY|TOKEN|SECRET|API) (?:.|[\n\r]){0,24}? \b ( [0-9a-f]{26} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+GHOST_CONTENT_API_KEY=22444f78447824223cefc48062
+ghost_api_key: "a1b2c3d4e5f6a7b8c9d0e1f2a3"

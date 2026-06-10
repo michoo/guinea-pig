@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Vultr API Key
+# Provider: vultr    Rule id (normalized): vultr.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.vultr.1
+#
+# Pattern: (?xi) \b vultr (?:.|[\n\r]){0,24}? (?:api[_\s-]*key|token|authorization|key) (?:.|[\n\r]){0,16}? ( [a-f0-9]{36} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+VULTR_API_KEY="7a1c3e5f7092ab4cd6ef80123456789abcde"
+export VULTR_TOKEN=0123456789abcdef0123456789abcedf1234  # vultr

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry (regex-scanner-only): bittrex-access-key
+#
+# Detected by this rule:
+#   - betterleaks bittrex-access-key
+#   - gitleaks    bittrex-access-key
+#
+# Identified a Bittrex Access Key, which could lead to unauthorized access to cryptocurrency trading accounts and financial loss.
+# Regex: (?i)[\w.-]{0,50}?(?:bittrex)(?:[ \t\w.-]{0,20})[\s'"]{0,3}(?:=|>|:{1,3}=|\|\||:|=>|\?=|,)[\x60'"\s=]{0,5}([a-z0-9]{32})(?:[\x60'"\s;]|\\[nr]|$)
+#
+# Synthesized fake credential matching the regex — safe to commit.
+
+bittrex_key = "0123456789abcdef0123456789abcdef"

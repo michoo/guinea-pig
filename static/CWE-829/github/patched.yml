@@ -1,0 +1,20 @@
+# Remediation for CWE-829: Inclusion of Functionality from Untrusted Control Sphere
+# Fix: Pin every action to a full 40-character commit SHA instead of a mutable tag or branch.
+name: build
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+      - uses: some-org/some-action@a1b2c3d4e5f60718293a4b5c6d7e8f9012345678 # v1.2.3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - run: make build

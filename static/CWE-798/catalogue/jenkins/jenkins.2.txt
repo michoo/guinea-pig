@@ -1,0 +1,26 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Jenkins Setup Admin Password
+# Provider: jenkins    Rule id (normalized): jenkins.2
+#
+# Detected by this rule:
+#   - noseyparker np.jenkins.2
+#   - titus       np.jenkins.2
+#
+# Pattern: (?x)(?m) Please\ use\ the\ following\ password\ to\ proceed\ to\ installation: (?: \n\n | \r\n\r\n ) ([a-f0-9]{30,36})$
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+bd9627decc6346d780b3b6ab6ea8fe1f
+
+This may also be found at: /root/.jenkins/secrets/initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************

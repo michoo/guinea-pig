@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Password Hash (sha256crypt)
+# Provider: hashes    Rule id (normalized): pwhash.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pwhash.3
+#   - noseyparker np.pwhash.3
+#   - titus       np.pwhash.3
+#
+# Pattern: (?x) ( \$ 5 (?: \$ rounds=\d+ )? \$ [./A-Za-z0-9]{8,16} \$ [./A-Za-z0-9]{43} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+$5$rounds=5000$GX7BopJZJxPc/KEK$le16UF8I2Anb.rOrn22AUPWvzUETDGefUmAV8AZkGcD
+$5$9ks3nNEqv31FX.F$gdEoLFsCRsn/WRN3wxUnzfeZLoooVlzeF4WjLomTRFD
+$5$KAlz5SULZNybHwil$3UgmS1pmo2r5HG.tjbjzoVxISBh8IH81d.bJh4MCC19

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Translator Region
+# Provider: azuretranslator    Rule id (normalized): azuretranslator.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azuretranslator.1
+#
+# Pattern: (?xi) \b (?: TRANSLATOR_REGION | AZURE_TRANSLATOR_REGION | translator[_-]?region | translation[_-]?region | Ocp-Apim-Subscription-Region ) \b (?:.|[\n\r]){0,16}? [=:] \s*["']? ( [a-z0-9-]{4,32} ) ["']?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TRANSLATOR_REGION=eastus
+azure_translator_region="westeurope"

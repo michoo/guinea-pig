@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Blynk Cloud Host
+# Provider: blynk    Rule id (normalized): blynk.10
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.blynk.10
+#
+# Pattern: (?xi) https:// ( (?:fra1\.|lon1\.|ny3\.|sgp1\.|blr1\.)?blynk\.cloud ) /
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://blynk.cloud/external/api/get?token=Ab12Cd34Ef56Gh78Ij90Kl12Mn34Op56&V1
+https://fra1.blynk.cloud/api/organization/profile

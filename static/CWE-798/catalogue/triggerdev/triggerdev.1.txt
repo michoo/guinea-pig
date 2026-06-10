@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Trigger.dev Secret Key
+# Provider: triggerdev    Rule id (normalized): triggerdev.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.triggerdev.1
+#
+# Pattern: (?x) \b ( tr_(?:dev|prod|stg)_[A-Za-z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TRIGGER_SECRET_KEY=tr_dev_AN0MnvS4n4GdfhELPUMU
+TRIGGER_SECRET_KEY=tr_prod_KCqL36ucD5LTPa9kdnMj

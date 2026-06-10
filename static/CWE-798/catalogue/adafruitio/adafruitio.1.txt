@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Adafruit IO Key
+# Provider: adafruitio    Rule id (normalized): adafruitio.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.adafruitio.1
+#
+# Pattern: (?x) \b ( aio_ [a-zA-Z]{4} [0-9]{2} [a-zA-Z0-9]{22} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ADAFRUIT_AIO_KEY      = "aio_giXk31KzM05IVxHRwJwtpNGClUE5"

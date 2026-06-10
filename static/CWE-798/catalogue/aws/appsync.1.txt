@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: AWS AppSync API Key
+# Provider: aws    Rule id (normalized): appsync.1
+#
+# Detected by this rule:
+#   - noseyparker np.appsync.1
+#   - titus       np.appsync.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    aws-access-token
+#   - gitleaks    aws-amazon-bedrock-api-key-long-lived
+#   - gitleaks    aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-access-token
+#   - betterleaks aws-amazon-bedrock-api-key-long-lived
+#   - betterleaks aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-secret-access-key
+#
+# Pattern: (?x) \b (da2-[a-z0-9]{26}) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+aws_appsync_apiKey: 'da2-nmaqhbb63zabjactesiydcfuvu',

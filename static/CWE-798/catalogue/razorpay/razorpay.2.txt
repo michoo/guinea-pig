@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Razorpay Test API Key
+# Provider: razorpay    Rule id (normalized): razorpay.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.razorpay.2
+#   - titus       np.razorpay.2
+#
+# Pattern: (?xi) \b ( rzp_test_[A-Za-z0-9]{14} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RAZORPAY_KEY_ID=rzp_test_7mHnQ3pL9xKvYw
+razorpay_key: rzp_test_Bf5tR8xC2qEvMd

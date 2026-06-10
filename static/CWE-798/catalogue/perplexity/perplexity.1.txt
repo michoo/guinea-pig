@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Perplexity AI API Key
+# Provider: perplexity    Rule id (normalized): perplexity.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.perplexity.1
+#   - titus       kingfisher.perplexity.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    perplexity-api-key
+#   - betterleaks perplexity-api-key
+#
+# Pattern: (?x) \b ( pplx-[A-Za-z0-9]{48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+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
+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
+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
+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

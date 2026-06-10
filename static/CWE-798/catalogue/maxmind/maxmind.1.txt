@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MaxMind License Key
+# Provider: maxmind    Rule id (normalized): maxmind.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.maxmind.1
+#   - titus       kingfisher.maxmind.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    maxmind-license-key
+#   - betterleaks maxmind-license-key
+#
+# Pattern: (?xi) \b ( [a-z0-9]{6}_[a-z0-9]{29}_mmk ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MAXMIND_LICENSE=AB12CD_1234567890abcdef1234567890abc_mmk
+license_key="ZXCVBN_0987654321abcdef1234567890abc_mmk"

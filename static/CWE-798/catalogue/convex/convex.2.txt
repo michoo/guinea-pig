@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Convex Management Access Token
+# Provider: convex    Rule id (normalized): convex.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.convex.2
+#
+# Pattern: (?x) \b (?i:convex|CONVEX_TEAM_ACCESS_TOKEN|CONVEX_PAT) (?:.|[\n\r]){0,32}? \b ( eyJ2MiI6I[A-Za-z0-9+\/]{46}= )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CONVEX_TEAM_ACCESS_TOKEN=eyJ2MiI6IjAxMjM0NTY3ODlhYmNkZWYwMTIzNDU2Nzg5YWJjZGVmIn0=
+CONVEX_PAT=eyJ2MiI6IjE1MDVkZTcxMTVjMzRlMWM5Yjg3Y2VlMGQ2NzgxNGUzIn0=

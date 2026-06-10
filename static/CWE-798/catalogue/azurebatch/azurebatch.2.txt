@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Batch Account Endpoint
+# Provider: azurebatch    Rule id (normalized): azurebatch.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurebatch.2
+#
+# Pattern: (?xi) \b ( https://[a-z0-9-]+\.[a-z0-9-]+\.batch\.azure\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BATCH_URL=https://mybatch.westus.batch.azure.com
+batchAccountUrl="https://contoso-prod.eastus.batch.azure.com"

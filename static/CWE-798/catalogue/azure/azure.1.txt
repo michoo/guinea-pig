@@ -1,0 +1,29 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Connection String
+# Provider: azure    Rule id (normalized): azure.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.1
+#   - noseyparker np.azure.1
+#   - titus       np.azure.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    azure-ad-client-secret
+#   - betterleaks azure-ad-client-secret
+#
+# Pattern: (?xi) (?: AccountName | SharedAccessKeyName | SharedSecretIssuer) \s*=\s* ([^;]{1,80}) \s*;\s* .{0,10}\s* (?: AccountKey | SharedAccessKey | SharedSecretValue) \s*=\s* ([^;]{1,100}) (?: ;|$ )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+# Azure Storage Connection String
+AzureWebJobsStorage=DefaultEndpointsProtocol=https;AccountName=hanatour9833;AccountKey=6jqh42QQjWWBwoPGGR/Jr0PZjhBMZVbHm/gkhEfHvOj8aV6+oI8ed6ZAAwB5a6993WqyQDiuJJB0QpseJwqYxw==;EndpointSuffix=core.windows.net
+DefaultEndpointsProtocol=http;AccountName=testacc1;
+AccountKey=1gy3lpE7Du1j5ljKiupgKzywSw2isjsa69sfsdfsdsgfsgfdgfdgfd/YThisv/OVVLfIOv9kQ==;
+BlobEndpoint=http://127.0.0.1:8440/testacc1;
+TableEndpoint=http://127.0.0.1:8440/testacc1;
+QueueEndpoint=http://127.0.0.1:8440/testacc1;
+"IOTHUB_CONNECTION_STRING": {
+  "value": "HostName=d1-vi-ioth521.azure-devices.net;SharedAccessKeyName=registryReadWrite;SharedAccessKey=S8ii67l3Gd1Ba69az78iP9UksewzhjvUfh1DIuDs30w="
+}
+"AZURE_STORAGE_CONNECTION_STRING": {
+  "value": "DefaultEndpointsProtocol=https;AccountName=d1biblobstor521;AccountKey=NjEwGHd9+piK+iCi2C2XURWPmeDDjif9UKN1HAszYptL4iQ+yD7/dgjLMZc3VOpURsa53aJ4HZfbVWzL429C5g==;EndpointSuffix=core.windows.net"
+}

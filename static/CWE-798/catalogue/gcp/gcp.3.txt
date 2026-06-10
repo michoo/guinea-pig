@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GCP Private Key ID
+# Provider: gcp    Rule id (normalized): gcp.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gcp.3
+#   - titus       kingfisher.gcp.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    gcp-api-key
+#   - betterleaks gcp-api-key
+#   - betterleaks gcp-service-account
+#
+# Pattern: (?xi) \b gcp (?: .{0,20}? (?:key|secret) ) .{0,12} [=:] \s{0,8} ["']? ( [0-9a-z]{35,40} ) ["']? \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+gcp_secret = ANzaSy0c3475372a7b10f7740dbda47abfdca42

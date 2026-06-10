@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SerpApi API Key
+# Provider: serpapi    Rule id (normalized): serpapi.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.serpapi.1
+#
+# Pattern: (?xi) \b serp(?:api)? (?:.|[\n\r]){0,24}? (?:api[_\s-]*key|access[_\s-]*token|token|key) (?:.|[\n\r]){0,16}? ( [a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+serpapi_api_key=8a7c2d91f4b60e3d9c1a27e6f5b8c0d372a4b1e8f906dc53ab74e19cf2056d8b
+SERP_TOKEN: "4e9d7a8c1f02b3d46e57a89b0c1d2e3f40a5b6c7d8e9f1023a4b5c6d7e8f9012"

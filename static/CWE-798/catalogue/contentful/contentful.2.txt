@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Contentful Personal Access Token
+# Provider: contentful    Rule id (normalized): contentful.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.contentful.2
+#   - titus       kingfisher.contentful.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    contentful-delivery-api-token
+#   - betterleaks contentful-delivery-api-token
+#
+# Pattern: (?xi) ( CFPAT-[A-Z0-9_-]{43} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+CFPAT-Cq3AarsJCDvdG9PYAJ3Y00crCG5nEPAAfVZ2LAldCsQ
+CFPAT-WFWEK_dWYIW0-uamOjhUBAJJ9NqQisr1x_ylb4z1vcQ
+CFPAT-lkITY2pqeiE0_p9TxUZrGAhfHJIiwYtbtr769y4_AYY
+export CONTENTFUL_PAT=CFPAT-0JsT8FnP_qGlX2kRxYZabcDEFghijKLMNopqRSTuvW

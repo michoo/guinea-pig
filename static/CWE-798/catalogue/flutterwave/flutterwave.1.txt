@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Flutterwave Public Key
+# Provider: flutterwave    Rule id (normalized): flutterwave.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.flutterwave.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    flutterwave-encryption-key
+#   - gitleaks    flutterwave-public-key
+#   - gitleaks    flutterwave-secret-key
+#   - betterleaks flutterwave-encryption-key
+#   - betterleaks flutterwave-public-key
+#   - betterleaks flutterwave-secret-key
+#
+# Pattern: (?x) \b ( FLWPUBK(?:_TEST)?-[a-f0-9]{32}-X ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+FLW_PUBLIC_KEY=FLWPUBK_TEST-32193bba8dab84e3d9c4525c85ea7a12-X
+data-PBFPubKey="FLWPUBK_TEST-589490616a6297324231c5e89b58f3f6-X"

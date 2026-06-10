@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Salesforce Instance URL
+# Provider: salesforce    Rule id (normalized): salesforce.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.salesforce.2
+#
+# Pattern: (?xi) \b (?:https?://)? ( [0-9A-Z-]{5,128} ) \. my\.salesforce\.com \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://example123.my.salesforce.com
+mydomainname.my.salesforce.com

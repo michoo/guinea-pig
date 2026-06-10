@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Loops Email API Key
+# Provider: loops    Rule id (normalized): loops.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.loops.1
+#
+# Pattern: (?xi) \b loops (?:.|[\n\r]){0,32}? (?:API[_-]?KEY|SECRET|TOKEN|KEY) (?:.|[\n\r]){0,16}? \b ( [0-9a-f]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+LOOPS_API_KEY=d2d561f5ff80136f69b4b5a31b9fb3c9

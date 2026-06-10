@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Duo Security Integration Key
+# Provider: duo    Rule id (normalized): duo.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.duo.1
+#
+# Pattern: (?xi) \b (?:duo|duosecurity) (?:.|[\n\r]){0,64}? \b(?:integration[_-]?key|ikey)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [A-Z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+duo
+integration_key=AMTRZFKBPWH3QNGL7WCY
+duo
+ikey = 'BNUSGLLCQXI4RNHMWX2Z'

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pinecone API Key
+# Provider: pinecone    Rule id (normalized): pinecone.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pinecone.1
+#
+# Pattern: (?xi) \b pinecone (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|API|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PINECONE_API_KEY=62b0dbfe-3489-4b79-b850-34d911527c88
+pinecone_key = "a1b2c3d4-e5f6-7890-abcd-ef1234567890"

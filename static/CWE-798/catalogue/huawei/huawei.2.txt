@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Huawei Open Platform Client Secret
+# Provider: huawei    Rule id (normalized): huawei.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.huawei.2
+#
+# Pattern: (?xi) \b huawei (?:.|[\n\r]){0,64}? \b(?:client[_-]?secret|app[_-]?secret)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+{ "Huawei": { "ClientId": "100809947", "ClientSecret": "9c94020cf0aed099bc88c0e57b613fdd55cdcec2590b55fa5693a9d672cad2d5" } }
+huawei
+client_secret=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b

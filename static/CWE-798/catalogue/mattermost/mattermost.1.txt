@@ -1,0 +1,29 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Mattermost URL
+# Provider: mattermost    Rule id (normalized): mattermost.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mattermost.1
+#   - titus       kingfisher.mattermost.1
+#   - titus       np.mattermost.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    mattermost-access-token
+#   - betterleaks mattermost-access-token
+#
+# Pattern: (?xi) \b mattermost (?:.|[\n\r]){0,32}? ( https?:\/\/[a-z0-9.-]+ (?::\d{2,5})? (?:\/[A-Za-z0-9._~\-\/]*)? ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mattermost_url = "https://community.mattermost.com"
+mattermost_url='http://localhost:8065'
+mattermost_url: https://intra.example.com/mattermost
+mm_url=http://localhost:8065
+mm.url=http://localhost:8065
+mm-server: https://chat.example.com
+mm_host=https://mattermost.internal.io
+MATTERMOST_TOKEN=9xuqwrwgstrb3mzrxb83nb357a
+mattermost_access_token: zmigewsanbbsdf59xnmduzypjc
+export MATTERMOST_PAT="bh5q3yjrufdr7z68nt1msp8oqr"
+mattermost_bot_token = "tj4xmdnqpfbryx1gwkhge1ca9h"
+MM_TOKEN=9xuqwrwgstrb3mzrxb83nb357a
+mm_access_token: zmigewsanbbsdf59xnmduzypjc

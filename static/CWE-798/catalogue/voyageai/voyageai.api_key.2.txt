@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Voyage AI API Key
+# Provider: voyageai    Rule id (normalized): voyageai.api_key.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.voyageai.api_key.2
+#
+# Pattern: (?x) \b ( al-[a-zA-Z0-9\-_]{43} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+al-Qf7M2bZ8xnLpvE4hRcDsJtAo1KyU93WgIBmXrNVoYTu

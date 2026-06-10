@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: xAI (Grok) API Key
+# Provider: xAI    Rule id (normalized): xai.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.xai.1
+#   - titus       kingfisher.xai.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks xai-api-key
+#
+# Pattern: (?x) \b ( xai-[A-Za-z0-9_-]{70,120} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+xai-CNPlxZEZVpxDTRD8N6Luet7LwS2qyuijh7pdHbmNzswLAYSWUeODm8Cav2On1LqgrCewPvGCWxBqSbh3
+xai-RoGXl5O4gCeiTW1AtbVbDC3YLOEC3WubJFNSUvzlWq2Lt41kiFHc6P896yxrEMmHBdpC1e8M7fkmXSr8
+xai-vogGGUbepTcg1Qft4w2K46BXuS8eQzD6Q294eQhXc4yqHFzC4wfzAvnHM3sUGVvbHNzhqIPdRey8qm13

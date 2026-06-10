@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Web PubSub Connection String
+# Provider: azurewebpubsub    Rule id (normalized): azurewebpubsub.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurewebpubsub.1
+#
+# Pattern: (?x) (?i:Endpoint=https://(?:[a-z0-9-]+\.webpubsub\.azure\.com);AccessKey=) ( [A-Za-z0-9+/]{40,90}={0,2} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Endpoint=https://myservice.webpubsub.azure.com;AccessKey=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890ABCDEFGHIJKLMNOPQRS+/==;Version=1.0;

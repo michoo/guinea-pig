@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WPEngine Account Name
+# Provider: wpengine    Rule id (normalized): wpengine.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.wpengine.2
+#
+# Pattern: (?xi) \b (?:WPE_ACCOUNT_NAME|WPENGINE_ACCOUNT|wpengine_account_name|wpengine_account|account_name) \s* [=:] \s* ["']? ( [a-z0-9][a-z0-9-]+ ) ["']?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WPE_ACCOUNT_NAME=prod-account
+account_name: "team-site-1"

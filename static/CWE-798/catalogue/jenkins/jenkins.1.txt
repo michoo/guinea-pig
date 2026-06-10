@@ -1,0 +1,23 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Jenkins Token or Crumb
+# Provider: jenkins    Rule id (normalized): jenkins.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.jenkins.1
+#   - noseyparker np.jenkins.1
+#   - titus       np.jenkins.1
+#
+# Pattern: (?i)jenkins.{0,10}(?:crumb)?.{0,10}\b([0-9a-f]{32,36})\b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+jenkins_user = 'root'
+# jenkins_passwd = '116365fd86d63bf507aba962606a5c8956'  Pre token
+jenkins_passwd = '11811f784531053132519844d047186074'   # Dev Token
+jenkins_url = 'http://10.1.188.121'
+export JENKINS_USER=justin-admin-edit-view
+export JENKINS_TOKEN=11f4274ec59be12eace9a08b08ee13d54b
+export JENKINS=jenkins-cicd.apps.sno.openshiftlabs.net
+sh "curl -X POST 'http://jenkins.lsfusion.luxsoft.by/job/${Paths.updateParentVersionsJob}/build' --user ${USERPASS} -H 'Jenkins-Crumb:440561953171ba44ace9740562d172bb'"
+// Jenkins query token
+readonly static string jenkinsToken = "df490bc6-ef6e-4f6a-99a0-b03d26cb56f9";

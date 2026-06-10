@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Cognitive Services / AI Services Key
+# Provider: azurecognitive    Rule id (normalized): azurecognitive.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azurecognitive.1
+#
+# Pattern: (?x) \b (?: (?i:azure[_\s-]*(?:cognitive|ai)[_\s-]*(?:service|key)) | (?i:cognitive[_\s-]*service[_\s-]*(?:key|secret|subscription)) | (?i: (?:azure[_\s-]*)?(?:anomaly[_\s-]*detector|computer[_\s-]*vision|content[_\s-]*moderator|content[_\s …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AZURE_COGNITIVE_SERVICE_KEY=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d
+AZURE_COMPUTER_VISION_KEY=abcdef0123456789abcdef0123456789
+content_moderator_key="1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d"
+AZURE_FACE_KEY=abcdef0123456789abcdef0123456789
+AZURE_FORM_RECOGNIZER_KEY=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d
+AZURE_LUIS_KEY=abcdef0123456789abcdef0123456789
+AZURE_QNA_MAKER_KEY=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d
+AZURE_TEXT_ANALYTICS_KEY=abcdef0123456789abcdef0123456789

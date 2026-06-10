@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: IpStack API Key
+# Provider: ipstack    Rule id (normalized): ipstack.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ipstack.1
+#   - titus       kingfisher.ipstack.1
+#
+# Pattern: (?xi) \b ipstack (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( (?:[0-9a-f]{16}){2} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ipstack_token=123e4567e89b12d3a456426614174000
+ipstack_key=abcdefabcdefabcdefabcdefabcdef12

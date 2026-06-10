@@ -1,0 +1,23 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Square Access Token
+# Provider: square    Rule id (normalized): square.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.square.1
+#   - noseyparker np.square.1
+#   - titus       np.square.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    square-access-token
+#   - betterleaks square-access-token
+#
+# Pattern: (?x) \b ( EAAA[a-zA-Z0-9\-\+=]{60} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+square EAAA7h9fL9zQJR8P0eAioAf9239345rDA2349bQ8edUA9FgA5JojdsF3A9f6nKLm
+square EAAAvlYh9H7dZwC9ash2hrHjtlL5D2srERGK5OM6F2nvle23he3NzA60PAeFXNHj
+personal access token sq0atp-qUlZzae8wVMc5P5NZdf5DA<br/>
+var applicationId = 'sq0idp-r34HdSnJVWaCesH3dnJrGA';
+var accessToken = 'sq0atp-RdSPeJa5qDMaCesxHOjeRQ';
+SQUARE_ACCESS_TOKEN=sq0atp-qUlZzae8wVMc5P5NZdf5DA
+access_token: sq0atp-HMKVjMfhw-nluwIJj2C1dQ

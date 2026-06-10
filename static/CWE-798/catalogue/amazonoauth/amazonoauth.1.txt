@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Login with Amazon OAuth Client ID
+# Provider: amazonoauth    Rule id (normalized): amazonoauth.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.amazonoauth.1
+#
+# Pattern: (?x) \b ( amzn1\.application-oa2-client\.[a-f0-9]{20,40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AMAZON_CLIENT_ID=amzn1.application-oa2-client.1a2b3c4d5e6f7890abcdef1234567890

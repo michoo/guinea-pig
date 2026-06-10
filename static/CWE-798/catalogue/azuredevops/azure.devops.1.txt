@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure DevOps Organization
+# Provider: azuredevops    Rule id (normalized): azure.devops.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.devops.1
+#   - titus       kingfisher.azure.devops.1
+#
+# Pattern: (?xi) \b dev\.azure\.com/ ( [a-z0-9][a-z0-9-]{0,61}[a-z0-9] )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://dev.azure.com/contoso
+dev.azure.com/somebody123

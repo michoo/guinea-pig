@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SMB / CIFS Connection URI
+# Provider: smb    Rule id (normalized): smb.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.smb.1
+#
+# Pattern: (?xi) \b smb:// [^:@\s]{1,64} : ([^@\s]{6,128}) @ [^\s/"']{4,128}
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+smb://alice:pf8rms3018@192.168.1.10/share/path
+SMB_URL=smb://administrator:P4ssw0rd!@fileserver.corp.example.com/data

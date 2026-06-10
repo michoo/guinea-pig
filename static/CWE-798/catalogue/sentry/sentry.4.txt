@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sentry DSN
+# Provider: sentry    Rule id (normalized): sentry.4
+#
+# Detected by this rule:
+#   - titus       kingfisher.sentry.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    sentry-access-token
+#   - gitleaks    sentry-org-token
+#   - gitleaks    sentry-user-token
+#   - betterleaks sentry-access-token
+#   - betterleaks sentry-org-token
+#   - betterleaks sentry-user-token
+#
+# Pattern: (?xi) (?: \bSENTRY[_-]?DSN\b\s*[:=]\s*["']? )? ( https:// [a-f0-9]{32} @ (?: (?:o\d+\.)?sentry\.io | [a-z0-9][a-z0-9.-]*\.[a-z]{2,} ) /\d+ )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SENTRY_DSN=https://0123456789abcdef0123456789abcdef@sentry.io/12345
+SENTRY_DSN="https://abcdef0123456789abcdef0123456789@o123456.sentry.io/67890"
+https://0123456789abcdef0123456789abcdef@sentry.example.com/99999

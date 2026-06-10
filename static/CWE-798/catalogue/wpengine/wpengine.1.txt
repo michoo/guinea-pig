@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WPEngine API Key
+# Provider: wpengine    Rule id (normalized): wpengine.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.wpengine.1
+#   - titus       np.wpengine.1
+#
+# Pattern: (?xi) \b (?: wpengine(?:[_.-]?api)?[_.-]?(?:key|secret|token) | wpe(?:[_.-]?api)?[_.-]?(?:key|secret|token) ) \b \s* [=:] \s* ["']? \b ( [A-Za-z0-9]{24,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WPE_APIKEY=a3b8f29e4d1c6a0578e23d9f41b6
+wpengine_api_key: "9f4b2d7e1a3c8056d2e7f1b94a6c3d80"
+export WPENGINE_API_KEY=d4e8f2a7b1c39605d2e7f1b94a6c3d80

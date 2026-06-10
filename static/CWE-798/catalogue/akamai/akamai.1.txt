@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Akamai API Client Token
+# Provider: akamai    Rule id (normalized): akamai.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.akamai.1
+#
+# Pattern: (?x) \b (?i:client[_-]?token) \s*=\s* ( akab- [A-Za-z0-9_-]{18,28} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+client-token=akab-sXedJBTOf0dHl27vVOd
+client_token = akab-c113ntt0k3n4qtari252bfxxbsl-yvsdj

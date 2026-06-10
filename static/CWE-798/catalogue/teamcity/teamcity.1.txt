@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: TeamCity API Token
+# Provider: teamcity    Rule id (normalized): teamcity.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.teamcity.1
+#   - noseyparker np.teamcity.1
+#   - titus       np.teamcity.1
+#
+# Pattern: (?x) \b ( eyJ0eXAiOiAiVENWMiJ9 (?# decodes to `{"typ": "TCV2"}` ) \. [A-Za-z0-9_-]{36} \. [A-Za-z0-9_-]{48} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+<add key="ClearTextPassword" value="eyJ0eXAiOiAiVENWMiJ9.RkNWLXdXS3M1RVBfencxM4A0WmJzdVlCQzFj.OGY1OWRkNGMtYTUxYS04ZDYwLWFiZGYtZWE5MWFhZWJiODhh" />

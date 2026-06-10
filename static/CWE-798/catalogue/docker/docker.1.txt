@@ -1,0 +1,28 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Docker Registry Credentials (auths JSON)
+# Provider: docker    Rule id (normalized): docker.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.docker.1
+#   - titus       kingfisher.docker.1
+#
+# Pattern: (?xis) "auths"\s*:\s*\{ [^}]*? " (?P<REG> (?:https?:\/\/)? [a-z0-9.\-:+/]+ ) "\s*:\s*\{ [^}]*? "auth"\s*:\s*"(?P<B64> [A-Za-z0-9+/=]{16,} )" [^}]*? \} [^}]*? \}
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+{
+  "auths": {
+    "quay.io": {
+      "auth": "dXNlcjEyOnRva2VuMzQ1Njc4OTA="
+    }
+  }
+}
+{"auths":{"index.docker.io/v1/":{"auth":"dXNlcjEyOnRva2VuMzQ1Njc4OTA="}}}
+{
+  "auths": {
+    "quay.io": {
+      "auth": "cmhkaCtyaHRhcDowM1BERl1RQTJQTDlaQUE5T1gzSU9IQjFYTUlXOVNGNU1XRzNSRVRHNThKVXpKMzEwV0ZZRVMOQTdGMExMNOYx"
+    }
+  }
+}
+{"auths":{"index.docker.io/v1/":{"auth":"dXNlcjp0b2tlbg=="}}}

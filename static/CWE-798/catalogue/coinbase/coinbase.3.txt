@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Coinbase CDP API Key (Ed25519)
+# Provider: coinbase    Rule id (normalized): coinbase.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.coinbase.3
+#   - titus       kingfisher.coinbase.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    coinbase-access-token
+#   - betterleaks coinbase-access-token
+#
+# Pattern: (?xis) "id"\s*:\s*"(?P<CRED_NAME>[0-9a-f-]{36})"[^{]*?"privateKey"\s*:\s*"(?P<PRIVATE_KEY>[A-Za-z0-9+/=]{88})"
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+{
+  "id": "413b23bf-4582-4e57-b33a-85d9527d9972",
+  "privateKey": "ygWq07YCO8UkmC9BE0PDBJNGhiu80yslsMUF9WnjPaIF5DBxb/wljjRuHhfuR/AMPC+kdgtL+mWKq/HOnq/YcQ=="
+}

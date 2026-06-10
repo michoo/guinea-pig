@@ -1,0 +1,37 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Hardcoded Gradle Credentials
+# Provider: gradle    Rule id (normalized): gradle.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gradle.1
+#   - noseyparker np.gradle.1
+#   - titus       np.gradle.1
+#
+# Pattern: (?xi) credentials \s* \{ (?:\s*//.*)* \s* (?:username|password) \s ['"]([^'"]{1,60})['"] (?:\s*//.*)* \s* (?:username|password) \s ['"]([^'"]{1,60})['"]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+credentials {
+    username 'user'
+    password 'password'
+}
+publishing {
+  repositories {
+      maven {
+          url "http://us01cmsysart01.example.com:8081/artifactory/Mobile-Libs-Internal"
+          credentials {
+              // your password here
+
+              username "SOME_USERNAME"
+              password "SOME_PASSWORD"
+          }
+      }
+  }
+credentials {
+  username 'user'
+  password 'password'
+}
+credentials {
+  username "user"
+  password "password"
+}

@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Datadog API Key
+# Provider: datadog    Rule id (normalized): datadog.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.datadog.2
+#   - titus       kingfisher.datadog.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    datadog-access-token
+#   - betterleaks datadog-access-token
+#
+# Pattern: (?xi) \b(?:datadog|dd) (?:.|[\n\r]){0,64}? (?:api[_-]?key|dd[_-]?api[_-]?key|secret|private|access|token) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DD_API_KEY=0024a29224affe29d173c0bf99e5a89d

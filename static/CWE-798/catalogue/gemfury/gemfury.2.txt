@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Gemfury Full Access Token
+# Provider: gemfury    Rule id (normalized): gemfury.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gemfury.2
+#
+# Pattern: (?xi) https:// ( [A-Za-z0-9]{16,24} ) :@ (?:pypi|npm|gem|nuget)\.fury\.io/
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+GEMFURY_URL=https://Toqq8z53AbKDYmGcTgRb:@pypi.fury.io/myorg
+GEMFURY_URL=https://Ua9vWx4yAz0BcDeFgHiJ:@npm.fury.io/myteam

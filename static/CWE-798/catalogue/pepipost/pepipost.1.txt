@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pepipost API Key
+# Provider: pepipost    Rule id (normalized): pepipost.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pepipost.1
+#
+# Pattern: (?xi) \b pepipost (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API) (?:.|[\n\r]){0,32}? \b ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pepipost_api_key = "216fdaeeb975729fae923d5a4fd12aab"
+Pepipost access key: fe228f219e9cb0eb53f16947ccf25ec8

@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Jumpcloud API Key
+# Provider: jumpcloud    Rule id (normalized): jumpcloud.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.jumpcloud.1
+#   - titus       kingfisher.jumpcloud.1
+#
+# Pattern: (?xi) \b jumpcloud (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [a-zA-Z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+jumpcloud_api_key=1a2b3c4d5e6f7g8h9i0j1a2b3c4d5e6f7g8h9i0j
+JUMPCLOUD_SECRET=k9l8m7n6o5p4q3r2s1t0k9l8m7n6o5p4q3r2s1t0

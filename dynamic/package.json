@@ -1,0 +1,14 @@
+{
+  "name": "guinea-pig-dynamic",
+  "version": "1.0.0",
+  "description": "Intentionally-vulnerable web service used as a DAST benchmark target (test fixture only).",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}

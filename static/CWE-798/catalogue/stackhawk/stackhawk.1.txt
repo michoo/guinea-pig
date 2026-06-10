@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: StackHawk API Key
+# Provider: stackhawk    Rule id (normalized): stackhawk.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.stackhawk.1
+#   - noseyparker np.stackhawk.1
+#   - titus       np.stackhawk.1
+#
+# Pattern: (?x) \b ( hawk\.[0-9A-Za-z_-]{20}\.[0-9A-Za-z_-]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HAWK_API_KEY="hawk.nHAOHdJjXoNyzAcTDC5M.R2gqQh2aCesrh0yCGB7q"

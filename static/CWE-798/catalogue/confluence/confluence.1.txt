@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Confluence Data Center Personal Access Token
+# Provider: confluence    Rule id (normalized): confluence.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.confluence.1
+#
+# Pattern: (?x) (?i:confluence|wiki) (?:.|[\n\r]){0,16}? \b ( [MNO][A-Za-z0-9+/]{15} O[g-v] [A-Za-z0-9+/]{26} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+confluence_pat: "MjQzMjkzMDQyNTI1OgTGWAoKFZTh/Is7cl+cdAI0Lbxo"
+wiki_PAT=MDgxODgyOTYwNTA5OkFSuEyq1mtrLTVNGAPyka+/Vyfv

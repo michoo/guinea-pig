@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MongoDB API PUBLIC Key
+# Provider: mongodb    Rule id (normalized): mongodb.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mongodb.2
+#   - titus       kingfisher.mongodb.2
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks mongodb-atlas-service-account-id
+#   - betterleaks mongodb-atlas-service-account-secret
+#   - betterleaks mongodb-connection-string
+#
+# Pattern: (?xi) (?: (?:\b|_|-|\.) (?:mongodb|atlas) (?:\b|_|-|\.) ) (?:public|pub|user|id) (?:.|[\n\r]){0,4}? ( [A-Z]+ ) (?:$|[^A-Z0-9/+=-])
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+mongodb-public: qj4Zrh8e6A

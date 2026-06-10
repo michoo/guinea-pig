@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Samsara API Token (prefixed)
+# Provider: samsara    Rule id (normalized): samsara.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.samsara.1
+#
+# Pattern: (?x) \b ( samsara_api_ [A-Za-z0-9]{26,32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+access_token = "samsara_api_8ZWXxCINWCRGi9qRl9JEz90x5lxAHU"
+SAMSARA_TOKEN=samsara_api_AbCdEfGhIjKlMnOpQrStUvWxYz0123

@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Midtrans Production Server/Client Key
+# Provider: midtrans    Rule id (normalized): midtrans.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.midtrans.2
+#
+# Pattern: (?xi) \b (?:midtrans|mid[_-]?) (?:.|[\n\r]){0,32}? \b(?:server[_-]?key|client[_-]?key|api[_-]?key|key)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( Mid-(?:server|client)- [A-Za-z0-9_]{10,20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+midtrans
+server_key="Mid-server-Xk93PcDP8pMKfhY2"
+midtrans.client_key = 'Mid-client-Xk93PcDP8pMKfhY2'

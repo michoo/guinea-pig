@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Contentful Delivery API Token
+# Provider: contentful    Rule id (normalized): contentful.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.contentful.1
+#   - titus       kingfisher.contentful.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    contentful-delivery-api-token
+#   - betterleaks contentful-delivery-api-token
+#
+# Pattern: (?xi) \b contentful (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9_-]{43,45} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+contentful_delivery_token = wJz-g_tqZ-8n_abcdefghijklmnopqrstuvwxyz12345
+CONTENTFUL_ACCESS_TOKEN=wJalrXUtnFEMI_K7MDENG-bPxRfiCYEXAMPLEKEY12
+contentful_token: 'abcdefghij1234567890ABCDEFGHIJ1234567890-_a'

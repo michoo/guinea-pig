@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Credentials in .NET System.Net.NetworkCredential
+# Provider: generic    Rule id (normalized): generic.7
+#
+# Detected by this rule:
+#   - noseyparker np.generic.7
+#   - titus       np.generic.7
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?x) \b (?: NetworkCredential | NETWORKCREDENTIAL | networkcredential ) \s* \( \s* " ( [^"\n]{3,50} ) " (?# username ) \s* , \s* " ( [^"\n]{3,50} ) " (?# password ) \s* \)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sender.Credentials = new NetworkCredential("NuGets@example.com", "vzihlaquknriqlht");
+$webClient.Credentials = new-object System.Net.NetworkCredential("cidownload", "AP7JaG9ToerxBc6gWP5LcU2CNpb");

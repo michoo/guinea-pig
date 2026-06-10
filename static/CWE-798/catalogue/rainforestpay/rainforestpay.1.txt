@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Rainforest Pay API Key
+# Provider: rainforestpay    Rule id (normalized): rainforestpay.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.rainforestpay.1
+#
+# Pattern: (?x) \b ( (?:sbx_)?apikey_[a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RAINFOREST_API_KEY=apikey_1ad1c535b0c0093e7b9bf093d7e3444cd0e2ddefab36199216f555c3efa65d63
+api_key: sbx_apikey_2bd2c646e7e1194f8c9cf194e8f4555de1f3eefbbc472003276666d4efb76e74

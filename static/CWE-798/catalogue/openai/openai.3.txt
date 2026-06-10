@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: OpenAI API Key (Short Prefixed)
+# Provider: openai    Rule id (normalized): openai.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.openai.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    openai-api-key
+#   - betterleaks openai-api-key
+#
+# Pattern: (?xi) \b ( sk-None-[A-Z0-9]{48} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sk-None-abcdefghij1234567890ABCDEFGHIJ1234567890abcdefgh

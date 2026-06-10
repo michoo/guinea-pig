@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Coveralls Personal API Token
+# Provider: coveralls    Rule id (normalized): coveralls.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.coveralls.2
+#   - titus       kingfisher.coveralls.2
+#
+# Pattern: (?xi) \b coveralls (?:.|[\n\r]){0,1}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9-]{37} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+coveralls_SECRETTOKEN abcdefghijklmnopqrstuvwxyzab12345cdef
+coveralls-SECRET-KEY mnopqrstuvwxyzabcdefghi12345678901234
+coveralls_PRIVATEKEY-1234567890abcdefghijklmnopqrstuvwxyza

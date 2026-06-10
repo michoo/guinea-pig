@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Translator API Key
+# Provider: azuretranslator    Rule id (normalized): azuretranslator.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azuretranslator.2
+#
+# Pattern: (?xi) \b (?: translator | translation | azure[_-]?(?:translator|translation) ) (?:.|[\n\r]){0,24}? (?: key | api[_-]?key | subscription[_-]?key | secret ) (?:.|[\n\r]){0,16}? ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AZURE_TRANSLATOR_KEY=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d
+translator_subscription_key="abcdef0123456789abcdef0123456789"

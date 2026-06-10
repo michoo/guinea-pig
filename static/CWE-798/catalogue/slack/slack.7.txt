@@ -1,0 +1,36 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Slack Workflow Webhook
+# Provider: slack    Rule id (normalized): slack.7
+#
+# Detected by this rule:
+#   - titus       np.slack.7
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    slack-app-token
+#   - gitleaks    slack-bot-token
+#   - gitleaks    slack-config-access-token
+#   - gitleaks    slack-config-refresh-token
+#   - gitleaks    slack-legacy-bot-token
+#   - gitleaks    slack-legacy-token
+#   - gitleaks    slack-legacy-workspace-token
+#   - gitleaks    slack-user-token
+#   - gitleaks    slack-webhook-url
+#   - betterleaks slack-app-token
+#   - betterleaks slack-bot-token
+#   - betterleaks slack-config-access-token
+#   - betterleaks slack-config-refresh-token
+#   - betterleaks slack-legacy-bot-token
+#   - betterleaks slack-legacy-token
+#   - betterleaks slack-legacy-workspace-token
+#   - betterleaks slack-session-cookie
+#   - betterleaks slack-session-token
+#   - betterleaks slack-user-token
+#   - betterleaks slack-webhook-url
+#
+# Pattern: (?i)(?P<webhook>https://hooks\.slack\.com/workflows/[TE][a-z0-9]{5,14}/A[a-z0-9]{5,14}/[0-9]{6,20}/[a-zA-Z0-9]{8,40})
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WORKFLOW_URL=https://hooks.slack.com/workflows/T00EXAMPLE1/A00EXAMPLE1/123456789012345678/aBcDeFgHiJkLmNoPqRsTuVwX
+curl -X POST https://hooks.slack.com/workflows/E00EXAMPLE2/A00EXAMPLE2/987654321098765432/xYzAbCdEfGhIjKlM
+# Trigger Slack workflow
+webhook_url = "https://hooks.slack.com/workflows/T00EXAMPLE3/A00EXAMPLE3/111222333444555666/qWeRtYuIoPaSdFgH"

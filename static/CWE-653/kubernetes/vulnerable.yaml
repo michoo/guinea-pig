@@ -1,0 +1,26 @@
+# CWE-653: Improper Isolation or Compartmentalization
+# Pod shares the host PID, IPC and network namespaces, breaking container/host isolation.
+# Using host operating system namespaces can lead to compromise of the host systems.
+# These attacks would target:
+#     - host processes
+#     - host inter-process communication (IPC) mechanisms
+#     - network services of the local host system
+
+# - MITRE, CWE-653 - Improper Isolation or Compartmentalization
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example
+  spec:
+  containers:
+    - name: web
+      image: nginx
+      ports:
+        - name: web
+          containerPort: 80
+          protocol: TCP
+  hostPID: true     # Sensitive
+  hostIPC: true     # Sensitive
+  hostNetwork: true # Sensitive

@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Kubernetes API Server URL
+# Provider: kubernetes    Rule id (normalized): kubernetes.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.kubernetes.1
+#   - noseyparker np.kubernetes.1
+#   - titus       np.kubernetes.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    gitlab-kubernetes-agent-token
+#   - gitleaks    kubernetes-secret-yaml
+#   - betterleaks gitlab-kubernetes-agent-token
+#   - betterleaks kubernetes-secret-yaml
+#
+# Pattern: (?xi) \b (?: kube(?:rnetes)?(?:_api)?_server | api_server ) \s*[:=]\s* ["']? ( https:// (?: \[[0-9a-f:.]+\] | [a-z0-9] [a-z0-9.-]{1,253} ) (?::\d{2,5})? ) ["']?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+kube_server: https://10.96.0.1:443
+KUBE_API_SERVER=https://api.cluster.example.com:6443
+BOOTSTRAP_TOKEN: "be8dfd.da8a689a46edc282"
+--tls-bootstrap-token abcdef.1234567890abcdef

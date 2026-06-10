@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Generic Username and Password
+# Provider: generic    Rule id (normalized): generic.13
+#
+# Detected by this rule:
+#   - noseyparker np.generic.13
+#   - titus       np.generic.13
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    generic-api-key
+#   - betterleaks generic-api-key
+#
+# Pattern: (?x)(?i) the\ (?: default\ )? password\ for\ (?: the\ )? (?: user|username ) \ ' ( [^'\n\#$|"{<+\ ()\\] (?# restrictive first character to suppress common interpolation forms ) [^'\n]{2,24} )' \ is\ ' ( [^'\n\#$|"{<+\ ()\\] (?# restrictive  …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+2. Ensure the password for user 'postgres' is 'admin' or change .env file.

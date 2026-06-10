@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: OpenShift OAuth Access Token
+# Provider: openshift    Rule id (normalized): openshift.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.openshift.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    openshift-user-token
+#   - betterleaks openshift-user-token
+#
+# Pattern: (?x) \b ( sha256~[A-Za-z0-9_-]{43} ) (?:[^A-Za-z0-9_-]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Authorization: Bearer sha256~kV46hPnEYhCWFnB85r5NrprAxggzgb6GOeLbgcKNsH0
+oc login --token=sha256~ZBMKw9VAayhdnyANaHvjJeXDiGwA7Fsr5gtLKj3-eh- --server=https://api.cluster.example.com:6443

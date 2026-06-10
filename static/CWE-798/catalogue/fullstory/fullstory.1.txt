@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Fullstory API Key
+# Provider: fullstory    Rule id (normalized): fullstory.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.fullstory.1
+#
+# Pattern: (?xi) \b (?:fullstory|fs_api|fullstory_api) (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|AUTHORIZATION|API) (?:.|[\n\r]){0,16}? \b ( (?:na1|eu1)\.[A-Za-z0-9]{20,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+FULLSTORY_API_KEY=na1.Abcd1234Efgh5678Ijkl9012Mnop3456
+fs_api_key: "eu1.Abcd1234Efgh5678Ijkl9012Mnop3456"

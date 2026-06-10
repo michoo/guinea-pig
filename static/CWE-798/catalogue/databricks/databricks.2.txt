@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Databricks API Token
+# Provider: databricks    Rule id (normalized): databricks.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.databricks.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    databricks-api-token
+#   - betterleaks databricks-api-token
+#
+# Pattern: (?xi) \b ( dapi[0-9a-f]{32} ) (-\d)? \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+dapiabcd1234abcd1234abcd1234abcd1234

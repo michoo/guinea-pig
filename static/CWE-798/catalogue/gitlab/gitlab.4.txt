@@ -1,0 +1,45 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GitLab Private Token - Routable Format
+# Provider: gitlab    Rule id (normalized): gitlab.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.gitlab.4
+#   - titus       np.gitlab.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    gitlab-cicd-job-token
+#   - gitleaks    gitlab-deploy-token
+#   - gitleaks    gitlab-feature-flag-client-token
+#   - gitleaks    gitlab-feed-token
+#   - gitleaks    gitlab-incoming-mail-token
+#   - gitleaks    gitlab-oauth-app-secret
+#   - gitleaks    gitlab-pat
+#   - gitleaks    gitlab-pat-routable
+#   - gitleaks    gitlab-ptt
+#   - gitleaks    gitlab-rrt
+#   - gitleaks    gitlab-runner-authentication-token
+#   - gitleaks    gitlab-runner-authentication-token-routable
+#   - gitleaks    gitlab-scim-token
+#   - gitleaks    gitlab-session-cookie
+#   - betterleaks gitlab-cicd-job-token
+#   - betterleaks gitlab-deploy-token
+#   - betterleaks gitlab-feature-flag-client-token
+#   - betterleaks gitlab-feed-token
+#   - betterleaks gitlab-incoming-mail-token
+#   - betterleaks gitlab-oauth-app-secret
+#   - betterleaks gitlab-pat
+#   - betterleaks gitlab-pat-routable
+#   - betterleaks gitlab-pat-routable-versioned
+#   - betterleaks gitlab-ptt
+#   - betterleaks gitlab-rrt
+#   - betterleaks gitlab-runner-authentication-token
+#   - betterleaks gitlab-runner-authentication-token-routable
+#   - betterleaks gitlab-scim-token
+#   - betterleaks gitlab-session-cookie
+#
+# Pattern: (?x) \b ( glpat- (?<base64_payload>[0-9A-Za-z_-]{27,300}) \. (?<version>01) \. (?<base36_payload_length>[0-9a-zA-Z]{2}) (?<crc32>[0-9a-z]{7}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+glpat-vSY1cyL948aAB440qB6L4zlu9OzsUmEV.01.0w0sfevch
+export GITLAB_TOKEN="glpat-3fZ1p5y4XWcCvMGVlfakeW86MQp1Oml3Ymg0Cw.01.1203afake"
+PRIVATE-TOKEN: glpat-AbCdEfGhIjKlMnOpQrStUvWxYz012345.02.a1b2c3d4e

@@ -1,0 +1,7 @@
+# Remediation for CWE-94: Improper Control of Generation of Code (Code Injection)
+# Fix: Treat untrusted CI variables as data by quoting them and never passing them to eval.
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying branch ${CI_MERGE_REQUEST_SOURCE_BRANCH_NAME}"
+    - echo "${CI_MERGE_REQUEST_TITLE}"

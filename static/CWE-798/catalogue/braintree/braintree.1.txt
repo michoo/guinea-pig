@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Braintree Tokenization Key
+# Provider: braintree    Rule id (normalized): braintree.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.braintree.1
+#
+# Pattern: (?x) \b (?i:braintree) (?:.|[\n\r]){0,32}? (?i:KEY|TOKEN|TOKENIZATION) (?:.|[\n\r]){0,32}? \b ( (?:sandbox|production) _ [a-z0-9]{6,10} _ [a-z0-9]{14,20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BRAINTREE_TOKENIZATION_KEY="sandbox_f252zhq7_hh4cpc39zq4rgjcg"
+braintree_token = production_abc12def_ghij34klmnop5678

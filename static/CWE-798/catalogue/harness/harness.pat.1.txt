@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Harness Personal Access Token (PAT)
+# Provider: harness    Rule id (normalized): harness.pat.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.harness.pat.1
+#   - titus       kingfisher.harness.pat.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    harness-api-key
+#   - betterleaks harness-api-key
+#
+# Pattern: (?x) \b ( pat\. [A-Za-z0-9_-]{22} \. [0-9a-fA-F]{24} \. [A-Za-z0-9]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HARNESS_TOKEN="pat.AbCdEfGhIjKlMnOpQrStUv.0123abcd4567ef890123abcd.ZyXwVuTsRqPoNmLkJiHg"

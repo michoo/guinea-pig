@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MaxMind Account ID
+# Provider: maxmind    Rule id (normalized): maxmind.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.maxmind.2
+#   - titus       kingfisher.maxmind.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    maxmind-license-key
+#   - betterleaks maxmind-license-key
+#
+# Pattern: (?xi) (?:maxmind|geoip|geolite) (?:.|[\n\r]){0,40}? (?:account|user) (?:.|[\n\r]){0,10}? (?:id|number) (?:.|[\n\r]){0,16}? ( \d{4,8} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MAXMIND_ACCOUNT_ID=123456
+"maxmind": {"account_id": "654321", "license_key": "..."}
+geoip_account_number: 456789

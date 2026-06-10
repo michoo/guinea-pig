@@ -1,0 +1,26 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: New Relic REST API Key
+# Provider: newrelic    Rule id (normalized): newrelic.7
+#
+# Detected by this rule:
+#   - noseyparker np.newrelic.7
+#   - titus       np.newrelic.7
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    new-relic-browser-api-token
+#   - gitleaks    new-relic-insert-key
+#   - gitleaks    new-relic-user-api-id
+#   - gitleaks    new-relic-user-api-key
+#   - betterleaks new-relic-browser-api-token
+#   - betterleaks new-relic-insert-key
+#   - betterleaks new-relic-user-api-id
+#   - betterleaks new-relic-user-api-key
+#
+# Pattern: (?x)(?i) \b (nrra-[a-f0-9]{42}) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+curl -X POST "https://api.newrelic.com/v2/applications/380836898/deployments.json" \
+     -H "X-Api-Key:NRRA-e270623d47659ff6a48ac5bde6bba223bef47c8c26" \
+     -i \
+     -H "Content-Type: application/json" \
+     -d "{ \"deployment\": { \"revision\": \"${rev}\" }}"

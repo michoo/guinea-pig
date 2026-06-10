@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Resend API Key
+# Provider: resend    Rule id (normalized): resend.api_key.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.resend.api_key.1
+#   - titus       kingfisher.resend.api_key.1
+#
+# Pattern: (?x) \b ( re_ [A-Za-z0-9]{8} _ [A-Za-z0-9]{24} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RESEND_API_KEY="re_EbtXGAbq_2E1LZ8WYqYsrrDfjEHf6DxEK"
+Authorization: Bearer re_jZmz3GSH_MqwC1vjBjZpQH88W4dLsTPpu

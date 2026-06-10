@@ -1,0 +1,23 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: AWS S3 Bucket
+# Provider: aws    Rule id (normalized): s3.1
+#
+# Detected by this rule:
+#   - noseyparker np.s3.1
+#   - titus       np.s3.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    aws-access-token
+#   - gitleaks    aws-amazon-bedrock-api-key-long-lived
+#   - gitleaks    aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-access-token
+#   - betterleaks aws-amazon-bedrock-api-key-long-lived
+#   - betterleaks aws-amazon-bedrock-api-key-short-lived
+#   - betterleaks aws-secret-access-key
+#
+# Pattern: (?x) (?: ^ | [\s/"'] | %2F ) ( (?: [a-zA-Z0-9_-]+ \. )+ (?# bucket name as subdomain ) (?: s3 | s3-af-south-1 | s3-ap-east-1 | s3-ap-northeast-1 | s3-ap-northeast-2 | s3-ap-northeast-3 | s3-ap-south-1 | s3-ap-south-2 | s3-ap-southeast-1 | s …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+example-bucket.s3.amazonaws.com
+http://bucket.s3-us-east-2.amazonaws.com
+http%2F%2Fsome-bucket.s3.amazonaws.com

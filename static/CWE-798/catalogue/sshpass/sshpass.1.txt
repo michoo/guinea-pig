@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SSH / SCP Password (sshpass)
+# Provider: sshpass    Rule id (normalized): sshpass.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sshpass.1
+#
+# Pattern: (?xi) \b sshpass\s+-p\s+ ['"]? ( [^\s"']{6,128} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+sshpass -p 'hkjento6hjfdaiwbhC' scp /home/user/data/*.js sftp-user@files.example.com:data/
+sshpass -p "xY3#mK81wP" ssh deploy@prod.example.com

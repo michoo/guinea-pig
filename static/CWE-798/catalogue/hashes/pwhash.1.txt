@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Password Hash (md5crypt)
+# Provider: hashes    Rule id (normalized): pwhash.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pwhash.1
+#   - noseyparker np.pwhash.1
+#   - titus       np.pwhash.1
+#
+# Pattern: (\$1\$[./A-Za-z0-9]{8}\$[./A-Za-z0-9]{22})
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+$1$OKgLCmVl$d02jECa4DXn/oXX0R.MoQ/
+$1$28772684$iEwNOgGugqO9.bIz5sk8k/

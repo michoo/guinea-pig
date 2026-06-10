@@ -1,0 +1,41 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Slack Token
+# Provider: slack    Rule id (normalized): slack.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.slack.2
+#   - noseyparker np.slack.2
+#   - titus       np.slack.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    slack-app-token
+#   - gitleaks    slack-bot-token
+#   - gitleaks    slack-config-access-token
+#   - gitleaks    slack-config-refresh-token
+#   - gitleaks    slack-legacy-bot-token
+#   - gitleaks    slack-legacy-token
+#   - gitleaks    slack-legacy-workspace-token
+#   - gitleaks    slack-user-token
+#   - gitleaks    slack-webhook-url
+#   - betterleaks slack-app-token
+#   - betterleaks slack-bot-token
+#   - betterleaks slack-config-access-token
+#   - betterleaks slack-config-refresh-token
+#   - betterleaks slack-legacy-bot-token
+#   - betterleaks slack-legacy-token
+#   - betterleaks slack-legacy-workspace-token
+#   - betterleaks slack-session-cookie
+#   - betterleaks slack-session-token
+#   - betterleaks slack-user-token
+#   - betterleaks slack-webhook-url
+#
+# Pattern: (?xi) \b ( xox[pbarose] [-0-9]{0,3}- [0-9a-z]{6,15}- [0-9a-z]{6,15}- [-0-9a-z]{6,66} )\b | ( xoxe\.xox[bparose]- \d- [A-Z0-9]{155,170} )\b | ( xoxe-\d- [A-Z0-9]{140,150} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+xoxb-853BAAEE-1B2eDb6A4c75-01bB6Da1CE3E98f6fED5AeC07Dc3E94C
+xoxe.xoxp-1-Mi0yLTIxNTE3NzA2MDYtNTEyOTQ2NTEzMDYxMy03MTkwNzY4NDc5ODc3LTcxOTM1NTk2ODMxODctZGE3NWQ0NmZiNTk3MTU1ZDA4ZTQwZTYxOWY2Njc3YTgzNzNhNDkxMzg4ZWZiYzljMjRkOWZhODgxYzA0NGI2ZQ
+xoxe-1-My0xLTIxNTE3NzA2MDYtNzE5MDc2ODQ3OTg3Ny03MjE2NDY0MzYxNDcyLTliOWNhYzZhODU3ODc3NjAxZGM4ODg2ZWRkMmE2MTc3ZDA3ODY4ZmUzZDg2NzEyZTU0Zjk2ZTYzMWMxZTVmOTA
+SLACK_API_TOKEN=xoxb-893582989554-899326518131-JRHeVv1o9Cf99fwDpuortR2D
+REM SET SLACK_TOKEN=xoxb-31446298938-537092655923-AeFmqVRV5nS3q028kmmHUFm3
+export SLACK_TOKEN="xoxb-0000000000-0000000000000-xxxxxxxxxxxxxxxxxxxxxxxx"
+data = {'token':'xoxb-262541194339-1293084920079-Z21cXgXdDdZDABIcrdG3D9OF','channel':'C017XD909UJ','ts':message[x],'pretty':'1'}

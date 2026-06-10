@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Rails Master Key
+# Provider: rails    Rule id (normalized): rails.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.rails.1
+#
+# Pattern: (?xi) \b rails[_-]?master[_-]?key (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RAILS_MASTER_KEY=9a3f2c1b4e8d7f60a2b5c9d1e3f7a4b8
+rails_master_key: "4b8e2f1a9c3d6e70b2a5c8d1e4f7b3c9"

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sauce Labs Access Key
+# Provider: sauce    Rule id (normalized): saucelabs.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.saucelabs.3
+#
+# Pattern: (?xi) \b sauce (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? ( [a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SAUCE_ACCESS_KEY=1736468d-b178-39cd-bfde-30fabdc371e4

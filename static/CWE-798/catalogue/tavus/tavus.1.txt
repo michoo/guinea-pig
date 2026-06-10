@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tavus API Key
+# Provider: tavus    Rule id (normalized): tavus.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tavus.1
+#
+# Pattern: (?xi) \b (?:tavus|tavusapi\.com) (?:.|[\n\r]){0,48}? (?:x-api-key|api[_\s-]*key|token|secret|key) (?:.|[\n\r]){0,24}? ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TAVUS_API_KEY="4a7b9c0d1e2f33445566778899aabbcc"
+headers = {"provider": "tavus", "x-api-key": "9f8e7d6c5b4a3210fedcba9876543210"}

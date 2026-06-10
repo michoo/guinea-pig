@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Agora App Certificate
+# Provider: agora    Rule id (normalized): agora.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.agora.2
+#
+# Pattern: (?xi) \b agora (?:.|[\n\r]){0,64}? \b(?:app[_-]?certificate|app[_-]?secret|customer[_-]?secret)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+agora.app_certificate=397a3af3db1950bdbd84f4e4ec18ebef
+agora.app_secret = "127a3af3db1950b8dbd4fe440c28ebef"

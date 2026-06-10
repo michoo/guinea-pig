@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Notion Legacy Token
+# Provider: notion    Rule id (normalized): notion.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.notion.1
+#   - titus       kingfisher.notion.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    notion-api-token
+#   - betterleaks notion-api-token
+#
+# Pattern: (?xi) notion (?:.|[\\n\r]){0,32}? \b ( secret_[A-Z0-9]{43} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+notion secret_efky1RtWsI0CB1Sn4TRRBLpemW1V11XwPRX3lzUKc5Q

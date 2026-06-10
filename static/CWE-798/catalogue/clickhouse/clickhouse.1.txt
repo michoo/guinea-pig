@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: ClickHouse Cloud Secret Key
+# Provider: clickhouse    Rule id (normalized): clickhouse.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.clickhouse.1
+#   - titus       kingfisher.clickhouse.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    clickhouse-cloud-api-secret-key
+#   - betterleaks clickhouse-cloud-api-secret-key
+#   - betterleaks clickhouse-cloud-key-id
+#
+# Pattern: (?x) \b ( 4b1d[a-zA-Z0-9]{38} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+4b1dwEZ8aNo1U9ODBqffSci1INBrltLHM2d1bHF4dq

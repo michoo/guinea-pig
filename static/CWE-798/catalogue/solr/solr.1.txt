@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Apache Solr Connection URI
+# Provider: solr    Rule id (normalized): solr.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.solr.1
+#
+# Pattern: (?xi) \b solr:// [^:@\s]{1,64} : ([^@\s]{6,128}) @ [^\s/"']{4,128}
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SOLR_URL=solr://admin:s3cureP4ss@solr.example.com:8983/solr
+solr://root:Tr0ub4dor3@192.168.1.100:8983/mycore

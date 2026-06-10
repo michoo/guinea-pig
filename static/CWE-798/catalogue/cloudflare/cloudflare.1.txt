@@ -1,0 +1,25 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Cloudflare API Token
+# Provider: cloudflare    Rule id (normalized): cloudflare.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.cloudflare.1
+#   - titus       kingfisher.cloudflare.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    cloudflare-api-key
+#   - gitleaks    cloudflare-global-api-key
+#   - gitleaks    cloudflare-origin-ca-key
+#   - betterleaks cloudflare-api-key
+#   - betterleaks cloudflare-global-api-key
+#   - betterleaks cloudflare-origin-ca-key
+#
+# Pattern: (?xi) \b cloudflare (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [a-z0-9_-]{38,42} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+cloudflareAPIKey = y3u7gjcxzpboe2hs50hvuewsx10koco3z327z_1i
+CLOUDFLARE_API_TOKEN: '0pf-j25nxkrkhp8t62qh6k4921ptv09ozq9k0kva'
+cloudflare_key="y3u7gjcxzpboe2hs50hvuewsx10koco3z327z_1i"
+cloudflareAPIKey = A1B2C3D4E5F6G7H8I9J0K1L2M3N4O5P6Q7R8S9T0
+CLOUDFLARE_API_TOKEN: 'a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0'
+cloudflare_key="B1C2D3E4F5G6H7I8J9K0L1M2N3O4P5Q6R7S8T9U0V1"

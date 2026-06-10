@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Snowflake Programmatic Access Token
+# Provider: snowflake    Rule id (normalized): snowflake.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.snowflake.2
+#
+# Pattern: (?x) \b (?: (?i:snowflake[_\s-]*(?:programmatic[_\s-]*)?(?:access[_\s-]*)?token) | (?i:SF_TOKEN) ) \b (?:.|[\n\r]){0,16}? [=:] \s*["']? ( [a-zA-Z0-9_-]{100,500} ) ["']?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SNOWFLAKE_TOKEN=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890AbCdEfGhIjKlMnOpQrStUvWxYz1234567890AbCdEfGhIjKlMnOpQrStUvWxYz12

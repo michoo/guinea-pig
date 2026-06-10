@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Vonage (Nexmo) API Secret
+# Provider: vonage    Rule id (normalized): vonage.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.vonage.2
+#
+# Pattern: (?xi) \b (?:nexmo|vonage) (?:.|[\n\r]){0,96}? \bapi[_-]?secret\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [A-Za-z0-9]{16} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+nexmo api_secret='bjrDnPt67HrfVjzD'
+vonage
+api_secret=K9mT4xRpWsLqZvAn

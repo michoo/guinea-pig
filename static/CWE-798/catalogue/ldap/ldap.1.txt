@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: LDAP Credentials
+# Provider: ldap    Rule id (normalized): ldap.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ldap.1
+#
+# Pattern: (?xi) \b ldap(?:s)?[_-]?(?:pass(?:word)?|pwd|secret|bind[_-]?pw) (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [^\s"']{8,128} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ldap_pass = "zX#mK91wP$3n=Q7!"
+ldap_pwd = 'Tr0ub4dor&3!'
+LDAP_PASSWORD=s3cur3P@ssw0rd

@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Apollo API Key
+# Provider: apollo    Rule id (normalized): apollo.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.apollo.1
+#   - titus       kingfisher.apollo.1
+#
+# Pattern: (?xi) \b apollo (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9_-]{22} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+APOLLO_API_KEY="ZNh-14foqIiscbz24oKwww"
+apollo_key=8ku3EoDJxz8fOSCdxYozdA
+apollo.io api_key oD8GCL8MNZIyg0tzeSDuhw

@@ -1,0 +1,31 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Google OAuth Credentials
+# Provider: google    Rule id (normalized): google.6
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.google.6
+#   - noseyparker np.google.6
+#   - titus       np.google.6
+#
+# Pattern: (?is)([0-9]+-[a-z0-9_]{32}\.apps\.googleusercontent\.com)(?:.|[\n\r]){0,120}?(?:GOCSPX-[A-Z0-9_-]{28}|(?:client[_\-. ]?secret)(?:.|[\n\r]){0,20}?[=:][ \t]*['"]?([A-Z0-9_-]{24})['"]?)(?:[^A-Z0-9_-]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+const CLIENT_ID = '204945162815-59422evifqzluuklf_09qff9pk6ehd4r.apps.googleusercontent.com';
+const CLIENT_SECRET = 'P5C9REQW_6NT5NMQO8FP75VO';
+public static GAPIS_CREDENTIALS = {
+  // 1. Generate credentials: https://console.cloud.google.com/apis/
+  // 2. Create OAuth page and set spreadsheets and drive.metadata.readonly scopes
+  client_id: '024565785402-92sn01z4gfwbv4zfu79ttqg2j7uphacz.apps.googleusercontent.com',
+  client_secret: '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',
+  redirect_uri: `http://localhost:${Config.OAUTH_HTTP_PORT}/oauth2callback`
+};
+const CLIENT_ID = '304167046824-45h8no7j0s38akv998nivvb7i17ckqeh.apps.googleusercontent.com';
+const CLIENT_SECRET = '1QcFpNjHoAf4_XczYwhYicTl';
+public static GAPIS_CREDENTIALS = {
+  // 1. Generate credentials: https://console.cloud.google.com/apis/
+  // 2. Create OAuth page and set spreadsheets and drive.metadata.readonly scopes
+  client_id: '132261435625-69ubohrvppjr9hcc5t9uighsb7j2cqhv.apps.googleusercontent.com',
+  client_secret: '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',
+  redirect_uri: `http://localhost:${Config.OAUTH_HTTP_PORT}/oauth2callback`
+};

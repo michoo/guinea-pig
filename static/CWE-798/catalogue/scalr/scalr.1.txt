@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Scalr API Access Token
+# Provider: scalr    Rule id (normalized): scalr.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.scalr.1
+#
+# Pattern: (?xi) \b (?:SCALR_KEY|scalr[_-]?(?:key|token|api[_-]?key)) (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9 \. eyJpc3MiOiJ1c2VyIiwianRpIjoiYXQt [A-Za-z0-9_-]{20,40} \. [A-Za-z0-9_-]{43} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SCALR_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1c2VyIiwianRpIjoiYXQtdzFwNWtvN2h2ODh0bGVzcDAifQ.VCPHD8dI5RAO4yexSrfk7mhrBu1KFnGU3Rm2zwApplF"
+scalr_api_key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ1c2VyIiwianRpIjoiYXQteVo1cW81aHY5OTF1bWZzcTAifQ.WDRIE9eJ6SBP5zfyTugl8nihCu2LGoPV4Sn3AxBrqmN

@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Coinbase Access Token
+# Provider: coinbase    Rule id (normalized): coinbase.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.coinbase.1
+#   - titus       kingfisher.coinbase.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    coinbase-access-token
+#   - betterleaks coinbase-access-token
+#
+# Pattern: (?xi) \b coinbase (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( [a-z-0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+coinbase_token = 32iAkQCcHHYxXGx20VogBZoj27PC1ouI

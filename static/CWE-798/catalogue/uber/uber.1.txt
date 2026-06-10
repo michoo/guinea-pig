@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Uber Server Token
+# Provider: uber    Rule id (normalized): uber.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.uber.1
+#
+# Pattern: (?xi) \b uber (?:.|[\n\r]){0,32}? \bserver[_-]?token\b (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [A-Za-z0-9_-]{36,44} ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+config.uber.server_token = "Cyob8XIWekjc6pbbRIJbw-Y2Y38QXzIVBbXpPtW"
+uber, server_token: 'PCLca4a2cQl2OR88-tZ_5X_yYmkzHF4zqoK838X_'

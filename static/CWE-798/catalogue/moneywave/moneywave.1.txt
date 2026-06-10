@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Moneywave / Flutterwave Private Key
+# Provider: moneywave    Rule id (normalized): moneywave.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.moneywave.1
+#
+# Pattern: (?x) \b ( ts_ [A-Z0-9]{28,34} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+privatekey => 'ts_ZB4EJCXOD6LX5IKHVMR6C7AGUY0B'
+MONEYWAVE_KEY=ts_AC1DFKWPE7MY6JIKVNS7D8BHWZ1C

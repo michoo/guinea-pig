@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Zoom OAuth Client Secret
+# Provider: zoom    Rule id (normalized): zoom.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.zoom.2
+#
+# Pattern: (?xi) \b zoom (?:.|[\n\r]){0,64}? \b(?:client[_-]?secret|api[_-]?secret|auth[_-]?secret)\b (?:.|[\n\r]){0,32}? [=:"'\s] \b ( [A-Za-z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+zoom.auth_secret=9NeGUzYkSjRupIF5pt93m2D1w17fOjI8
+zoom
+api_secret="ihPmh3dnXxn3Cd7s3UVZoCDvVEef1f1Q"

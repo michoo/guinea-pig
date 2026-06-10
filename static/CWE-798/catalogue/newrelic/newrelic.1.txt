@@ -1,0 +1,30 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: New Relic Personal API Key
+# Provider: newrelic    Rule id (normalized): newrelic.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.newrelic.1
+#   - noseyparker np.newrelic.1
+#   - titus       np.newrelic.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    new-relic-browser-api-token
+#   - gitleaks    new-relic-insert-key
+#   - gitleaks    new-relic-user-api-id
+#   - gitleaks    new-relic-user-api-key
+#   - betterleaks new-relic-browser-api-token
+#   - betterleaks new-relic-insert-key
+#   - betterleaks new-relic-user-api-id
+#   - betterleaks new-relic-user-api-key
+#
+# Pattern: (?xi) \b newrelic (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9_.]{4} - [A-Z0-9_.]{42} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+newrelic_key = abcd-1234567890abcdef1234567890abcdef1234dd5678
+newrelic_token = 1234-abcdefghijklmnopqrstuvwxyzABCD2342EFGHIJKL
+# Required license key associated with your New Relic account.
+license_key: 033f2f2072ca3f2cb2ec39024fa9e49cd640NRAL
+
+# Your application name. Renaming here affects where data displays in New
+license_key: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaNRAL
+license: eu01xxaa7460e1ea3abdfbbbd36e85c10cd0NRAL

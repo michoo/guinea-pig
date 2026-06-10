@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Webex Integration Client Secret
+# Provider: webex    Rule id (normalized): webex.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.webex.2
+#
+# Pattern: (?xi) \b webex (?:.|[\n\r]){0,64}? \b(?:client[_-]?secret|secret)\b (?:.|[\n\r]){0,16}? [=:"'\s] \b ( [A-Fa-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+webex.secret = 8ab9b3c77035e1121e2d7d64529749682b3ce5b93dc1f1e6677f0800dcf00d1e
+webex
+client_secret=1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b

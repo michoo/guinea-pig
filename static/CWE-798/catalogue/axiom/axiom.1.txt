@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Axiom API Token
+# Provider: axiom    Rule id (normalized): axiom.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.axiom.1
+#
+# Pattern: (?x) \b ( xaat-[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AXIOM_TOKEN=xaat-fa97e617-e653-45a8-2f3b-f1c0ccf731ae
+Authorization: Bearer xaat-deadbeef-1234-5678-9abc-def012345678

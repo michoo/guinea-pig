@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: TrueNAS API Key (REST API)
+# Provider: truenas    Rule id (normalized): truenas.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.truenas.2
+#   - noseyparker np.truenas.2
+#   - titus       np.truenas.2
+#
+# Pattern: (?x) /api/v2\.0 (?:.|[\n\r]){0,256}? Bearer\s+ (\d+-[a-zA-Z0-9]{64}) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+curl -X POST "http://192.168.0.30/api/v2.0/device/get_info" -H "Content-Type: application/json" -H "Authorization: Bearer 8-Lp22ov7halMBLUpG97Wg4y7fibQi3CW19VJiZcCu746zgCs0mdDdTCoOcpgEucgu" -d "\"SERIAL\""

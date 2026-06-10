@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pingdom API Token
+# Provider: pingdom    Rule id (normalized): pingdom.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pingdom.1
+#
+# Pattern: (?xi) \b pingdom (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( [A-Za-z0-9_-]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pingdom_api_token = "ofOhK18Ca6w4S_XmInGv0QPkqly-rbRBBoHsp_2FEH5QnIbH0VZhRPO3tlvrjMIK"
+PINGDOM_TOKEN=abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890

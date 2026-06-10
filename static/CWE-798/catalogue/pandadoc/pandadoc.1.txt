@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PandaDoc API Key
+# Provider: pandadoc    Rule id (normalized): pandadoc.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pandadoc.1
+#
+# Pattern: (?x) \b (?i:pandadoc) (?:.|[\n\r]){0,32}? \b ( [a-zA-Z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PANDADOC_API_KEY=3039ba033eb1410caa0a2227158d63c9d6502cd8

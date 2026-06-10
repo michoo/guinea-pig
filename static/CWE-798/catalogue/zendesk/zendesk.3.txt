@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Zendesk API Token
+# Provider: zendesk    Rule id (normalized): zendesk.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.zendesk.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    zendesk-secret-key
+#   - betterleaks zendesk-secret-key
+#
+# Pattern: (?xi) \b (?:zendesk|zd) (?:.|[\n\r]){0,48}? (?: api[\s_.-]*token | token | api[\s_.-]*key ) (?:.|[\n\r]){0,16}? ( [A-Za-z0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ZENDESK_API_TOKEN=a3B8f29E4d1C6a0578e23D9f41b6C8e2qR7tY4uI
+zendesk_token="E7d2A1f849c3B05d6e81F2a794c3D5b0pQ8wX1zK"

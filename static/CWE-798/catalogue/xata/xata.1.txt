@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Xata API Key
+# Provider: xata    Rule id (normalized): xata.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.xata.1
+#
+# Pattern: (?x) \b ( xau_[A-Za-z0-9]{33} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+XATA_API_KEY=xau_A1b2C3d4E5f6G7h8I9j0K1l2M3n4O5p6Q
+Authorization: Bearer xau_Z9y8X7w6V5u4T3s2R1qPoNmLkJiHgFeDc

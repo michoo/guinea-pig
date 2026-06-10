@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Lob Publishable API Key
+# Provider: lob    Rule id (normalized): lob.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.lob.2
+#   - titus       kingfisher.lob.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    lob-api-key
+#   - gitleaks    lob-pub-api-key
+#   - betterleaks lob-api-key
+#   - betterleaks lob-pub-api-key
+#
+# Pattern: (?xi) lob (?:.|[\n\r]){0,24}? \b ( (?:test|live)_pub_[a-f0-9]{31} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+const LOB_PUB_KEY = "test_pub_abcdefa12defabcdefabcdefabcdefa";
+LOB_PUBLISHABLE="live_pub_1234567890abcdef1234567890abcde"
+const LOB_PUB_KEY = "test_pub_abcdefabcdefabcdefabcdefabcdefa";

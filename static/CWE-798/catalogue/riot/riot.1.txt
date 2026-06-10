@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Riot Platform Host
+# Provider: riot    Rule id (normalized): riot.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.riot.1
+#   - titus       kingfisher.riot.1
+#
+# Pattern: (?xi) \b ( (?:br1|eun1|euw1|jp1|kr|la1|la2|na1|oc1|ru|tr1 |ph2|sg2|th2|tw2|vn2 |americas|europe|asia) \.api\.riotgames\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+na1.api.riotgames.com
+euw1.api.riotgames.com
+americas.api.riotgames.com

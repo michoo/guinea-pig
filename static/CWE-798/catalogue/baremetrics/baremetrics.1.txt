@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Baremetrics API Key
+# Provider: baremetrics    Rule id (normalized): baremetrics.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.baremetrics.1
+#   - titus       kingfisher.baremetrics.1
+#
+# Pattern: (?xi) \b baremetrics (?:.|[\n\r]){0,32}? \b ( [a-z0-9_-]{25} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+baremetrics_api_key = "12345abcdef67890abcdef123"
+BAREMETRICS_API_KEY:'abcde12345fghij67890klmno'

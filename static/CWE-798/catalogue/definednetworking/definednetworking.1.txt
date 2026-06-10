@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Defined Networking API Token
+# Provider: definednetworking    Rule id (normalized): definednetworking.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.definednetworking.1
+#   - titus       kingfisher.definednetworking.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    defined-networking-api-token
+#   - betterleaks defined-networking-api-token
+#
+# Pattern: (?x) \b ( dnkey- [A-Z0-9]{26} - [A-Z0-9]{52} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+defined_api_token="dnkey-AHBDSNIG5ATR4LPUX4XTEVXEP4-ACW2JQ45HAWA2XA6FIJNSNBRY2Q4WMSCNNIFSL6VRZQYFZKI2VHA"

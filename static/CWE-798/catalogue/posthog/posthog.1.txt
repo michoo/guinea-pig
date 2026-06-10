@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PostHog Project API Key
+# Provider: posthog    Rule id (normalized): posthog.1
+#
+# Detected by this rule:
+#   - titus       kingfisher.posthog.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks posthog-project-api-key
+#
+# Pattern: (?x) ( phc_[a-zA-Z0-9_\-]{43} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+phc_E123456789012345678901234567890123456789012

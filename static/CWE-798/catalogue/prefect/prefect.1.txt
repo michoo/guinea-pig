@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Prefect API Token
+# Provider: prefect    Rule id (normalized): prefect.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.prefect.1
+#   - titus       kingfisher.prefect.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    prefect-api-token
+#   - betterleaks prefect-api-token
+#
+# Pattern: (?xi) \b ( pnu_[a-z0-9]{36} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PREFECT_API_TOKEN=pnu_1234567890abcdef1234567890abcdef1234
+"prefectToken": "pnu_abcdefabcdef12cdefabcdefabcdefabcdef"
+"prefectToken": "pnu_abcdefabcdefabcdefabcdefabcdefabcdef"

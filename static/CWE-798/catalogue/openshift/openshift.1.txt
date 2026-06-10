@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: OpenShift API Server URL
+# Provider: openshift    Rule id (normalized): openshift.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.openshift.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    openshift-user-token
+#   - betterleaks openshift-user-token
+#
+# Pattern: (?xi) (?: \boc\s+login\b (?:.|[\n\r]){0,128}? --server= | \bopenshift(?:[_-]?(?:server|api(?:[_-]?server)?|cluster(?:[_-]?url)?))?\b (?:.|[\n\r]){0,32}? \b(?:server|api(?:[_-]?server)?|cluster(?:[_-]?url)?)?\b \s*[:=]\s* ) ["']? ( https://  …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+oc login --token=sha256~kV46hPnEYhCWFnB85r5NrprAxggzgb6GOeLbgcKNsH0 --server=https://api.cluster.example.com:6443
+OPENSHIFT_SERVER=https://api.dev-cluster.example.net:6443

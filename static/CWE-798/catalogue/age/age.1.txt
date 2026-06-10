@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Age Recipient (X25519 public key)
+# Provider: age    Rule id (normalized): age.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.age.1
+#   - noseyparker np.age.1
+#   - titus       np.age.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    age-secret-key
+#   - betterleaks age-secret-key
+#   - betterleaks upstage-api-key
+#
+# Pattern: (?x) ( age1[qpzry9x8gf2tvdw0s3jn54khce6mua7l]{58} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+age1zvkyg2lqzraa2lnjvqej32nkuu0ues2s82hzrye869xeexvn73equnujwj

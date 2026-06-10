@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Auth0 Domain
+# Provider: auth0    Rule id (normalized): auth0.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.auth0.3
+#
+# Pattern: (?xi) \b ( [a-z0-9] [a-z0-9._-]* auth0\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+https://mycompany.us.auth0.com/
+auth0Domain: 'example-org.auth0.com'
+AUTH0_DOMAIN=myapp.eu.auth0.com

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure Notification Hub SAS Key Name
+# Provider: azure-notification-hub    Rule id (normalized): azure.notificationhub.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.notificationhub.3
+#
+# Pattern: (?xi) \b ["']? SharedAccessKeyName ["']? \s*[:=]\s* ["']? ( [A-Za-z] [A-Za-z0-9_-]{6,63} ) ["']? \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SharedAccessKeyName=DefaultListenSharedAccessSignature
+"SharedAccessKeyName": "DefaultFullSharedAccessSignature"

@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Artifactory NPM Auth (base64)
+# Provider: artifactory    Rule id (normalized): artifactory.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.artifactory.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    artifactory-api-key
+#   - gitleaks    artifactory-reference-token
+#   - betterleaks artifactory-api-key
+#   - betterleaks artifactory-jfrog-url
+#   - betterleaks artifactory-reference-token
+#
+# Pattern: (?x) // [A-Za-z0-9._:-]+ /artifactory/api/npm/[A-Za-z0-9._\-/]+/:_auth \s*=\s* ( [A-Za-z0-9+/]{20,}={0,2} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+registry=https://artifactory.corp.company.com/artifactory/api/npm/npm-cloud/
+//artifactory.corp.company.com/artifactory/api/npm/npm-cloud/:_auth=bW9uZ29kYi1jbF81ZDpHMzhoZCE2aElSTjk=
+@cloud-company-js:registry=https://artifactory.corp.company.com/artifactory/api/npm/compass-data-explorer/
+//artifactory.corp.company.com/artifactory/api/npm/compass-data-explorer/:_auth=bW9uZ29kYi1jbF81ZDpHMzhoZCE2aElSTjk=

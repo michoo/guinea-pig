@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tolgee Project API Key
+# Provider: tolgee    Rule id (normalized): tolgee.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tolgee.1
+#
+# Pattern: (?x) \b ( tgpak_[a-z0-9]{40,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TOLGEE_API_KEY=tgpak_ha3tkxzton2wm4twmrsgkmtgmnsgw4bqgvttemttnrwwoyld
+X-API-Key: tgpak_gm2tgnrqgi3tsnrvheytomrvme4dgmrtgntdgntfmu3to

@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Datadog Site Domain
+# Provider: datadog    Rule id (normalized): datadog.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.datadog.1
+#   - titus       kingfisher.datadog.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    datadog-access-token
+#   - betterleaks datadog-access-token
+#
+# Pattern: (?xi) (?: # env/config patterns \b(?:DD_SITE|DATADOG_SITE|DATADOG_HOST)\b\s*[:=]\s*["']? (?:https?://)? (?:api\.|app\.)? | # raw URLs in code/docs \bhttps?://(?:api\.|app\.)? )? ( datadoghq\.com | us3\.datadoghq\.com | us5\.datadoghq\.com | …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DD_SITE=datadoghq.eu
+DATADOG_HOST=https://api.us3.datadoghq.com
+https://app.datadoghq.com
+https://api.ddog-gov.com

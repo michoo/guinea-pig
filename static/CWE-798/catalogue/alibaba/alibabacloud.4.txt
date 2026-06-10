@@ -1,0 +1,21 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Alibaba STS Security Token
+# Provider: alibaba    Rule id (normalized): alibabacloud.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.alibabacloud.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    alibaba-access-key-id
+#   - gitleaks    alibaba-secret-key
+#   - betterleaks alibaba-access-key-id
+#   - betterleaks alibaba-secret-key
+#   - betterleaks alibaba-sts-access-key-id
+#   - betterleaks alibaba-sts-access-key-secret
+#   - betterleaks alibaba-sts-security-token
+#
+# Pattern: (?xi) \b (?:security[\s_-]*token|sts[\s_-]*token|x[\s_-]*oss[\s_-]*security[\s_-]*token|alibaba[\s_-]*cloud[\s_-]*security[\s_-]*token|aliyun[\s_-]*security[\s_-]*token) (?:.|[\n\r]){0,16}? (?: [=:] | ["']\s*:\s*["'] ) \s* ["']? ( CAIS[A-Za …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+securityToken = "CAISuwJ1q6Ft5B2yu9Kiaa5E0VnVJ8q2o3P4r5S6t7U8v9W0xYz"
+ALIBABA_CLOUD_SECURITY_TOKEN=CAIS/gF1q6Ft5B2yfSjIr5eDA9xjJCcl57eKC7A3ThnJA

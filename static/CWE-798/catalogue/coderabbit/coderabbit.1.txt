@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: CodeRabbit API Key
+# Provider: coderabbit    Rule id (normalized): coderabbit.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.coderabbit.1
+#   - titus       kingfisher.coderabbit.1
+#
+# Pattern: (?x) \b ( cr-[a-fA-F0-9]{58} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+cr-33420bb12fddf6cde6fba5414df88b07f75b2258e30c956b95f2ddbb2d

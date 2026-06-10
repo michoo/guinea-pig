@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: FTP Connection URI Credentials
+# Provider: ftp    Rule id (normalized): ftp.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.ftp.1
+#
+# Pattern: (?xi) \b (?P<TOKEN> (?P<FTP_SCHEME>ftps?):// (?P<FTP_USERNAME>[^:@\s]{1,64}) : (?P<FTP_PASSWORD>[^@\s]{6,128}) @ (?P<FTP_HOST>[^\s/"':]{4,128}) (?::(?P<FTP_PORT>\d{2,5}))? (?:/[^\s"']*)? )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ftp://johndoe:pg9stqu2018@files.example.edu.cn
+BACKUP_URL=ftps://backupuser:S5ec4rePassWord@ftp.corp.example.com

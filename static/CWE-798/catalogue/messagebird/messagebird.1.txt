@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MessageBird API Token
+# Provider: messagebird    Rule id (normalized): messagebird.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.messagebird.1
+#   - titus       kingfisher.messagebird.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    messagebird-api-token
+#   - gitleaks    messagebird-client-id
+#   - betterleaks messagebird-api-token
+#   - betterleaks messagebird-client-id
+#
+# Pattern: (?xi) \b message[_-]?bird (?:.|[\n\r]){0,32}? \b ( [a-z0-9]{25} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MESSAGEBIRD_API_KEY=abcdefghijklmno12rstuvwxy
+messagebird_token: 'abcde12345fghij67890klmno'
+MESSAGEBIRD_API_KEY=abcdefghijklmnopqrstuvwxy

@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Fernet Symmetric Encryption Key
+# Provider: fernet    Rule id (normalized): fernet.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.fernet.1
+#
+# Pattern: (?xi) \b (?:fernet[_-]?key|AIRFLOW__CORE__FERNET_KEY) (?:.|[\n\r]){0,16}? [=:"'\s] ['"]* ( [A-Za-z0-9_-]{43}= ) ['"\s]
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AIRFLOW__CORE__FERNET_KEY=AbCdEfGhIjKlMnOpQrStUvWxYz0123456789AbCDEFG=
+fernet_key = 'MbDfFhHjJlLnNpPrRtTvVxXzZ0123456789MbDFHJLN='

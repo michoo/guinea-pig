@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Freshdesk Domain
+# Provider: freshdesk    Rule id (normalized): freshdesk.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.freshdesk.1
+#   - titus       kingfisher.freshdesk.1
+#
+# Pattern: (?xi) \b ( [0-9a-z-]{1,63}\.freshdesk\.com ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+acme-support.freshdesk.com
+mycompany-helpdesk.freshdesk.com

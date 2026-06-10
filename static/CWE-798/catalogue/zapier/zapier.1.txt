@@ -1,0 +1,18 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Zapier Webhook URL
+# Provider: zapier    Rule id (normalized): zapier.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.zapier.1
+#   - titus       np.zapier.1
+#
+# Pattern: (?x) \b ( https://hooks\.zapier\.com/hooks/catch/ [0-9]{5,10} / [a-z0-9]{5,12} /? )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ZAPIER_WEBHOOK=https://hooks.zapier.com/hooks/catch/99999999/notalive/
+webhook_url="https://hooks.zapier.com/hooks/catch/99999998/notlive/"
+ZAPIER_WEBHOOK=https://hooks.zapier.com/hooks/catch/11595998/3ouwv7m/
+webhook_url = 'https://hooks.zapier.com/hooks/catch/2929690/ztd17n/'
+# Zapier integration endpoint
+ENDPOINT = "https://hooks.zapier.com/hooks/catch/15616669/38qwq19/"

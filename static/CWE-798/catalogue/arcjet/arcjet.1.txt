@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Arcjet API Key
+# Provider: arcjet    Rule id (normalized): arcjet.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.arcjet.1
+#
+# Pattern: (?x) \b ( ajkey_[a-z0-9]{26} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ARCJET_KEY=ajkey_01kpe3gbb3ek3asrwvfsmtjtam
+ARCJET_KEY="ajkey_01kpe3k7r4n6v9s2q1w8x5y7zc"

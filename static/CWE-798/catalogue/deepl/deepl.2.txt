@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DeepL API Key (Pro)
+# Provider: deepl    Rule id (normalized): deepl.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.deepl.2
+#
+# Pattern: (?xi) deepl (?:.|[\n\r]){0,32}? (?:SECRET|AUTH|KEY|TOKEN|API) (?:.|[\n\r]){0,16}? \b ( [a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+DEEPL_AUTH_KEY=279a2e9d-83b3-c416-7e2d-f721593e42a0
+deepl_api_key: "5ef4a0d1-7e1f-47b2-ac0a-1282002aa2a1"

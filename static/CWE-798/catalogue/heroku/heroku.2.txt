@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Heroku API Key (Platform Key)
+# Provider: heroku    Rule id (normalized): heroku.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.heroku.2
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    heroku-api-key
+#   - gitleaks    heroku-api-key-v2
+#   - betterleaks heroku-api-key
+#   - betterleaks heroku-api-key-v2
+#
+# Pattern: (?xi) ( HRKU-[A-Z0-9_]{60} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HRKU-AADVTUYvfjT4nhuJ07bEfAUq9GS3PkTdyWuNBiXYmYMg_____wgAf6OTnGyh
+HRKU-AABW9W1iH9NHEIlAABq9nZUq9GS3PkTdyWuNBiXYmYMg_____wV2XYIXxm5p
+HRKU-AAWpqREEr2V1gqh6urSXWYUq9GS3PkTdyWuNBiXYmYMg_____wNI1VGijd8y

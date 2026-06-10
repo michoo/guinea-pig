@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: HubSpot Private App Token
+# Provider: hubspot    Rule id (normalized): hubspot.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.hubspot.1
+#   - titus       kingfisher.hubspot.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    hubspot-api-key
+#   - betterleaks hubspot-api-key
+#
+# Pattern: (?x) \b ( pat-[a-z0-9]{2,3}-[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pat-na2-3b124f92-f4cb-4d1d-8d1c-7fc3f3512dba

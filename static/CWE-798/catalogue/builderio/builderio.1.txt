@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Builder.io Private API Key
+# Provider: builderio    Rule id (normalized): builderio.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.builderio.1
+#
+# Pattern: (?x) \b ( bpk-[a-f0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+BUILDER_PRIVATE_KEY=bpk-326204939cb941afb1431bf19bdc007d
+builder_key: "bpk-7e3094a4265949f69b98a02b80e82cb8"
+bpk-3d990a73da74423ca9ac00b9a2cf0f08

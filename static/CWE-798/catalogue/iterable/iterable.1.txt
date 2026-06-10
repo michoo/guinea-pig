@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Iterable API Key
+# Provider: iterable    Rule id (normalized): iterable.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.iterable.1
+#   - titus       np.iterable.1
+#
+# Pattern: (?xi) (?:iterable) (?:.|[\n\r]){0,32}? (?:KEY|TOKEN|SECRET|API) (?:.|[\n\r]){0,16}? \b ( [A-Za-z0-9]{32,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+ITERABLE_API_KEY=a3B8f29E4d1C6a0578e23D9f41b6C8e2
+iterable_api_key: "E7d2A1f849c3B05d6e81F2a794c3D5b09f4B2d7E"
+export ITERABLE_KEY=9f4B2d7E1a3c8056d2E7f1b94A6c3d80
+ITERABLE_API_KEY=a3b8f29e4d1c6a0578e23d9f41b6c8e2
+iterable_api_key: "42f187310705012194bd0bd694905664ae"
+export ITERABLE_KEY=9F4B2D7E1A3C8056D2E7F1B94A6C3D80
+ITERABLE_SECRET=e7d2a1f849c3b05d6e81f2a794c3d5b0ab

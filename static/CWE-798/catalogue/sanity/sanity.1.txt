@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Sanity API Token
+# Provider: sanity    Rule id (normalized): sanity.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.sanity.1
+#
+# Pattern: (?xi) \b sanity (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API) (?:.|[\n\r]){0,32}? \b ( (?:sk[A-Za-z0-9]{52}|sk[A-Za-z0-9]{78}) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+SANITY_API_TOKEN=skE5UXUmBEy7U50jcG4In4v4xoHZTlduDxQYet8Y84tsTqAZxp2reIPJsA1JzqXJno2qcpauGwPfjHpU
+sanity_token = "sk1234567890abcdefghijklmnopqrstuvwxyz1234567890abcdef"

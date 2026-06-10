@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Codecov Access Token
+# Provider: codecov    Rule id (normalized): codecov.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.codecov.1
+#   - titus       kingfisher.codecov.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    codecov-access-token
+#   - betterleaks codecov-access-token
+#
+# Pattern: (?xi) \b codecov (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9-]{36} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+codecov_token = 52acf265-3fc6-4ecd-304a-15940bd04653

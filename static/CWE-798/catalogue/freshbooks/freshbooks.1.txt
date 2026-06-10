@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: FreshBooks Access Token
+# Provider: freshbooks    Rule id (normalized): freshbooks.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.freshbooks.1
+#   - titus       kingfisher.freshbooks.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    freshbooks-access-token
+#   - betterleaks freshbooks-access-token
+#
+# Pattern: (?xi) \b freshbooks (?:.|[\n\r]){0,32}? \b ( [a-z0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+FRESHBOOKS_TOKEN=0f1e2d3c4b5a69788776655443322110ffeeddccbbaa00998877665544332211
+"freshbooksAccess": "abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcd"

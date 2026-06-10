@@ -1,0 +1,22 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: New Relic Pixie API Key
+# Provider: newrelic    Rule id (normalized): newrelic.8
+#
+# Detected by this rule:
+#   - noseyparker np.newrelic.8
+#   - titus       np.newrelic.8
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    new-relic-browser-api-token
+#   - gitleaks    new-relic-insert-key
+#   - gitleaks    new-relic-user-api-id
+#   - gitleaks    new-relic-user-api-key
+#   - betterleaks new-relic-browser-api-token
+#   - betterleaks new-relic-insert-key
+#   - betterleaks new-relic-user-api-id
+#   - betterleaks new-relic-user-api-key
+#
+# Pattern: (?x)(?i) \b (px-api-[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+MW_PX_DEPLOY_KEY=px-dep-f43ae612-dc8a-4049-9553-4af1b0e17620 MW_PX_API_KEY=px-api-c20a3cba-d3c9-45c1-a557-8864040b8f79

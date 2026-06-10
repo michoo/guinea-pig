@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure DevOps Personal Access Token
+# Provider: azuredevops    Rule id (normalized): azure.devops.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azure.devops.2
+#   - titus       kingfisher.azure.devops.2
+#
+# Pattern: (?xi) \b ( [a-z0-9]{76}AZDO[a-z0-9]{4,5} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+azure devops pat = FBdFol081crwkIHWJH2yiqDDyrFjVSi7HWl22hN2hTYfsB8NlGDpJQQJ77BAACAAAAAAAAAAAAASAZDOBucTj

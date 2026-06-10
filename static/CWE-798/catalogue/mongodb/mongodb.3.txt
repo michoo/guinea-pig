@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: MongoDB URI Connection String
+# Provider: mongodb    Rule id (normalized): mongodb.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.mongodb.3
+#   - titus       kingfisher.mongodb.3
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks mongodb-atlas-service-account-id
+#   - betterleaks mongodb-atlas-service-account-secret
+#   - betterleaks mongodb-connection-string
+#
+# Pattern: (?xi) ( mongodb(?:\+srv)?://[\S]{3,50}:(?:[\S]{3,88})@[-.%\w/:]+ ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+client = mongoc_client_new ("mongodb+srv://someuser:hunter2@my-atlas-rd941.mongodb.net/test?retryWrites=true&w=majority");
+mongodb+srv://user:passw0rd@cluster0.something.mongodb.net/
+mongodb://mongoadmin:contoso@something.foo.mongodb.net/myFirstDatabase

@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: UpCloud API Token
+# Provider: upcloud    Rule id (normalized): upcloud.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.upcloud.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks upcloud-api-token
+#
+# Pattern: (?xi) \b ( ucat_[0-9A-HJKMNP-TV-Z]{26} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+UPCLOUD_API_TOKEN=ucat_01KPW6N68RKV5WV44Y2C5CKTZY
+upcloud_token: "ucat_01J9K4BNZM3RGXW7VDQFTHY5PC"

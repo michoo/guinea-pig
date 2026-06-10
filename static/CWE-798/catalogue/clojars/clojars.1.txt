@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Clojars Username
+# Provider: clojars    Rule id (normalized): clojars.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.clojars.1
+#   - titus       kingfisher.clojars.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    clojars-api-token
+#   - betterleaks clojars-api-token
+#
+# Pattern: (?xi) \b clojars (?:.|[\n\r]){0,32}? (?:ID|USER) (?:.|[\n\r]){0,16}? \b ( [a-z0-9_-]{3,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+clojars_user = my-username

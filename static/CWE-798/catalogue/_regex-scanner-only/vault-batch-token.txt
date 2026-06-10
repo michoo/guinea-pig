@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry (regex-scanner-only): vault-batch-token
+#
+# Detected by this rule:
+#   - betterleaks vault-batch-token
+#   - gitleaks    vault-batch-token
+#
+# Detected a Vault Batch Token, risking unauthorized access to secret management services and sensitive data.
+# Regex: \b(hvb\.[\w-]{138,300})(?:[\x60'"\s;]|\\[nr]|$)
+#
+# Synthesized fake credential matching the regex — safe to commit.
+
+hvb.Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_Ab1_

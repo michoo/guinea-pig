@@ -1,0 +1,14 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tailscale API Key
+# Provider: tailscale    Rule id (normalized): tailscale.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tailscale.1
+#   - titus       kingfisher.tailscale.1
+#
+# Pattern: (?xi) \b ( tskey-[a-z]{3,10}-[A-Z0-9_-]{20,36} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+tskey-secret-weRTWSfoeFKI-3480754342kDSFelW3
+tskey-api-weRTWSfoeFKI-3480754342kDSFelW3

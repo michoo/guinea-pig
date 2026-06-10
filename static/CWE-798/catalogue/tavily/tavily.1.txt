@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Tavily API Key
+# Provider: tavily    Rule id (normalized): tavily.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.tavily.1
+#   - noseyparker np.tavily.1
+#   - titus       np.tavily.1
+#
+# Pattern: (?x) \b ( tvly-[a-zA-Z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+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
+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
+TAVILY_API_KEY = "tvly-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"

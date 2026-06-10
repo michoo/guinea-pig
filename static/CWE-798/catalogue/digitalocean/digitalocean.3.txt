@@ -1,0 +1,20 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DigitalOcean Refresh Token
+# Provider: digitalocean    Rule id (normalized): digitalocean.3
+#
+# Detected by this rule:
+#   - noseyparker np.digitalocean.3
+#   - titus       np.digitalocean.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    digitalocean-access-token
+#   - gitleaks    digitalocean-pat
+#   - gitleaks    digitalocean-refresh-token
+#   - betterleaks digitalocean-access-token
+#   - betterleaks digitalocean-pat
+#   - betterleaks digitalocean-refresh-token
+#
+# Pattern: (?x)(?i) \b (dor_v1_[a-f0-9]{64}) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+"refresh_token": "dor_v1_d6ce5b93104521c47be0b580e9296454ef4a319b02b5513469f0ec71d99af2e2",

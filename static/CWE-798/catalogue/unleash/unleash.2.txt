@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Unleash Personal Access Token
+# Provider: unleash    Rule id (normalized): unleash.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.unleash.2
+#
+# Pattern: (?xi) \b unleash (?:.|[\n\r]){0,32}? \b ( user:[0-9a-f]{56} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+UNLEASH_PAT=user:be7536c3a160ff15e3a92da45de531dd54bc1ae15d8455c0476f086b
+unleash_pat: "user:a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8"

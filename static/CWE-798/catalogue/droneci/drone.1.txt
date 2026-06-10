@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: DroneCI Access Token
+# Provider: droneci    Rule id (normalized): drone.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.drone.1
+#   - titus       kingfisher.drone.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    droneci-access-token
+#   - betterleaks droneci-access-token
+#
+# Pattern: (?xi) \b (?:drone|droneci|drone[_-]) (?:.|[\n\r]){0,16}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,16}? \b ( ey[A-Za-z0-9_-]{30,}\.[A-Za-z0-9_-]{10,}\.[A-Za-z0-9_-]{10,} | [a-f0-9]{32,64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+export DRONE_TOKEN=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiZGVtbyJ9.GEPa7kCDdw4nruBKgLkQF1EGMZVvJ1kM4sMp9p8a1x4
+drone_token = fe8c402a51e6629aa1f43a4234afee81

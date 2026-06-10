@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: SHODAN API Key
+# Provider: shodan    Rule id (normalized): shodan.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.shodan.1
+#   - titus       kingfisher.shodan.1
+#
+# Pattern: (?xi) \b shodan (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [A-Z0-9]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+shodan_api_key = dqlblS2CmTOc5zYn4nZkJljYsXRnNuiq

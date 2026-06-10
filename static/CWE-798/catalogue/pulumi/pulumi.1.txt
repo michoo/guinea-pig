@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Pulumi API Key
+# Provider: pulumi    Rule id (normalized): pulumi.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pulumi.1
+#   - titus       kingfisher.pulumi.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    pulumi-api-token
+#   - betterleaks pulumi-api-token
+#
+# Pattern: (?x) \b ( pul-[a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+pul-18e13e3eebebeb94eac318d421ca8ecc5ca78d5f

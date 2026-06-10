@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: WarpStream API Key Secret
+# Provider: warpstream    Rule id (normalized): warpstream.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.warpstream.1
+#
+# Pattern: (?x) \b ( aks_[a-f0-9]{64} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+WARPSTREAM_API_KEY=aks_a51b1fb20ac4a3af549503bb08cd309672fcada1030c5a494850e87ce5d4c613

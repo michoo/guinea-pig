@@ -1,0 +1,19 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Groq API Key
+# Provider: groq    Rule id (normalized): groq.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.groq.1
+#   - noseyparker np.groq.1
+#   - titus       np.groq.1
+# Related provider rules (regex scanners, provider-level match):
+#   - betterleaks groq-api-key
+#
+# Pattern: (?x) \b ( gsk_[A-Za-z0-9]{52} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+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
+# Set up the client for OpenAI
+client = OpenAI(base_url="https://api.groq.com/openai/v1/", api_key="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")
+const apiKey = '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'; // Replace with your actual API key

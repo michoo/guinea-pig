@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure SignalR Connection String
+# Provider: azuresignalr    Rule id (normalized): azuresignalr.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azuresignalr.1
+#
+# Pattern: (?x) (?i:Endpoint=https://(?:[a-z0-9-]+\.service\.signalr\.net);AccessKey=) ( [A-Za-z0-9+/]{40,90}={0,2} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+Endpoint=https://myservice.service.signalr.net;AccessKey=AbCdEfGhIjKlMnOpQrStUvWxYz1234567890ABCDEFGHIJKLMNOPQRS+/==;Version=1.0;

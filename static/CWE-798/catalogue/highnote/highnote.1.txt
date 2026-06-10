@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Highnote API Key
+# Provider: highnote    Rule id (normalized): highnote.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.highnote.1
+#
+# Pattern: (?x) \b (?i:highnote) (?:.|[\n\r]){0,24}? \b ( sk_live_a2V5Xz[A-Za-z0-9+/]{69}={0,2} ) (?:[^A-Za-z0-9+/=]|$)
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+HIGHNOTE_API_KEY="sk_live_a2V5XzAxS1BSWE1LTjBEWE1INlpBU0VEWjU2VFE3LFdjOWxFMTNDS29xRkdlYU9uMUpDbUpTZWE"

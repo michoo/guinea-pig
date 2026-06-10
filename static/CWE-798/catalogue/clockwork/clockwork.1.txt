@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Clockwork SMS API Key
+# Provider: clockwork    Rule id (normalized): clockwork.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.clockwork.1
+#
+# Pattern: (?xi) \b (?:clockwork|clockworksms) (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API) (?:.|[\n\r]){0,32}? \b ( [a-f0-9]{40} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+clockwork_api_key=5a1c7e9d3b6f0a4c8d2e1f7a9b3c5d6e8f0a1b2c
+clockworksms access token: 9f0e1d2c3b4a59687766554433221100abcde123

@@ -1,0 +1,12 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Docker Swarm Join Token
+# Provider: docker    Rule id (normalized): docker.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.docker.2
+#
+# Pattern: (?x) \b ( SWMTKN-1-[a-z0-9]{50,60}-[a-z0-9]{24,30} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+docker swarm join --token SWMTKN-1-3pu6hszjas19xyp7ghgosyx9k8atbfcr8p2is99znpy26u2lkl-1awxwuwd3z9j1z3puu7rcgdbx 192.168.99.100:2377

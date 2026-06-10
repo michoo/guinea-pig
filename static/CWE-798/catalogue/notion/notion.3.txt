@@ -1,0 +1,16 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Notion OAuth Refresh Token
+# Provider: notion    Rule id (normalized): notion.3
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.notion.3
+#   - titus       kingfisher.notion.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    notion-api-token
+#   - betterleaks notion-api-token
+#
+# Pattern: (?xi) notion (?:.|[\\n\r]){0,32}? ( nrt_[A-Z0-9_]{40,55} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+notion refresh token = nrt_4Y29zY29vbF9leGFtcGxlX3JlZnJlc2hfdG9rZW4xMjM0NQ

@@ -1,0 +1,28 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: GitHub App User-to-Server Token
+# Provider: github    Rule id (normalized): github.4
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.github.4
+#   - noseyparker np.github.4
+#   - titus       np.github.4
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    github-app-token
+#   - gitleaks    github-fine-grained-pat
+#   - gitleaks    github-oauth
+#   - gitleaks    github-pat
+#   - gitleaks    github-refresh-token
+#   - betterleaks github-app-token
+#   - betterleaks github-fine-grained-pat
+#   - betterleaks github-oauth
+#   - betterleaks github-pat
+#   - betterleaks github-refresh-token
+#
+# Pattern: (?x) ( ghu_(?P<body>[A-Za-z0-9]{30})(?P<checksum>[A-Za-z0-9]{6}) )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+"token": "ghu_TIOHHEVefAwRonSMALCFfWMYK0un1R1dj2rn",
+Example usage:
+git clone http://ghu_imqBAXUtRirzzcJPwAiqImhkzsvzYZ1eDtPf@github.com/username/repo.git
+"refresh_token": "ghr_1B4a2e77838347a7E420ce178F2E7c6912E169246c3CE1ccbF66C46812d16D5B1A9Dc86A1498",

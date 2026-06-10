@@ -1,0 +1,16 @@
+# CWE-798: Use of Hard-coded Credentials
+# A task authenticates using a hard-coded API token literal embedded in the playbook.
+---
+- name: Hard-coded credentials example
+  hosts: all
+  tasks:
+    - name: Authenticate to API with hard-coded token
+      ansible.builtin.uri:
+        url: https://api.example.com/login
+        method: POST
+        headers:
+          Authorization: "Bearer sk_live_abc123HARDCODEDtoken456xyz"
+        body_format: json
+        body:
+          username: admin
+          password: "Hardcoded@Pass123"

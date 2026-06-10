@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Customer.io Tracking API Key
+# Provider: customerio    Rule id (normalized): customerio.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.customerio.1
+#   - titus       kingfisher.customerio.1
+#
+# Pattern: (?xi) \b (?:customer(?:\.?io)?|customerio|cio|tracking|track) (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN|API[_-]?KEY) (?:.|[\n\r]){0,16}? \b ( [0-9a-f]{20} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+tracking api key: f3b0c2b92eca01472efe
+customerio_key = a98eab982f4692ceb78f
+customer.io tracking_api_key d24d3915959b4d793a67

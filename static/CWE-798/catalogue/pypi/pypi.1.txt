@@ -1,0 +1,24 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: PyPI Upload Token
+# Provider: pypi    Rule id (normalized): pypi.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.pypi.1
+#   - noseyparker np.pypi.1
+#   - titus       np.pypi.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    pypi-upload-token
+#   - betterleaks pypi-upload-token
+#
+# Pattern: (?x) ( pypi-AgEIcHlwaS5vcmc[A-Za-z0-9_-]{50,} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+# password = pypi-AgEIcHlwaS5vcmcABCD1234efgh5678ijklmnopqrst9098UVWXYZabcd1234EFGHIJKL
+# password = pypi-AgEIcHlwaS5vcmcCJDkwNzYwNzU1LWMwOTUtNGNkOC1iYjQzLTU3OWNhZjI1NDQ1MwACJXsicGVybWCf99lvbnMiOiAidXNlciIsICJ2ZXJzaW9uIjogMX0AAAYgSpW5PAywXvchMUQnkF5H6-SolJysfUvIWopMsxE4hCM
+- name: Publish package
+uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+with:
+  user: santoshp
+  password: ${{ secrets.pypi-AgEIcHlwaS5vcmcCJDA1NTdiYzI2LTQ3N2QtNDAyYy04YzBjLTVmODU4ZTFkMjACf99COXsicGVybWlzc2lvbnMiOiB7InByb2plY3RzIjogWyJlbXB5cmlhbCJdfSwgInZlcnNpb24iOiAxfQAABiAx85KUjr83dNyI9uO0RVMmH7DKqoXNH4_rMkO5SQYItA}}
+password: pypi-AgEIcHlwaS5vcmcCJGExMDIxZjRhLTFhZDMtNDc4YS1iOWNmLWQwCf99OTIwZjFjNwACSHsicGVybWlzc2lvbnMiOiB7InByb2plY3RzIjogWyJkamFuZ28tY2hhbm5lbHMtanNvbnJwYyJdfSwgInZlcnNpb24iOiAxfQAABiBZg48cIBQt7HckwM4G3q-462xphsLbm7IZvjqMS4jvQw

@@ -1,0 +1,15 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Razorpay API Key
+# Provider: razorpay    Rule id (normalized): razorpay.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.razorpay.1
+#   - titus       np.razorpay.1
+#
+# Pattern: (?xi) \b ( rzp_live_[A-Za-z0-9]{14} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+RAZORPAY_KEY_ID=rzp_live_dK4mHQs3eAHUtq
+razorpay_key: rzp_live_Nf2tP7xB5qWvYd
+var razorpay = new Razorpay("rzp_live_8mQ2kLpV3xRbYe", secret);

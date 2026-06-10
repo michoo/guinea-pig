@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: New York Times API Key
+# Provider: nytimes    Rule id (normalized): nytimes.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.nytimes.1
+#   - titus       kingfisher.nytimes.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    nytimes-access-token
+#   - betterleaks nytimes-access-token
+#
+# Pattern: (?xi) (?:nytimes|new[- ]?york[- ]?times) (?:.|[\n\r]){0,32}? \b ( [a-z0-9_\-=]{32} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+NYTIMES_API_KEY=abcd1234efgh5678ijkl9012mnop3456
+"new-york-times": "zyxw9876vuts5432rqpo1098nmlk7654"

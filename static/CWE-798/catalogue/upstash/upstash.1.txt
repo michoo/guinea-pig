@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Upstash Redis REST Token
+# Provider: upstash    Rule id (normalized): upstash.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.upstash.1
+#
+# Pattern: (?x) \b (?: UPSTASH_REDIS_REST_TOKEN | (?i:upstash) (?:.|[\n\r]){0,40}? (?i:(?:redis|rest)) (?:.|[\n\r]){0,40}? (?i:token) ) (?:.|[\n\r]){0,24}? ( (?: [A-Za-z0-9]{32,48} | AYNgAS[A-Za-z0-9+/_-]{26,90}={0,2} ) ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+UPSTASH_REDIS_REST_TOKEN="2553feg6a2d9842h2a0gcdb5f8efe9934"
+upstash redis token: "AYNgAS2553feg6a2d9842h2a0gcdb5f8efe9934DQ="

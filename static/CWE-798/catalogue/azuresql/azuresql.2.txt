@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Azure SQL Password Assignment
+# Provider: azuresql    Rule id (normalized): azuresql.2
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.azuresql.2
+#
+# Pattern: (?x) \b (?: (?i:azure[_\s-]*sql[_\s-]*password) | (?i:sql_admin_password) | (?i:mssql_sa_password) ) \b (?:.|[\n\r]){0,8}? [=:] \s*["']? ([^\s"']{8,128}) ["']?
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+AZURE_SQL_PASSWORD=MyStr0ngP@ssword!
+SQL_ADMIN_PASSWORD="Compl3x!Pass#2024"

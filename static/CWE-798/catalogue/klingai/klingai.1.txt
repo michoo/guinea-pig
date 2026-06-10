@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Kling AI Secret Key
+# Provider: klingai    Rule id (normalized): klingai.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.klingai.1
+#   - titus       kingfisher.klingai.1
+#
+# Pattern: (?xi) \b kling (?:.|[\n\r]){0,120}? \b (?:access[\s_-]*key|accesskeyid|ak) (?:.|[\n\r]){0,64}? \b (?P<AKID> [A-Za-z0-9]{32} ) \b (?:.|[\n\r]){0,120}? \b (secret[\s_-]*key|accesskeysecret|sk) \b (?:.|[\n\r]){0,64}? \b (?P<SECRET> [A-Za-z0-9] …
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+kling Access Key: ADaPACHhrBACBMABNbLpyfdQC2aBdf8r kling Secret Key: 8kKdpk9EnNdYJGQ8hRptagCFBmFHDB33"

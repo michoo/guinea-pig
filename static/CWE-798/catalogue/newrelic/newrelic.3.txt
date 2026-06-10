@@ -1,0 +1,26 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: New Relic API Service Key
+# Provider: newrelic    Rule id (normalized): newrelic.3
+#
+# Detected by this rule:
+#   - noseyparker np.newrelic.3
+#   - titus       np.newrelic.3
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    new-relic-browser-api-token
+#   - gitleaks    new-relic-insert-key
+#   - gitleaks    new-relic-user-api-id
+#   - gitleaks    new-relic-user-api-key
+#   - betterleaks new-relic-browser-api-token
+#   - betterleaks new-relic-insert-key
+#   - betterleaks new-relic-user-api-id
+#   - betterleaks new-relic-user-api-key
+#
+# Pattern: (?x)(?i) \b (nrak-[a-z0-9]{27}) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+PS> Get-NR1Catalog -PersonalAPIKey 'NRAK-123456788ABCDEFGHIJKLMNOPQR'
+placeholder="e.g: NRAK-CIH1YVYWKA9ZP6E49WP5XYJH1G9">
+ENV NODE_ENV "production"
+ENV PORT 8079
+#ENV NEW_RELIC_LICENSE_KEY=NRAK-7JCF597RJ492YP6MZWST3HWRNY2

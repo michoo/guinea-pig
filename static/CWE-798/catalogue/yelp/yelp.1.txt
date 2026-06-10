@@ -1,0 +1,13 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Yelp API Key
+# Provider: yelp    Rule id (normalized): yelp.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.yelp.1
+#   - titus       kingfisher.yelp.1
+#
+# Pattern: (?xi) \b yelp (?:.|[\n\r]){0,32}? (?:SECRET|PRIVATE|ACCESS|KEY|TOKEN) (?:.|[\n\r]){0,32}? \b ( [a-zA-Z0-9_\\=.\\-]{128} ) \b
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+yelp_token = wiuck20l8j-oWwCd9r53FqpN6ELB7K03zGw-ccUQR7uLHc9NaWubovOMdGdyFqIGGM4aVK6nxQ1DreDZn_qBYU4jky_5kQRVkiIDPSheCPggY3WzyRzi27kxoOpoYAYx

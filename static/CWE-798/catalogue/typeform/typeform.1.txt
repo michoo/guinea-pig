@@ -1,0 +1,17 @@
+# CWE-798 — Use of Hard-coded Credentials
+# Catalogue entry: Typeform API Token
+# Provider: typeform    Rule id (normalized): typeform.1
+#
+# Detected by this rule:
+#   - kingfisher  kingfisher.typeform.1
+#   - titus       kingfisher.typeform.1
+# Related provider rules (regex scanners, provider-level match):
+#   - gitleaks    typeform-api-token
+#   - betterleaks typeform-api-token
+#
+# Pattern: (?xi) \b typeform (?:.|[\n\r]){0,32}? ( tfp_[a-z0-9_\-=\.]{59} )
+#
+# Fake credentials from scanner test corpora — safe to commit, not live secrets.
+
+TYPEFORM_TOKEN=tfp_abcd1234efgh5678ijkl9012mnop3456qrst7890uvwx_yzABCD1234efgh
+typeform_api_key: 'tfp_qwerty1234567890asdfgh0987654321zxcvbnmPOIU_0987654321lkjhi'
