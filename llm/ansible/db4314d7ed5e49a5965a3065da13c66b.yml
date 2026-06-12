@@ -1,0 +1,15 @@
+---
+- name: Configure application files
+  hosts: all
+  tasks:
+    - name: Copy config
+      ansible.builtin.copy:
+        src: app.conf
+        dest: /etc/app/app.conf
+        mode: '0777'
+
+    - name: Create directory
+      ansible.builtin.file:
+        path: /opt/app/data
+        state: directory
+        mode: '0777'

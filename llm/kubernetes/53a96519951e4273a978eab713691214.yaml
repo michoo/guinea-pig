@@ -1,0 +1,17 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app
+spec:
+  containers:
+  - image: k8s.gcr.io/test-webserver
+    name: app-container
+    volumeMounts:
+    - mountPath: /var/run/docker.sock
+      name: app-volume
+  volumes:
+  - name: app-volume
+    hostPath:
+      path: /var/run/docker.sock
+      type: Socket

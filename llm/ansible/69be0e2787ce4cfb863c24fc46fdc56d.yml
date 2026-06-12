@@ -1,0 +1,12 @@
+---
+- name: Configure database user
+  hosts: db_servers
+  vars:
+    db_password: "MyPlainTextPassword123"
+  tasks:
+    - name: Create MySQL user
+      community.mysql.mysql_user:
+        name: appuser
+        password: "{{ db_password }}"
+        priv: "*.*:ALL"
+        state: present

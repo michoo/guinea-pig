@@ -1,0 +1,16 @@
+stages: [build, deploy]
+
+build:
+  stage: build
+  image: node:latest
+  script:
+    - curl -s https://example.com/install.sh | sh
+    - eval "$CI_MERGE_REQUEST_TITLE"
+    - npm install && npm run build
+
+deploy:
+  stage: deploy
+  image: alpine:latest
+  script:
+    - echo "Deploy token is $DEPLOY_TOKEN"
+    - ./deploy.sh

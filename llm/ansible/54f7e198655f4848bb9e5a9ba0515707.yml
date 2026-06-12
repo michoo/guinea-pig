@@ -1,0 +1,6 @@
+---
+- name: Search logs
+  hosts: all
+  tasks:
+    - name: Run command
+      ansible.builtin.shell: "grep {{ user_input }} /var/log/app.log"

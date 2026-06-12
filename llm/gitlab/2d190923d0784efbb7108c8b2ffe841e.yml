@@ -1,0 +1,5 @@
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying branch $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME"
+    - eval "echo $CI_MERGE_REQUEST_TITLE"

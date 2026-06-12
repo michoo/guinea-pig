@@ -1,0 +1,4 @@
+install:
+  stage: build
+  script:
+    - curl -sSL https://example.com/install.sh | sh

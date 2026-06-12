@@ -1,0 +1,15 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: some-org/some-action@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - run: make build

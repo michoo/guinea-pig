@@ -1,0 +1,14 @@
+---
+- name: Authenticate to API
+  hosts: all
+  tasks:
+    - name: Login request
+      ansible.builtin.uri:
+        url: https://api.example.com/login
+        method: POST
+        headers:
+          Authorization: "Bearer sk_live_abc123HARDCODEDtoken456xyz"
+        body_format: json
+        body:
+          username: admin
+          password: "Hardcoded@Pass123"

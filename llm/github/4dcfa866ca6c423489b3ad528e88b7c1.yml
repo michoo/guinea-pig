@@ -1,0 +1,14 @@
+name: issue-handler
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo title
+        run: |
+          echo "New issue: ${{ github.event.issue.title }}"
+          grep -q "bug" <<< "${{ github.event.issue.title }}"

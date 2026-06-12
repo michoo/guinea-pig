@@ -1,0 +1,14 @@
+---
+- name: Fetch resources
+  hosts: all
+  tasks:
+    - name: Download file
+      ansible.builtin.get_url:
+        url: https://example.com/package.tar.gz
+        dest: /tmp/package.tar.gz
+        validate_certs: no
+
+    - name: Call API
+      ansible.builtin.uri:
+        url: https://api.example.com/data
+        validate_certs: no
